@@ -1,0 +1,171 @@
+{
+ "state": "Michigan",
+ "slug": "michigan",
+ "abbr": "MI",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 50,
+  "formation_doc": "Articles of Organization (Form CSCL/CD-700)",
+  "formation_notes": "Fee waiver available when a majority of initial membership interests are held by veterans. Expedited service available for extra fees (not verified).",
+  "annual_report": {
+   "name": "Annual Statement",
+   "fee": 25,
+   "frequency": "annual",
+   "due": "February 15, starting the year after formation (LLCs formed after September 30 skip the first February 15)",
+   "late_penalty": "Not in good standing; restoration fee $50 plus $25 per missing statement"
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.michigan.gov/lara/-/media/Project/Websites/lara/cscl/NonImages_new/Corps/forms/llc/700-0725.pdf",
+    "title": "CSCL/CD-700 Articles of Organization (rev. 07/25)",
+    "quote": "NONREFUNDABLE FEE: Make remittance payable to the State of Michigan. ... $50.00"
+   },
+   {
+    "id": 2,
+    "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions",
+    "title": "LARA Corporations Division FAQ",
+    "quote": "Every LLC and PLLC is required to file an annual statement starting the year after formation."
+   },
+   {
+    "id": 3,
+    "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions",
+    "title": "LARA FAQ - restoring good standing",
+    "quote": "Restoration Fee: $50 Annual Statement Fee: $25 per missing year"
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [
+   {
+    "name": "Corporate Income Tax (CIT) - S corps generally not subject",
+    "rate": null,
+    "minimum": null,
+    "notes": "Michigan CIT (6%) applies to C corporations; S corporations are treated as flow-through entities. Not re-verified on an official page today.",
+    "source": null
+   }
+  ],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Elective Flow-Through Entity (FTE) tax at the same rate as the individual income tax (4.25% for 2026). Not read on a 2026 Treasury FTE page today (pages 404).",
+   "source": 1
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.michigan.gov/treasury/news/2026/04/15/state-individual-income-tax-rate-for-2026-tax-year-determined",
+    "title": "Treasury: 2026 individual income tax rate",
+    "quote": "the individual income tax rate for the 2026 tax year will remain at 4.25%."
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "flat",
+  "flat_rate": 0.0425,
+  "brackets": null,
+  "standard_deduction": null,
+  "personal_exemption": {
+   "single": 5900,
+   "mfj": 11800,
+   "is_credit": false,
+   "notes": "$5,900 per personal/dependency exemption for 2026 (withholding guide)."
+  },
+  "starting_point": "federal AGI",
+  "surtaxes": "None at state level; city income taxes in 24 cities (see local_taxes).",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.michigan.gov/treasury/news/2026/04/15/state-individual-income-tax-rate-for-2026-tax-year-determined",
+    "title": "Treasury news release 2026-04-15",
+    "quote": "the individual income tax rate for the 2026 tax year will remain at 4.25%."
+   },
+   {
+    "id": 2,
+    "url": "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/SUW/TY2026/446_Withholding-Guide_2026.pdf",
+    "title": "Form 446, 2026 Michigan Income Tax Withholding Guide",
+    "quote": "Withholding Rate: 4.25% Personal Exemption Amount: $5,900"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "expect to owe more than $500 on the MI-1040 (rule from MI-1040ES; 2026 form not read)",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "",
+  "source_url": "https://www.michigan.gov/taxes/questions/iit/accordion/estimate/when-are-the-quarterly-estimated-tax-payments-due-1"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": 9000,
+  "new_employer_rate": null,
+  "notes": "$9,000 for qualified employers ($9,500 otherwise). New employer base rate 2.7% plus a share of the chargeable benefits component (not a single official 2026 figure found); construction uses industry average.",
+  "source_url": "https://www.michigan.gov/leo/bureaus-agencies/uia/employers/frequently-asked-questions-for-employers/for-employers/taxable-wage-base"
+ },
+ "local_taxes": [
+  {
+   "place": "Detroit",
+   "name": "City of Detroit income tax (administered by Michigan Treasury)",
+   "rate": 0.024,
+   "applies": "residents on all income incl. net business/self-employment profits; nonresidents 1.2% on Detroit-source income; corporations pay Detroit corporate income tax separately",
+   "threshold_or_exemption": "$600 per personal exemption",
+   "source_url": "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/City-Withholding/TY2026/5469_ty2026.pdf",
+   "quote": "The City of Detroit income tax rate for residents is 2.4% (multiply by 0.024). The City of Detroit income tax rate for nonresidents is 1.2%"
+  },
+  {
+   "place": "Grand Rapids",
+   "name": "City income tax",
+   "rate": 0.015,
+   "applies": "residents; nonresidents 0.75% on Grand Rapids-source income (incl. business net profits)",
+   "threshold_or_exemption": "$600 per exemption",
+   "source_url": "https://www.grandrapidsmi.gov/departments/fiscal-services/income-tax/other-michigan-cities-with-income-tax/",
+   "quote": "Grand Rapids ... Resident Rate 1.50% Non-Resident Rate 0.75%"
+  },
+  {
+   "place": "Highland Park",
+   "name": "City income tax",
+   "rate": 0.02,
+   "applies": "residents; nonresidents 1.00%",
+   "threshold_or_exemption": "$600 per exemption",
+   "source_url": "https://www.grandrapidsmi.gov/departments/fiscal-services/income-tax/other-michigan-cities-with-income-tax/",
+   "quote": "Highland Park ... Resident Rate 2.00% Non-Resident Rate 1.00%"
+  },
+  {
+   "place": "Saginaw",
+   "name": "City income tax",
+   "rate": null,
+   "applies": "residents and nonresidents",
+   "threshold_or_exemption": null,
+   "source_url": "https://www.grandrapidsmi.gov/departments/fiscal-services/income-tax/other-michigan-cities-with-income-tax/",
+   "quote": "Saginaw ... Resident Rate 1.00% Non-Resident Rate 0.50%"
+  },
+  {
+   "place": "Albion, Battle Creek, Benton Harbor, Big Rapids, East Lansing, Flint, Grayling, Hamtramck, Hudson, Ionia, Jackson, Lansing, Lapeer, Muskegon, Muskegon Heights, Pontiac, Port Huron, Portland, Springfield, Walker",
+   "name": "City income tax (Uniform City Income Tax Ordinance rates)",
+   "rate": 0.01,
+   "applies": "residents 1.00%; nonresidents 0.50% on city-source income, incl. net profits of a business in the city",
+   "threshold_or_exemption": "per-exemption amount $600 in most cities; Battle Creek, Springfield, Benton Harbor $750; Ionia $700; Hudson, Portland $1,000; Grayling $3,000 (Grand Rapids table)",
+   "source_url": "https://www.grandrapidsmi.gov/departments/fiscal-services/income-tax/other-michigan-cities-with-income-tax/",
+   "quote": "Lansing ... Resident Rate 1.00% Non-Resident Rate 0.50%"
+  }
+ ],
+ "notable": [
+  "24 cities levy an income tax; Detroit residents pay 2.4% (nonresidents 1.2%) on top of the 4.25% state rate (https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/City-Withholding/TY2026/5469_ty2026.pdf)",
+  "State rate stays at 4.25% for 2026: the automatic rate-cut trigger was not met (https://www.michigan.gov/treasury/news/2026/04/15/state-individual-income-tax-rate-for-2026-tax-year-determined)",
+  "Cheap LLC: $50 to form, $25 annual statement due February 15 (https://www.michigan.gov/lara/-/media/Project/Websites/lara/cscl/NonImages_new/Corps/forms/llc/700-0725.pdf)",
+  "Personal exemption rises to $5,900 for 2026 (https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/SUW/TY2026/446_Withholding-Guide_2026.pdf)"
+ ],
+ "uncertain": [
+  "Saginaw city rate: the Grand Rapids official table lists 1.00%/0.50%, but other (secondary and older legislative) sources give 1.5%/0.75%; rate set to null.",
+  "Other city rates come from the City of Grand Rapids' table of other Michigan cities (official municipal page, not each city's own site); exemption amounts vary by city.",
+  "Elective FTE tax 2026 rate assumed equal to the 4.25% individual rate (statutory link); Treasury FTE pages returned 404.",
+  "MI-1040ES 2026 not read; $500 threshold taken from prior-year form wording.",
+  "New employer UI rate for 2026 not stated on an official page (2.7% base plus CBC share).",
+  "Annual statement late penalty other than loss of good standing not verified; a future reduction of the $25 fee reported by third parties not verified."
+ ]
+}

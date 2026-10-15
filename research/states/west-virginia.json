@@ -1,0 +1,59 @@
+{
+  "state": "West Virginia", "slug": "west-virginia", "abbr": "WV", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "Statutory SOS fee $100 (W. Va. Code § 59-1-2); foreign LLC certificate of authority $150.",
+    "annual_report": { "name": "Annual Report", "fee": 25, "frequency": "annual", "due": "between January 1 and July 1 of each year following the year of formation", "late_penalty": null },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://code.wvlegislature.gov/59-1-2/", "title": "W. Va. Code § 59-1-2 Fees", "quote": "(C) Articles of organization of limited liability company, $100;" },
+      { "id": 2, "url": "https://code.wvlegislature.gov/31B-1-108/", "title": "W. Va. Code § 31B-1-108", "quote": "Every limited liability company shall pay the annual report fee of $25 ... or the biennial report fee of $50" },
+      { "id": 3, "url": "https://code.wvlegislature.gov/31B-2-211/", "title": "W. Va. Code § 31B-2-211 Annual and Biennial Report", "quote": "Subsequent annual reports must be delivered to the Secretary of State between January 1 and July 1 of the ensuing calendar years." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": { "available": true, "rate_note": "Elective PTET (Form EPT-100) at the top individual marginal rate (4.58% for 2026); annual irrevocable election by the return due date incl. extensions; not available to disregarded entities. Enacted by SB 151 (2025), retroactive to tax year 2022.", "source": 1 },
+    "sources": [
+      { "id": 1, "url": "https://code.wvlegislature.gov/11-21-3A/", "title": "W. Va. Code § 11-21-3a", "quote": "A tax equal to the top marginal rate on individuals under this article on the West Virginia taxable income of an electing pass-through entity" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.0211], [10000, 0.0281], [25000, 0.0316], [40000, 0.0422], [60000, 0.0458]],
+      "mfj": [[0, 0.0211], [10000, 0.0281], [25000, 0.0316], [40000, 0.0422], [60000, 0.0458]]
+    },
+    "standard_deduction": null,
+    "personal_exemption": { "single": 2000, "mfj": 4000, "is_credit": false, "notes": "$2,000 deduction per exemption (dependents included). Same bracket table for single, MFJ and head of household; MFS uses halved brackets." },
+    "starting_point": "federal AGI",
+    "surtaxes": "none",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://code.wvlegislature.gov/11-21-4j/", "title": "W. Va. Code § 11-21-4j Rate of tax, taxable years beginning on and after January 1, 2026 (SB 392, 2026)", "quote": "Over $60,000 $1,950.50 plus 4.58% of excess over $60,000" },
+      { "id": 2, "url": "https://code.wvlegislature.gov/11-21-16/", "title": "W. Va. Code § 11-21-16 Personal exemptions", "quote": "with respect to any taxable year beginning on or after January 1, 1987, said exemption shall be $2,000." }
+    ]
+  },
+  "estimated_tax": { "required_if": "WV AGI other than withheld wages expected to exceed $400 plus personal exemptions (statute); third parties cite owing $600+", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Form IT-140ES. 2026 form not located on tax.wv.gov.", "source_url": "https://code.wvlegislature.gov/11-21-55/" },
+  "unemployment_2026": { "taxable_wage_base": 9500, "new_employer_rate": 0.027, "notes": "Statutory base $9,500; new employers 2.7% for first 36 months (out-of-state construction firms 7.5%). SB 1053 (2026) adds an automation/administration fee from July 1, 2026, offset by a rate reduction (not verified on an official page).", "source_url": "https://code.wvlegislature.gov/21A-5-5/" },
+  "local_taxes": [
+    { "place": "West Virginia municipalities (general)", "name": "Municipal business and occupation (B&O) tax on gross income", "rate": 0.01, "applies": "cities may levy B&O on gross income of businesses operating within city limits; services capped at 1% of gross income (W. Va. Code § 8-13-5 via § 11-13-2k)", "threshold_or_exemption": "varies by city", "source_url": "https://code.wvlegislature.gov/8-13-5/", "quote": "or in excess of one percent of gross income under §11-13-2k of this code" },
+    { "place": "Charleston", "name": "City B&O tax, Service/All Other Businesses", "rate": 0.01, "applies": "gross income from services rendered in the city or directed from a city location", "threshold_or_exemption": null, "source_url": "https://www.charlestonwv.gov/sites/default/files/documents/2022-12/B%26O%20Frequently%20Asked%20Questions%2012.2022.pdf", "quote": "12. Service/All Other Businesses (1%) 0.01" }
+  ],
+  "notable": [
+    "Income tax cut again for 2026 (SB 392): top rate 4.58% (was 4.82% in 2025) (https://code.wvlegislature.gov/11-21-4j/)",
+    "No standard deduction; only a $2,000 personal exemption (https://code.wvlegislature.gov/11-21-16/)",
+    "No LLC franchise tax; $25 annual report, and from July 1, 2026 an LLC with 5 timely years can elect a $50 biennial report (https://code.wvlegislature.gov/31B-2-211/)",
+    "Many cities (e.g., Charleston 1% on services) charge a municipal B&O tax on gross receipts (https://code.wvlegislature.gov/8-13-5/)",
+    "Elective PTET available at the top individual rate (https://code.wvlegislature.gov/11-21-3A/)"
+  ],
+  "uncertain": [
+    "Annual report late penalty not verified.",
+    "Charleston B&O rate taken from a 2022 city FAQ; current rate not reconfirmed; Charleston also has a $2/week city service fee (not verified).",
+    "2026 IT-140ES not found on tax.wv.gov; the $600 threshold is from third parties, statute uses $400 + exemptions.",
+    "SB 1053 UI fee details not verified on an official page."
+  ]
+}

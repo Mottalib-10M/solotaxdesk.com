@@ -1,0 +1,153 @@
+{
+ "state": "Mississippi",
+ "slug": "mississippi",
+ "abbr": "MS",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 50,
+  "formation_doc": "Certificate of Formation (Form F0100)",
+  "formation_notes": "Filed online with the Secretary of State.",
+  "annual_report": {
+   "name": "Annual Report (Form F0108)",
+   "fee": 0,
+   "frequency": "annual",
+   "due": "between January 1 and April 15 each year, online only",
+   "late_penalty": "may lead to administrative dissolution; reinstatement $50"
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.sos.ms.gov/sites/default/files/business-services/FeeSchedule.pdf",
+    "title": "MS Secretary of State Business Documents Filing Fees",
+    "quote": "F0100 MS LLC Certificate of Formation $50 ... F0108 MS LLC Annual Report $0 ... F0109 LLC Reinstatement $50"
+   },
+   {
+    "id": 2,
+    "url": "https://www.sos.ms.gov/business-services/annual-reports",
+    "title": "MS SOS Annual Reports",
+    "quote": "The Annual Report for profit corporations and limited liability companies can be filed any time on or after January 1st of each year and are due by April 15th"
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [
+   {
+    "name": "Franchise tax (all S corporations, incl. LLCs taxed as S corps)",
+    "rate": null,
+    "minimum": 25,
+    "notes": "Tax years beginning in 2026: $0.50 per $1,000 of capital employed above $100,000 (or assessed property value if greater), minimum $25. Drops to $0.25 in 2027.",
+    "source": 1
+   }
+  ],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Partnerships and S corps may elect (Form 84-381) to be taxed at entity level since 2022; rate follows the individual rate (not stated in the FAQ read).",
+   "source": 2
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.dor.ms.gov/business/business-tax-frequently-asked-questions",
+    "title": "MS DOR Business Tax FAQ",
+    "quote": "For tax years beginning on or after January 1, 2026, but before January 1, 2027, Franchise tax is computed at $0.50 per $1,000 ... In no case shall the franchise tax computed be less than $25."
+   },
+   {
+    "id": 2,
+    "url": "https://www.dor.ms.gov/sites/default/files/business/Updated%20EPTE%20FAQ.pdf",
+    "title": "MS DOR Electing Pass-Through Entity FAQ (2024)",
+    "quote": "For calendar year 2022 and each calendar year thereafter, any partnership, S Corporation or similar pass-through entity can elect to be treated as an electing pass-through entity."
+   },
+   {
+    "id": 3,
+    "url": "https://www.dor.ms.gov/business/business-tax-frequently-asked-questions",
+    "title": "MS DOR Business Tax FAQ",
+    "quote": "All S Corporations are subject to franchise tax which is taxed and paid at the entity level."
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "flat",
+  "flat_rate": 0.04,
+  "brackets": {
+   "single": [
+    [
+     0,
+     0.0
+    ],
+    [
+     10000,
+     0.04
+    ]
+   ],
+   "mfj": [
+    [
+     0,
+     0.0
+    ],
+    [
+     10000,
+     0.04
+    ]
+   ]
+  },
+  "standard_deduction": {
+   "single": 2300,
+   "mfj": 4600
+  },
+  "personal_exemption": {
+   "single": 6000,
+   "mfj": 12000,
+   "is_credit": false,
+   "notes": "Head of family $8,000; each dependent/65+/blind $1,500. Joint filers: the first $10,000 of EACH spouse's taxable income is exempt, so the MFJ table applies per spouse. Standard deduction HOH $3,400."
+  },
+  "starting_point": "own definition (Mississippi gross income)",
+  "surtaxes": "None. Rate falls to 3.75% in 2027 (scheduled).",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.dor.ms.gov/individual/tax-rates",
+    "title": "MS DOR Individual Income Tax rates, exemptions and deductions",
+    "quote": "Tax Year 2026 Excess of $10,000 of Taxable Income is taxed @ 4%"
+   },
+   {
+    "id": 2,
+    "url": "https://www.dor.ms.gov/individual/individual-income-tax-frequently-asked-questions",
+    "title": "MS DOR Individual FAQ",
+    "quote": "If married filing joint, the first $10,000 of each taxpayer's taxable income is exempt"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "annual tax liability exceeds $200 and less than 80% is prepaid through withholding",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "Payments must total at least 80% of the annual liability (Form 80-106).",
+  "source_url": "https://www.dor.ms.gov/individual/individual-income-tax-frequently-asked-questions"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": null,
+  "new_employer_rate": 0.01,
+  "notes": "Start-up rate 1.00% first year, 1.10% second, 1.20% third, excluding the Workforce Investment and Training contribution. Wage base not stated on the MDES page read.",
+  "source_url": "https://mdes.ms.gov/employers/unemployment-tax/reporting-and-filing/unemployment-tax-rates/"
+ },
+ "local_taxes": [],
+ "notable": [
+  "Rate cut to 4% on taxable income above $10,000 in 2026, then 3.75% in 2027 (https://www.dor.ms.gov/individual/tax-rates)",
+  "LLC annual report is free; formation $50 (https://www.sos.ms.gov/sites/default/files/business-services/FeeSchedule.pdf)",
+  "Electing S corp status brings the corporate franchise tax ($25 minimum, $0.50 per $1,000 of capital over $100,000 in 2026) (https://www.dor.ms.gov/business/business-tax-frequently-asked-questions)",
+  "No local income taxes."
+ ],
+ "uncertain": [
+  "MFJ: the 0% band applies to each spouse's own first $10,000 of taxable income; the bracket table is per spouse, not a doubled joint band.",
+  "Elective PTE tax rate not stated in the official FAQ read.",
+  "SUTA taxable wage base for 2026 not found on the MDES page (web search budget exhausted).",
+  "The DOR page sentence 'In 2026, the graduated 2025 tax year income tax rate is ... 4.4%' refers to returns filed in 2026 for tax year 2025; tax year 2026 is 4%."
+ ]
+}

@@ -1,0 +1,90 @@
+{
+  "state": "Delaware",
+  "slug": "delaware",
+  "abbr": "DE",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 110,
+    "formation_doc": "Certificate of Formation (domestic LLC)",
+    "formation_notes": "$110 equals filing fee plus municipality fee; certified copy $50; expedite fees extra (raised by HB 400 from August 1, 2026). A Delaware registered agent is required.",
+    "annual_report": {
+      "name": "None for LLCs (annual LLC tax only)",
+      "fee": 0,
+      "frequency": "none",
+      "due": "LLCs file no annual report; the annual tax for the prior year is due on or before June 1",
+      "late_penalty": "$200 penalty plus 1.5% interest per month on tax and penalty"
+    },
+    "state_tax_on_llc": [
+      { "name": "Annual LLC tax", "amount": 400, "kind": "fixed", "rate": null, "applies": "Every domestic and foreign LLC, LP and GP formed or registered in Delaware, active at any time during the calendar year", "notes": "Raised from $300 to $400 by HB 400 (153rd GA, signed May 21, 2026, 85 Del. Laws c. 273), effective January 1, 2026; so the 2026 tax ($400) is due June 1, 2027. No proration.", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://corpfiles.delaware.gov/Fee_Schedule/AugustFee2026.pdf", "title": "Delaware Division of Corporations Fee Schedule (revised August 1, 2026)", "quote": "Formation – domestic $110.00 $50.00 $100.00 $50.00" },
+      { "id": 2, "url": "https://corp.delaware.gov/alt-entitytaxinstructions/", "title": "LLC/LP/GP Franchise Tax Instructions - Delaware Division of Corporations", "quote": "are required to pay an annual tax of $400.00. There is no requirement to file an Annual Report." },
+      { "id": 3, "url": "https://corpfiles.delaware.gov/2026_Legislation/House_Bill_400.pdf", "title": "House Bill 400 (2026)", "quote": "Sections 9, 16, and 23 of this Act take effect January 1, 2026." },
+      { "id": 4, "url": "https://legis.delaware.gov/BillDetail/143069", "title": "House Bill 400 - Bill Detail", "quote": "Signed 5/21/26" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporate franchise tax + annual report", "rate": null, "minimum": 175, "notes": "Minimum $175 under the Authorized Shares Method ($400 minimum under Assumed Par Value Capital Method), max $200,000; plus $50 annual report fee for non-exempt domestic corporations; due March 1. Late: $200 penalty + 1.5%/month.", "source": 1 },
+      { "name": "Gross receipts tax (all business forms)", "rate": null, "minimum": null, "notes": "Tax on total gross revenues at 0.0945% to 1.9914% depending on activity, after a monthly/quarterly exclusion generally starting at $100,000 per month. Applies to sole proprietors and LLCs too.", "source": 2 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://corp.delaware.gov/paytaxes/", "title": "Annual Report and Tax Instructions - Delaware Division of Corporations", "quote": "The minimum tax is currently $175.00, using the Authorized Shares Method" },
+      { "id": 2, "url": "https://revenue.delaware.gov/business-tax-forms/gross-receipts-tax-faqs/", "title": "Gross Receipts Tax FAQs - Delaware Division of Revenue", "quote": "Gross receipts tax rates currently range from .0945% to 1.9914%" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.0], [2000, 0.022], [5000, 0.039], [10000, 0.048], [20000, 0.052], [25000, 0.0555], [60000, 0.066]],
+      "mfj": [[0, 0.0], [2000, 0.022], [5000, 0.039], [10000, 0.048], [20000, 0.052], [25000, 0.0555], [60000, 0.066]]
+    },
+    "standard_deduction": { "single": 3250, "mfj": 6500 },
+    "personal_exemption": { "single": 110, "mfj": 220, "is_credit": true, "notes": "Personal credit $110 per federal exemption (plus extra for 60+). Same rate table for all filing statuses; spouses may file a combined separate return (status 4) to use the table twice. Additional $2,500 standard deduction if 65+ or blind." },
+    "starting_point": "federal AGI",
+    "surtaxes": "None. HS 2 for HB 13 (new brackets up to 6.95%) remains in House Revenue & Finance Committee, not enacted.",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://revenuefiles.delaware.gov/2025/PITForms_Instructions/Instructions/PIT-EST_Instructions_2026-01.pdf", "title": "Delaware Declaration of Estimated Income Tax for Individuals 2026 - Instructions", "quote": "Over $60,000.00 $2,943.00 6.6% (.0660) $60,000.00" },
+      { "id": 2, "url": "https://revenuefiles.delaware.gov/2025/PITForms_Instructions/Instructions/PIT-EST_Instructions_2026-01.pdf", "title": "Delaware PIT-EST 2026 Instructions", "quote": "Standard Deduction ($3,250 single, divorced or widow(er), head of household) ($6,500 if married filing jointly)" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "Tax due in excess of withholding can reasonably be expected to exceed $800",
+    "due_dates_2026": ["2026-04-30", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "First installment is due April 30 (Delaware's return due date), not April 15. Penalty 1.5% per month on underpayment; safe harbor 100% of prior-year tax (110% if federal AGI over $150,000 per instructions).",
+    "source_url": "https://revenuefiles.delaware.gov/2025/PITForms_Instructions/Instructions/PIT-EST_Instructions_2026-01.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 14500,
+    "new_employer_rate": 0.01,
+    "notes": "Employer Services page: 'The taxable wage base in 2026 is $14,500.00' and new employer rate 1.0% for 2026 (1.2% in 2025). The UI employer FAQ (undated) says $18,500, a conflict. A separate 0.2% Operational & Technology assessment is billed separately from 2026.",
+    "source_url": "https://labor.delaware.gov/divisions/unemployment-insurance/employer-services/"
+  },
+  "local_taxes": [
+    {
+      "place": "Wilmington",
+      "name": "City wage (earned income) tax and net profits tax",
+      "rate": null,
+      "applies": "Wage tax on residents and on nonresidents working in the city; net profits tax on net profit of sole proprietors and partnerships within city limits (annual Form WCWT-6).",
+      "threshold_or_exemption": "Not verified",
+      "source_url": "https://www.wilmingtonde.gov/residents/earned-income-tax-and-net-profits-tax",
+      "quote": null
+    }
+  ],
+  "notable": [
+    "LLC annual tax rose from $300 to $400 for tax year 2026 (HB 400, signed May 21, 2026) - first payment at the new rate due June 1, 2027 (https://corp.delaware.gov/alt-entitytaxinstructions/)",
+    "No sales tax but a gross receipts tax on businesses above a $100,000/month exclusion (https://revenue.delaware.gov/business-tax-forms/gross-receipts-tax-faqs/)",
+    "First estimated payment is due April 30, two weeks after the federal date (https://revenuefiles.delaware.gov/2025/PITForms_Instructions/Instructions/PIT-EST_Instructions_2026-01.pdf)"
+  ],
+  "uncertain": [
+    "Wilmington wage and net profits tax rate: 1.25% for both per a City FY2023 budget summary seen only in search results; the city website blocks automated access (403), so the rate is left null.",
+    "SUTA wage base conflict on DOL pages ($14,500 dated 2026 vs $18,500 undated FAQ).",
+    "No Delaware PTET found (none known); not confirmed on an official page because web search budget ran out.",
+    "Delaware state business license fee ($75/year commonly cited) not verified."
+  ]
+}

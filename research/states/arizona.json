@@ -1,0 +1,73 @@
+{
+  "state": "Arizona",
+  "slug": "arizona",
+  "abbr": "AZ",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 50,
+    "formation_doc": "Articles of Organization (Form L010)",
+    "formation_notes": "Expedited processing +$35 (total $85); next day +$100, same day +$200, two-hour +$400. Publication of a notice of the Articles is required (A.R.S. § 29-3201) unless the statutory agent's street address is in Maricopa or Pima County, in which case the Commission publishes it automatically on its website. Name reservation $10.",
+    "annual_report": {
+      "name": "None for LLCs",
+      "fee": 0,
+      "frequency": "none",
+      "due": "Arizona LLCs do not file an annual report with the Corporation Commission",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://azcc.gov/docs/default-source/corps-files/fee-schedules/fee-schedule-llcs.pdf", "title": "Schedule of Fees, Limited Liability Companies (Rev. 3.2026)", "quote": "Articles of Organization $50.00 $85.00" },
+      { "id": 2, "url": "https://www.azcc.gov/docs/default-source/corps-files/instructions/l010i-instructions-articles-of-organization.pdf", "title": "Instructions L010i Articles of Organization", "quote": "If your statutory agent street address is outside of Maricopa or Pima county, you will need to publish notice in a newspaper." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Entity-level tax election (A.R.S. § 43-1014) for partnerships and S corporations, tax years beginning 2022, at the highest individual rate (2.5%). Electing entities with taxable income over $150,000 in the prior year must make estimated payments.",
+      "source": 1
+    },
+    "sources": [
+      { "id": 1, "url": "https://www.azleg.gov/ars/43/01014.htm", "title": "A.R.S. 43-1014 Entity-level tax election; partnerships; S corporations", "quote": "may consent to be taxed at the entity level at a tax rate that is the same as the highest tax rate prescribed by section 43-1011" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.025,
+    "brackets": null,
+    "standard_deduction": { "single": null, "mfj": null },
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No personal exemption; dependent credit raised from $100 to $125 per dependent under 17 for 2026 (SB 1861/HB 4168, 2026). Standard deduction base in statute: $15,750 single / $31,500 MFJ (raised retroactively to 2025), indexed for inflation like the federal basic standard deduction; ADOR's 2026 indexed amount could not be read (azdor.gov blocks automated access). If indexed exactly like the federal deduction it would be $16,100 / $32,200 - unverified." },
+    "starting_point": "federal AGI",
+    "surtaxes": "None for ordinary income (the Prop 208 surcharge was struck down). Optional small business income tax at 2.5% (A.R.S. 43-1711).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.azleg.gov/ars/43/01011.01.htm", "title": "A.R.S. 43-1011 Version 1 - Taxes and tax rates", "quote": "the tax is 2.5% of taxable income." },
+      { "id": 2, "url": "https://www.azleg.gov/ars/43/01041.htm", "title": "A.R.S. 43-1041 Optional standard deduction", "quote": "In the case of a single person or a married person filing separately, the standard deduction is $15,750, subject to subsection H of this section." },
+      { "id": 3, "url": "https://www.azleg.gov/legtext/57leg/2R/summary/S.1861-4168ATT_ASENACTED.DOCX.htm", "title": "SB 1861 Senate Fact Sheet (as enacted, 2026)", "quote": "Increases the Dependent Tax Credit from $100 to $125 for each dependent who is under 17 years old" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "Arizona gross income exceeded $75,000 ($150,000 joint) in both the current and preceding year; no penalty if the Arizona liability due on the return is under $1,000",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Form 140ES; dates follow the federal pattern per A.R.S. 43-581(D) (2026 booklet not readable automatically).",
+    "source_url": "https://www.azleg.gov/ars/43/00581.htm"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 8000,
+    "new_employer_rate": 0.02,
+    "notes": "From the DES FY2026 rate chart (UIT-0603A) as shown in search results; the PDF itself is behind bot protection and was not read directly. New employers generally keep 2.0% for at least two calendar years.",
+    "source_url": "https://des.az.gov/sites/default/files/dl/UIT-0603A_FY26.pdf"
+  },
+  "local_taxes": [],
+  "notable": [
+    "No annual report for LLCs and only a $50 filing fee, but newspaper publication is required when the statutory agent is outside Maricopa and Pima counties (https://www.azcc.gov/docs/default-source/corps-files/instructions/l010i-instructions-articles-of-organization.pdf)",
+    "Estimated tax is only mandatory above $75,000 / $150,000 of Arizona gross income (https://www.azleg.gov/ars/43/00581.htm)",
+    "Flat 2.5% income tax; Arizona cities levy transaction privilege (sales) tax but no local income tax (https://www.azleg.gov/ars/43/01011.01.htm)"
+  ],
+  "uncertain": [
+    "2026 standard deduction: statute base $15,750 / $31,500 is inflation-indexed each year; ADOR's 2026 figure not readable (azdor.gov returns a bot challenge). Left null.",
+    "SUTA 2026 figures read from search-index text of the official DES rate chart, not the PDF itself.",
+    "2026 Form 140ES due dates not read from the booklet (blocked); taken as the standard federal-pattern dates."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "state": "Tennessee", "slug": "tennessee", "abbr": "TN", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 300,
+    "formation_doc": "Articles of Organization - Limited Liability Company (Form SS-4270)",
+    "formation_notes": "$50 per member in existence on the filing date, minimum $300, maximum $3,000 (so $300 for 1-6 members). $300 flat if the articles prohibit doing business in Tennessee.",
+    "annual_report": { "name": "Annual Report", "fee": 300, "frequency": "annual", "due": "on or before the first day of the fourth month after the close of the LLC's fiscal year", "late_penalty": "failure to file can lead to administrative dissolution; fee rises $50 per member above 6, max $3,000; +$20 if registered agent/office changed" },
+    "state_tax_on_llc": [
+      { "name": "Franchise tax", "amount": 100, "kind": "rate", "rate": 0.0025, "applies": "LLCs doing business in Tennessee, including single-member LLCs owned by an individual (not disregarded for F&E) unless an obligated member entity", "notes": "0.25% ($0.25 per $100) of Tennessee net worth, $100 minimum. Public Chapter 950 (2024) repealed the property ('minimum') measure for tax years ending on or after January 1, 2024; base is now net worth only.", "source": 2 },
+      { "name": "Excise tax", "amount": null, "kind": "rate", "rate": 0.065, "applies": "net earnings of LLCs doing business in Tennessee (entity-level, even if federal pass-through)", "notes": "6.5% of Tennessee taxable income. A DOR workshop deck (08/25/2026) reportedly mentions a 5.5% rate for certain pass-through entities - not verified.", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/SS-4270%20LLC_0.pdf", "title": "SS-4270 Articles of Organization LLC (Revised 01/25)", "quote": "Filing Fee: $50.00 per member (minimum fee = $300/maximum fee = $3,000)" },
+      { "id": 2, "url": "https://www.tn.gov/revenue/taxes/franchise---excise-tax/due-dates-and-tax-rates.html", "title": "TN DOR - Franchise & Excise Tax Due Dates and Tax Rates (not fetched: HTTP 403; text from search index)", "quote": null },
+      { "id": 3, "url": "https://www.tn.gov/content/dam/tn/revenue/documents/notices/fae/24-05fe.pdf", "title": "TN DOR Notice 24-05: Franchise Tax Property Measure Repeal (not fetched: HTTP 403; text from search index)", "quote": null },
+      { "id": 4, "url": "https://sos.tn.gov/businesses/faqs", "title": "TN Secretary of State - Business FAQs", "quote": "The annual report fee for LLCs is $300 minimum up to a maximum of $3000. The fee increases by an additional $50 per member for every member over 6 members" },
+      { "id": 5, "url": "https://sos.tn.gov/businesses/services/business-forms-fees", "title": "TN Secretary of State - Business Forms & Fees", "quote": "Articles of Organization Limited Liability Company ... SS-4270 $300*" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "no",
+    "entity_level_taxes": [
+      { "name": "Franchise tax", "rate": 0.0025, "minimum": 100, "notes": "On net worth (property measure repealed from 2024)", "source": 1 },
+      { "name": "Excise tax", "rate": 0.065, "minimum": null, "notes": "On net earnings; S corps taxed at entity level like C corps", "source": 1 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://www.tn.gov/revenue/taxes/franchise---excise-tax/due-dates-and-tax-rates.html", "title": "TN DOR F&E rates (not fetched: HTTP 403; text from search index)", "quote": null }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": null,
+    "starting_point": null,
+    "surtaxes": "Hall income tax (interest and dividends) repealed for tax years beginning on or after January 1, 2021",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://revenue.support.tn.gov/hc/en-us/articles/360057828631-HIT-3-Hall-Income-Tax-Repealed-Beginning-January-1-2021", "title": "HIT-3 - Hall Income Tax Repealed Beginning January 1, 2021 (not fetched: HTTP 403; title from search index)", "quote": null }
+    ]
+  },
+  "estimated_tax": { "required_if": "Not applicable for individuals (no personal income tax)", "due_dates_2026": [], "notes": "LLCs/corporations make F&E estimated payments (threshold not verified).", "source_url": null },
+  "unemployment_2026": { "taxable_wage_base": null, "new_employer_rate": null, "notes": "Not verified", "source_url": null },
+  "local_taxes": [],
+  "notable": [
+    "An LLC pays franchise ($100 minimum) and excise tax at entity level even when it is a single-member LLC disregarded federally, unless it is an obligated member entity (https://www.tn.gov/revenue/taxes/franchise---excise-tax.html)",
+    "Franchise tax property measure repealed by Public Chapter 950 (2024) for tax years ending on or after 2024-01-01; refund window closed in late 2024 (https://www.tn.gov/content/dam/tn/revenue/documents/notices/fae/24-05fe.pdf)",
+    "LLC formation and annual report fees are per member: $300 minimum, $3,000 maximum (https://sos.tn.gov/businesses/faqs)",
+    "No tax on wages or self-employment income; Hall tax on interest/dividends gone since 2021"
+  ],
+  "uncertain": [
+    "All tn.gov and revenue.support.tn.gov pages (and capitol.tn.gov, tnsosfiles acts) returned HTTP 403 from this network (both curl and WebFetch). F&E rates (6.5%, 0.25%, $100 minimum), PC 950 repeal and Hall repeal come from tn.gov text as shown in search-engine excerpts, not a direct read. They match long-standing statute, but treat as unverified today.",
+    "A DOR workshop PDF dated 08/25/2026 is reported (via search summary) to mention a 5.5% excise rate for certain pass-through entities; could not read it, so 6.5% is kept. Worth checking.",
+    "Exact F&E estimated payment threshold not verified.",
+    "2026 SUTA wage base and new employer rate not verified (TN Dept of Labor not read)."
+  ]
+}

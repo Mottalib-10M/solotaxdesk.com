@@ -1,0 +1,179 @@
+{
+  "state": "Oklahoma",
+  "slug": "oklahoma",
+  "abbr": "OK",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Articles of Organization (18 O.S. 2055)",
+    "formation_notes": "Other SOS fees: name reservation $10, articles of amendment $100, certificate of good standing $20. An 'Annual Agent Fee' of $40 is also listed on the SOS schedule (applies when the SOS-listed service is used; not verified as mandatory).",
+    "annual_report": {
+      "name": "LLC Annual Certificate (18 O.S. 2055.2)",
+      "fee": 25,
+      "frequency": "annual",
+      "due": "each year on the anniversary date of the LLC's filing/registration",
+      "late_penalty": "no late fee listed; LLC ceases to be in good standing if not filed within 60 days after the due date"
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Oklahoma franchise tax",
+        "amount": 0,
+        "kind": "fixed",
+        "rate": null,
+        "applies": "repealed; never applied to LLCs taxed as partnerships/disregarded",
+        "notes": "Franchise tax repealed by HB 1039X (2023) starting tax year 2024; tax year 2023 was the last year a return was required.",
+        "source": 3
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.sos.ok.gov/business/fees.aspx",
+        "title": "Oklahoma Secretary of State - Fee Schedule",
+        "quote": "Articles of Organization - Oklahoma LLC 18 OS 2055 100.00 ... Annual Certificates - Oklahoma/Foreign LLC 18 OS 2055.2 25.00"
+      },
+      {
+        "id": 2,
+        "url": "https://www.sos.ok.gov/forms/Llcannualcertificate.PDF",
+        "title": "LLC Annual Certificate form",
+        "quote": "fails to file the annual certificate within sixty (60) days after the due date shall cease to be in good standing"
+      },
+      {
+        "id": 3,
+        "url": "https://oklahoma.gov/tax/newsroom/2023/07-26-23.html",
+        "title": "OTC: Franchise Tax Ends in Oklahoma (read via search result summary and FRX-200 listing)",
+        "quote": "tax year 2023 is the last year that franchise tax returns will be required to be filed"
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Pass-Through Entity Tax Equity Act of 2019 (68 O.S. 2355.1P-1 to 2355.1P-4): partnerships and S corps may elect via Form 586 to pay Oklahoma income tax at entity level. Per-member rate (reported as top individual rate, 4.5% from 2026, and 6% for corporate members) not read on an official 2026 page.",
+      "source": 2
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF",
+        "title": "Enrolled HB 2764 (68 O.S. 2355)",
+        "quote": "a tax is hereby imposed upon the Oklahoma taxable income of every corporation ... in an amount equal to four percent (4%) thereof."
+      },
+      {
+        "id": 2,
+        "url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/software-developers/Dev586-25.pdf",
+        "title": "OTC Form 586 Pass-through Entity Election (rev. 2025)",
+        "quote": "allows qualifying entities to elect to pay Oklahoma income tax at the entity level rather than having the income passed through"
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.0
+        ],
+        [
+          3750,
+          0.025
+        ],
+        [
+          4900,
+          0.035
+        ],
+        [
+          7200,
+          0.045
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.0
+        ],
+        [
+          7500,
+          0.025
+        ],
+        [
+          9800,
+          0.035
+        ],
+        [
+          14400,
+          0.045
+        ]
+      ]
+    },
+    "standard_deduction": {
+      "single": 6350,
+      "mfj": 12700
+    },
+    "personal_exemption": {
+      "single": 1000,
+      "mfj": 2000,
+      "is_credit": false,
+      "notes": "$1,000 per exemption (2026 OW-8-ES worksheet). Head of household uses the MFJ brackets and a $9,350 standard deduction (2025 Form 511 instructions)."
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": "none. HB 2764 adds automatic 0.25-point rate cuts after future State Board of Equalization certifications (effective Jan 1 after a February certification).",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF",
+        "title": "Enrolled HB 2764 (2025), amending 68 O.S. 2355",
+        "quote": "(a) 0% tax on first $3,750.00 or part thereof, (b) 2.5% tax on the next $1,150.00 ... (d) 4.5% tax on the remainder."
+      },
+      {
+        "id": 2,
+        "url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/511-Pkt.pdf",
+        "title": "2025 Oklahoma Form 511 packet",
+        "quote": "If your filing status is “single” or “married filing separate,” your Oklahoma standard deduction is $6,350."
+      },
+      {
+        "id": 3,
+        "url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/OW-8-ES.pdf",
+        "title": "OW-8-ES Tax Year 2026 worksheet",
+        "quote": "Exemptions ($1,000 for each exemption)"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "tax liability expected to exceed withholding by $500 or more and withholding below the smaller of 70% of current-year or 100% of prior-year tax",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "Safe harbor is 70% of current-year tax (not 90%). No underpayment interest if tax shown on return is under $1,000; underpayment interest 20% per annum. Farmers and estates exempt.",
+    "source_url": "https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/OW-8-ES.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 25000,
+    "new_employer_rate": 0.015,
+    "notes": "OESC 2026: range 0.2% to 5.8%. Wage base cut from $28,200 (2025) by SB 911; OESC lists $24,400 for 2027.",
+    "source_url": "https://oklahoma.gov/content/dam/ok/en/oesc/images/misc/Employer-Improtant-Numbers-2026.pdf"
+  },
+  "local_taxes": [],
+  "notable": [
+    "2026 top rate cut to 4.5% (from 4.75%) and brackets collapsed to 0% / 2.5% / 3.5% / 4.5% by HB 2764 (http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF)",
+    "4.5% applies above only $7,200 of taxable income (single), so nearly all freelancers pay the top rate on most income (same source)",
+    "No franchise tax since tax year 2024 and no LLC entity tax; LLC costs are $100 formation + $25 annual certificate (https://www.sos.ok.gov/business/fees.aspx)",
+    "Estimated-tax safe harbor is 70% of current-year tax (https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/OW-8-ES.pdf)",
+    "SUTA wage base dropped to $25,000 in 2026 (https://oklahoma.gov/content/dam/ok/en/oesc/images/misc/Employer-Improtant-Numbers-2026.pdf)"
+  ],
+  "uncertain": [
+    "Franchise tax repeal: the OTC newsroom page (2023-07-26) was identified via search; its text was seen only in search excerpts, not fetched directly.",
+    "Standard deduction $6,350/$12,700 read in the 2025 Form 511 packet; the 2026 packet is not yet published (amounts have been fixed by statute for years, so 2026 is very likely the same, but not read for 2026).",
+    "PTE election per-member rate for 2026 not read on an official source.",
+    "Did not check for a 2026-session law changing 2026 rates; the oksenate.gov press release on a tax package could not be fetched (JS redirect). HB 2764 rates are the enacted 2026 rates read today.",
+    "Annual Agent Fee $40 listed on the SOS fee schedule: applicability to a domestic LLC with its own registered agent not verified."
+  ]
+}

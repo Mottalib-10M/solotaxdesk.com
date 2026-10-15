@@ -1,0 +1,114 @@
+{
+  "state": "North Dakota",
+  "slug": "north-dakota",
+  "abbr": "ND",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 135,
+    "formation_doc": "Articles of Organization (registration)",
+    "formation_notes": "No publication requirement known.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 50,
+      "frequency": "annual",
+      "due": "November 15 (regular LLC/PLLC; farm/ranch LLCs April 15)",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.sos.nd.gov/business/business-services/business-structures/limited-liability-company-llc",
+        "title": "ND Secretary of State - Limited Liability Company",
+        "quote": "Registration (domestic and foreign) - $135 Annual Report (domestic and foreign) - $50"
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": null,
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.0
+        ],
+        [
+          48475,
+          0.0195
+        ],
+        [
+          244825,
+          0.025
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.0
+        ],
+        [
+          80975,
+          0.0195
+        ],
+        [
+          298075,
+          0.025
+        ]
+      ]
+    },
+    "standard_deduction": null,
+    "personal_exemption": {
+      "single": null,
+      "mfj": null,
+      "is_credit": false,
+      "notes": "Starts from federal taxable income, so the federal standard deduction is already applied; no separate ND deduction/exemption."
+    },
+    "starting_point": "federal taxable income",
+    "surtaxes": "None",
+    "year_of_figures": 2025,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.tax.nd.gov/individual-income-tax",
+        "title": "ND Office of State Tax Commissioner - Individual Income Tax",
+        "quote": "The tax rates applicable to each filing status for the 2025 tax year are as follows"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "required to pay federal estimated tax and expect North Dakota net tax liability over $1,000",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "Due dates assumed to follow federal schedule (not stated on the page read).",
+    "source_url": "https://www.tax.nd.gov/individual-income-tax"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": null,
+    "new_employer_rate": null,
+    "notes": "Not found on Job Service ND pages read.",
+    "source_url": null
+  },
+  "local_taxes": [],
+  "notable": [
+    "0% bracket on the first $48,475 (single) / $80,975 (MFJ) of taxable income in 2025, top rate 2.5% (https://www.tax.nd.gov/individual-income-tax)",
+    "LLC annual report due November 15, $50 (https://www.sos.nd.gov/business/business-services/business-structures/limited-liability-company-llc)"
+  ],
+  "uncertain": [
+    "2026 brackets not published on the tax page (shows 2025); 2026 withholding booklet exists but uses wage tables. Brackets recorded are 2025 (indexed annually).",
+    "UI 2026 wage base and new employer rate not found.",
+    "S corp entity-level taxes and PTE election not verified (web search budget exhausted).",
+    "Estimated tax due dates not stated on the page read.",
+    "Annual report late fee not captured."
+  ]
+}

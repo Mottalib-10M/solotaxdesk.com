@@ -1,0 +1,59 @@
+{
+  "state": "Indiana", "slug": "indiana", "abbr": "IN", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": null,
+    "formation_doc": "Articles of Organization (State Form 49459)",
+    "formation_notes": "Filed online via INBiz. Fee could not be read today: inbiz.in.gov and forms.in.gov returned Cloudflare 403; the SOS fees page no longer exists (404). Commonly cited $95 online / $100 mail is NOT verified.",
+    "annual_report": {
+      "name": "Business Entity Report",
+      "fee": null,
+      "frequency": "biennial",
+      "due": "by the end of the anniversary month every two years (not verified on an official page today)",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://www.in.gov/sos/business/division-forms/business-forms", "title": "Indiana SOS - Business Forms", "quote": "Limited Liability Companies (Domestic) Articles of Organization 49459 FILE ONLINE" },
+      { "id": 2, "url": "https://www.in.gov/sos/business/hb-1593-and-hb-1666-filing-process-changes", "title": "Indiana SOS - HB 1593 and HB 1666 filing process changes", "quote": "HB 1593 and HB 1666 filing changes effective 01/01/2026" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": { "available": true, "rate_note": "Partnerships and S corporations may elect pass-through entity tax (PTET), paid at the state individual rate (2.95% for 2026); owners get a credit. Rate wording for PTET not verified today beyond the bulletin's description of the election.", "source": 1 },
+    "sources": [
+      { "id": 1, "url": "https://www.in.gov/dor/files/reference/ib72.pdf", "title": "Indiana DOR Income Tax Information Bulletin #72 (October 2024)", "quote": "the 90% safe harbor for tax reasonably expected to be due applies only if the entity elects to be subject to PTET." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.0295,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": 1000, "mfj": 2000, "is_credit": false, "notes": "$1,000 per personal exemption; additional $1,000 if 65+ and/or blind; $1,500 per dependent; $3,000 per adopted child (withholding notice figures)." },
+    "starting_point": "federal AGI",
+    "surtaxes": "County income tax on top of state tax (0.5% to 3.0% depending on county, see local_taxes). State rate falls to 2.9% in 2027 under current law (not verified today).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.in.gov/dor/files/dn01.pdf", "title": "Indiana DOR Departmental Notice #1, effective Jan. 1, 2026", "quote": "For 2026, the state adjusted gross income tax rate for individuals is 2.95%." },
+      { "id": 2, "url": "https://www.in.gov/dor/files/dn01.pdf", "title": "Indiana DOR Departmental Notice #1 - exemptions", "quote": "Table A is used to figure personal exemptions. Each employee is entitled to deduct $1,000 per year" }
+    ]
+  },
+  "estimated_tax": { "required_if": "expected to owe more than $1,000 for the year (not verified today)", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Form ES-40; county tax included in estimates. Threshold and dates not re-read on an official page today.", "source_url": null },
+  "unemployment_2026": { "taxable_wage_base": null, "new_employer_rate": 0.025, "notes": "Most new employers pay 2.5% for the first four calendar years; construction: lesser of 4.0% or construction average. Wage base (believed $9,500) not found on a DWD page today.", "source_url": "https://www.in.gov/dwd/indiana-unemployment/employers/employer-guide/rate-computation/new-employer-premium-rate" },
+  "local_taxes": [
+    { "place": "All 92 Indiana counties", "name": "County local income tax (LIT)", "rate": null, "applies": "Indiana residents on Jan. 1 at their county-of-residence rate (incl. self-employment income); nonresidents whose principal place of work or business is in an Indiana county on Jan. 1 at that county's rate", "threshold_or_exemption": "Rates vary by county for 2026: lowest 0.5% (Porter), highest 3.0% (Randolph); e.g. Marion (Indianapolis) 2.02%, Allen 1.59%, Hamilton 1.10%, Lake 1.50%. Full list: https://www.in.gov/dor/files/dn01.pdf", "source_url": "https://www.in.gov/dor/files/dn01.pdf", "quote": "Indiana County Tax Rates: Effective Jan. 1, 2026 ... Marion 49 0.0202 ... Porter 64 0.005 ... Randolph 68 0.03" }
+  ],
+  "notable": [
+    "2026 state rate is 2.95% flat, but every county adds its own income tax of 0.5%-3.0% (https://www.in.gov/dor/files/dn01.pdf)",
+    "No standard deduction; only a $1,000 personal exemption (https://www.in.gov/dor/files/dn01.pdf)",
+    "PTET election available for partnerships and S corps (https://www.in.gov/dor/files/reference/ib72.pdf)",
+    "New SOS filing rules (HB 1593/HB 1666) took effect Jan. 1, 2026, e.g. remote businesses may keep a residential address off the public record (https://www.in.gov/sos/business/hb-1593-and-hb-1666-filing-process-changes)"
+  ],
+  "uncertain": [
+    "LLC formation fee and Business Entity Report fee: INBiz and forms.in.gov blocked by Cloudflare (403) today; SOS fee page removed (404). Left null. Commonly cited: $95 online formation, $31 online biennial BER - unverified.",
+    "SUTA taxable wage base for 2026 not found on a DWD page; left null.",
+    "Estimated tax threshold/dates not read on an official page today (WebSearch budget exhausted).",
+    "PTET rate not quoted from an official page; assumed equal to the 2.95% state rate."
+  ]
+}

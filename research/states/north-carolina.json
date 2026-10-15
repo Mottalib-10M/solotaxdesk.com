@@ -1,0 +1,112 @@
+{
+  "state": "North Carolina",
+  "slug": "north-carolina",
+  "abbr": "NC",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 125,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "No publication requirement.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 200,
+      "frequency": "annual",
+      "due": "April 15 each year (statutory; not read on an official page today)",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.sosnc.gov/fees/by_title/_Business_Registration",
+        "title": "NC Secretary of State - Business Registration fees",
+        "quote": "Articles of Organization $125.00 ... Annual Report $200.00"
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      {
+        "name": "Franchise tax (S corporations)",
+        "rate": null,
+        "minimum": 200,
+        "notes": "$200 for the first $1,000,000 of tax base, plus $1.50 per $1,000 above $1,000,000. Applies to S corporations (corporations), not to LLCs taxed as partnerships/disregarded.",
+        "source": 1
+      }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "North Carolina taxed pass-through entity election for partnerships and S corporations exists; rate and details not read on an official page today.",
+      "source": null
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.ncdor.gov/taxes-forms/corporate-income-franchise-tax/corporate-income-and-franchise-tax-rates",
+        "title": "NCDOR - Corporate Income and Franchise Tax Rates",
+        "quote": "the franchise tax rate for S corporations is $200 for the first $1,000,000 of the corporation's tax base and $1.50 per $1,000"
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.0399,
+    "brackets": null,
+    "standard_deduction": {
+      "single": 12750,
+      "mfj": 25500
+    },
+    "personal_exemption": {
+      "single": null,
+      "mfj": null,
+      "is_credit": false,
+      "notes": "No personal exemption. No extra standard deduction for age 65+/blind."
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": "None",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/tax-rate-schedules",
+        "title": "NCDOR - Tax rate schedules",
+        "quote": "For Taxable Years after 2025, the North Carolina individual income tax rate is 3.99% (0.0399)."
+      },
+      {
+        "id": 2,
+        "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/north-carolina-standard-deduction-or-north-carolina-itemized-deductions",
+        "title": "NCDOR - NC Standard Deduction",
+        "quote": "Single $12,750 ... Married Filing Jointly/Qualifying Widow(er)/Surviving Spouse $25,500"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "tax due after NC withholding and credits is $1,000 or more",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "January payment not needed if return filed and balance paid by January 31.",
+    "source_url": "https://www.ncdor.gov/taxes-forms/individual-income-tax/estimated-income-tax"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 34200,
+    "new_employer_rate": 0.01,
+    "notes": "New employer standard beginning rate 1.000%; wage base $34,200 for 2026 (was $32,600 in 2025).",
+    "source_url": "https://www.des.nc.gov/employers/tax-rate-information"
+  },
+  "local_taxes": [],
+  "notable": [
+    "Flat rate cut to 3.99% for 2026 (4.25% in 2025) (https://www.ncdor.gov/taxes-forms/individual-income-tax/tax-rate-schedules)",
+    "LLC annual report costs $200 every year (https://www.sosnc.gov/fees/by_title/_Business_Registration)",
+    "S corporations pay at least $200 franchise tax per year; LLCs do not (https://www.ncdor.gov/taxes-forms/corporate-income-franchise-tax/corporate-income-and-franchise-tax-rates)"
+  ],
+  "uncertain": [
+    "Standard deduction page is not year-labelled; amounts shown as current ($12,750 / $25,500).",
+    "Annual report due date and late penalty not read on an official page.",
+    "Taxed pass-through entity (PTET) details not read (page URL not found; web search budget exhausted)."
+  ]
+}

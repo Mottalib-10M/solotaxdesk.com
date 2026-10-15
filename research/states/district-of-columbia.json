@@ -1,0 +1,87 @@
+{
+  "state": "District of Columbia",
+  "slug": "district-of-columbia",
+  "abbr": "DC",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 99,
+    "formation_doc": "Articles of Organization (domestic for-profit entity initial registration)",
+    "formation_notes": "Filed through DLCP CorpOnline. A DC Basic Business License is also generally required ($99 for a 2-year general business license; $49 for 6 months, $198 for 4 years).",
+    "annual_report": {
+      "name": "Biennial Report",
+      "fee": 300,
+      "frequency": "biennial",
+      "due": "April 1 of the year due (every two years)",
+      "late_penalty": "$100 late fee for for-profit entities filed after April 1"
+    },
+    "state_tax_on_llc": [
+      { "name": "Unincorporated Business Franchise Tax (UBT, Form D-30)", "amount": null, "kind": "rate", "rate": 0.0825, "applies": "Unincorporated businesses, including LLCs and sole proprietorships, with DC gross receipts over $12,000", "notes": "8.25% of net income after a 30% salary allowance for owners and a $5,000 exemption. Minimum tax $250 if DC gross receipts are $1M or less, $1,000 if more. Exempt if more than 80% of gross income comes from owners' personal services and capital is not a material income-producing factor, or if the profession cannot by law be incorporated.", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://dlcp.dc.gov/page/dlcp-license-corporate-filing-fees", "title": "DLCP License & Corporate Filing Fees", "quote": "Domestic for-profit entities: $99 ... Biennial Reports For-profit entities: $300" },
+      { "id": 2, "url": "https://otr.cfo.dc.gov/page/dc-business-franchise-tax-rates", "title": "DC Business Franchise Tax Rates - OTR", "quote": "A 30% salary allowance for owners and a $5,000 exemption are deductible from net income to arrive at taxable income." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "no",
+    "entity_level_taxes": [
+      { "name": "Corporation franchise tax (Form D-20)", "rate": 0.0825, "minimum": 250, "notes": "S corporations must file the D-20 and pay the 8.25% corporate franchise tax like C corporations (DC does not follow the federal S election). Minimum $250 if DC gross receipts are $1M or less, $1,000 if more.", "source": 1 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://otr.cfo.dc.gov/page/franchise-tax-faqs", "title": "Franchise Tax FAQs - DC OTR", "quote": "including small businesses, professional corporations, and S corporations, if they carry on or engage in any trade, business, or commercial activity in the District" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.04], [10000, 0.06], [40000, 0.065], [60000, 0.085], [250000, 0.0925], [500000, 0.0975], [1000000, 0.1075]],
+      "mfj": [[0, 0.04], [10000, 0.06], [40000, 0.065], [60000, 0.085], [250000, 0.0925], [500000, 0.0975], [1000000, 0.1075]]
+    },
+    "standard_deduction": { "single": 16100, "mfj": 32200 },
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No personal exemption. Same brackets for all filing statuses. 2026 standard deduction from the 2026 D-40ES worksheet ($24,150 head of household); additional amount for aged/blind $1,650 ($2,050 unmarried)." },
+    "starting_point": "federal AGI",
+    "surtaxes": "None beyond the 10.75% top bracket over $1,000,000",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2026_D40ES_Book_wLinks04012026.pdf", "title": "2026 D-40ES Estimated Payment for Individual Income Tax", "quote": "enter $16,100 if single ... Enter $32,200 if married/registered domestic partner filing jointly" },
+      { "id": 2, "url": "https://otr.cfo.dc.gov/page/dc-individual-and-fiduciary-income-tax-rates", "title": "DC Individual and Fiduciary Income Tax Rates", "quote": "Over $1,000,000 $91,525, plus 10.75% of the excess above $1,000,000." }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "You expect your DC tax liability to be greater than $100",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Businesses filing D-20/D-30 must pay estimated franchise tax if liability is more than $1,000.",
+    "source_url": "https://otr.cfo.dc.gov/page/underpayment-estimated-tax-interest"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 9000,
+    "new_employer_rate": 0.027,
+    "notes": "New employers pay the higher of 2.7% or the average contribution rate of all employers in the preceding year (2026 average not published on the page read). Wage base $9,000 per the DOES rate FAQ example (undated). DC Paid Family Leave employer tax is separate and was not verified.",
+    "source_url": "https://does.dc.gov/service/tax-rate-questions"
+  },
+  "local_taxes": [
+    {
+      "place": "District of Columbia",
+      "name": "Unincorporated Business Franchise Tax",
+      "rate": 0.0825,
+      "applies": "Sole proprietorships, partnerships and LLCs carrying on business in DC with gross receipts over $12,000 (on top of DC individual income tax)",
+      "threshold_or_exemption": "Gross receipts $12,000 or less: not taxable. 30% owner salary allowance and $5,000 exemption. Exempt if >80% of gross income is from owners' personal services and capital is not material. Minimum $250 / $1,000.",
+      "source_url": "https://otr.cfo.dc.gov/page/dc-business-franchise-tax-rates",
+      "quote": "Net income of unincorporated businesses on a combined reporting basis with gross receipts more than $12,000."
+    }
+  ],
+  "notable": [
+    "DC does not recognize S corporations: they pay the 8.25% franchise tax, so an S election brings no DC benefit (https://otr.cfo.dc.gov/page/franchise-tax-faqs)",
+    "Sole proprietors and LLCs owe the 8.25% unincorporated business tax above $12,000 of gross receipts unless they qualify for the personal-services exemption (https://otr.cfo.dc.gov/page/dc-business-franchise-tax-rates)",
+    "Estimated tax is required once you owe more than $100 (https://otr.cfo.dc.gov/page/underpayment-estimated-tax-interest)",
+    "Biennial report costs $300 for an LLC (https://dlcp.dc.gov/page/dlcp-license-corporate-filing-fees)"
+  ],
+  "uncertain": [
+    "UBT/franchise tax rate table on the OTR page lists years through 2025 (8.25%); 2026 rate assumed unchanged at 8.25% (no change found, but not shown for 2026).",
+    "UBT credit against individual income tax: DC allows no credit; owners pay both (not re-verified today).",
+    "SUTA wage base $9,000 from an undated DOES FAQ example; 2026 new-employer average rate not found.",
+    "DC Paid Family Leave employer contribution rate for 2026 not verified (web search budget exhausted)."
+  ]
+}

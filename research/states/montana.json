@@ -1,0 +1,135 @@
+{
+ "state": "Montana",
+ "slug": "montana",
+ "abbr": "MT",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": null,
+  "formation_doc": "Articles of Organization",
+  "formation_notes": "Fees are set by Secretary of State rule (MCA 35-8-211); sosmt.gov and rules.mt.gov block automated reading. Third-party guides cite $35 to form - not verified.",
+  "annual_report": {
+   "name": "Annual Report",
+   "fee": null,
+   "frequency": "annual",
+   "due": "between January 1 and April 15, starting the year after organization",
+   "late_penalty": null
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://archive.legmt.gov/bills/mca/title_0350/chapter_0080/part_0020/section_0080/0350-0080-0020-0080.html",
+    "title": "MCA 35-8-208 Annual report",
+    "quote": "The first annual report must be delivered to the secretary of state between January 1 and April 15 of the year following the calendar year in which a domestic limited liability company is organized"
+   },
+   {
+    "id": 2,
+    "url": "https://archive.legmt.gov/bills/mca/title_0350/chapter_0080/part_0020/section_0110/0350-0080-0020-0110.html",
+    "title": "MCA 35-8-211 Fees",
+    "quote": "The secretary of state shall establish fees for the following"
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Electing pass-through entity pays the highest marginal individual rate (5.65% for 2026) on owners' distributive share of Montana-source income (MCA 15-30-3326, enacted 2023).",
+   "source": 1
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://archive.legmt.gov/bills/mca/title_0150/chapter_0300/part_0330/section_0260/0150-0300-0330-0260.html",
+    "title": "MCA 15-30-3326 Pass-through entity tax",
+    "quote": "The entity tax is equal to the highest marginal tax rate in effect under 15-30-2103 for the tax year the election is made multiplied by the distributive share"
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "graduated",
+  "flat_rate": null,
+  "brackets": {
+   "single": [
+    [
+     0,
+     0.047
+    ],
+    [
+     47500,
+     0.0565
+    ]
+   ],
+   "mfj": [
+    [
+     0,
+     0.047
+    ],
+    [
+     95000,
+     0.0565
+    ]
+   ]
+  },
+  "standard_deduction": null,
+  "personal_exemption": {
+   "single": null,
+   "mfj": null,
+   "is_credit": false,
+   "notes": "Montana taxable income starts from federal taxable income (federal standard/itemized deduction already applied); no separate Montana standard deduction or exemption. HOH bracket $71,250. Net long-term capital gains taxed at 3.0% / 4.1%."
+  },
+  "starting_point": "federal taxable income",
+  "surtaxes": "None. Scheduled for 2027: 4.7% to $65,000 single / $130,000 MFJ, 5.4% above, then indexed.",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://archive.legmt.gov/bills/mca/title_0150/chapter_0300/part_0210/section_0030/0150-0300-0210-0030.html",
+    "title": "MCA 15-30-2103 (Temporary, terminates Dec 31, 2026) Rate of tax",
+    "quote": "on the first $47,500 of Montana taxable income or any part of that income, 4.7%; on any Montana taxable income in excess of $47,500 ... 5.65%"
+   },
+   {
+    "id": 2,
+    "url": "https://archive.legmt.gov/bills/mca/title_0150/chapter_0300/part_0210/section_0030/0150-0300-0210-0030.html",
+    "title": "MCA 15-30-2103 joint filers",
+    "quote": "on the first $95,000 of Montana taxable income or any part of that income, 4.7%"
+   },
+   {
+    "id": 3,
+    "url": "https://archive.legmt.gov/bills/mca/title_0150/chapter_0300/part_0210/section_0010/0150-0300-0210-0010.html",
+    "title": "MCA 15-30-2101 definitions",
+    "quote": "\"Montana taxable income\" means federal taxable income as determined for federal income tax purposes and adjusted as provided in 15-30-2120."
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "expect to owe more than $500 in tax",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "",
+  "source_url": "https://revenue.mt.gov/taxes/estimated-tax-payments"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": 47300,
+  "new_employer_rate": null,
+  "notes": "New employers pay their industry average rate: 1.00% for most industries (services 1.10%, agriculture/mining 1.30%, construction 2.00%), plus 0.18% Administrative Fund Tax.",
+  "source_url": "https://uid.dli.mt.gov/_docs/contributions-bureau/rate-insert.pdf"
+ },
+ "local_taxes": [],
+ "notable": [
+  "2026 brackets widened by HB 337 (2025): 4.7% up to $47,500 single / $95,000 joint, 5.65% above (https://archive.legmt.gov/bills/mca/title_0150/chapter_0300/part_0210/section_0030/0150-0300-0210-0030.html)",
+  "Montana tax starts from federal taxable income, so the federal standard deduction flows through (https://archive.legmt.gov/bills/mca/title_0150/chapter_0300/part_0210/section_0010/0150-0300-0210-0010.html)",
+  "High SUTA wage base: $47,300 in 2026 (https://uid.dli.mt.gov/_docs/contributions-bureau/rate-insert.pdf)",
+  "No sales tax and no local income taxes."
+ ],
+ "uncertain": [
+  "LLC formation and annual report fees not verified: set by Secretary of State rule and sosmt.gov / rules.mt.gov return 403 (third parties: $35 and $20, late fee $15).",
+  "2026 DOR tax rate page not yet published (only 2025); 2026 brackets read from the temporary MCA 15-30-2103 text.",
+  "Single new employer UI rate depends on industry; null given."
+ ]
+}

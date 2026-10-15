@@ -1,0 +1,76 @@
+{
+  "state": "Connecticut",
+  "slug": "connecticut",
+  "abbr": "CT",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 120,
+    "formation_doc": "Certificate of Organization (includes appointment of statutory agent)",
+    "formation_notes": "Filed online at business.ct.gov.",
+    "annual_report": {
+      "name": "LLC Annual Report",
+      "fee": 80,
+      "frequency": "annual",
+      "due": "Each year after the year of formation, between January 1 and March 31 (per Secretary of the State instructions; not re-read today)",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://business.ct.gov/knowledge-base/articles/domestic-limited-liability-companies-forms-and-fees", "title": "What are the Domestic Limited Liability Company Fees in Connecticut?", "quote": "Certificate of Organization - required, including appointment of statutory agent. (file online) > $120" },
+      { "id": 2, "url": "https://business.ct.gov/knowledge-base/articles/domestic-annual-report-forms-and-fees", "title": "Domestic Annual Report Forms and Fees", "quote": "Limited Liability Company (LLC) Annual Report (file online) > $80" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Pass-through entity tax at 6.99% (Form CT-PET). Mandatory for 2018-2023, optional (elective) from 2024; the 2025 form is labeled 'Optional Pass-Through Entity Tax Return'. 2026 form not yet published.",
+      "source": 1
+    },
+    "sources": [
+      { "id": 1, "url": "https://portal.ct.gov/-/media/drs/forms/2025/pass-through/ct-pet_1225.pdf", "title": "Form CT-PET Connecticut Pass-Through Entity Tax Return 2025", "quote": "PE Tax due: Multiply Line 1 by 6.99% (.0699)." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.02], [10000, 0.045], [50000, 0.055], [100000, 0.06], [200000, 0.065], [250000, 0.069], [500000, 0.0699]],
+      "mfj": [[0, 0.02], [20000, 0.045], [100000, 0.055], [200000, 0.06], [400000, 0.065], [500000, 0.069], [1000000, 0.0699]]
+    },
+    "standard_deduction": null,
+    "personal_exemption": { "single": 15000, "mfj": 24000, "is_credit": false, "notes": "Exemption is reduced $1,000 for each $1,000 of Connecticut AGI over $30,000 (single) / $48,000 (joint), so it disappears at $45,000 / $72,000. A separate personal tax credit (75% down to 0%) applies at low incomes. Not indexed (statute fixed since 2016)." },
+    "starting_point": "federal AGI",
+    "surtaxes": "Benefit recapture: the 2% bracket is phased out for single filers with CT AGI over $56,500 (joint thresholds double), plus recapture add-ons above $105,000, $200,000 and $500,000 of CT AGI (single), which effectively tax all income at the top marginal rate for high earners (CGS 12-700(a)(10)).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.cga.ct.gov/2025/pub/chap_229.htm", "title": "CGS Chapter 229, Sec. 12-700(a)(10) (taxable years on or after January 1, 2024)", "quote": "Over $500,000 $31,250, plus 6.99% of the excess over $500,000" },
+      { "id": 2, "url": "https://www.cga.ct.gov/2025/pub/chap_229.htm", "title": "CGS Sec. 12-702 Exemptions", "quote": "For taxable years commencing on or after January 1, 2016, fifteen thousand dollars." },
+      { "id": 3, "url": "https://www.cga.ct.gov/2026/rpt/pdf/2026-R-0057.pdf", "title": "OLR Comparison of State Income Taxes (2026-R-0057)", "quote": "6.99% > 500,000 > 800,000 > 1,000,000" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "No underpayment interest if tax shown on the return less Connecticut withholding is under $1,000",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Underpayment interest 1% per month. Farmers/fishermen: one installment January 15. Filing and paying in full by January 31 waives the fourth installment.",
+    "source_url": "https://www.cga.ct.gov/2025/pub/chap_229.htm"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 27000,
+    "new_employer_rate": 0.019,
+    "notes": "2026 wage base up from $26,100; new employer rate down from 2.2% to 1.9%. Contribution rates 1.1%-9.9% including the fund solvency tax.",
+    "source_url": "https://portal.ct.gov/dol/divisions/unemployment-insurance-tax/information-on-unemployment-tax-rate-for-calendar-year-2026"
+  },
+  "local_taxes": [],
+  "notable": [
+    "No LLC franchise or business entity tax (the $250 BET was repealed from 2020); only the $80 annual report (https://business.ct.gov/knowledge-base/articles/domestic-annual-report-forms-and-fees)",
+    "Connecticut recaptures the low brackets for higher incomes, so the effective top rate applies to all income for high earners (https://www.cga.ct.gov/2025/pub/chap_229.htm)",
+    "PTE tax became optional from 2024 at 6.99% (https://portal.ct.gov/-/media/drs/forms/2025/pass-through/ct-pet_1225.pdf)"
+  ],
+  "uncertain": [
+    "Brackets are fixed in statute (12-700(a)(10), single and joint schedules both read) and not indexed; no 2026 rate change found.",
+    "Annual report due window (Jan 1 - Mar 31) and late penalty not re-read on an official page today.",
+    "Connecticut Paid Leave employee contribution (0.5%) not verified for 2026."
+  ]
+}

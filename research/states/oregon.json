@@ -1,0 +1,75 @@
+{
+  "state": "Oregon", "slug": "oregon", "abbr": "OR", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "No publication requirement found. Foreign LLC Application for Authority is $275.",
+    "annual_report": { "name": "Annual Report / Renewal", "fee": 100, "frequency": "annual", "due": "On the anniversary date of the original filing; SOS sends a notice about 45 days before", "late_penalty": null },
+    "state_tax_on_llc": [
+      { "name": "Corporate Activity Tax (CAT)", "amount": 250, "kind": "rate", "rate": 0.0057, "applies": "Any business entity (LLCs and sole proprietors included) with more than $1 million of taxable Oregon commercial activity; registration required above $750,000", "notes": "$250 plus 0.57% of taxable Oregon commercial activity over $1 million, after a 35% subtraction for certain expenses. No Oregon LLC franchise or minimum tax otherwise; a single-member LLC is disregarded for income tax.", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://sos.oregon.gov/business/Documents/business-registry-forms/br-fee-schedule.pdf", "title": "Oregon Secretary of State, Business Registry Fee Schedule", "quote": "LIMITED LIABILITY COMPANIES ... Domestic ... Articles of Organization $100.00 ... Renewal (Annually) $100.00" },
+      { "id": 2, "url": "https://www.oregon.gov/dor/programs/businesses/Pages/corporate-activity-tax.aspx", "title": "Oregon DOR, Corporate Activity Tax", "quote": "The tax is computed as $250 plus 0.57 percent of taxable Oregon commercial activity of more than $1 million." },
+      { "id": 3, "url": "https://sos.oregon.gov/business/Pages/faq.aspx", "title": "Oregon SOS, Answers to Business Registration Questions", "quote": "Your renewal will be due on the anniversary date of the original filing." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "S corporation minimum excise tax", "rate": null, "minimum": 150, "notes": "Flat $150 for an S corporation doing business in Oregon (excise tax filers); does not flow through to shareholders. Tax on built-in gains and excess net passive income also applies if taxed federally.", "source": 1 },
+      { "name": "Corporate Activity Tax (CAT)", "rate": 0.0057, "minimum": null, "notes": "$250 + 0.57% of taxable Oregon commercial activity over $1 million; applies to all entity types", "source": 3 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "PTE-E: 9% on the first $250,000 of distributive proceeds, 9.9% above; elected annually by S corps and partnerships. SB 1510 (2026 session) extends it to tax years beginning before 2028-01-01. For 2026 only, the 1st and 2nd quarterly estimated payments are both due June 15.", "source": 2 },
+    "sources": [
+      { "id": 1, "url": "https://www.oregon.gov/DOR/programs/businesses/Pages/corp-subs.aspx", "title": "Oregon DOR, S corporations", "quote": "An S corporation carrying on or doing business in Oregon must also pay $150 minimum excise tax." },
+      { "id": 2, "url": "https://www.oregon.gov/dor/programs/businesses/Pages/pass-through-entity-elective-tax.aspx", "title": "Oregon DOR, Pass-Through Entity Elective (PTE-E) Tax", "quote": "Senate Bill 1510 in the 2026 legislative session extends the PTE-E program through tax years beginning before January 1, 2028." },
+      { "id": 3, "url": "https://www.oregon.gov/dor/programs/businesses/Pages/corporate-activity-tax.aspx", "title": "Oregon DOR, Corporate Activity Tax", "quote": "Only taxpayers with more than $1 million of taxable Oregon commercial activity will have a payment obligation." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.0475], [4550, 0.0675], [11400, 0.0875], [125000, 0.099]],
+      "mfj": [[0, 0.0475], [9100, 0.0675], [22800, 0.0875], [250000, 0.099]]
+    },
+    "standard_deduction": { "single": 2900, "mfj": 5800 },
+    "personal_exemption": { "single": 260, "mfj": 520, "is_credit": true, "notes": "$260 credit per exemption (2026 estimated indexed figure); $0 if federal AGI over $100,000 (single/MFS) or $200,000 (MFJ/HOH/QSS). Head of household standard deduction $4,650; HOH uses the joint (Chart J) rates." },
+    "starting_point": "federal AGI",
+    "surtaxes": "No state surtax. Federal tax subtraction of $0 to $8,750 for 2026 (phases out with AGI). Reduced rate available for qualified business income (Oregon-specific election). Local personal income taxes: Metro SHS and Multnomah PFA (see local_taxes).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf", "title": "Oregon DOR, 2026 Publication OR-ESTIMATE (Rev. 10-07-25)", "quote": "Over $125,000 $10,618 plus 9.9% of excess over $125,000" },
+      { "id": 2, "url": "https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf", "title": "Oregon DOR, 2026 Publication OR-ESTIMATE", "quote": "Single or married filing separately: $2,900. ... Married filing jointly or Qualifying surviving spouse: $5,800" }
+    ]
+  },
+  "estimated_tax": { "required_if": "Expect to owe $1,000 or more after withholding and credits (including refundable credits)", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Required annual payment is the lesser of 90% of 2026 tax or 100% of 2025 tax (no 110% high-income rule); annualized method allowed. Self-employment tax is not included. Farmers/fishermen with 2/3 of gross income from farming/fishing are exempt.", "source_url": "https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 56700, "new_employer_rate": 0.024, "notes": "Tax Schedule 3 for 2026 (rates 0.9%-5.4% per press release). Oregon also has Paid Leave Oregon contributions and transit payroll taxes, not covered here.", "source_url": "https://www.oregon.gov/employ/NewsAndMedia/Documents/2025-11-18_Tax_Rate_2026_Press_Release.pdf" },
+  "local_taxes": [
+    { "place": "City of Portland", "name": "Business License Tax (BLT)", "rate": 0.026, "applies": "Net business income of businesses (sole proprietors included, single-member LLC filed at owner level) doing business in Portland", "threshold_or_exemption": "Exempt if gross receipts from all business everywhere are under $75,000 for tax years beginning in 2026 ($50,000 before 2026; $100,000 from 2027). Owner's compensation deduction up to 75% of net business income, capped at $160,500 per owner for tax years from 2025 (2026 cap not read).", "source_url": "https://www.portland.gov/revenue/business-tax", "quote": "$75,000 for tax years beginning on or after January 1, 2026 and prior to January 1, 2027" },
+    { "place": "Multnomah County", "name": "Business Income Tax (MCBIT)", "rate": 0.02, "applies": "Net business income of businesses doing business in Multnomah County (administered by Portland Revenue Division)", "threshold_or_exemption": "Exempt if gross receipts from all business are under $100,000. Owner's compensation deduction up to 75% of net business income, capped at $158,500 per owner for tax years from 2025 (2026 cap not read).", "source_url": "https://www.portland.gov/revenue/business-tax", "quote": "Multnomah County Business Income Tax rate: 2%" },
+    { "place": "Metro (Portland region: parts of Clackamas, Multnomah, Washington counties)", "name": "Supportive Housing Services (SHS) Personal Income Tax", "rate": 0.01, "applies": "Metro taxable income above the threshold (residents on all income; nonresidents on Metro-source income). Sole proprietors and disregarded entities pay this instead of the SHS business tax.", "threshold_or_exemption": "2026: over $128,000 single/MFS, over $205,000 joint/HOH/QSS ($125,000/$200,000 for 2021-2025; $132,000/$211,000 for 2027); now inflation-indexed", "source_url": "https://www.portland.gov/revenue/personal-tax", "quote": "2026 $128,000 $205,000" },
+    { "place": "Metro (Portland region)", "name": "Supportive Housing Services (SHS) Business Income Tax", "rate": 0.01, "applies": "Net income of businesses operating in Metro with total gross receipts over $5 million", "threshold_or_exemption": "Gross receipts of $5,000,000 or less exempt; sole proprietors and disregarded entities exempt (they pay the SHS personal tax)", "source_url": "https://www.portland.gov/revenue/business-tax", "quote": "Metro Supporting Housing Services (SHS) Business Income Tax rate: 1%" },
+    { "place": "Multnomah County", "name": "Preschool for All (PFA) Personal Income Tax", "rate": 0.015, "applies": "Multnomah County taxable income of residents, people working in the county, or with county-source income", "threshold_or_exemption": "1.5% over $125,000 single / $200,000 joint, plus an additional 1.5% (3% total) over $250,000 single / $400,000 joint. Thresholds not indexed. The scheduled 0.8% increase is now set for 2028 (not 2026).", "source_url": "https://www.portland.gov/revenue/personal-tax", "quote": "an additional 1.5% on Multnomah County taxable income over $250,000 for individuals and $400,000 for joint filers. The rate will increase by 0.8% in 2028." },
+    { "place": "TriMet District (Portland area)", "name": "TriMet transit self-employment tax", "rate": 0.008237, "applies": "Net self-employment earnings from business carried on in the TriMet District (filed with Oregon DOR, Form OR-TM)", "threshold_or_exemption": "$400 exclusion of net self-employment earnings (per DOR form instructions for the parallel LTD tax; not re-read for OR-TM)", "source_url": "https://trimet.org/taxinfo/", "quote": "The transit tax rate is 0.8237% of the wages paid by an employer" },
+    { "place": "Lane Transit District (Eugene/Springfield)", "name": "LTD transit self-employment tax", "rate": 0.008, "applies": "Net self-employment earnings from business carried on in the Lane Transit District (Form OR-LTD)", "threshold_or_exemption": "Net self-employment earnings over $400; one $400 exclusion", "source_url": "https://www.oregon.gov/dor/forms/FormsPubs/form-or-ltd-instructions_560-001-1_2025.pdf", "quote": "The tax rate is 0.0080 (.8000 of 1 percent)." }
+  ],
+  "notable": [
+    "No sales tax, but a top income tax rate of 9.9% starting at only $125,000 taxable income for single filers (https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf)",
+    "Personal exemption is a $260 nonrefundable credit, not a deduction, and is lost above $100,000/$200,000 federal AGI (https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf)",
+    "Portland-area freelancers can stack Portland BLT 2.6% + Multnomah BIT 2% on net business income, plus Metro SHS 1% and PFA 1.5%-3% on high personal income, plus TriMet 0.8237% on self-employment earnings (https://www.portland.gov/revenue/business-tax)",
+    "Portland BLT small-business exemption rises from $50,000 to $75,000 of gross receipts in 2026 and $100,000 in 2027 (https://www.portland.gov/revenue/business-tax)",
+    "Metro SHS personal tax thresholds are inflation-indexed from 2026: $128,000 single / $205,000 joint (https://www.portland.gov/revenue/personal-tax)",
+    "Corporate Activity Tax hits every entity type, including LLCs and sole proprietors, above $1 million of Oregon commercial activity (https://www.oregon.gov/dor/programs/businesses/Pages/corporate-activity-tax.aspx)",
+    "PTE-E SALT workaround extended through tax year 2027 by SB 1510 (2026 session) (https://www.oregon.gov/dor/programs/businesses/Pages/pass-through-entity-elective-tax.aspx)"
+  ],
+  "uncertain": [
+    "2026 income tax brackets, standard deduction ($2,900/$5,800) and exemption credit ($260) are the DOR's 'estimated Oregon indexed figures for tax year 2026' published in Oct 2025; final 2026 return figures may differ slightly.",
+    "Annual report late penalty: no official LLC-specific late fee or dissolution timing read today (an SOS FAQ about nonprofits mentions 45 days; not applied here).",
+    "Portland and Multnomah owner's compensation deduction caps for tax years 2026 not read; only the 2025 caps ($160,500 Portland, $158,500 Multnomah) from SP-2025 instructions.",
+    "TriMet rate 0.8237% read on trimet.org (page updated Feb 2026) without an explicit '2026' label; no DOR 2026 OR-TM instructions read. LTD 0.80% read on the 2025 DOR form instructions only.",
+    "Portland Arts Tax (per-resident flat tax) exists but amount not verified today.",
+    "Metro SHS / PFA pages read on portland.gov (Revenue Division administers both on behalf of Metro and Multnomah County); oregonmetro.gov and multco.us not separately read."
+  ]
+}

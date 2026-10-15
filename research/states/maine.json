@@ -1,0 +1,149 @@
+{
+ "state": "Maine",
+ "slug": "maine",
+ "abbr": "ME",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 175,
+  "formation_doc": "Certificate of Formation (Form MLLC-6)",
+  "formation_notes": "Fee set by 31 M.R.S. 1680. Expedited service fees not checked.",
+  "annual_report": {
+   "name": "Annual Report",
+   "fee": 85,
+   "frequency": "annual",
+   "due": "between January 1 and June 1 of each year, starting the year after formation",
+   "late_penalty": "$50 in addition to the filing fee"
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://legislature.maine.gov/statutes/31/title31sec1680.html",
+    "title": "31 M.R.S. 1680 Filing and copying fees; penalties",
+    "quote": "For filing of a certificate of formation under section 1531, a fee of $175"
+   },
+   {
+    "id": 2,
+    "url": "https://legislature.maine.gov/statutes/31/title31sec1680.html",
+    "title": "31 M.R.S. 1680",
+    "quote": "For filing of an annual report under section 1665, a fee of $85 for a limited liability company ... Late filing penalty ... a fee of $50"
+   },
+   {
+    "id": 3,
+    "url": "https://legislature.maine.gov/statutes/31/title31sec1665.html",
+    "title": "31 M.R.S. 1665 Annual report",
+    "quote": "annual reports must be delivered to the office of the Secretary of State between January 1st and June 1st of the following calendar year."
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [],
+  "pte_elective_tax": null,
+  "sources": []
+ },
+ "income_tax_2026": {
+  "type": "graduated",
+  "flat_rate": null,
+  "brackets": {
+   "single": [
+    [
+     0,
+     0.058
+    ],
+    [
+     27400,
+     0.0675
+    ],
+    [
+     64850,
+     0.0715
+    ],
+    [
+     1000000,
+     0.0915
+    ]
+   ],
+   "mfj": [
+    [
+     0,
+     0.058
+    ],
+    [
+     54850,
+     0.0675
+    ],
+    [
+     129750,
+     0.0715
+    ],
+    [
+     1500000,
+     0.0915
+    ]
+   ]
+  },
+  "standard_deduction": {
+   "single": 15700,
+   "mfj": 31400
+  },
+  "personal_exemption": {
+   "single": 5300,
+   "mfj": 10600,
+   "is_credit": false,
+   "notes": "$5,300 per taxpayer (and spouse if MFJ). HOH standard deduction $23,550; HOH brackets 5.8% < $41,100, 6.75% < $97,300, 7.15% above. Standard deduction and exemption phase out at higher incomes (not detailed here)."
+  },
+  "starting_point": "federal AGI",
+  "surtaxes": "New for 2026: 2% surcharge on Maine taxable income above $1,000,000 single / $750,000 MFS / $1,500,000 MFJ and HOH (the 0.0915 bracket above = 7.15% + 2%). Thresholds indexed from 2027.",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/2026-05/ind_tax_rate_sched_2026_rev.pdf",
+    "title": "Maine Revenue Services, 2026 Individual Income Tax Rates (revised May 20, 2026)",
+    "quote": "$64,850 or more (1) $4,117 plus 7.15% of excess over $64,850"
+   },
+   {
+    "id": 2,
+    "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/2026-05/ind_tax_rate_sched_2026_rev.pdf",
+    "title": "2026 rate schedule, Note (1)",
+    "quote": "the tax calculated above is increased by a surcharge of 2% on the portion of the taxpayer's Maine taxable income greater than $1,000,000 if filing single"
+   },
+   {
+    "id": 3,
+    "url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/2026-05/ind_tax_rate_sched_2026_rev.pdf",
+    "title": "2026 rate schedule",
+    "quote": "Personal Exemption: $5,300 ... Standard Deduction: Single - $15,700 Married Filing Jointly - $31,400"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "estimated Maine tax after withholding and credits is $1,000 or more and prior-year tax liability was also $1,000 or more",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "",
+  "source_url": "https://www.maine.gov/revenue/sites/maine.gov.revenue/files/inline-files/26_1040es_fillable.pdf"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": 12000,
+  "new_employer_rate": 0.0254,
+  "notes": "New employer rate 2.23% UI + 0.14% CSSF + 0.17% UPAF = 2.54% combined. Wage base $12,000 from 26 M.R.S. 1043.",
+  "source_url": "https://www.maine.gov/unemployment/docs/2026/employers/uitaxrates2026.pdf"
+ },
+ "local_taxes": [],
+ "notable": [
+  "New 2% income tax surcharge from 2026 on taxable income above $1M single / $1.5M joint, making the top rate 9.15% (https://www.maine.gov/revenue/sites/maine.gov.revenue/files/2026-05/ind_tax_rate_sched_2026_rev.pdf)",
+  "Top 7.15% bracket starts at $64,850 single, low for a freelancer (https://www.maine.gov/revenue/sites/maine.gov.revenue/files/2026-05/ind_tax_rate_sched_2026_rev.pdf)",
+  "LLC: $175 to form, $85 annual report due by June 1, $50 late penalty (https://legislature.maine.gov/statutes/31/title31sec1680.html)",
+  "No pass-through entity elective tax and no local income taxes."
+ ],
+ "uncertain": [
+  "The first 2026 rate schedule (Sept 2025) was revised on 2026-05-20 to add the surcharge; third-party sources still cite $15,300 standard deduction from older versions. Values here are from the revised MRS sheet.",
+  "Absence of a Maine PTET was not confirmed on an official page.",
+  "Phase-outs of the standard deduction and personal exemption at higher incomes not recorded."
+ ]
+}

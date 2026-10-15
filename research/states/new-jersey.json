@@ -1,0 +1,176 @@
+{
+  "state": "New Jersey",
+  "slug": "new-jersey",
+  "abbr": "NJ",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Public Records Filing for New Business Entity (Certificate of Formation)",
+    "formation_notes": "Fee is $100 per the Division of Revenue fee schedule (was $125 in older references). No publication requirement.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 75,
+      "frequency": "annual",
+      "due": "each year by the end of the anniversary month of formation (not verified on an official page today)",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.nj.gov/treasury/revenue/fees.shtml",
+        "title": "NJ Division of Revenue and Enterprise Services - Fees",
+        "quote": "Limited Liability Company (LLC) Filing Fees Certificate of formation $100.00"
+      },
+      {
+        "id": 2,
+        "url": "https://www.nj.gov/treasury/revenue/gettingregistered.shtml",
+        "title": "NJ DORES - Getting Registered",
+        "quote": "The fee is $100 for all for-profit entities and Foreign Non-Profit corporations."
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      {
+        "name": "Corporation Business Tax minimum tax (CBT-100S)",
+        "rate": null,
+        "minimum": 375,
+        "notes": "NJ S corps pay only the minimum tax by NJ gross receipts: under $100,000 = $375; $100k-250k = $562; $250k-500k = $750; $500k-1M = $1,125; $1M+ = $1,500; $2,000 if in a group with payroll of $5M+. Since privilege periods beginning on/after Dec 22, 2022 a federal S corp can file as NJ S corp without a prior NJ election (needs Shareholder Jurisdictional Consent). 2025 instructions.",
+        "source": 1
+      }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Pass-Through Business Alternative Income Tax (BAIT), elective, for partnerships and S corporations (referenced on CBT-100S line 11b). Rates not read on an official page today.",
+      "source": 1
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.nj.gov/treasury/taxation/pdf/current/cbt/cbt100sins.pdf",
+        "title": "2025 CBT-100S Instructions",
+        "quote": "Less than $100,000 $375"
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.014
+        ],
+        [
+          20000,
+          0.0175
+        ],
+        [
+          35000,
+          0.035
+        ],
+        [
+          40000,
+          0.05525
+        ],
+        [
+          75000,
+          0.0637
+        ],
+        [
+          500000,
+          0.0897
+        ],
+        [
+          1000000,
+          0.1075
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.014
+        ],
+        [
+          20000,
+          0.0175
+        ],
+        [
+          50000,
+          0.0245
+        ],
+        [
+          70000,
+          0.035
+        ],
+        [
+          80000,
+          0.05525
+        ],
+        [
+          150000,
+          0.0637
+        ],
+        [
+          500000,
+          0.0897
+        ],
+        [
+          1000000,
+          0.1075
+        ]
+      ]
+    },
+    "standard_deduction": null,
+    "personal_exemption": {
+      "single": 1000,
+      "mfj": 2000,
+      "is_credit": false,
+      "notes": "$1,000 per taxpayer/spouse; other exemptions $1,500 (dependents) and $6,000 categories per NJ-1040-ES worksheet. No standard deduction. No return required if gross income is $10,000 or less (single) / $20,000 or less (MFJ)."
+    },
+    "starting_point": "own definition",
+    "surtaxes": "None; top rate 10.75% over $1,000,000.",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.nj.gov/treasury/taxation/pdf/current/1040esi.pdf",
+        "title": "2026 Form NJ-1040-ES instructions",
+        "quote": "1,000,000 and over .1075 32,926.25"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "expect to owe more than $400",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "Interest on underpayment at prime + 3%.",
+    "source_url": "https://www.nj.gov/treasury/taxation/pdf/current/1040esi.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 44800,
+    "new_employer_rate": 0.026825,
+    "notes": "New employer UI rate 2.6825% (FY July 1, 2026 - June 30, 2027), plus employer WF/SWF 0.1175% and DI 0.50%. Wage base up from $43,300 (2025).",
+    "source_url": "https://www.nj.gov/labor/ea/employer-services/rate-info/"
+  },
+  "local_taxes": [],
+  "notable": [
+    "LLC formation fee is $100 on the current DORES fee schedule (https://www.nj.gov/treasury/revenue/fees.shtml)",
+    "S corps pay a gross-receipts minimum tax ($375 to $1,500) even with no NJ income tax at entity level (https://www.nj.gov/treasury/taxation/pdf/current/cbt/cbt100sins.pdf)",
+    "No standard deduction; brackets not indexed; top rate 10.75% over $1M (https://www.nj.gov/treasury/taxation/pdf/current/1040esi.pdf)"
+  ],
+  "uncertain": [
+    "Annual report due date not read on an official page.",
+    "BAIT rates not read today.",
+    "Partnership filing fee (per-owner fee for multi-member LLCs taxed as partnerships) not verified.",
+    "Newark and Jersey City employer payroll taxes (hit an S corp paying wages there) not researched; NJ has no local income tax on self-employment income.",
+    "NJ UI new employer rate and wage base read via search extracts of NJDOL pages."
+  ]
+}

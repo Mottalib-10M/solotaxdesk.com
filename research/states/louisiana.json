@@ -1,0 +1,132 @@
+{
+ "state": "Louisiana",
+ "slug": "louisiana",
+ "abbr": "LA",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 125,
+  "formation_doc": "Articles of Organization - Louisiana Limited Liability Company (Form 365) with Initial Report",
+  "formation_notes": "Fee raised from $100 to $125 effective 2026-10-01 under Act 921 of the 2026 Regular Session. Third parties mention a small online service charge, not verified.",
+  "annual_report": {
+   "name": "Annual Report",
+   "fee": 35,
+   "frequency": "annual",
+   "due": "each year on or before the anniversary date of organization (per third-party guides; not read on sos.la.gov)",
+   "late_penalty": null
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://static.sos.la.gov/shared/fee_changes_2026.pdf",
+    "title": "Louisiana Secretary of State Fee Schedule effective 10/1/26",
+    "quote": "Effective October 1, 2026, the fees for the Commercial Division of the Secretary of State will increase in accordance with Act 921"
+   },
+   {
+    "id": 2,
+    "url": "https://static.sos.la.gov/shared/fee_changes_2026.pdf",
+    "title": "Fee Schedule effective 10/1/26 - Domestic LLCs",
+    "quote": "Articles of Organization-Louisiana Limited Liability Company $125 ... Annual Reports $35"
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Entities taxed as partnerships or S corps may elect (Form R-6980, R.S. 47:287.732.2) to be taxed at entity level; LDR FAQ on PTE-election rates answers with the flat 3% rate for periods from 2025. Exact entity rate not separately confirmed.",
+   "source": 2
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://dam.ldr.la.gov/lawspolicies/RIB%2025-032.pdf",
+    "title": "LDR Revenue Information Bulletin 25-032 (Act 382 of 2025)",
+    "quote": "As of January 1, 2026, Louisiana (La. R.S. 47:287.732) now recognizes S corporations as flow-through entities consistent with federal income tax treatment."
+   },
+   {
+    "id": 2,
+    "url": "https://revenue.louisiana.gov/tax-education-and-faqs/faqs/income-tax-reform/what-are-the-income-tax-rates-for-s-corps-and-other-pass-through-entities-making-the-pte-election/",
+    "title": "LDR FAQ: rates for S corps and PTE-election entities",
+    "quote": "For taxable periods beginning on or after January 1, 2025, the individual income tax rate is a flat 3%."
+   },
+   {
+    "id": 3,
+    "url": "https://revenue.louisiana.gov/tax-education-and-faqs/faqs/income-tax-reform/is-the-corporation-franchise-tax-repealed/",
+    "title": "LDR FAQ: Is the corporation franchise tax repealed?",
+    "quote": "The franchise tax has been repealed for franchise tax periods beginning on or after January 1, 2026."
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "flat",
+  "flat_rate": 0.03,
+  "brackets": null,
+  "standard_deduction": {
+   "single": 12875,
+   "mfj": 25750
+  },
+  "personal_exemption": {
+   "single": null,
+   "mfj": null,
+   "is_credit": false,
+   "notes": "Personal exemption folded into the standard deduction since 2025. Standard deduction indexed to CPI-U (R.S. 47:294(B)); LDR says official 2026 amounts may differ slightly from the $12,875/$25,750 used in withholding tables and the 2026 IT-540ES worksheet. HOH $25,750."
+  },
+  "starting_point": "federal AGI",
+  "surtaxes": "None.",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.legis.la.gov/Legis/Law.aspx?d=101946",
+    "title": "La. R.S. 47:32",
+    "quote": "taxable income of an individual shall be computed at the rate of three percent on net income."
+   },
+   {
+    "id": 2,
+    "url": "https://dam.ldr.la.gov/taxforms/IT540ESi-2026.pdf",
+    "title": "2026 IT-540ES instructions",
+    "quote": "Beginning January 1, 2026, the individual income tax is computed at a tax rate of 3 percent."
+   },
+   {
+    "id": 3,
+    "url": "https://dam.ldr.la.gov/lawspolicies/RIB%2026-005-Updated%20Withholding%20Tables.pdf",
+    "title": "RIB 26-005",
+    "quote": "a standard deduction of $12,875 was used for single and married-filing-separately taxpayers, and $25,750 for married-filing-jointly"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "estimated Louisiana tax after credits and withholding expected to exceed $1,000 (single) or $2,000 (joint)",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "",
+  "source_url": "https://dam.ldr.la.gov/taxforms/IT540ESi-2026.pdf"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": null,
+  "new_employer_rate": null,
+  "notes": "laworks.net blocks automated reading. Secondary sources: 2026 wage base $7,000 (down from $7,700); new employers pay their industry average rate (min 1%). Not verified.",
+  "source_url": null
+ },
+ "local_taxes": [],
+ "notable": [
+  "Flat 3% income tax with a $12,875 / $25,750 standard deduction in 2026 (https://dam.ldr.la.gov/taxforms/IT540ESi-2026.pdf)",
+  "From 2026 S corporations are true pass-throughs: no more Louisiana corporation income tax at entity level (https://dam.ldr.la.gov/lawspolicies/RIB%2025-032.pdf)",
+  "Corporation franchise tax repealed from 2026 (https://revenue.louisiana.gov/tax-education-and-faqs/faqs/income-tax-reform/is-the-corporation-franchise-tax-repealed/)",
+  "LLC fees went up on 2026-10-01: $125 to form, $35 annual report (https://static.sos.la.gov/shared/fee_changes_2026.pdf)",
+  "No local income taxes; parishes and cities do levy occupational license taxes on businesses (not researched)."
+ ],
+ "uncertain": [
+  "Official 2026 standard deduction may differ slightly from $12,875/$25,750 (LDR's own caveat in RIB 26-005).",
+  "Annual report due date (anniversary) and late consequences not read on sos.la.gov (pages 404/blocked).",
+  "Rate paid by entities making the PTE election not separately confirmed (LDR FAQ answer gives the 3% individual rate).",
+  "SUTA 2026 wage base and new employer rate not read on laworks.net (403).",
+  "Local occupational license taxes (gross-receipts based) not researched."
+ ]
+}

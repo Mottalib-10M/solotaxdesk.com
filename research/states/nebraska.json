@@ -1,0 +1,154 @@
+{
+  "state": "Nebraska",
+  "slug": "nebraska",
+  "abbr": "NE",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Certificate of Organization",
+    "formation_notes": "$100 online / $110 in office. Publication requirement: notice of organization must be published three successive weeks in a legal newspaper of general circulation near the designated office, and proof of publication filed with the SOS (Affidavit/Proof of Publication filing $25 online / $30 in office). Newspaper cost extra. LB1014 (2026 session) proposed an electronic publication option; status not verified.",
+    "annual_report": {
+      "name": "Biennial Report",
+      "fee": 25,
+      "frequency": "biennial",
+      "due": "odd-numbered years by April 1 (delinquent June 16, then administrative dissolution)",
+      "late_penalty": "Administrative dissolution after June 16; late reinstatement $500"
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Proof of Publication filing fee (one-time)",
+        "amount": 25,
+        "kind": "fixed",
+        "rate": null,
+        "applies": "every domestic LLC after newspaper publication",
+        "notes": "$25 online / $30 in office, plus newspaper charges",
+        "source": 1
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://sos.nebraska.gov/business-services/forms-and-fee-information",
+        "title": "Nebraska SOS - Forms and Fee Information",
+        "quote": "Certificate of Organization $110 (In-Office) / $100 (Online)"
+      },
+      {
+        "id": 2,
+        "url": "https://sos.nebraska.gov/business-services/annualbiennial-reporting",
+        "title": "Nebraska SOS - Annual/Biennial Reporting",
+        "quote": "Limited Liability Companies ... biennial reports are due in the odd numbered years by April 1, delinquent June 16."
+      },
+      {
+        "id": 3,
+        "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=21-193",
+        "title": "Neb. Rev. Stat. 21-193",
+        "quote": "must be published three successive weeks in some legal newspaper of general circulation near the designated office"
+      },
+      {
+        "id": 4,
+        "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=21-192",
+        "title": "Neb. Rev. Stat. 21-192 (fees)",
+        "quote": "thirty dollars if the filing is submitted in writing and twenty-five dollars if the filing is submitted electronically"
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": null,
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.0246
+        ],
+        [
+          4130,
+          0.0351
+        ],
+        [
+          24760,
+          0.0455
+        ],
+        [
+          39900,
+          0.0455
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.0246
+        ],
+        [
+          8250,
+          0.0351
+        ],
+        [
+          49530,
+          0.0455
+        ],
+        [
+          79800,
+          0.0455
+        ]
+      ]
+    },
+    "standard_deduction": {
+      "single": 8850,
+      "mfj": 17700
+    },
+    "personal_exemption": {
+      "single": 176,
+      "mfj": 352,
+      "is_credit": true,
+      "notes": "Nonrefundable personal exemption credit $176 per exemption (2026)."
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": "None. Top rate falls to 4.55% in 2026 (5.20% in 2025) and to 3.99% from 2027 under current law.",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://revenue.nebraska.gov/sites/default/files/doc/research/chronology/4-607table1.pdf",
+        "title": "Nebraska DOR - Tax Rate Chronologies (Rev. 2-2026)",
+        "quote": "Jan. 1, 2026 7 2.46% 3.51% 4.55% 4.55% $176 $8,850 $17,700"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": null,
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "Penalty avoided if payments total at least 90% of current-year tax, 100% of prior-year tax, or 110% if prior-year AGI over $150,000.",
+    "source_url": "https://revenue.nebraska.gov/sites/default/files/doc/tax-forms/2025/f_Individual_Income_Tax_Booklet.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 9000,
+    "new_employer_rate": 0.0125,
+    "notes": "Non-construction new employer 1.25%, construction 5.40%; wage base $9,000 (categories 1-19), $24,000 for category 20 (max-rate) employers.",
+    "source_url": "https://dol.nebraska.gov/webdocs/Resources/Items/2026%20UI%20guide%20to%20understanding.pdf"
+  },
+  "local_taxes": [],
+  "notable": [
+    "Rate cut: top individual rate 4.55% for 2026 (5.20% in 2025), scheduled 3.99% for 2027 (https://revenue.nebraska.gov/sites/default/files/doc/research/chronology/4-607table1.pdf)",
+    "New LLCs must publish a notice for three successive weeks in a newspaper (https://nebraskalegislature.gov/laws/statutes.php?statute=21-193)",
+    "No LLC franchise tax; biennial report only in odd years (https://sos.nebraska.gov/business-services/annualbiennial-reporting)"
+  ],
+  "uncertain": [
+    "LLC biennial report fee: statute 21-192 gives $25 electronic / $30 written (read via search extract); an older SOS release cited $28 online (likely incl. portal fee). Not on the SOS fee page.",
+    "Publication statute and LB1014 status read via search extract; nebraskalegislature.gov refused connections.",
+    "Nebraska S corp entity-level taxes and the elective pass-through entity tax not verified (web search budget exhausted).",
+    "Estimated tax threshold not read (penalty rules from 2025 booklet).",
+    "UI figures read via search extract of the NDOL 2026 guide (PDF download failed)."
+  ]
+}

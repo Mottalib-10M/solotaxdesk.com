@@ -1,0 +1,167 @@
+{
+ "state": "Minnesota",
+ "slug": "minnesota",
+ "abbr": "MN",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 155,
+  "formation_doc": "Articles of Organization (Chapter 322C)",
+  "formation_notes": "Statutory fee $135 (Minn. Stat. 322C.0201 subd. 4); SOS fee schedule: $135 by mail, $155 online or in person. The SOS schedule read is dated 2017; current sos.mn.gov pages block automated reading.",
+  "annual_report": {
+   "name": "Annual Renewal",
+   "fee": 0,
+   "frequency": "annual",
+   "due": "each calendar year (by December 31)",
+   "late_penalty": "administrative dissolution if not filed; reinstatement $25 mail / $45 online"
+  },
+  "state_tax_on_llc": [
+   {
+    "name": "Minimum fee (partnerships, incl. multi-member LLCs taxed as partnerships)",
+    "amount": null,
+    "kind": "tiered",
+    "rate": null,
+    "applies": "partnerships whose Minnesota property + payroll + sales/receipts is at least $1,250,000 (2025 instructions)",
+    "notes": "Tiered fee by size of Minnesota factors; single-member disregarded LLCs not subject. 2026 tiers not read.",
+    "source": 3
+   }
+  ],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.revisor.mn.gov/statutes/cite/322C.0201",
+    "title": "Minn. Stat. 322C.0201",
+    "quote": "A limited liability company is formed when articles of organization have been filed with the secretary of state accompanied by a payment of $135."
+   },
+   {
+    "id": 2,
+    "url": "https://www.sos.mn.gov/media/1687/businessentityfees.pdf",
+    "title": "MN Secretary of State Business Filing Fee Schedule (rev. 6/19/2017)",
+    "quote": "Articles of Organization - Original Filing for 322C $135.00 $155.00 ... Annual Renewal for 322B or 322C $0 $0"
+   },
+   {
+    "id": 3,
+    "url": "https://www.revenue.state.mn.us/sites/default/files/2026-07/m8-inst-25.pdf",
+    "title": "2025 Form M8 instructions",
+    "quote": "An S corporation is subject to a minimum fee if the sum of its Minnesota source property, payroll and sales or receipts is at least $1,250,000."
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [
+   {
+    "name": "Minimum fee",
+    "rate": null,
+    "minimum": null,
+    "notes": "Applies when Minnesota property + payroll + sales/receipts >= $1,250,000 (2025); tiered amounts per Minn. Stat. 290.0922, indexed. Also built-in gains / excess passive income taxes at entity level.",
+    "source": 1
+   }
+  ],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Elective pass-through entity tax for S corps and partnerships, computed at 9.85% (top individual rate) on the entity's PTE income (Schedule PTE).",
+   "source": 1
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.revenue.state.mn.us/sites/default/files/2026-07/m8-inst-25.pdf",
+    "title": "2025 Form M8 instructions",
+    "quote": "Multiply line 51 of Schedule KS by 9.85% (0.0985)"
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "graduated",
+  "flat_rate": null,
+  "brackets": {
+   "single": [
+    [
+     0,
+     0.0535
+    ],
+    [
+     33310,
+     0.068
+    ],
+    [
+     109430,
+     0.0785
+    ],
+    [
+     203150,
+     0.0985
+    ]
+   ],
+   "mfj": [
+    [
+     0,
+     0.0535
+    ],
+    [
+     48700,
+     0.068
+    ],
+    [
+     193480,
+     0.0785
+    ],
+    [
+     337930,
+     0.0985
+    ]
+   ]
+  },
+  "standard_deduction": {
+   "single": 15300,
+   "mfj": 30600
+  },
+  "personal_exemption": {
+   "single": null,
+   "mfj": null,
+   "is_credit": false,
+   "notes": "No personal exemption for filer/spouse; dependent exemption $5,300 each. HOH standard deduction $23,000; HOH brackets 5.35% to $41,010, 6.8% to $164,800, 7.85% to $270,060, 9.85% above."
+  },
+  "starting_point": "federal AGI",
+  "surtaxes": "Net investment income tax of 1% on net investment income over $1M (since 2024) - not re-read today.",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.revenue.state.mn.us/press-release/2025-12-16/minnesota-income-tax-brackets-standard-deduction-and-dependent-exemption",
+    "title": "MN Revenue press release 2025-12-16: 2026 brackets, standard deduction, dependent exemption",
+    "quote": "Single up to $33,310 5.35% ... $203,151 and over 9.85%; Married Filing Joint: $30,600; Single: $15,300; Dependent exemption: $5,300"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "tax after credits expected to be $500 or more (no underpayment addition below $500)",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "Due dates follow the federal schedule (not read on revenue.state.mn.us, which blocks automated reading).",
+  "source_url": "https://www.revisor.mn.gov/statutes/cite/289A.25"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": null,
+  "new_employer_rate": null,
+  "notes": "uimn.org/mn.gov unreachable or blocked. Secondary sources: 2026 wage base $44,000, new employer rates vary by industry (1%+), plus 0.40% base tax rate - not verified. Minnesota Paid Leave premiums began 2026 (not researched).",
+  "source_url": null
+ },
+ "local_taxes": [],
+ "notable": [
+  "Top rate 9.85% from $203,150 single / $337,930 joint in 2026 (https://www.revenue.state.mn.us/press-release/2025-12-16/minnesota-income-tax-brackets-standard-deduction-and-dependent-exemption)",
+  "LLC annual renewal is free, but forgetting it leads to administrative dissolution (https://www.sos.mn.gov/media/1687/businessentityfees.pdf)",
+  "S corps and partnerships owe a minimum fee once Minnesota property+payroll+sales reach $1.25M (https://www.revenue.state.mn.us/sites/default/files/2026-07/m8-inst-25.pdf)",
+  "Elective PTE tax at 9.85% (https://www.revenue.state.mn.us/sites/default/files/2026-07/m8-inst-25.pdf)"
+ ],
+ "uncertain": [
+  "revenue.state.mn.us, sos.mn.gov and uimn.org block automated reading (Radware). Bracket figures read via WebFetch of the official press release; LLC fees from statute and a 2017 SOS fee schedule (online $155 may have changed).",
+  "2026 minimum fee tiers and threshold not read (2025 threshold $1,250,000).",
+  "SUTA 2026 wage base and new employer rate not verified.",
+  "Standard deduction phase-out for high incomes and the 1% net investment income tax not verified today."
+ ]
+}

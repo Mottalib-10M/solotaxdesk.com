@@ -1,0 +1,64 @@
+{
+  "state": "Iowa", "slug": "iowa", "abbr": "IA", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 50,
+    "formation_doc": "Certificate of Organization (Iowa Code 489.201)",
+    "formation_notes": "Filed online via Fast Track Filing or by paper.",
+    "annual_report": {
+      "name": "Biennial Report",
+      "fee": 30,
+      "frequency": "biennial",
+      "due": "odd-numbered years, between January 1 and April 1",
+      "late_penalty": "not stated on the fee page; paper filing costs $45"
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://sos.iowa.gov/business/FormsAndFees.html", "title": "Iowa SOS - Business Entity Forms and Fees", "quote": "Domestic **Certificate of Organization - $50 Iowa Code 489.201" },
+      { "id": 2, "url": "https://sos.iowa.gov/business/FormsAndFees.html", "title": "Iowa SOS - Biennial Report", "quote": "LLCs, LLPs, and Nonprofit Corporations: Every Odd numbered year beginning January 1st and due by April 1st. The fee is $30* by online filing or $45* by paper." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporate income tax on built-in gains and passive investment income only", "rate": 0.071, "minimum": null, "notes": "Only when the S corp owes federal tax on these items; corporate rate 7.1% for 2024 or later (from the composite tax table). Otherwise S corps are not taxable entities in Iowa.", "source": 1 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "Annual PTET election for partnerships and S corps (HF 352, 2023); rate 3.8% for 2025 (individual rate). After P.L. 119-21 the election is no longer scheduled to expire and remains available while the federal SALT limitation applies.", "source": 2 },
+    "sources": [
+      { "id": 1, "url": "https://revenue.iowa.gov/taxes/tax-guidance/general/iowa-taxfee-descriptions-and-rates", "title": "Iowa DOR - Tax/Fee Descriptions and Rates (S Corporation Income Tax)", "quote": "Generally, an S Corporation is not a taxable entity in Iowa, but the shareholders are taxed on their distributive shares" },
+      { "id": 2, "url": "https://revenue.iowa.gov/taxes/tax-guidance/business-income-tax/pass-through-entity-tax-ptet", "title": "Iowa DOR - Pass-Through Entity Tax (PTET)", "quote": "Due to federal legislation, P.L. 119-21, the PTET election is no longer scheduled to expire." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.038,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": 40, "mfj": 80, "is_credit": true, "notes": "$40 personal exemption credit per person (and per dependent); +$20 credit if 65+ or blind. No separate Iowa standard deduction: Iowa starts from federal taxable income, so the federal standard deduction applies implicitly. Filing threshold: net income over $9,000 single / $13,500 married." },
+    "starting_point": "federal taxable income",
+    "surtaxes": "School district income surtax (up to 20% of state tax, varies by district) and Appanoose County EMS surtax (1% of state tax) - see local_taxes.",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://revenue.iowa.gov/resources/law-policy-information/iowa-tax-rate-history", "title": "Iowa DOR - Iowa Tax Rate History", "quote": "2025 All brackets were eliminated. A single rate of 3.8% applied to all taxable income." },
+      { "id": 2, "url": "https://revenue.iowa.gov/taxes/tax-guidance/general/iowa-taxfee-descriptions-and-rates", "title": "Iowa DOR - composite tax rate for individual nonresident members", "quote": "Estate, trust, S corporation, partnership, or individual 8.53% for 2022; 6% for 2023; 5.7% for 2024; 3.8% for 2025 or later" },
+      { "id": 3, "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/exemption-credits", "title": "Iowa DOR - IA 1040 Exemption Credits", "quote": "Add the number of personal credits and multiply by $40." }
+    ]
+  },
+  "estimated_tax": { "required_if": "you expect to owe $1,000 or more (raised from $200 for tax years beginning on or after Jan 1, 2026) in tax on income not subject to withholding", "due_dates_2026": ["2026-04-30", "2026-06-30", "2026-09-30", "2027-01-31"], "notes": "Iowa uses end-of-month dates (April 30, June 30, Sept 30, Jan 31); next business day if weekend/holiday", "source_url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/estimated-income-tax-payments" },
+  "unemployment_2026": { "taxable_wage_base": 20400, "new_employer_rate": 0.01, "notes": "2026 wage base dropped to $20,400 from $39,500 in 2025; Table D (lowest) in effect; new construction employers 5.4%", "source_url": "https://workforce.iowa.gov/media/1278/download?inline" },
+  "local_taxes": [
+    { "place": "Iowa school districts (most districts)", "name": "School district income surtax", "rate": null, "applies": "Iowa residents, computed as a percentage of state income tax liability, collected on the IA 1040", "threshold_or_exemption": "Varies by school district, not to exceed 20% of state income tax; district list on the DOR income tax forms page", "source_url": "https://revenue.iowa.gov/taxes/tax-guidance/general/iowa-taxfee-descriptions-and-rates", "quote": "Tax Rate: Not to exceed 20% of state income tax liability. The rate is different for each school district." },
+    { "place": "Appanoose County", "name": "Emergency medical services income surtax", "rate": 0.01, "applies": "county residents, as a percentage of state income tax liability", "threshold_or_exemption": "1% of state tax, not of income", "source_url": "https://revenue.iowa.gov/taxes/tax-guidance/general/iowa-taxfee-descriptions-and-rates", "quote": "Only Appanoose County imposes this tax (at a rate of 1%) at this time." }
+  ],
+  "notable": [
+    "Flat 3.8% on federal taxable income since 2025 (https://revenue.iowa.gov/resources/law-policy-information/iowa-tax-rate-history)",
+    "Estimated tax threshold raised to $1,000 from 2026, and quarterly dates are the last day of April, June, September and January (https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/estimated-income-tax-payments)",
+    "SUTA wage base cut to $20,400 for 2026, new employers 1.0% (https://workforce.iowa.gov/media/1278/download?inline)",
+    "LLC costs are low: $50 to form, $30 online biennial report (https://sos.iowa.gov/business/FormsAndFees.html)",
+    "School district surtax adds up to 20% of the state tax bill (https://revenue.iowa.gov/taxes/tax-guidance/general/iowa-taxfee-descriptions-and-rates)"
+  ],
+  "uncertain": [
+    "No DOR page states the 2026 individual rate in words; 3.8% applies to 2025 'or later' per the composite rate table and rate history. No 2026 law change was found.",
+    "Biennial report late penalty not found.",
+    "Corporate rate for built-in gains (7.1%) is read from the composite tax table for C corporations; Iowa corporate rate schedule not checked separately."
+  ]
+}

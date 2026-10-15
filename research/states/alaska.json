@@ -1,0 +1,74 @@
+{
+  "state": "Alaska",
+  "slug": "alaska",
+  "abbr": "AK",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 250,
+    "formation_doc": "Articles of Organization (Form 08-0484)",
+    "formation_notes": "The Division of Corporations forms page lists $250 for Articles of Organization; the regulation 3 AAC 16.065(a) sets the articles filing fee at $150 (the difference appears to be the first biennial fee collected at formation, not confirmed). A free Initial Report may be due within 6 months of formation. A separate state business license ($50/year) is required for every business.",
+    "annual_report": {
+      "name": "Biennial Report",
+      "fee": 100,
+      "frequency": "biennial",
+      "due": "January 2 of the reporting year (every two years); late fee applies on or after February 2",
+      "late_penalty": "Regulation: $25 per year of delinquency plus 10% of the filing fee; the Division lists $137.50 total for a late domestic LLC report"
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "State business license fee",
+        "amount": 50,
+        "kind": "fixed",
+        "rate": null,
+        "applies": "Every business operating in Alaska, including sole proprietors and LLCs",
+        "notes": "$50 per year or $100 for a two-year license; $25/$50 for a sole proprietor aged 65+ or a disabled veteran (not available to LLCs). Licenses expire December 31. Alaska has no franchise tax on LLCs.",
+        "source": 3
+      }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://www.commerce.alaska.gov/web/cbpl/Corporations/CorporationFormsFees", "title": "Corporation Forms & Fees, Alaska Division of Corporations (read via search index; site blocks automated fetch)", "quote": "Articles of Organization (PDF) | 08-0484 | $250.00" },
+      { "id": 2, "url": "https://www.akleg.gov/basis/aac.asp?media=print&secStart=3.16.065&secEnd=3.16.065", "title": "3 AAC 16.065 Fees and charges for limited liability companies", "quote": "The fee to file a biennial report for a domestic limited liability company is $100" },
+      { "id": 3, "url": "https://www.commerce.alaska.gov/web/portals/5/pub/BusinessLicenseStatutes.pdf", "title": "Statutes and Regulations, Business Licensing (March 2026)", "quote": "Sec. 43.70.030. Levy and computation of license fee. (a) The fee for each business license is $50 a year" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": null,
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No individual income tax" },
+    "starting_point": null,
+    "surtaxes": "None",
+    "year_of_figures": 2026,
+    "sources": []
+  },
+  "estimated_tax": {
+    "required_if": "Not applicable (no individual income tax)",
+    "due_dates_2026": [],
+    "notes": "",
+    "source_url": null
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 54200,
+    "new_employer_rate": 0.01,
+    "notes": "2026 new (industry) employer rate is 1.00% for every industry, plus a 0.50% employee contribution withheld from wages (total 1.50%). Experienced employer rates 1% to 5.40%.",
+    "source_url": "https://labor.alaska.gov/estax/2026-industry-rates.html"
+  },
+  "local_taxes": [],
+  "notable": [
+    "No state individual income tax and no tax on LLCs or S corporations at the state level (https://labor.alaska.gov/estax/newsletters/newsltr0126.pdf is UI only; no individual income tax statute exists)",
+    "Employees pay unemployment insurance too: 0.50% of wages up to $54,200 in 2026, so an S corp owner's salary has both employer and employee UI (https://labor.alaska.gov/estax/2026-industry-rates.html)",
+    "Every business needs a state business license, $50/year (https://www.commerce.alaska.gov/web/portals/5/pub/BusinessLicenseStatutes.pdf)"
+  ],
+  "uncertain": [
+    "LLC formation fee: the Division of Corporations site blocks automated access; the $250 figure comes from the search-indexed forms page, while the regulation 3 AAC 16.065(a) states $150 for articles. Use $250 (current form) but verify.",
+    "Late biennial report total ($137.50) from the search-indexed Division FAQ, not read directly.",
+    "Local taxes: Alaska has no local income taxes; some boroughs/cities levy sales taxes, which are out of scope."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "state": "Alabama",
+  "slug": "alabama",
+  "abbr": "AL",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 200,
+    "formation_doc": "Certificate of Formation (domestic LLC)",
+    "formation_notes": "A Certificate of Name Reservation must be obtained before filing (separate fee, amount not verified on an official page). Foreign LLC registration: $150.",
+    "annual_report": {
+      "name": "None with the Secretary of State; the Business Privilege Tax Return (Form PPT) is filed with the Department of Revenue only when the privilege tax exceeds $100",
+      "fee": 0,
+      "frequency": "none",
+      "due": "Form PPT (when required) is due on the due date of the entity's federal income tax return (April 15 for a calendar-year single-member LLC reported on Schedule C; March 15 for a calendar-year partnership LLC or S corp)",
+      "late_penalty": "Failure to timely file: 10% of the tax shown due or $50, whichever is greater"
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Business Privilege Tax",
+        "amount": null,
+        "kind": "tiered",
+        "rate": null,
+        "applies": "Every corporation, LLC (including single-member disregarded LLCs) and S corporation doing business in or registered in Alabama",
+        "notes": "Tax on Alabama net worth at $0.25 to $1.75 per $1,000 depending on federal taxable income apportioned to Alabama (<$1: 0.25; $1-$200k: 1.00; $200k-$500k: 1.25; $500k-$2.5M: 1.50; $2.5M+: 1.75 per $1,000). For taxable year 2026, no return is required and nothing is due if the tax calculates to $100 or less (the old $100 minimum is effectively eliminated). Maximum $15,000 for S corps, LLEs and disregarded entities; $500 for electing family LLEs.",
+        "source": 2
+      }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://www.sos.alabama.gov/business-entities/llcs", "title": "Alabama Secretary of State - LLCs", "quote": "Filing Fees Secretary of State: $200.00" },
+      { "id": 2, "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/26fpptinstr.pdf", "title": "Alabama Form PPT Instructions 2026", "quote": "For taxable year 2026, taxpayers who would be subject to the minimum tax of one hundred dollars ($100), do not have a filing requirement." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Business Privilege Tax", "rate": null, "minimum": null, "notes": "Same net-worth based privilege tax as LLCs (Form PPT), $0.25-$1.75 per $1,000 of Alabama net worth, nothing due if $100 or less, $15,000 maximum.", "source": 1 }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Electing Pass-Through Entity tax (Form EPT) since tax years beginning 2021: S corps and partnerships multiply Alabama Schedule K lines 1-17 by 5 percent; election made by checking the Electing PTE box on a timely Form 20S/65.",
+      "source": 2
+    },
+    "sources": [
+      { "id": 1, "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/26fpptinstr.pdf", "title": "Alabama Form PPT Instructions 2026", "quote": "S-corporations, limited liability entities, and disregarded entities must file Alabama Form PPT." },
+      { "id": 2, "url": "https://www.revenue.alabama.gov/individual-corporate/electing-pass-through-entities/", "title": "Electing Pass Through Entities - Alabama Department of Revenue", "quote": "Calculate the total of lines 1 through 17 in the Alabama column on Schedule K from the S-Corporation's Form 20S, then multiply this total by 5 percent." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.02], [500, 0.04], [3000, 0.05]],
+      "mfj": [[0, 0.02], [1000, 0.04], [6000, 0.05]]
+    },
+    "standard_deduction": { "single": 3000, "mfj": 8500 },
+    "personal_exemption": {
+      "single": 1500,
+      "mfj": 3000,
+      "is_credit": false,
+      "notes": "Standard deduction phases down with adjusted gross income: single $3,000 at AGI up to $25,999, minus $25 per $500 above, floor $2,500 at $35,500+; MFJ $8,500 minus $175 per $500 above $25,999, floor $5,000 at $35,500+ (2026 withholding booklet formula). Dependent exemption $1,000 / $500 / $300 depending on income. Federal income tax paid is deductible on the Alabama return."
+    },
+    "starting_point": "own definition",
+    "surtaxes": "None",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.revenue.alabama.gov/tax-types/individual-income-tax/", "title": "Individual Income Tax - Alabama Department of Revenue", "quote": "2 percent on first $500 of taxable income ... 5 percent on all over $3,000 ... 2 percent on first $1,000 ... 5 percent on all over $6,000" },
+      { "id": 2, "url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/whbooklet_0126.pdf", "title": "Withholding Tax Tables and Instructions (January 2026)", "quote": "GI of $25,999 or less deduct $8,500" },
+      { "id": 3, "url": "https://www.revenue.alabama.gov/faqs/what-personal-exemptions-am-i-entitled-to/", "title": "What personal exemptions am I entitled to?", "quote": "Taxpayers using the Single and Married Filing Separately filing statuses are entitled to a $1,500 personal exemption." }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "You expect to owe at least $500 in Alabama tax for 2026 after withholding and credits",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Form 40ES. An older ALDOR FAQ still shows December 15 for the fourth payment; the 2026 40ES instructions use January 15, 2027.",
+    "source_url": "https://www.revenue.alabama.gov/wp-content/uploads/2026/01/26f40esinstr.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 8000,
+    "new_employer_rate": 0.027,
+    "notes": "Newly liable employers pay 2.70% on the first $8,000 of wages per employee; later rates by experience rating. The FAQ is not dated for 2026 specifically.",
+    "source_url": "https://workforce.alabama.gov/faqs/what-is-the-new-account-rate/"
+  },
+  "local_taxes": [
+    {
+      "place": "Birmingham",
+      "name": "Occupational tax (occupational license fee)",
+      "rate": null,
+      "applies": "Persons engaging in a trade, occupation or profession in the city; withheld by employers from wages. The city lists Occupational Tax among the taxes filed through its online system.",
+      "threshold_or_exemption": "Not verified",
+      "source_url": "https://www.birminghamal.gov/government/city-departments/finance/tax-license-division",
+      "quote": "Occupational Tax"
+    }
+  ],
+  "notable": [
+    "No Secretary of State annual report for LLCs; the only recurring state filing is the Business Privilege Tax return, and none is needed when the tax is $100 or less (https://www.revenue.alabama.gov/wp-content/uploads/2026/01/26fpptinstr.pdf)",
+    "Federal income tax paid is deductible on the Alabama return, and the standard deduction shrinks as income rises (https://www.revenue.alabama.gov/wp-content/uploads/2026/01/whbooklet_0126.pdf)",
+    "Cities and counties levy their own business license taxes on gross receipts; ALDOR does not administer municipal licenses (https://www.revenue.alabama.gov/business-privilege-tax/)"
+  ],
+  "uncertain": [
+    "Birmingham occupational tax rate: widely reported as 1% of gross receipts/compensation (Birmingham Code § 3A-2-33), but the official code host (Municode) could not be loaded and the city site does not state the rate; whether it reaches self-employed people's net earnings was not verified. Other Alabama cities with occupational taxes (Bessemer, Gadsden, etc.) were not checked.",
+    "Name reservation fee: the Secretary of State fee schedule and name reservation pages returned 'Access denied' today.",
+    "Standard deduction figures come from the 2026 withholding formula, which uses gross income; the Form 40 chart uses AGI with the same dollar amounts per the statute but the 2026 Form 40 chart was not read."
+  ]
+}

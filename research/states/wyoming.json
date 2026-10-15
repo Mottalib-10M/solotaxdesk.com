@@ -1,0 +1,48 @@
+{
+  "state": "Wyoming", "slug": "wyoming", "abbr": "WY", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "SOS filing fee $100 (fee schedule revised June 2026); foreign LLC certificate of authority $150; $10 per series in a series LLC. A small card/convenience fee may apply online (not verified).",
+    "annual_report": { "name": "Annual Report and License Tax", "fee": 60, "frequency": "annual", "due": "on or before the first day of the LLC's anniversary month (formed Jan 15 -> due Jan 1 each year), starting the year after formation", "late_penalty": "entity subject to administrative dissolution if not paid within 60 days of the due date; reinstatement for tax $100" },
+    "state_tax_on_llc": [
+      { "name": "Annual report license tax", "amount": 60, "kind": "rate", "rate": 0.0002, "applies": "every domestic and foreign LLC", "notes": "Greater of $60 or two-tenths of one mill ($0.0002) per dollar of assets located and employed in Wyoming; e.g., $1,210,000 of WY assets -> $242. Minimum binds until WY assets exceed $300,000.", "source": 1 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://sos.wyo.gov/Business/Docs/BusinessFees.pdf", "title": "Wyoming Secretary of State, Business Division Filing Fee schedule (revised June 2026)", "quote": "Annual Report License tax is $60 or two-tenths of one mill on the dollar ($.0002) whichever is greater" },
+      { "id": 2, "url": "https://sos.wyo.gov/Business/Docs/BusinessFees.pdf", "title": "Wyoming Secretary of State, Business Division Filing Fee schedule", "quote": "Articles of Organization*/Continuance/Domestication ... $100.00" },
+      { "id": 3, "url": "https://sos.wyo.gov/faqs.aspx?root=BUS", "title": "Wyoming SOS, Business Entities FAQ", "quote": "if your business registers or qualifies on January 15th, your annual report due date will be January 1st of each year." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "partial",
+    "entity_level_taxes": [],
+    "pte_elective_tax": null,
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": null,
+    "starting_point": null,
+    "surtaxes": "none",
+    "year_of_figures": 2026,
+    "sources": []
+  },
+  "estimated_tax": { "required_if": "no state individual income tax", "due_dates_2026": [], "notes": "", "source_url": null },
+  "unemployment_2026": { "taxable_wage_base": 33800, "new_employer_rate": null, "notes": "Wage base $33,800 in 2026 ($32,400 in 2025, $34,900 in 2027). New employers get an industry-based base rate plus four additional factors; no single rate (8.5% if registration incomplete).", "source_url": "https://dws.wyo.gov/dws-division/unemployment-insurance/wyui/unemployment-taxable-wage-base/" },
+  "local_taxes": [],
+  "notable": [
+    "No personal or corporate income tax; the S election has no state tax effect (no state return to file)",
+    "Only recurring state cost for a small LLC is the $60 minimum annual license tax (https://sos.wyo.gov/Business/Docs/BusinessFees.pdf)",
+    "UI wage base is high ($33,800 in 2026), which matters for an S corp owner's salary (https://dws.wyo.gov/dws-division/unemployment-insurance/wyui/unemployment-taxable-wage-base/)"
+  ],
+  "uncertain": [
+    "S corp recognition marked 'partial' because there is no income tax at all; no official page read stating this explicitly.",
+    "Absence of income tax not quoted from an official page read today (well established, but no source captured).",
+    "Online card/convenience fee on formation not verified.",
+    "New-employer UI rate is industry-specific; not recorded."
+  ]
+}

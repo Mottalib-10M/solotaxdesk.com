@@ -1,0 +1,223 @@
+{
+  "state": "Ohio",
+  "slug": "ohio",
+  "abbr": "OH",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 99,
+    "formation_doc": "Articles of Organization (Form 610)",
+    "formation_notes": "No publication requirement known.",
+    "annual_report": {
+      "name": "None",
+      "fee": 0,
+      "frequency": "none",
+      "due": "Ohio has no LLC annual report",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Commercial Activity Tax (CAT)",
+        "amount": null,
+        "kind": "rate",
+        "rate": 0.0026,
+        "applies": "businesses (any entity type incl. sole proprietors/LLCs) with Ohio taxable gross receipts over $6 million (calendar 2025 and after)",
+        "notes": "Annual minimum tax eliminated from 2024. 0.26% on receipts above $6,000,000; no return required at or below $6M.",
+        "source": 2
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/610_web.pdf",
+        "title": "Ohio SOS Form 610 - Articles of Organization for a Domestic LLC",
+        "quote": "Filing Fee: $99"
+      },
+      {
+        "id": 2,
+        "url": "https://tax.ohio.gov/static/commercial_activities/information_releases/CAT_2023-01_info_release.pdf",
+        "title": "Ohio DOT CAT Information Release 2023-01",
+        "quote": "For calendar year 2025 and thereafter, the exclusion amount is increased to $6 million."
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      {
+        "name": "Commercial Activity Tax (CAT)",
+        "rate": 0.0026,
+        "minimum": 0,
+        "notes": "Only on Ohio taxable gross receipts above $6 million.",
+        "source": 1
+      },
+      {
+        "name": "Municipal net profit tax",
+        "rate": null,
+        "minimum": null,
+        "notes": "Ohio cities tax S corporation net profits at the entity level at the municipal rate (e.g. 2.5% Columbus). Shareholder distributions are generally not taxed again by the city (not verified per city).",
+        "source": null
+      }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Electing pass-through entity tax on Form IT 4738; from taxable years beginning 2026 estimated payments due April 15, June 15, September 15, January 15. Composite IT 4708 rate is 3.00% from 2026 (3.125% in 2025); IT 4738 rate for 2026 not confirmed.",
+      "source": 2
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://tax.ohio.gov/static/commercial_activities/information_releases/CAT_2023-01_info_release.pdf",
+        "title": "Ohio DOT CAT Information Release 2023-01",
+        "quote": "The CAT rate of 0.26% remains unchanged"
+      },
+      {
+        "id": 2,
+        "url": "https://dam.assets.ohio.gov/image/upload/tax.ohio.gov/OVTA/2025%20Power%20Point%20Presentations/09-09-2025/PTE_OVTA_Materials_Sep_25.pdf",
+        "title": "Ohio DOT - PTE OVTA materials Sept 2025 (House Bill 96)",
+        "quote": "3.00%: Reporting period starting on or after January 1, 2026"
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.0
+        ],
+        [
+          26050,
+          0.0275
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.0
+        ],
+        [
+          26050,
+          0.0275
+        ]
+      ]
+    },
+    "standard_deduction": null,
+    "personal_exemption": {
+      "single": 1900,
+      "mfj": 3800,
+      "is_credit": false,
+      "notes": "Exemption $1,900 per person per the 2026 IT 1040ES worksheet (amount varies with income in law; zero if income $500,000 or more). Business income: first $250,000 deductible (single/MFJ), remainder taxed at flat 3% regardless of brackets. Brackets apply to nonbusiness income, same for all filing statuses."
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": "None at state level; Ohio school district income taxes and municipal income taxes apply on top.",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://codes.ohio.gov/assets/laws/revised-code/authenticated/57/5747/5747.02/9-30-2025/5747.02-9-30-2025.pdf",
+        "title": "Ohio Revised Code 5747.02 (effective 9-30-2025, HB 96)",
+        "quote": "$332.00 plus 2.75% of the amount in excess of $26,050 (taxable years beginning in 2026 and later, per search extract)"
+      },
+      {
+        "id": 2,
+        "url": "https://dam.assets.ohio.gov/image/upload/tax.ohio.gov/forms/ohio_individual/individual/2026/ites-instructions-fi.pdf",
+        "title": "2026 Ohio Estimated Income Tax Payment Worksheet",
+        "quote": "Multiply the business income portion of line 5 by 3%"
+      },
+      {
+        "id": 3,
+        "url": "https://tax.ohio.gov/individual/resources/annual-tax-rates",
+        "title": "Ohio DOT - Annual Tax Rates (lists through 2025)",
+        "quote": "$100,000 - $2,394.32 + 3.125% of excess over $100,000"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "estimated Ohio tax (after credits) less Ohio withholding is more than $500",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "Safe harbor: 90% of current-year tax or 100% of prior-year tax. Municipal and school district estimated taxes are separate.",
+    "source_url": "https://dam.assets.ohio.gov/image/upload/tax.ohio.gov/forms/ohio_individual/individual/2026/ites-instructions-fi.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 9000,
+    "new_employer_rate": 0.027,
+    "notes": "Rate year 2026: new (non-construction) employer rate 2.7% plus 0.15% mutualized/surcharge = 2.85% total; construction new employer 5.7%.",
+    "source_url": "https://dam.assets.ohio.gov/image/upload/jfs.ohio.gov/ouio/uctax/2026RateDetails.pdf"
+  },
+  "local_taxes": [
+    {
+      "place": "Columbus",
+      "name": "Municipal income tax (wages and net profits)",
+      "rate": 0.025,
+      "applies": "residents on all income; nonresidents on income earned in Columbus; business net profits apportioned to Columbus",
+      "threshold_or_exemption": "Residents get 100% credit for tax paid to other cities up to 2.5%",
+      "source_url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/General-Income-Tax-Information",
+      "quote": "Columbus residents pay a total of 2.5% in taxes on all income earned"
+    },
+    {
+      "place": "Cleveland",
+      "name": "Municipal income tax (CCA)",
+      "rate": 0.025,
+      "applies": "residents, nonresidents working in Cleveland, business net profits",
+      "threshold_or_exemption": "Resident credit 100% up to 2.50% limit",
+      "source_url": "https://ccatax.ci.cleveland.oh.us/?p=taxrates",
+      "quote": "Cleveland Yes 2.50% 100% 2.50%"
+    },
+    {
+      "place": "Cincinnati",
+      "name": "Municipal income tax",
+      "rate": 0.018,
+      "applies": "residents on all income incl. Schedule C/E/F net profit; nonresidents on Cincinnati-apportioned income",
+      "threshold_or_exemption": "Resident credit for tax paid to other cities up to 1.8%",
+      "source_url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+      "quote": "The current Cincinnati income tax rate effective 10/02/20 is 1.8%."
+    },
+    {
+      "place": "Toledo",
+      "name": "Municipal income tax",
+      "rate": 0.025,
+      "applies": "residents, nonresidents working in Toledo, business net profits",
+      "threshold_or_exemption": null,
+      "source_url": "https://toledo.oh.gov/pay-taxes",
+      "quote": "effective January 1, 2021, the city of Toledo income tax rate is two and one-half percent (2.5%)."
+    },
+    {
+      "place": "Akron",
+      "name": "Municipal income tax",
+      "rate": 0.025,
+      "applies": "residents, nonresidents working in Akron, business net profits (also its JEDDs)",
+      "threshold_or_exemption": "Credit for tax paid to other municipalities up to 2.5%",
+      "source_url": "https://www.akronohio.gov/departments/finance/individual_joint_filers.php",
+      "quote": "2.5% effective January 1, 2018 (per search extract)"
+    },
+    {
+      "place": "Dayton",
+      "name": "Municipal income tax",
+      "rate": 0.025,
+      "applies": "residents and nonresidents working in Dayton; wages, business income, rental income",
+      "threshold_or_exemption": "2.25% base + 0.25% (Ord. 32072-23, Jan 1 2025 - Dec 31 2032); resident credit up to 2.5%",
+      "source_url": "https://www.daytonohio.gov/262/Tax-Information-Forms",
+      "quote": "The current tax rate for the City of Dayton is 2.5%"
+    }
+  ],
+  "notable": [
+    "2026: HB 96 collapses the nonbusiness brackets into one 2.75% rate above $26,050 (https://codes.ohio.gov/assets/laws/revised-code/authenticated/57/5747/5747.02/9-30-2025/5747.02-9-30-2025.pdf)",
+    "First $250,000 of business income deductible, rest taxed at flat 3% (https://tax.ohio.gov/individual/file-now/business-income-deduction-information)",
+    "No LLC annual report and no franchise tax; CAT only above $6 million of receipts (https://tax.ohio.gov/static/commercial_activities/information_releases/CAT_2023-01_info_release.pdf)",
+    "Municipal income taxes (often 2.5%) apply to self-employment net profits; most cities tax net profits of S corps/LLCs at entity level (https://ccatax.ci.cleveland.oh.us/?p=taxrates)"
+  ],
+  "uncertain": [
+    "2026 brackets: the Ohio DOT 2026 IT 1040ES worksheet (file dated Jan 2025, pre-HB 96) still shows 0% to $26,050, 2.75% to $100,000, 3.125% above; ORC 5747.02 as amended by HB 96 (effective 9-30-2025) sets a single 2.75% rate above $26,050 for 2026. codes.ohio.gov and legislature.ohio.gov refused connections today, so the statute was read only through a search-engine extract. Recorded the statutory version; verify before publishing.",
+    "Ohio SOS (ohiosos.gov) blocked direct fetch (security check); $99 LLC fee read via search extract of Form 610.",
+    "Cincinnati and Akron city pages blocked direct fetch; rates read via search extracts of official city pages.",
+    "IT 4738 electing PTE rate for 2026 not confirmed.",
+    "Business income deduction $250,000 amount from Ohio DOT page via search extract (not opened)."
+  ]
+}

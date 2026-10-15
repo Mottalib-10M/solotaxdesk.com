@@ -1,0 +1,443 @@
+{
+ "state": "Maryland",
+ "slug": "maryland",
+ "abbr": "MD",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 100,
+  "formation_doc": "Articles of Organization (filed with the State Department of Assessments and Taxation, SDAT)",
+  "formation_notes": "Statutory processing fee $100 (Corps. & Ass'ns 1-203(b)(4)). Optional expedited processing carries an extra fee (third parties cite $50, not verified: SDAT site blocked automated reading).",
+  "annual_report": {
+   "name": "Annual Report (with Personal Property Return)",
+   "fee": 300,
+   "frequency": "annual",
+   "due": "April 15 each year",
+   "late_penalty": null
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gca&section=1-203&enactments=false",
+    "title": "Md. Code, Corps. & Ass'ns 1-203",
+    "quote": "For each of the following documents recorded or filed the nonrefundable processing fee is $100: (i) ... articles of organization of a limited liability company"
+   },
+   {
+    "id": 2,
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gca&section=1-203&enactments=false",
+    "title": "Md. Code, Corps. & Ass'ns 1-203",
+    "quote": "Annual report of a Maryland limited liability company, limited liability partnership, limited partnership ... except a family farm ... $300"
+   },
+   {
+    "id": 3,
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gtp&section=11-101&enactments=false",
+    "title": "Md. Code, Tax-Property 11-101",
+    "quote": "On or before April 15 of each year, a person shall submit an annual report to the Department"
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Electing PTE pays 6.50% (top state rate) + 2.25% (lowest local rate) = 8.25% on members' PTE taxable income (2026 Form 510/511D). Nonelecting PTEs withhold on nonresident members.",
+   "source": 1
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/forms/2026/510-511d.pdf",
+    "title": "2026 Form 510/511D Pass-Through Entity Declaration",
+    "quote": "the tax is the top marginal state tax of 6.50% plus the lowest local income tax rate of 2.25% of members' pass-through"
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "graduated",
+  "flat_rate": null,
+  "brackets": {
+   "single": [
+    [
+     0,
+     0.02
+    ],
+    [
+     1000,
+     0.03
+    ],
+    [
+     2000,
+     0.04
+    ],
+    [
+     3000,
+     0.0475
+    ],
+    [
+     100000,
+     0.05
+    ],
+    [
+     125000,
+     0.0525
+    ],
+    [
+     150000,
+     0.055
+    ],
+    [
+     250000,
+     0.0575
+    ],
+    [
+     500000,
+     0.0625
+    ],
+    [
+     1000000,
+     0.065
+    ]
+   ],
+   "mfj": [
+    [
+     0,
+     0.02
+    ],
+    [
+     1000,
+     0.03
+    ],
+    [
+     2000,
+     0.04
+    ],
+    [
+     3000,
+     0.0475
+    ],
+    [
+     150000,
+     0.05
+    ],
+    [
+     175000,
+     0.0525
+    ],
+    [
+     225000,
+     0.055
+    ],
+    [
+     300000,
+     0.0575
+    ],
+    [
+     600000,
+     0.0625
+    ],
+    [
+     1200000,
+     0.065
+    ]
+   ]
+  },
+  "standard_deduction": {
+   "single": 3350,
+   "mfj": 6700
+  },
+  "personal_exemption": {
+   "single": 3200,
+   "mfj": 6400,
+   "is_credit": false,
+   "notes": "$3,200 per exemption (taxpayer, spouse, each dependent) when FAGI <= $100,000; phased down above $100,000 single / $150,000 joint, zero above $150,000 single / $200,000 joint. +$1,000 if 65+ or blind."
+  },
+  "starting_point": "federal AGI",
+  "surtaxes": "Additional 2% tax on net capital gain income when federal AGI exceeds $350,000 (from tax year 2025). Plus county/Baltimore City income tax 2.25%-3.30% (see local_taxes).",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+    "title": "Maryland 2025 resident booklet, 2026 estimated tax worksheet (PVW)",
+    "quote": "$500,001 $1,000,000 $27,135.00 plus 6.25% of excess over $500,000 $1,000,001 -- $58,385.00 plus 6.50% of excess over $1,000,000"
+   },
+   {
+    "id": 2,
+    "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+    "title": "2026 estimated tax worksheet instructions",
+    "quote": "If Your Filing Status is single, dependent, or married filing separately, your standard deduction amount is $3,350."
+   },
+   {
+    "id": 3,
+    "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+    "title": "2026 estimated tax worksheet instructions",
+    "quote": "If your federal adjusted gross income is greater than $350,000, net capital gain income ... may be subject to an additional 2% tax."
+   },
+   {
+    "id": 4,
+    "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/md/state-payroll/memos/2026/2026-maryland-state-and-local-withholding-information.pdf",
+    "title": "2026 Maryland State and Local Income Tax Withholding Information",
+    "quote": "$500,001 - $1,000,000 6.25 percent (new) Over $1,000,000 6.5 percent (new)"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "gross income expected to develop a tax of more than $500 in excess of Maryland withholding",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "Covers state + local tax. Fourth payment can be replaced by filing and paying by 2027-01-31. 110% of prior-year tax safe harbor when income rises.",
+  "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": 8500,
+  "new_employer_rate": null,
+  "notes": "Table A in effect for 2026; new employer rate 'may range from 1.0% to 2.6%' (2.6% commonly reported, not stated as a single figure on the official page).",
+  "source_url": "https://www.labor.maryland.gov/unemployment-insurance/employer-agent/tax-rate.shtml"
+ },
+ "local_taxes": [
+  {
+   "place": "Baltimore City",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Baltimore City .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Allegany County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Allegany County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Anne Arundel County",
+   "name": "County income tax (graduated)",
+   "rate": null,
+   "applies": "residents; 2026 graduated rates on Maryland taxable net income",
+   "threshold_or_exemption": "Single/MFS: 2.70% on $1-$50,000, 2.94% on $50,001-$400,000, 3.20% over $400,000. MFJ/HOH/QSS: 2.70% to $75,000, 2.94% $75,001-$480,000, 3.20% over $480,000",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "(1) .0270 of Maryland taxable net income of $1 through $50,000; (2) .0294 ... $50,001 through $400,000; and (3) .0320 ... over $400,000"
+  },
+  {
+   "place": "Baltimore County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Baltimore County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Calvert County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Calvert County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Caroline County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Caroline County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Carroll County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0303,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Carroll County .......... .0303 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Cecil County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0274,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Cecil County .......... .0274 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Charles County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0303,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Charles County .......... .0303 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Dorchester County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.033,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Dorchester County .......... .0330 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Garrett County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0265,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Garrett County .......... .0265 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Frederick County",
+   "name": "County income tax (graduated)",
+   "rate": null,
+   "applies": "residents; 2026 graduated rates (rate applies to whole taxable net income per bracket wording)",
+   "threshold_or_exemption": "Single/MFS: 2.25% to $25,000, 2.75% $25,001-$50,000, 2.96% $50,001-$150,000, 3.20% $150,001+. MFJ/HOH/QSS: 2.25% to $25,000, 2.75% $25,001-$100,000, 2.96% $100,001-$250,000, 3.20% $250,001+",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "** Frederick Co. The local tax rates for tax year 2026 are as follows"
+  },
+  {
+   "place": "Harford County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0306,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Harford County .......... .0306 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Howard County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Howard County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Kent County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.033,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Kent County .......... .0330 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Montgomery County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Montgomery County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Prince George's County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Prince George's County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Queen Anne's County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Queen Anne's County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "St. Mary's County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "St. Mary's County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Somerset County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Somerset County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Talbot County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.024,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Talbot County .......... .0240 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Washington County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0295,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Washington County .......... .0295 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Wicomico County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.032,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Wicomico County .......... .0320 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Worcester County",
+   "name": "County income tax (local income tax)",
+   "rate": 0.0225,
+   "applies": "Maryland residents of this county/city, on Maryland taxable net income, tax year 2026",
+   "threshold_or_exemption": "none (same taxable net income as the state tax)",
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Worcester County .......... .0225 (2026 estimated tax worksheet local rate list)"
+  },
+  {
+   "place": "Nonresidents (statewide)",
+   "name": "Special nonresident income tax",
+   "rate": 0.0225,
+   "applies": "nonresidents with Maryland-source income instead of a county tax",
+   "threshold_or_exemption": null,
+   "source_url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf",
+   "quote": "Nonresidents use ...... .0225"
+  }
+ ],
+ "notable": [
+  "Every resident also pays a county (or Baltimore City) income tax of 2.25% to 3.30% on the same taxable income; Allegany rose to 3.20% and Kent to 3.30% for 2026, Dorchester also 3.30% (https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf)",
+  "Two new top brackets since 2025: 6.25% and 6.50% above $500,000 / $1,000,000 single (https://www.marylandcomptroller.gov/content/dam/mdcomp/md/state-payroll/memos/2026/2026-maryland-state-and-local-withholding-information.pdf)",
+  "Flat standard deduction $3,350 / $6,700 replaces the old 15%-of-income formula (https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/instructions/2025/resident-booklet.pdf)",
+  "LLC formation is only $100 but the annual report costs $300, due April 15 (https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gca&section=1-203&enactments=false)",
+  "Elective PTE tax 8.25% (6.50% + 2.25%) (https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/forms/2026/510-511d.pdf)"
+ ],
+ "uncertain": [
+  "Standard deduction for 2026 taken from the Comptroller's 2026 estimated tax worksheet ($3,350/$6,700); law provides inflation indexing in later years, final 2026 Form 502 amounts not yet published.",
+  "Expedited filing fee and online card fee for Articles of Organization not verified: dat.maryland.gov returns 403 to automated reading.",
+  "Late annual report penalty not verified.",
+  "New employer UI rate: official page gives only a 1.0%-2.6% range.",
+  "Local tax: Comptroller 2026 payroll memo shows Baltimore City 3.20 and Out-of-state 2.25, consistent with the worksheet list."
+ ]
+}

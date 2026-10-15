@@ -1,0 +1,288 @@
+{
+  "state": "New York",
+  "slug": "new-york",
+  "abbr": "NY",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 200,
+    "formation_doc": "Articles of Organization (DOS-1336)",
+    "formation_notes": "Publication requirement: within 120 days of formation, publish a notice in two newspapers for six consecutive weeks, then file a Certificate of Publication ($50 filing fee); failure suspends the LLC's authority to do business. Newspaper costs are extra and vary by county (not verified). Optional expedited handling available for Articles (fee amounts not verified on an official page today).",
+    "annual_report": {
+      "name": "Biennial Statement",
+      "fee": 9,
+      "frequency": "biennial",
+      "due": "every two years, in the calendar month the LLC was formed",
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Certificate of Publication filing fee (one-time)",
+        "amount": 50,
+        "kind": "fixed",
+        "rate": null,
+        "applies": "every domestic LLC, after completing newspaper publication",
+        "notes": "Plus newspaper publication costs",
+        "source": 2
+      },
+      {
+        "name": "LLC annual filing fee (Form IT-204-LL)",
+        "amount": 25,
+        "kind": "tiered",
+        "rate": null,
+        "applies": "LLCs (including single-member disregarded LLCs) with New York source income, gain, loss or deduction",
+        "notes": "Disregarded single-member LLC: $25. Multi-member LLC taxed as partnership: tiered on prior-year NY source gross income: up to $100,000 = $25; $100,000-250,000 = $50; $250,000-500,000 = $175; $500,000-1M = $500; 1M-5M = $1,500; 5M-25M = $3,000; over 25M = $4,500. Due 15th day of 3rd month after year end (March 15 for calendar year). Table from 2025 instructions.",
+        "source": 3
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://dos.ny.gov/biennial-statements-business-corporations-and-limited-liability-companies",
+        "title": "NY DOS - Biennial Statements for Business Corporations and LLCs",
+        "quote": "$9 filing fee for Biennial Statement."
+      },
+      {
+        "id": 2,
+        "url": "https://dos.ny.gov/forming-limited-liability-company-new-york",
+        "title": "NY DOS - Forming a Limited Liability Company in New York",
+        "quote": "The fee for filing the Articles of Organization is $200."
+      },
+      {
+        "id": 3,
+        "url": "https://www.tax.ny.gov/pdf/current_forms/it/it204lli.pdf",
+        "title": "Instructions for Form IT-204-LL (2025)",
+        "quote": "If your LLC is treated as a disregarded entity for federal income tax purposes and has any income, gain, loss, or deduction from New York sources, the filing fee is $25."
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "partial",
+    "entity_level_taxes": [
+      {
+        "name": "NYS Article 9-A fixed dollar minimum tax (Form CT-3-S)",
+        "rate": null,
+        "minimum": 25,
+        "notes": "New York S election is separate: file Form CT-6. Fixed dollar minimum by NY receipts: up to $100,000 = $25; $100k-250k = $50; $250k-500k = $175; $500k-1M = $300; 1M-5M = $1,000; 5M-25M = $3,000; over 25M = $4,500 (2025 instructions).",
+        "source": 1
+      },
+      {
+        "name": "NYC General Corporation Tax (S corporations doing business in NYC)",
+        "rate": 0.0885,
+        "minimum": 25,
+        "notes": "NYC does not recognize the S election; federal S corps pay GCT. Tax is highest of 8.85% of net income, 0.15% of capital, or fixed dollar minimum by NYC receipts: up to $100,000 = $25; to $250k = $75; to $500k = $175; to $1M = $500; to $5M = $1,500; to $25M = $3,500; over = $5,000 (2025 NYC-4S).",
+        "source": 2
+      }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Annual opt-in election between January 1 and March 15 for partnerships and New York S corporations; single-member LLCs not eligible unless they elect S status. Graduated PTET rates not read on an official page today. NYC also has a city PTET (not researched).",
+      "source": 3
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.tax.ny.gov/pdf/current_forms/ct/ct3si.pdf",
+        "title": "Instructions for Form CT-3-S (2025)",
+        "quote": "Not more than $100,000  $ 25"
+      },
+      {
+        "id": 2,
+        "url": "https://www.nyc.gov/site/finance/business/business-general-corporation-tax-gct.page",
+        "title": "NYC Finance - General Corporation Tax",
+        "quote": "New York City does not have an S corporation election and does not recognize a New York State S corporation election."
+      },
+      {
+        "id": 3,
+        "url": "https://www.tax.ny.gov/bus/ptet/",
+        "title": "NYS DTF - Pass-through entity tax (PTET)",
+        "quote": "An eligible entity may opt in on or after January 1, but no later than March 15."
+      },
+      {
+        "id": 4,
+        "url": "https://www.nyc.gov/assets/finance/downloads/pdf/25pdf/business_tax_forms/nyc-4s_2025.pdf",
+        "title": "NYC-4S 2025 form",
+        "quote": "Net income (from Schedule B, line 8) ... X .0885"
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.039
+        ],
+        [
+          8500,
+          0.044
+        ],
+        [
+          11700,
+          0.0515
+        ],
+        [
+          13900,
+          0.054
+        ],
+        [
+          80650,
+          0.059
+        ],
+        [
+          215400,
+          0.0685
+        ],
+        [
+          1077550,
+          0.0965
+        ],
+        [
+          5000000,
+          0.103
+        ],
+        [
+          25000000,
+          0.109
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.039
+        ],
+        [
+          17150,
+          0.044
+        ],
+        [
+          23600,
+          0.0515
+        ],
+        [
+          27900,
+          0.054
+        ],
+        [
+          161550,
+          0.059
+        ],
+        [
+          323200,
+          0.0685
+        ],
+        [
+          2155350,
+          0.0965
+        ],
+        [
+          5000000,
+          0.103
+        ],
+        [
+          25000000,
+          0.109
+        ]
+      ]
+    },
+    "standard_deduction": {
+      "single": 8000,
+      "mfj": 16050
+    },
+    "personal_exemption": {
+      "single": 0,
+      "mfj": 0,
+      "is_credit": false,
+      "notes": "No exemption for taxpayer or spouse; $1,000 per dependent."
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": "Benefit recapture: above NYAGI $107,650 the benefit of lower brackets is phased out (tax computation worksheets), so high earners pay their top rate on all income. NYC residents add city tax 3.078%-3.876%; Yonkers residents add 16.75% of net state tax.",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf",
+        "title": "IT-2105-I (2026) Instructions for Estimated Income Tax",
+        "quote": "$ 0 $8,500 3.90% of line 5"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "expect to owe at least $300 of NYS, NYC or Yonkers tax after withholding and credits (any MCTMT amount requires payment)",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "Safe harbor: 90% of 2026 tax or 100% of 2025 tax (110% if 2025 NYAGI over $150,000). NYS, NYC, Yonkers and MCTMT paid together on IT-2105.",
+    "source_url": "https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 17600,
+    "new_employer_rate": 0.041,
+    "notes": "New employer total rate 4.1% = 4.025% UI rate + 0.075% Re-employment Services Fund (new employer normal rate 3.4%). Wage base now adjusts each January 1 to 18% of state average annual wage.",
+    "source_url": "https://dol.ny.gov/unemployment-insurance-rate-information"
+  },
+  "local_taxes": [
+    {
+      "place": "New York City",
+      "name": "Unincorporated Business Tax (UBT)",
+      "rate": 0.04,
+      "applies": "individuals and unincorporated entities (incl. single-member LLCs) carrying on a trade, business or profession wholly or partly in NYC; S corps are not subject (they pay GCT)",
+      "threshold_or_exemption": "Return required only if total business gross income exceeds $95,000; $5,000 exemption against net income; full credit if tax is $3,400 or less, partial credit between $3,400 and $5,400, no credit at $5,400 or more. NYC residents also get a partial credit against NYC personal income tax.",
+      "source_url": "https://www.nyc.gov/site/finance/business/business-unincorporated-business-tax-ubt.page",
+      "quote": "A liability of $3,400 or less is allowed a credit for the full amount of the tax."
+    },
+    {
+      "place": "New York City",
+      "name": "NYC resident personal income tax",
+      "rate": 0.03876,
+      "applies": "NYC residents (top rate; 3.078%, 3.762%, 3.819%, 3.876%)",
+      "threshold_or_exemption": "Single brackets: 0 / 12,000 / 25,000 / 50,000; MFJ: 0 / 21,600 / 45,000 / 90,000 (2026)",
+      "source_url": "https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf",
+      "quote": "50,000 ................ 1,813 plus 3.876% of the excess over 50,000"
+    },
+    {
+      "place": "Yonkers",
+      "name": "Yonkers resident income tax surcharge",
+      "rate": 0.1675,
+      "applies": "Yonkers residents: 16.75% of net New York State tax",
+      "threshold_or_exemption": null,
+      "source_url": "https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf",
+      "quote": "The current rate for Yonkers is 16.75% (.1675)."
+    },
+    {
+      "place": "Yonkers",
+      "name": "Yonkers nonresident earnings tax",
+      "rate": 0.005,
+      "applies": "nonresidents with wages or net earnings from self-employment earned in Yonkers (Form Y-203)",
+      "threshold_or_exemption": "Exclusion amount applies (not detailed here)",
+      "source_url": "https://www.tax.ny.gov/pdf/current_forms/it/y203i.pdf",
+      "quote": "on line 5 by the rate of 0.5% (0.005)."
+    },
+    {
+      "place": "Metropolitan Commuter Transportation District (NYC + Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk, Westchester)",
+      "name": "MCTMT on net earnings from self-employment",
+      "rate": 0.006,
+      "applies": "Zone 1 (NYC) 0.60%; Zone 2 (other MCTD counties) 0.34%",
+      "threshold_or_exemption": "Only if net earnings from self-employment allocated to the zone exceed $150,000 (individual basis)",
+      "source_url": "https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf",
+      "quote": ".60% (.0060) of an individual's net earnings from self-employment allocated to Zone 1 of the MCTD, if such earnings exceed $150,000."
+    }
+  ],
+  "notable": [
+    "2026 rate cut: the five lowest NYS brackets drop to 3.9%/4.4%/5.15%/5.4%/5.9% (was 4%/4.5%/5.25%/5.5%/6%) (https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf)",
+    "MCTMT self-employment threshold is now $150,000 of net earnings per zone (https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf)",
+    "LLC must publish formation notice in two newspapers for six weeks within 120 days, or lose authority to do business (https://dos.ny.gov/forming-limited-liability-company-new-york)",
+    "NYC taxes a sole proprietor / LLC at 4% UBT on top of state and city income tax, while an S corp pays 8.85% NYC GCT instead (https://www.nyc.gov/site/finance/business/business-general-corporation-tax-gct.page)",
+    "UI wage base jumped from $12,800 (2025) to $17,600 (2026) (https://dol.ny.gov/nys-45-quarterly-reporting)"
+  ],
+  "uncertain": [
+    "LLC and S corp fixed-fee tables come from 2025 instructions (IT-204-LL-I, CT-3-S-I, NYC-4S-I); 2026 versions not yet published, no change seen in law.",
+    "NYS PTET graduated rates and NYC PTET not read on an official page today.",
+    "Newspaper publication cost varies by county and was not verified.",
+    "Biennial Statement late penalty not found."
+  ]
+}

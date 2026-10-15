@@ -1,0 +1,56 @@
+{
+  "state": "Texas", "slug": "texas", "abbr": "TX", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 300,
+    "formation_doc": "Certificate of Formation - Limited Liability Company (Form 205)",
+    "formation_notes": "Form 205 Revised 09/26. Professional LLCs use Form 206. Credit card convenience fee applies online (exact % not verified).",
+    "annual_report": { "name": "No Secretary of State annual report; annual franchise tax report plus Public Information Report (Form 05-102) or Ownership Information Report (Form 05-167) filed with the Comptroller", "fee": 0, "frequency": "annual", "due": "May 15 (next business day if weekend/holiday)", "late_penalty": "$50 penalty on each report filed after the due date; 5% if tax paid 1-30 days late, 10% if over 30 days" },
+    "state_tax_on_llc": [
+      { "name": "Franchise (margin) tax - no tax due threshold", "amount": 0, "kind": "tiered", "rate": null, "applies": "every taxable entity incl. LLCs and single-member LLCs organized in Texas or with nexus", "notes": "Reports due 2026 and 2027: no tax due if annualized total revenue is at or below $2,650,000 (was $2,470,000 for 2024-2025). Since report year 2024 the No Tax Due Report (Form 05-163) is discontinued: entities at or below the threshold owe nothing and file only the PIR or OIR ($0).", "source": 1 },
+      { "name": "Franchise (margin) tax rate", "amount": null, "kind": "rate", "rate": 0.0075, "applies": "taxable margin of entities above $2,650,000 revenue (reports due 2026-2027)", "notes": "0.375% for retail or wholesale; 0.75% other. EZ computation: 0.331% of apportioned revenue for total revenue up to $20 million. Compensation deduction limit $480,000.", "source": 1 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://comptroller.texas.gov/taxes/franchise/", "title": "Franchise Tax - Texas Comptroller", "quote": "2026 and 2027 Item Amount No Tax Due Threshold $2,650,000 Tax Rate (retail or wholesale) 0.375% Tax Rate (other than retail or wholesale) 0.75%" },
+      { "id": 2, "url": "https://comptroller.texas.gov/taxes/franchise/ntd-rpt-updates-2024.php", "title": "No Tax Due Reporting for Report Years 2024 and Later", "quote": "Does not owe any tax. Is not required to file a No Tax Due Report. Is required to file a Public Information Report or Ownership Information Report." },
+      { "id": 3, "url": "https://www.sos.state.tx.us/corp/forms/205_boc.pdf", "title": "Form 205 Certificate of Formation - Limited Liability Company (Revised 09/26)", "quote": "Form 205 (Revised 09/26) ... Filing Fee: $300" },
+      { "id": 4, "url": "https://comptroller.texas.gov/taxes/publications/98-806.php", "title": "Franchise Tax Overview (Comptroller publication 98-806)", "quote": "limited liability companies (LLCs), including single member LLCs (SMLLCs) and series LLCs" },
+      { "id": 5, "url": "https://comptroller.texas.gov/taxes/franchise/pir-oir-filing-req.php", "title": "Texas Franchise Tax Public Information Report and Ownership Information Report", "quote": "must file Form 05-102, Texas Franchise Tax Public Information Report (PIR) annually to satisfy their filing requirements" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "no",
+    "entity_level_taxes": [
+      { "name": "Franchise (margin) tax", "rate": 0.0075, "minimum": 0, "notes": "S corporations are taxable entities; same $2,650,000 no-tax-due threshold and 0.375%/0.75% rates (reports due 2026-2027). No personal income tax, so the federal S election has no state income tax effect.", "source": 1 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://comptroller.texas.gov/taxes/publications/98-806.php", "title": "Franchise Tax Overview", "quote": "savings and loan associations; S corporations; professional corporations; partnerships (general, limited and limited liability)" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": null,
+    "starting_point": null,
+    "surtaxes": null,
+    "year_of_figures": 2026,
+    "sources": []
+  },
+  "estimated_tax": { "required_if": "Not applicable (no individual income tax)", "due_dates_2026": [], "notes": "Franchise tax is an annual report due May 15; no individual estimated payments.", "source_url": "https://comptroller.texas.gov/taxes/franchise/" },
+  "unemployment_2026": { "taxable_wage_base": 9000, "new_employer_rate": 0.027, "notes": "TWC pages blocked from this network (CloudFront 403); values from TWC page text shown in search index: 2026 wage base $9,000, entry-level rate 2.70% (or NAICS industry average if higher), min 0.32%, max 6.32%.", "source_url": "https://www.twc.texas.gov/programs/unemployment-tax/tax-rates" },
+  "local_taxes": [],
+  "notable": [
+    "No-tax-due threshold raised to $2,650,000 for franchise tax reports due 2026 and 2027 (https://comptroller.texas.gov/taxes/franchise/)",
+    "Since report year 2024 the No Tax Due Report is gone: an LLC under the threshold files only the free Public Information Report by May 15 (https://comptroller.texas.gov/taxes/franchise/ntd-rpt-updates-2024.php)",
+    "Single-member LLCs are taxable entities for franchise tax, unlike sole proprietorships (https://comptroller.texas.gov/taxes/publications/98-806.php)",
+    "Qualifying new veteran-owned businesses file no franchise report or PIR during their first five years (https://comptroller.texas.gov/taxes/franchise/ntd-rpt-updates-2024.php)",
+    "No state or local individual income tax"
+  ],
+  "uncertain": [
+    "No-income-tax status not cited from a page read today (constitutional; no official page fetched).",
+    "Unemployment 2026 figures: twc.texas.gov returned HTTP 403 (geo-block); figures come from TWC page excerpts in search results, not a direct read.",
+    "Online credit card convenience fee for SOS filings not verified (sources disagree)."
+  ]
+}

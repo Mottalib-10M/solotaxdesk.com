@@ -1,0 +1,80 @@
+{
+  "state": "Pennsylvania", "slug": "pennsylvania", "abbr": "PA", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 125,
+    "formation_doc": "Certificate of Organization (domestic LLC)",
+    "formation_notes": "Optional expedite (on top of the statutory fee): $100 same-day, $300 3-hour, $1,000 1-hour. No publication requirement found on the DOS fee page.",
+    "annual_report": { "name": "Annual Report", "fee": 7, "frequency": "annual", "due": "January 1 to September 30 each year for LLCs (domestic and foreign); requirement began in 2025", "late_penalty": "Beginning with reports due in 2027, failure to file leads to administrative dissolution/termination/cancellation six months after the deadline; domestic reinstatement $35 online ($40 paper) plus $15 per missing annual report" },
+    "state_tax_on_llc": [
+      { "name": "Capital Stock/Foreign Franchise Tax", "amount": 0, "kind": "fixed", "rate": null, "applies": "none - eliminated", "notes": "Eliminated for tax years beginning Jan. 1, 2016 and after. No PA franchise or minimum tax on LLCs; a disregarded or partnership LLC files PA-20S/PA-65 (partnership) or flows to PA-40.", "source": 3 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://www.pa.gov/agencies/dos/programs/business/fees-and-payments", "title": "PA Department of State - Fees and Payments", "quote": "Certificate of Organization $125; All other annual reports (for profit entities) $7" },
+      { "id": 2, "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/annual-reports", "title": "PA Department of State - Annual Reports", "quote": "The deadline for limited liability companies (domestic and foreign) is September 30." },
+      { "id": 3, "url": "https://www.pa.gov/agencies/revenue/resources/tax-rates/corporation-tax-rates", "title": "PA Revenue - Corporation Tax Rates", "quote": "Eliminated for tax years beginning Jan. 1, 2016 and after." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporate Net Income Tax on net recognized built-in gains only", "rate": 0.0749, "minimum": null, "notes": "A federal S corp is automatically a PA S corporation (can elect out on REV-976, then taxed as C corp). CNIT 7.49% for tax years in 2026, scheduled down each year to 4.99% from 2031. No capital stock tax (eliminated 2016).", "source": 2 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://www.pa.gov/agencies/revenue/forms-and-publications/pa-personal-income-tax-guide/pass-through-entities", "title": "PA Personal Income Tax Guide - Pass Through Entities", "quote": "any corporation with a valid federal S corporation election is automatically a PA S Corporation." },
+      { "id": 2, "url": "https://www.pa.gov/agencies/revenue/resources/tax-rates/corporation-tax-rates", "title": "PA Revenue - Corporation Tax Rates", "quote": "January 1, 2026 through December 31, 2026 7.49 percent" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.0307,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No standard deduction or personal exemption. Low-income Tax Forgiveness credit (Schedule SP) exists; thresholds not collected." },
+    "starting_point": "own definition (eight classes of income; a loss in one class cannot offset another class, no carryforward/back)",
+    "surtaxes": "none",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/personal-income-tax", "title": "PA Revenue - Personal Income Tax", "quote": "The Pennsylvania personal income tax does not provide for a standard deduction or personal exemption." },
+      { "id": 2, "url": "https://www.pa.gov/agencies/revenue/resources/tax-rates/personal-income-tax-rates", "title": "PA Revenue - Personal Income Tax Rates", "quote": "2004 – Present 3.07%" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "expect at least $430 of PA tax ($14,000 of income not subject to employer withholding) for 2026, and withholding/credits below the smaller of 90% of 2026 tax or 100% of 2025 net PA taxable income x 3.07%",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Threshold is rising: $8,000 (2023 and prior), $9,500 (2024), $11,000 (2025), $14,000 (2026), $17,000 (2027), $20,000 (2028). Farmers: pay all by Jan. 15, 2027 or file by March 1, 2027.",
+    "source_url": "https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/formsandpublications/formsforindividuals/pit/documents/2026/2026_rev-413i.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 10000,
+    "new_employer_rate": 0.03822,
+    "notes": "Newly liable non-construction employer total rate .038220 (3.5% basic rate + 9.2% surcharge; additional contributions do not apply). Employee UC withholding 0.07% on all gross wages, no cap. Construction new employers higher (not collected).",
+    "source_url": "https://www.pa.gov/agencies/dli/resources/for-employers-and-educators/how-to-file/uc-tax/yearly-tax-highlights"
+  },
+  "local_taxes": [
+    { "place": "Philadelphia", "name": "Net Profits Tax (NPT)", "rate": 0.03735, "applies": "Net profits of unincorporated businesses/self-employed: residents on all business income even if conducted outside Philadelphia; non-residents on business conducted in Philadelphia (non-resident rate 3.425%). Tax year 2026, filed in 2027.", "threshold_or_exemption": "No threshold; a return must be filed even at a loss. Credit against NPT of 60% of the BIRT net income portion paid. Tax year 2025 rates were 3.74% / 3.43%.", "source_url": "https://www.phila.gov/2026-06-11-what-you-need-to-know-about-changes-to-phillys-use-and-occupancy-tax/", "quote": "For tax year 2026, the Net Profits Tax (NPT) rate will be: Philadelphia residents: 3.735% (down from 3.74%)" },
+    { "place": "Philadelphia", "name": "Business Income and Receipts Tax (BIRT)", "rate": 0.0565, "applies": "Every business (including sole proprietors and LLCs) doing business in Philadelphia: 5.65% of taxable net income PLUS 1.395 mills ($1.395 per $1,000) of gross receipts, tax year 2026 (filed by April 15, 2027).", "threshold_or_exemption": "The $100,000 gross receipts exemption no longer applies from tax year 2025 (legal challenge). Tax year 2025 rates: 1.410 mills and 5.71%. Scheduled cuts each year; gross receipts portion 0 and net income 2.80% from 2038.", "source_url": "https://www.phila.gov/departments/department-of-revenue/forms-documents/regulations-rulings/tax-rate-history/", "quote": "2026 1.395 mills on gross receipts and 5.65% on taxable net income" },
+    { "place": "Philadelphia", "name": "Wage Tax / Earnings Tax", "rate": 0.03735, "applies": "Wages paid to residents (3.735%) and to non-residents working in Philadelphia (3.425%) from July 1, 2026 to June 30, 2027 - relevant to an S corp owner's salary.", "threshold_or_exemption": "July 1, 2025 to June 30, 2026: 3.74% / 3.43%.", "source_url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/wage-tax-employers/", "quote": "3.735% for residents of Philadelphia, or 3.425% for non-residents." },
+    { "place": "Pennsylvania (all municipalities and school districts outside Philadelphia)", "name": "Local Earned Income Tax (EIT) on wages and net profits", "rate": 0.01, "applies": "Residents on earned income and net profits of a business as sole proprietor or partner; non-residents taxed at work location. Rate varies by PSD code (DCED lookup); 1% is the usual combined cap, shared 50/50 between municipality and school district.", "threshold_or_exemption": "Cap can be exceeded by home rule municipalities, financially distressed municipalities, Act 24/Act 50 referendum school districts, etc. Annual final return due April 15; residents with net profits over $12,000 must file a declaration and pay quarterly estimates (April 15, July 15, Oct 15, Jan 15).", "source_url": "https://dced.pa.gov/download/act-32-of-2008-procedure-manual/?wpdmdl=56767", "quote": "all other municipalities and school districts adopting income taxes under the Local Tax Enabling Act are limited to a combined rate of one percent." },
+    { "place": "Pennsylvania (statewide, where levied)", "name": "Local Services Tax (LST)", "rate": null, "applies": "Flat per-person tax on people working in a subdivision, self-employed included (quarterly prorated where rate exceeds $10). Maximum $52 per year.", "threshold_or_exemption": "Where the rate exceeds $10, mandatory exemption if total earned income and net profits in the subdivision are below $12,000.", "source_url": "https://dced.pa.gov/local-government/local-income-tax-information/local-services-tax/", "quote": "The total LST paid by any taxpayer in a calendar year remains limited to $52." },
+    { "place": "Pittsburgh", "name": "Earned Income Tax (city 1% + School District of Pittsburgh 2%)", "rate": 0.03, "applies": "Residents of Pittsburgh on earned income and net profits; collected by Jordan Tax Service. Non-PA residents working in the city pay 1%.", "threshold_or_exemption": "Home rule city above the 1% Act 511 cap.", "source_url": "https://www.pittsburghpa.gov/City-Government/Finance-Budget/Taxes", "quote": "Residents pay 1% city tax and 2% school tax for a total of 3%." },
+    { "place": "Pittsburgh", "name": "Payroll Expense Tax", "rate": 0.0055, "applies": "Employers' gross payroll for work in the city, plus net distributions/draws to self-employed individuals and partners for services performed in Pittsburgh (form ET-1, quarterly).", "threshold_or_exemption": "Amounts of $2.00 or less not due.", "source_url": "https://www.pittsburghpa.gov/files/assets/city/v/1/finance/documents/tax-forms/2026-et-1-tax-form.pdf", "quote": "Line 2b (Self-Employed) & Line 3b (Partners) - Multiply line 2a and/or 3a by 0.0055" },
+    { "place": "Pittsburgh", "name": "Local Services Tax", "rate": null, "applies": "$52 per year per person working in the city, employers and self-employed individuals (form LS-1, quarterly).", "threshold_or_exemption": "Upfront exemption when total earned income from all sources within Pittsburgh is less than $12,000.", "source_url": "https://www.pittsburghpa.gov/files/assets/city/v/1/finance/documents/tax-forms/ls-2026-fillable.pdf", "quote": "Pennsylvania Act 7 of 2007 requires that the $52 be deducted evenly from paychecks throughout the year." }
+  ],
+  "notable": [
+    "Flat 3.07% PIT with no standard deduction or personal exemption, and a business loss cannot offset wages or other classes of income (https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/personal-income-tax)",
+    "New $7 annual report since 2025 (LLCs due Sept 30); missing reports due from 2027 lead to administrative dissolution (https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/annual-reports)",
+    "Estimated-tax income threshold rising fast: $14,000 in 2026, $17,000 in 2027, $20,000 in 2028 (https://www.pa.gov/content/dam/copapwp-pagov/en/revenue/documents/formsandpublications/formsforindividuals/pit/documents/2026/2026_rev-413i.pdf)",
+    "Philadelphia lost the $100,000 BIRT exemption from tax year 2025, so even small freelancers owe BIRT on all receipts; 60% of the BIRT net-income portion is credited against NPT (https://www.phila.gov/media/20251028121348/Philadelphia-business-tax-changes-starting-in-FY26.pdf)",
+    "Self-employed people pay local EIT on net profits (usually ~1%, 3% in Pittsburgh, NPT 3.735% in Philadelphia) on top of the 3.07% state tax (https://dced.pa.gov/download/act-32-of-2008-procedure-manual/?wpdmdl=56767)",
+    "Pittsburgh also taxes self-employed draws/distributions at 0.55% payroll expense tax (https://www.pittsburghpa.gov/City-Government/Finance-Budget/Taxes)"
+  ],
+  "uncertain": [
+    "PTET: no Pennsylvania pass-through entity elective tax found on pa.gov; 2023 bills (SB 659) not shown enacted. Set to null, but absence not confirmed by an official statement.",
+    "Phila.gov BIRT service page still shows rates only through tax year 2025; 2026 BIRT (1.395 mills / 5.65%) and NPT (3.735% / 3.425%) taken from the phila.gov Tax Rate History page and the 2026-06-11 phila.gov notice, which agree.",
+    "A phila.gov FY26 flyer prints the 2025 gross receipts rate as 1.140 mills; the official rate table says 1.410 mills (flyer typo).",
+    "Local EIT: rate depends on the exact PSD code; the DCED rate table (PDF download) did not expose rates in extracted text and munstats.pa.gov lookup was unreachable, so only the 1% general cap and Pittsburgh 3% are recorded.",
+    "Pittsburgh EIT 3% is from the city Taxes page (not the regulations); non-resident handling for PA residents (higher of home rate or work-location rate under Act 32) not detailed.",
+    "Tax Forgiveness income thresholds and construction new-employer UC rate not collected."
+  ]
+}

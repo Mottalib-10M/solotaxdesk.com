@@ -1,0 +1,67 @@
+{
+  "state": "Kentucky", "slug": "kentucky", "abbr": "KY", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 40,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "Reinstatement penalty after administrative dissolution $100.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 15,
+      "frequency": "annual",
+      "due": "between January 1 and June 30 each year (starting the year after formation)",
+      "late_penalty": "administrative dissolution if not filed; $100 reinstatement penalty"
+    },
+    "state_tax_on_llc": [
+      { "name": "Limited Liability Entity Tax (LLET)", "amount": 175, "kind": "tiered", "rate": null, "applies": "every business with liability protection under state law: LLCs (incl. single-member), S corporations, corporations, limited partnerships; not sole proprietorships or general partnerships", "notes": "$175 minimum if Kentucky gross receipts or gross profits are $3 million or less; above $6 million: 0.095% of Kentucky gross receipts or 0.75% of Kentucky gross profits (lesser); sliding scale between $3M and $6M", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://www.sos.ky.gov/bus/business-filings/Pages/Fees.aspx", "title": "Kentucky SOS - Fees", "quote": "Limited Liability Company (Profit, Non-Profit or Professional Service) Articles of Organization: $40.00" },
+      { "id": 2, "url": "https://revenue.ky.gov/Business/Corporation-Income-and-Limited-Liability-Entity-Tax/Pages/default.aspx", "title": "Kentucky DOR - Corporation Income and Limited Liability Entity Tax", "quote": "If either total gross receipts or total gross profits amounts to $3 million or less, then the company just pays a $175 minimum LLET." },
+      { "id": 3, "url": "https://www.sos.ky.gov/bus/business-filings/Pages/Annual-Reports.aspx", "title": "Kentucky SOS - Annual Reports", "quote": "Reports can be filed any time between January 1 and June 30 ... accompanied by a $15 filin[g fee]" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Limited Liability Entity Tax (LLET)", "rate": null, "minimum": 175, "notes": "$175 minimum up to $3M gross receipts/profits; 0.095% of gross receipts or 0.75% of gross profits above $6M", "source": 1 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "Elective pass-through entity tax enacted in 2023 (Form 740-PTET); owners receive a refundable PTE tax credit. Rate presumably the individual rate (3.5% for 2026) - not read on an official page.", "source": 2 },
+    "sources": [
+      { "id": 1, "url": "https://revenue.ky.gov/Business/Corporation-Income-and-Limited-Liability-Entity-Tax/Pages/default.aspx", "title": "Kentucky DOR - LLET", "quote": "This includes corporations, LLCs, S-Corporations, limited partnerships, and other types of businesses." },
+      { "id": 2, "url": "https://revenue.ky.gov/News/Pages/The-Department-of-Revenue-is-ready-to-begin-accepting-forms-electronically-for-this-new-tax-enacted-by-the-2023-General-Ass.aspx", "title": "Kentucky DOR - New Pass-through Entity Tax Forms Available", "quote": "The new Form 740-PTET allows for the election to pay the tax at the entity level" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.035,
+    "brackets": null,
+    "standard_deduction": { "single": 3360, "mfj": null },
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": true, "notes": "No personal exemption deduction (family size tax credit for low incomes, not verified). Standard deduction $3,360 per return for 2026; MFJ left null: whether a joint return gets one or two $3,360 deductions (spouses may file separately on a combined return, each claiming one) was not verified. 2027 standard deduction $3,470." },
+    "starting_point": "federal AGI (IRC as of Dec 31, 2024)",
+    "surtaxes": "None at state level; local occupational license taxes apply (see local_taxes). Rate cut from 4% (2025) to 3.5% (2026).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://revenue.ky.gov/Business/Pages/Employer-Payroll-Withholding.aspx", "title": "Kentucky DOR - Employer Payroll Withholding", "quote": "The Kentucky Withholding Tax rate will be 3.5% for tax year 2026." },
+      { "id": 2, "url": "https://revenue.ky.gov/News/Pages/Kentucky-DOR-Announces-2026-Standard-Deduction.aspx", "title": "Kentucky DOR Announces 2026 Standard Deduction (Sept 4, 2025)", "quote": "After adjusting for inflation, the standard deduction for 2026 is $3,360, an increase of $90." }
+    ]
+  },
+  "estimated_tax": { "required_if": null, "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Form 740-ES; threshold (commonly $500) and dates not read on an official page today", "source_url": null },
+  "unemployment_2026": { "taxable_wage_base": null, "new_employer_rate": null, "notes": "kcc.ky.gov (Office of Unemployment Insurance) returned 403 today", "source_url": null },
+  "local_taxes": [
+    { "place": "Louisville Metro (Jefferson County)", "name": "Occupational license tax on wages and net profits (Metro + school board + TARC)", "rate": null, "applies": "net profits of businesses and self-employed individuals operating in Louisville Metro, and wages earned there", "threshold_or_exemption": "Rate not verified: louisvilleky.gov blocked (Cloudflare 403). Commonly published total 2.20% for residents and 1.45% for nonresidents - unverified.", "source_url": "https://louisvilleky.gov/government/revenue-commission/occupational-license-tax", "quote": null },
+    { "place": "Lexington-Fayette Urban County Government", "name": "Occupational license fee", "rate": 0.0225, "applies": "individual compensation and business net profits earned in Lexington-Fayette County", "threshold_or_exemption": "plus school board tax on some items not verified", "source_url": "https://www.lexingtonky.gov/departments/revenue", "quote": "LFUCG assesses a 2.25% occupational license fee on individual compensation and net profits." },
+    { "place": "Many other Kentucky cities and counties", "name": "Local occupational license taxes on net profits/wages", "rate": null, "applies": "net profits and wages, rates set locally (commonly about 1%-2.5%)", "threshold_or_exemption": "No official consolidated list was read today", "source_url": null, "quote": null }
+  ],
+  "notable": [
+    "2026 rate cut to 3.5% flat (from 4.0%) (https://revenue.ky.gov/Business/Pages/Employer-Payroll-Withholding.aspx)",
+    "Even a single-member LLC owes the $175 minimum LLET each year, on top of the $15 annual report (https://revenue.ky.gov/Business/Corporation-Income-and-Limited-Liability-Entity-Tax/Pages/default.aspx)",
+    "Cities and counties levy occupational license taxes on net profits, e.g. Lexington 2.25% (https://www.lexingtonky.gov/departments/revenue)",
+    "Very low LLC formation fee: $40 (https://www.sos.ky.gov/bus/business-filings/Pages/Fees.aspx)"
+  ],
+  "uncertain": [
+    "Louisville Metro occupational license tax rates not verified (site blocked).",
+    "DOR individual income tax page still states 'four (4) percent' (2025 rate); the 3.5% 2026 rate is taken from the DOR withholding page.",
+    "MFJ standard deduction left null (one vs two deductions on a joint/combined return not verified).",
+    "PTET rate, estimated tax threshold and SUTA 2026 figures not verified (pages unreachable, WebSearch budget exhausted)."
+  ]
+}

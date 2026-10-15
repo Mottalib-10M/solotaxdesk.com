@@ -1,0 +1,151 @@
+{
+  "state": "New Hampshire",
+  "slug": "new-hampshire",
+  "abbr": "NH",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Certificate of Formation (Form LLC-1)",
+    "formation_notes": "No publication requirement known.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 100,
+      "frequency": "annual",
+      "due": "April 1 each year following the year of registration",
+      "late_penalty": "$50 late fee after April 1; entity placed 'Not in Good Standing'"
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Business Profits Tax (BPT)",
+        "amount": null,
+        "kind": "rate",
+        "rate": 0.075,
+        "applies": "every business organization incl. sole proprietors and single-member LLCs with gross business income over $109,000 (taxable periods beginning on or after Jan 1, 2025)",
+        "notes": "7.5% for taxable periods ending on or after Dec 31, 2023. Filing required even with no profit once gross business income exceeds $109,000. Thresholds indexed biennially.",
+        "source": 2
+      },
+      {
+        "name": "Business Enterprise Tax (BET)",
+        "amount": null,
+        "kind": "rate",
+        "rate": 0.0055,
+        "applies": "businesses with gross business receipts over $298,000 or enterprise value tax base over $298,000 (taxable periods beginning on or after Jan 1, 2025)",
+        "notes": "Base = compensation paid + interest + dividends. Thresholds indexed biennially.",
+        "source": 3
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.sos.nh.gov/corporations-0/forms-and-fees/limited-liability-companies",
+        "title": "NH SOS - Limited Liability Companies forms and fees",
+        "quote": "Annual Report ... Report Fee Late Fee | $100 $50"
+      },
+      {
+        "id": 2,
+        "url": "https://www.revenue.nh.gov/resource-center/frequently-asked-questions/business-profits-tax",
+        "title": "NH DRA - Business Profits Tax FAQ",
+        "quote": "On or after December 31, 2023 | 7.5%"
+      },
+      {
+        "id": 3,
+        "url": "https://www.revenue.nh.gov/resource-center/frequently-asked-questions/business-enterprise-tax",
+        "title": "NH DRA - Business Enterprise Tax FAQ",
+        "quote": "BET Rate: 0.55%."
+      },
+      {
+        "id": 4,
+        "url": "https://gc.nh.gov/rsa/html/XXVIII/304-C/304-C-191.htm",
+        "title": "RSA 304-C:191 Fees",
+        "quote": "Upon the receipt for filing of a certificate of formation under RSA 304-C:31, a fee in the amount of $100."
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "no",
+    "entity_level_taxes": [
+      {
+        "name": "Business Profits Tax (BPT)",
+        "rate": 0.075,
+        "minimum": null,
+        "notes": "New Hampshire taxes S corporations (and LLCs, partnerships, sole proprietors) at entity level; filing threshold gross business income over $109,000.",
+        "source": 1
+      },
+      {
+        "name": "Business Enterprise Tax (BET)",
+        "rate": 0.0055,
+        "minimum": null,
+        "notes": "Thresholds $298,000 gross receipts or enterprise value tax base.",
+        "source": 2
+      }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.revenue.nh.gov/resource-center/frequently-asked-questions/business-profits-tax",
+        "title": "NH DRA - Business Profits Tax FAQ",
+        "quote": "On or after December 31, 2023 | 7.5%"
+      },
+      {
+        "id": 2,
+        "url": "https://www.revenue.nh.gov/resource-center/frequently-asked-questions/business-enterprise-tax",
+        "title": "NH DRA - Business Enterprise Tax FAQ",
+        "quote": "BET Rate: 0.55%."
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": {
+      "single": null,
+      "mfj": null,
+      "is_credit": false,
+      "notes": "No tax on wages; the Interest and Dividends Tax was repealed for taxable periods beginning on or after January 1, 2025."
+    },
+    "starting_point": "n/a",
+    "surtaxes": "None. Business income is instead hit by BPT 7.5% and BET 0.55% at the business level.",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.revenue.nh.gov/news-and-media/repeal-nh-interest-and-dividends-tax-now-effect",
+        "title": "NH DRA - Repeal of NH Interest and Dividends Tax Now in Effect",
+        "quote": "repealed for taxable periods beginning on or after January 1, 2025"
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "BPT estimated tax of $200 or more, or BET estimated tax of $260 or more (business taxes; no individual income tax)",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2026-12-15"
+    ],
+    "notes": "Business tax estimates due 15th day of 4th, 6th, 9th and 12th months (calendar year). Penalty if under 90% of the period's liability.",
+    "source_url": "https://www.revenue.nh.gov/sites/g/files/ehbemt736/files/documents/nh-1040-es-instructions-2026.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 14000,
+    "new_employer_rate": 0.027,
+    "notes": "2.7% on first $14,000 per employee, reduced by any quarterly fund balance reduction. No 2026-specific rate notice read.",
+    "source_url": "https://www.nhes.nh.gov/employers/employer-claims-taxes"
+  },
+  "local_taxes": [],
+  "notable": [
+    "No income tax on wages or self-employment income, but a sole proprietor or LLC with gross business income over $109,000 owes 7.5% Business Profits Tax (https://www.revenue.nh.gov/resource-center/frequently-asked-questions/business-profits-tax)",
+    "Business Enterprise Tax 0.55% on compensation + interest + dividends once receipts or base exceed $298,000 (https://www.revenue.nh.gov/resource-center/frequently-asked-questions/business-enterprise-tax)",
+    "Interest and Dividends Tax repealed from 2025 (https://www.revenue.nh.gov/news-and-media/repeal-nh-interest-and-dividends-tax-now-effect)"
+  ],
+  "uncertain": [
+    "All nh.gov sites (revenue.nh.gov, sos.nh.gov, nhes.nh.gov, gc.nh.gov) returned 403 Access Denied to direct fetches today; figures were read through search-engine extracts of those official pages, not opened directly. Quotes are as reported in those extracts.",
+    "BPT/BET thresholds ($109,000 / $298,000) apply to periods beginning on or after Jan 1, 2025; indexed biennially, so could change for periods beginning in 2027, not 2026.",
+    "BET credit against BPT and BPT compensation deduction for owners not verified.",
+    "HB 503 (2025) proposed reinstating a 5% interest and dividends tax; no evidence it passed, not verified.",
+    "NH UI new employer rate/wage base not confirmed by a 2026-specific notice."
+  ]
+}

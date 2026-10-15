@@ -1,0 +1,60 @@
+{
+  "state": "Florida", "slug": "florida", "abbr": "FL", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 125,
+    "formation_doc": "Articles of Organization (Florida Limited Liability Company)",
+    "formation_notes": "$100 filing fee for articles of organization plus $25 for the certificate designating the registered agent = $125 (s. 605.0213, F.S.). Certified copy $30 and certificate of status $5 are optional. Sunbiz fee page (dos.fl.gov) blocked automated reading today; amounts taken from the statute.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 138.75,
+      "frequency": "annual",
+      "due": "between January 1 and May 1 each year, starting the year after formation",
+      "late_penalty": "$400 late charge if filed after May 1 (s. 607.193(2)(b))"
+    },
+    "state_tax_on_llc": [
+      { "name": "Supplemental corporate fee (collected with the annual report)", "amount": 88.75, "kind": "fixed", "rate": null, "applies": "every business entity, including LLCs, that must file an annual report", "notes": "Annual report fee = $50 (s. 605.0213(5)) + $88.75 supplemental corporate fee (s. 607.193) = $138.75. No franchise tax on LLCs taxed as partnerships or disregarded.", "source": 2 },
+      { "name": "Florida corporate income/franchise tax (only if LLC elects to be taxed as a C corporation)", "amount": null, "kind": "rate", "rate": 0.055, "applies": "LLCs classified as corporations for federal and Florida purposes; not LLCs classified as partnerships or disregarded", "notes": "$50,000 exemption subtracted before applying the rate", "source": 3 }
+    ],
+    "sources": [
+      { "id": 1, "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0605/Sections/0605.0213.html", "title": "Florida Statutes s. 605.0213 Fees of the department", "quote": "(2) For filing original articles of organization or articles of revocation of dissolution, $100. ... (5) For filing an annual report, $50." },
+      { "id": 2, "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0607/Sections/0607.193.html", "title": "Florida Statutes s. 607.193 Supplemental corporate fee", "quote": "an annual supplemental corporate fee of $88.75 is imposed on each business entity that is authorized to transact business in this state" },
+      { "id": 3, "url": "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx", "title": "Florida DOR - Corporate Income Tax", "quote": "An LLC classified as a partnership for Florida and federal income ..." },
+      { "id": 4, "url": "https://services.sunbiz.org/Filings/AnnualReport/FilingStart", "title": "Sunbiz Annual Report e-filing", "quote": "Annual reports for all corporations, limited liability companies ... are due each year between January 1 and May 1." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporate income tax on S corporations only for income taxed federally (built-in gains / passive income, Form 1120S line 23c)", "rate": 0.055, "minimum": null, "notes": "Otherwise an S corporation does not have to file a Florida corporate income tax return; $50,000 exemption applies", "source": 1 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx", "title": "Florida DOR - Corporate Income Tax", "quote": "S corporations that pay federal income tax on Line 23c of Federal Form 1120S." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No personal income tax" },
+    "starting_point": null,
+    "surtaxes": null,
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx", "title": "Florida DOR - Corporate Income Tax (individuals not covered)", "quote": "Corporations, including entities that are taxed federally as corporations, are subject to the tax." }
+    ]
+  },
+  "estimated_tax": { "required_if": "No state individual income tax, so no individual estimated payments", "due_dates_2026": [], "notes": "Corporations (incl. LLCs taxed as C corps) owing more than $2,500 make corporate estimated payments (not verified today)", "source_url": "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx" },
+  "unemployment_2026": { "taxable_wage_base": 7000, "new_employer_rate": 0.027, "notes": "Florida reemployment tax; employer-only; applies to an S corp owner's own W-2 salary", "source_url": "https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx" },
+  "local_taxes": [],
+  "notable": [
+    "No personal income tax; S corp and LLC pass-through income is not taxed by the state (https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx)",
+    "LLC annual report is $138.75 and a $400 late charge applies after May 1 (http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0607/Sections/0607.193.html)",
+    "LLC taxed as C corp pays 5.5% corporate income tax after a $50,000 exemption (https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx)"
+  ],
+  "uncertain": [
+    "dos.fl.gov Sunbiz fee pages returned a Cloudflare/403 block today; LLC fees taken from Florida Statutes 605.0213 and 607.193 (2026 statute pages) rather than the fee schedule page.",
+    "Local business tax receipts (city/county occupational licenses) exist but are flat fees, not income taxes; not listed."
+  ]
+}

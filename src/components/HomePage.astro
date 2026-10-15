@@ -36,7 +36,7 @@ const due = P.estimated.dueDates;
   <header class="mb-4">
     <h1 class="font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{x.h1}</h1>
     <p class="mt-2 text-base text-navy-700 sm:text-lg">{x.intro}</p>
-    <p class="mt-1 text-sm text-navy-600">IRS Rev. Proc. 2025-32, Form 1040-ES 2026 and 51 state agencies, checked <time datetime={LAST_UPDATED}>{K.day(LAST_UPDATED)}</time> · <a href={route('method', lang)} class="underline">How we calculate</a> · <a href={route('about', lang)} class="underline">Who publishes this</a></p>
+    <p class="mt-1 text-sm text-navy-600">IRS Rev. Proc. 2025-32, Form 1040-ES 2026 and 51 state agencies · <a href={route('method', lang)} class="underline">How we calculate</a> · <a href={route('about', lang)} class="underline">Who publishes this</a></p>
   </header>
   <div data-outil data-chrome><Tool kind="total" /></div>
   <ol class="my-5 grid grid-cols-2 gap-2 text-sm sm:grid-cols-4" data-chrome aria-label="2026 estimated tax due dates">

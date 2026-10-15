@@ -1,0 +1,215 @@
+{
+ "state": "Missouri",
+ "slug": "missouri",
+ "abbr": "MO",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 45,
+  "formation_doc": "Articles of Organization (Form LLC-1)",
+  "formation_notes": "Statute: $45 when filed online, $100 on paper (RSMo 347.179). The Secretary of State site (sos.mo.gov) blocks automated reading, so any added online processing fee was not checked.",
+  "annual_report": {
+   "name": "None",
+   "fee": 0,
+   "frequency": "none",
+   "due": "Missouri LLCs file no annual report",
+   "late_penalty": null
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=347.179",
+    "title": "RSMo 347.179 LLC filing fees",
+    "quote": "For filing the original articles of organization online, in an electronic format prescribed by the secretary of state, a fee of forty-five dollars"
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "SALT Parity Act (RSMo 143.436): electing partnership or S corp pays tax on Missouri net income at the highest individual rate (4.7% for 2026 per withholding formula); members get a credit. Election made each year on Form MO-PTE.",
+   "source": 1
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.436",
+    "title": "RSMo 143.436 SALT Parity Act",
+    "quote": "shall be multiplied by the highest rate of tax used to determine a Missouri income tax liability for an individual pursuant to section 143.011"
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "graduated",
+  "flat_rate": null,
+  "brackets": {
+   "single": [
+    [
+     0,
+     0.0
+    ],
+    [
+     1348,
+     0.02
+    ],
+    [
+     2696,
+     0.025
+    ],
+    [
+     4044,
+     0.03
+    ],
+    [
+     5392,
+     0.035
+    ],
+    [
+     6740,
+     0.04
+    ],
+    [
+     8088,
+     0.045
+    ],
+    [
+     9436,
+     0.047
+    ]
+   ],
+   "mfj": [
+    [
+     0,
+     0.0
+    ],
+    [
+     1348,
+     0.02
+    ],
+    [
+     2696,
+     0.025
+    ],
+    [
+     4044,
+     0.03
+    ],
+    [
+     5392,
+     0.035
+    ],
+    [
+     6740,
+     0.04
+    ],
+    [
+     8088,
+     0.045
+    ],
+    [
+     9436,
+     0.047
+    ]
+   ]
+  },
+  "standard_deduction": {
+   "single": 16100,
+   "mfj": 32200
+  },
+  "personal_exemption": {
+   "single": null,
+   "mfj": null,
+   "is_credit": false,
+   "notes": "No personal exemption. Same brackets for all filing statuses. Standard deduction equals the federal standard deduction (RSMo 143.131)."
+  },
+  "starting_point": "federal AGI",
+  "surtaxes": "None. From tax year 2025, 100% of capital gains reported by individuals is subtracted (RSMo 143.121.3(14)).",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://help.nfc.usda.gov/bulletins/2026/1773783048.htm",
+    "title": "USDA National Finance Center bulletin reproducing the Missouri 2026 withholding formula",
+    "quote": "Over $9,436 $263.00 plus 4.70% of excess over $9,436"
+   },
+   {
+    "id": 2,
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.131",
+    "title": "RSMo 143.131",
+    "quote": "The Missouri standard deduction shall be the allowable federal standard deduction."
+   },
+   {
+    "id": 3,
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.121",
+    "title": "RSMo 143.121",
+    "quote": "For all tax years beginning on or after January 1, 2025, one hundred percent of all income reported as a capital gain for federal income tax purposes by an individual"
+   },
+   {
+    "id": 4,
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.011",
+    "title": "RSMo 143.011 (rate cuts, indexing)",
+    "quote": "the brackets of Missouri taxable income identified in subsection 1 of this section shall be adjusted annually by the percent increase in inflation."
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "Missouri estimated tax reasonably expected to be at least $100",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "Due dates follow the federal schedule (not read on dor.mo.gov, which blocks automated access).",
+  "source_url": "https://revisor.mo.gov/main/OneSection.aspx?section=143.521"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": null,
+  "new_employer_rate": null,
+  "notes": "labor.mo.gov blocks automated reading. Secondary sources report $9,000 wage base and 2.376% new employer rate (1% nonprofits) for 2026 - not verified.",
+  "source_url": null
+ },
+ "local_taxes": [
+  {
+   "place": "Kansas City",
+   "name": "Earnings tax (profits tax on net profits, Form RD-108)",
+   "rate": 0.01,
+   "applies": "residents on all earnings and net profits; nonresidents on earnings/net profits from work or business in Kansas City; sole proprietors, partnerships and corporations file RD-108 on net profits",
+   "threshold_or_exemption": "none stated",
+   "source_url": "https://www.kcmo.gov/city-hall/departments/finance/tax-home/tax-form-descriptions",
+   "quote": "Form RD-108/108B is a tax return used by a sole proprietor, corporation, partnership ... to file and pay the earnings tax of 1% due on net profits."
+  },
+  {
+   "place": "St. Louis (City)",
+   "name": "Earnings tax (individual E-1 / business E-234)",
+   "rate": 0.01,
+   "applies": "residents regardless of where they work, nonresidents working in the City; businesses (incl. self-employed and sole proprietors) on business earnings",
+   "threshold_or_exemption": "none stated",
+   "source_url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/business-earnings-tax-info.cfm",
+   "quote": "All businesses located in the City of St. Louis, except those exempted by law, are required to pay the earnings tax of 1% of the business's earnings."
+  },
+  {
+   "place": "St. Louis (City)",
+   "name": "Payroll expense tax (Form P-10)",
+   "rate": 0.005,
+   "applies": "employers on compensation paid for work in the City (relevant to an S corp paying its owner a salary)",
+   "threshold_or_exemption": "nonprofits and governments exempt",
+   "source_url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/payroll-tax-info.cfm",
+   "quote": "The Payroll Expense Tax is a 0.5% tax paid by the employer for wages earned in the City of St. Louis."
+  }
+ ],
+ "notable": [
+  "No annual report and a $45 online formation fee make Missouri one of the cheapest LLC states (https://revisor.mo.gov/main/OneSection.aspx?section=347.179)",
+  "Kansas City and St. Louis each levy a 1% earnings tax that also hits self-employment net profits (https://www.kcmo.gov/city-hall/departments/finance/tax-home/tax-form-descriptions)",
+  "Capital gains fully exempt for individuals from 2025 (https://revisor.mo.gov/main/OneSection.aspx?section=143.121)",
+  "Top rate 4.7% starts at only $9,436 of taxable income in 2026 (https://help.nfc.usda.gov/bulletins/2026/1773783048.htm)"
+ ],
+ "uncertain": [
+  "dor.mo.gov, sos.mo.gov and labor.mo.gov block automated access (Incapsula/Cloudflare). 2026 brackets and standard deduction were read from the USDA National Finance Center's reproduction of the Missouri DOR 2026 withholding formula, not from DOR directly; they match RSMo 143.131 (federal standard deduction).",
+  "Whether a further 0.1-point top-rate cut applies for 2026 was not read on DOR; withholding formula uses 4.70%.",
+  "SUTA 2026 wage base and new employer rate not verified on an official page.",
+  "Possible SOS online processing surcharge over the $45 statutory fee not verified."
+ ]
+}

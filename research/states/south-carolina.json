@@ -1,0 +1,53 @@
+{
+  "state": "South Carolina", "slug": "south-carolina", "abbr": "SC", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 110,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "Fee set by S.C. Code 33-44-1204. A Secretary of State chart (third-party report) may show $100 online; sos.sc.gov returned 403, so the online price was not verified.",
+    "annual_report": { "name": "none for an LLC taxed as a partnership or disregarded entity", "fee": 0, "frequency": "none", "due": "An LLC taxed as a corporation (incl. S corp) files the corporate annual report with its SC income tax return and pays the corporate license fee (see s_corp).", "late_penalty": null },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://www.scstatehouse.gov/code/t33c044.php", "title": "S.C. Code Title 33 Chapter 44, Section 33-44-1204 Fees", "quote": "(1) articles of organization of a limited liability company: one hundred ten dollars." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporate license fee (annual report)", "rate": 0.001, "minimum": 25, "notes": "$15 plus $1 per $1,000 (or fraction) of capital stock and paid-in surplus; minimum $25; due with the annual report (S corps included).", "source": 2 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "Qualified partnerships and S corps (all owners individuals/estates/trusts) may elect annually to pay tax at the 3% active trade or business income rate at entity level; owners exclude that income. Separately, individuals may elect the 3% rate on active trade or business income from pass-throughs on their own return (12-6-545(B)). Statute page may not yet reflect Act 110 of 2026.", "source": 3 },
+    "sources": [
+      { "id": 2, "url": "https://www.scstatehouse.gov/code/t12c020.php", "title": "S.C. Code 12-20-50", "quote": "shall pay an annual license fee of fifteen dollars plus one dollar for each thousand dollars ... In no case may the license fee provided by this section be less than twenty-five dollars." },
+      { "id": 3, "url": "https://www.scstatehouse.gov/code/t12c006.php", "title": "S.C. Code 12-6-545(G)", "quote": "A qualified entity may elect annually under this subsection to have its income taxed on its active trade or business income at the rate provided in subsection (B)(2)" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": { "single": [[0, 0.0199], [30000, 0.0521]], "mfj": [[0, 0.0199], [30000, 0.0521]] },
+    "standard_deduction": { "single": 15000, "mfj": 30000 },
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "The 'standard_deduction' is the new South Carolina Income Adjusted Deduction (SCIAD): $15,000 single/MFS (reduced pro rata for AGI $40,001-$94,999, zero at $95,000+), $22,500 HoH (phase-out $60,001-$142,499), $30,000 MFJ (phase-out $80,001-$189,999). The federal standard/itemized/QBI deductions no longer apply." },
+    "starting_point": "federal AGI (from tax year 2026; previously federal taxable income)",
+    "surtaxes": "none. Brackets are the same for all filing statuses; DOR formula for $30,000 or more is 5.21% x taxable income minus $966.",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 4, "url": "https://dor.sc.gov/sites/dor/files/policies/IL26-20.pdf", "title": "SC Information Letter #26-20, Individual Income Tax Reform (Act 110 of 2026), 2026-08-31", "quote": "$0 - $29,999 1.99% times taxable income $30,000 or more (5.21% times taxable income) minus $966" },
+      { "id": 5, "url": "https://dor.sc.gov/sites/dor/files/policies/IL26-20.pdf", "title": "SC Information Letter #26-20 (SCIAD)", "quote": "the calculation for South Carolina taxable income will begin with federal AGI instead of federal taxable income for tax years beginning after 2025." }
+    ]
+  },
+  "estimated_tax": { "required_if": "expect to owe $100 or more with the SC1040", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "The last installment can be skipped if the SC1040 is filed by 2027-02-01 with full payment. Farmers/fishermen: single payment by 2027-01-15 or file by 2027-03-01.", "source_url": "https://dor.sc.gov/sites/dor/files/forms/SC1040ES_2026.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 14000, "new_employer_rate": null, "notes": "Wage base read only from the search-indexed text of dew.sc.gov (direct fetch 403). DEW says 2026 rates decrease or stay the same, with no solvency surcharge. The new-employer rate is a predetermined statutory rate, not verified.", "source_url": "https://dew.sc.gov/employers/tax-rate-information" },
+  "local_taxes": [],
+  "notable": [
+    "Big 2026 reform (Act 110, signed 2026-03-30): two brackets 1.99% / 5.21%, top rate down from 6%, and further cuts possible from 2027 down to 1.99% then 0% (https://dor.sc.gov/sites/dor/files/policies/IL26-20.pdf)",
+    "SC no longer uses federal taxable income: it starts from AGI, so the federal standard deduction and the 20% QBI deduction are gone, replaced by a phased-out SCIAD of $15,000 / $30,000 (https://dor.sc.gov/sites/dor/files/policies/IL26-20.pdf)",
+    "Pass-through business owners can elect a 3% rate on active trade or business income, well below 5.21% (https://www.scstatehouse.gov/code/t12c006.php)",
+    "No annual report or franchise tax for an LLC taxed as a partnership or disregarded entity (https://www.scstatehouse.gov/code/t33c044.php)"
+  ],
+  "uncertain": [
+    "sos.sc.gov and dew.sc.gov returned 403; the LLC fee comes from statute ($110). Whether online filing costs $100 was not checked.",
+    "Bracket threshold ($30,000) will be chained-CPI indexed in later years; Act 110's interaction with the 3% active trade or business income rate (12-6-545) is not addressed in IL26-20 and the online code may not yet show Act 110 amendments.",
+    "SUTA new-employer rate not verified; the wage base comes from the search index of the official page.",
+    "No county/municipal income taxes in SC (business license taxes on gross receipts exist at the city/county level but vary by locality; not catalogued)."
+  ]
+}

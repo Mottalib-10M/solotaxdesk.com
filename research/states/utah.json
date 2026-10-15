@@ -1,0 +1,55 @@
+{
+  "state": "Utah", "slug": "utah", "abbr": "UT", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 59,
+    "formation_doc": "Certificate of Organization (domestic LLC)",
+    "formation_notes": "Fee from the Division of Corporations' FY2026 fee schedule (effective 2025-07-01). The PDF could not be fetched directly (Cloudflare 403); figures read from the search-indexed text of the official file. See uncertain.",
+    "annual_report": { "name": "Annual Renewal (annual report)", "fee": 18, "frequency": "annual", "due": "by the end of the LLC's anniversary month (not verified on an official page)", "late_penalty": "$10 late renewal fee (from the same fee schedule, indexed text)" },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://commerce.utah.gov/wp-content/uploads/2023/04/currentfees.pdf", "title": "Utah Division of Corporations and Commercial Code - current fee schedule (FY2026)", "quote": "Domestic limited liability company (LLC) certificate of organization $59" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporate franchise tax on S corporation built-in/entity-level items", "rate": 0.0445, "minimum": null, "notes": "Utah Code 59-7-701 says an S corporation is taxed at the 59-7-104 rate, which S.B. 60 (2026) cut from 4.5% to 4.45% retroactive to 2026-01-01; applies only to income taxed at entity level federally. C corporations pay a $100 minimum; whether that minimum applies to S corps was not verified (tax.utah.gov blocked).", "source": 2 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "A pass-through entity that is not disregarded may elect to pay tax at the individual rate in 59-10-104(2) (4.45% for 2026) on voluntary taxable income; election made by payment on or before the last day of the taxable year, irrevocable.", "source": 3 },
+    "sources": [
+      { "id": 2, "url": "https://le.utah.gov/Session/2026/bills/enrolled/SB0060.pdf", "title": "S.B. 60 Income Tax Rate Amendments (2026 General Session, enrolled)", "quote": "The tax shall be [4.5] 4.45% of a corporation's Utah taxable income." },
+      { "id": 3, "url": "https://le.utah.gov/xcode/Title59/Chapter10/59-10-S1403.2.html", "title": "Utah Code 59-10-1403.2", "quote": "A pass-through entity that is not a disregarded pass-through entity may elect to pay a tax in an amount equal to the product of" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.0445,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": true, "notes": "No standard deduction or exemption; instead a nonrefundable taxpayer tax credit = 6% of the federal standard (or Utah itemized) deduction + 6% of the Utah personal exemption ($1,750 per qualifying dependent, indexed). The credit is reduced by 1.3 cents per dollar of state taxable income above base amounts (statute text: $15,095 single, $22,643 HoH, $30,190 joint, indexed annually; 2026 indexed values not read because tax.utah.gov is blocked)." },
+    "starting_point": "federal AGI (with Utah additions/subtractions)",
+    "surtaxes": "none",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 4, "url": "https://le.utah.gov/Session/2026/bills/enrolled/SB0060.pdf", "title": "S.B. 60 (2026) - 59-10-104", "quote": "(b) 4.45%. [(b) 4.5%.] ... This bill has retrospective operation for a taxable year beginning on or after January 1, 2026." },
+      { "id": 5, "url": "https://le.utah.gov/xcode/Title59/Chapter10/59-10-S1018.html", "title": "Utah Code 59-10-1018 Nonrefundable taxpayer tax credits", "quote": "The tax credit allowed by Subsection (2) shall be reduced by $.013 for each dollar by which a claimant's state taxable income exceeds" }
+    ]
+  },
+  "estimated_tax": { "required_if": "No quarterly estimated payment schedule in statute; to avoid the penalty, pay by the return due date the lesser of 90% of current-year tax or 100% of prior-year tax (Utah Code 59-10-516(2)).", "due_dates_2026": [], "notes": "Utah has no quarterly estimate requirement for individuals (prepayment rule applies on the extended return). Not confirmed on tax.utah.gov (blocked).", "source_url": "https://le.utah.gov/xcode/Title59/Chapter10/59-10-S516.html" },
+  "unemployment_2026": { "taxable_wage_base": 50700, "new_employer_rate": null, "notes": "Wage base read only from the search-indexed text of jobs.utah.gov (direct fetch 403); overall rates 0.1%-7.1%. New employers get an industry-average rate (no single figure).", "source_url": "https://jobs.utah.gov/ui/employer/public/Questions/TaxRates.aspx" },
+  "local_taxes": [],
+  "notable": [
+    "Flat rate cut again for 2026: 4.5% to 4.45%, retroactive to 2026-01-01, also for corporations (https://le.utah.gov/Session/2026/bills/enrolled/SB0060.pdf)",
+    "No standard deduction: a 6% taxpayer credit phases out at 1.3% of income above a base amount, so the effective marginal rate is ~5.75% in the phase-out range (https://le.utah.gov/xcode/Title59/Chapter10/59-10-S1018.html)",
+    "Elective pass-through entity tax at 4.45% for partnerships and S corps (https://le.utah.gov/xcode/Title59/Chapter10/59-10-S1403.2.html)",
+    "No local income taxes on self-employment income"
+  ],
+  "uncertain": [
+    "tax.utah.gov, corporations.utah.gov, commerce.utah.gov and jobs.utah.gov all returned Cloudflare 403 to curl and WebFetch; the LLC fees ($59 / $18 / $10 late) and SUTA wage base ($50,700) come from the search-indexed text of those official files, not from a direct read. The fee schedule is labelled FY2026 (effective 2025-07-01); a FY2027 schedule from 2026-07-01 may exist.",
+    "2026 indexed phase-out base amounts of the taxpayer tax credit and the indexed personal exemption amount were not read (Pub 14 / TC-40 instructions blocked).",
+    "Whether the $100 corporate minimum tax applies to S corporations was not verified.",
+    "Annual renewal due date wording (anniversary month) not read on an official page.",
+    "Utah SUTA new employer rate: industry-based, no single figure verified.",
+    "A third party says 2026 S.B. 41 recodifies the LLC Act from Title 48 chapter 3a to Title 16 chapter 20 effective 2026-10-01; not verified."
+  ]
+}

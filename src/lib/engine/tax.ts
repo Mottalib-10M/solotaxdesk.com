@@ -91,7 +91,7 @@ export interface StateTax {
   name: string; slug: string; abbr: string;
   income: { type: 'none' | 'flat' | 'graduated' | 'interest_dividends_only'; flat: number | null; brackets: { single: Brackets; mfj: Brackets } | null; std: { single: number; mfj: number } | null; exemption: { single: number; mfj: number; credit: boolean } | null; start: 'agi' | 'federal_taxable'; year: number; verified: boolean };
   llc: { formation: number | null; annual: number | null; frequency: 'annual' | 'biennial' | 'none' | null; minTax: number; minTaxName: string | null; firstYearExtra: number };
-  scorp: { recognized: 'yes' | 'no' | 'partial'; rate: number; minimum: number; fixed: number; name: string | null };
+  scorp: { recognized: 'yes' | 'no' | 'partial'; rate: number; minimum: number; fixed: number; name: string | null; replacesLlcMin?: boolean };
   suta: { wageBase: number | null; rate: number | null };
 }
 const bucket = (f: Filing): 'single' | 'mfj' => (f === 'mfj' ? 'mfj' : 'single');
@@ -182,7 +182,8 @@ export function scorp(i: ScorpInput): ScorpResult {
   const ordinary = pos(i.profit - salary - employerFica - futa - suta - admin);
   const st = i.state?.scorp;
   const entityTax = st && (st.rate || st.minimum || st.fixed) ? r2(Math.max(st.minimum, ordinary * st.rate) + st.fixed) : 0;
-  const llcFees = i.llcFees ?? 0;
+  // Where the S corp tax replaces the LLC's own minimum tax (California $800), the LLC minimum is not paid twice.
+  const llcFees = Math.max(0, (i.llcFees ?? 0) - (st?.replacesLlcMin ? i.state!.llc.minTax : 0));
   const k1 = r2(pos(ordinary - entityTax - llcFees));
   const agi = r2(salary + k1 + other + sp);
   const before = pos(agi - standardDeduction(f));

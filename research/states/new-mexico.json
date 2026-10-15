@@ -1,0 +1,96 @@
+{
+  "state": "New Mexico",
+  "slug": "new-mexico",
+  "abbr": "NM",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": null,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "Fee not verified: sos.nm.gov fee pages not found and nmonesource.com (statutes) returned 403.",
+    "annual_report": {
+      "name": "None (New Mexico LLCs do not file annual reports - not verified today)",
+      "fee": null,
+      "frequency": "none",
+      "due": null,
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": []
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      {
+        "name": "Corporate Franchise Tax",
+        "rate": null,
+        "minimum": 50,
+        "notes": "$50 annual franchise tax on every domestic and foreign corporation, including S corporations, engaged in business or exercising its franchise in NM (reported on S-Corp return / CIT-1). Does not apply to LLCs taxed as partnerships or disregarded.",
+        "source": 1
+      }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Annual election to pay entity-level tax (Section 7-3A-10 NMSA 1978), made by filing the PTE or S-Corp return; binding on all owners; rate not read.",
+      "source": 2
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.tax.newmexico.gov/businesses/corporate-income-franchise-tax-overview/",
+        "title": "NM TRD - Corporate Income & Franchise Tax Overview",
+        "quote": "New Mexico Corporate Franchise Tax is the obligation of every domestic and foreign corporation, including S corporations"
+      },
+      {
+        "id": 2,
+        "url": "https://www.tax.newmexico.gov/businesses/corporate-income-franchise-tax-overview/pass-through-entity/",
+        "title": "NM TRD - Pass-Through Entity",
+        "quote": "A pass-through entity may elect on an annual basis to pay tax at the entity level for each tax year."
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": {
+      "single": null,
+      "mfj": null,
+      "is_credit": false,
+      "notes": ""
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": null,
+    "year_of_figures": null,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://www.tax.newmexico.gov/individuals/personal-income-tax-information-overview/",
+        "title": "NM TRD - Personal Income Tax Information Overview",
+        "quote": "New Mexico uses a graduated-rate table."
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": null,
+    "due_dates_2026": [],
+    "notes": "Not verified.",
+    "source_url": null
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": null,
+    "new_employer_rate": null,
+    "notes": "Not verified (DWS page not reachable).",
+    "source_url": null
+  },
+  "local_taxes": [],
+  "notable": [
+    "Gross receipts tax generally applies to services, so freelancers usually owe GRT on their receipts (state + local location rate) in addition to income tax; rates vary by location (https://www.tax.newmexico.gov/governments/gross-receipts-location-code-and-tax-rate-map/)",
+    "S corporations owe a $50 corporate franchise tax each year (https://www.tax.newmexico.gov/businesses/corporate-income-franchise-tax-overview/)"
+  ],
+  "uncertain": [
+    "2026 personal income tax brackets: the TRD rate page renders its table by script and the forms site could not be searched; nmlegis.gov (WAF) and nmonesource.com (403) blocked the statute; web search budget was exhausted. Brackets left null (the 2024 HB 252 schedule effective 2025 is expected to still apply but was not read).",
+    "LLC formation fee, annual report status, estimated tax rules, and 2026 UI wage base / new employer rate not verified.",
+    "GRT state and local rates not captured (rate schedule PDF is a map only)."
+  ]
+}

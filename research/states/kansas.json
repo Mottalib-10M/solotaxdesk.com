@@ -1,0 +1,63 @@
+{
+  "state": "Kansas", "slug": "kansas", "abbr": "KS", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 85,
+    "formation_doc": "Articles of Organization (Form DL)",
+    "formation_notes": "$85 online, $90 paper (form rev. 2/27/26). Older third-party figures of $160/$165 are outdated.",
+    "annual_report": {
+      "name": "Information Report (biennial since Jan 1, 2024)",
+      "fee": 90,
+      "frequency": "biennial",
+      "due": "April 15 (for-profit) of every even year if formed in an even year, every odd year if formed in an odd year",
+      "late_penalty": "three-month delinquency period after the due date, then forfeiture; reinstatement required"
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://sos.ks.gov/forms/business_services/DL.pdf", "title": "Kansas SOS - Articles of Organization, Form DL (Rev. 2/27/26)", "quote": "Online Articles of Organization: .....................$85 Paper Articles of Organization: ......................$90" },
+      { "id": 2, "url": "https://sos.ks.gov/forms/business_services/ILC.pdf", "title": "Kansas SOS - LLC Information Report, Form ILC (Rev. 1/23/26)", "quote": "Online Information Report: ............................ $90 Paper Information Report: ............................. $110" },
+      { "id": 3, "url": "https://sos.ks.gov/businesses/information-reports.html", "title": "Kansas SOS - Information Reports", "quote": "All for profit businesses are due by April 15th of their respective odd or even year" },
+      { "id": 4, "url": "https://sos.ks.gov/Pubs/Businesses/Biennial-Filing.pdf", "title": "Kansas SOS - Biennial Business Filing", "quote": "Starting January 1, 2024, Kansas businesses will file information reports with the Kansas Secretary of State every two years" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": { "available": true, "rate_note": "SALT Parity Act (L. 2022): electing pass-through entities pay tax at the highest individual rate under K.S.A. 79-32,110(a) (5.58% for 2024 onward unless reduced); owners get a credit.", "source": 1 },
+    "sources": [
+      { "id": 1, "url": "https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0287_section/079_032_0287_k/", "title": "K.S.A. 79-32,287 Tax rate imposed (electing pass-through entity)", "quote": "an electing pass-through entity shall be subject to a tax in an amount equal to the highest rate of tax for the applicable income tax year under K.S.A. 79-32,110(a)" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.052], [23000, 0.0558]],
+      "mfj": [[0, 0.052], [46000, 0.0558]]
+    },
+    "standard_deduction": { "single": 3605, "mfj": 8240 },
+    "personal_exemption": { "single": 9160, "mfj": 18320, "is_credit": false, "notes": "Deduction; plus $2,320 per dependent (incl. unborn child). Head of household standard deduction $6,180." },
+    "starting_point": "federal AGI",
+    "surtaxes": "None. K.S.A. 79-32,110c can cut rates automatically from the next tax year when revenue and rainy-day fund triggers are met (first determination Aug 15, 2025).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0110_section/079_032_0110_k/", "title": "K.S.A. 79-32,110 Individual tax rates", "quote": "For tax year 2024, and all tax years thereafter: ... Not over $23,000 5.2% of Kansas taxable income Over $23,000 $1,196 plus 5.58% of excess over $23,000" },
+      { "id": 2, "url": "https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0119_section/079_032_0119_k/", "title": "K.S.A. 79-32,119 Standard deduction", "quote": "For tax year 2024, and all tax years thereafter ... Single individual filing status, $3,605; married filing status, $8,240" },
+      { "id": 3, "url": "https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0121_section/079_032_0121_k/", "title": "K.S.A. 79-32,121 Kansas personal exemptions", "quote": "married individuals filing a joint return, a personal exemption of $18,320 ... single ... $9,160" },
+      { "id": 4, "url": "https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0110c_section/079_032_0110c_k/", "title": "K.S.A. 79-32,110c Adjustment of tax rates", "quote": "Commencing on August 15, 2025, and every August 15 thereafter, the director of the budget ... shall determine whether the total fiscal year adjusted general revenue fund collections" }
+    ]
+  },
+  "estimated_tax": { "required_if": "you can reasonably expect to owe at least $500 after withholding and credits, and withholding/credits are below 90% of current-year or 100% of prior-year tax", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Due dates assumed to follow the federal schedule; not read on an official page (ksrevenue.gov unreachable)", "source_url": "https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0101_section/079_032_0101_k/" },
+  "unemployment_2026": { "taxable_wage_base": null, "new_employer_rate": null, "notes": "dol.ks.gov returned Access Denied (403) today", "source_url": null },
+  "local_taxes": [],
+  "notable": [
+    "LLC formation fee is now $85 online (form revised Feb 2026) and the information report is biennial at $90 online (https://sos.ks.gov/forms/business_services/DL.pdf)",
+    "Two brackets only: 5.2% and 5.58% above $23,000 single / $46,000 joint (https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0110_section/079_032_0110_k/)",
+    "Large personal exemption: $9,160 single / $18,320 joint (https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0121_section/079_032_0121_k/)",
+    "Estimated tax only if you expect to owe $500 or more (https://www.kslegislature.gov/li/b2025_26/statute/079_000_0000_chapter/079_032_0000_article/079_032_0101_section/079_032_0101_k/)"
+  ],
+  "uncertain": [
+    "ksrevenue.gov refused connections today; 2026 rates taken from the statute. Whether the K.S.A. 79-32,110c revenue trigger produced an automatic rate cut for tax year 2026 could not be checked (would lower 5.2%/5.58%).",
+    "SUTA 2026 wage base and new employer rate not verified (dol.ks.gov 403).",
+    "Information report late penalty amount not stated on the pages read."
+  ]
+}

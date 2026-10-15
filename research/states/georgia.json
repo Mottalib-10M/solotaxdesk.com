@@ -1,0 +1,61 @@
+{
+  "state": "Georgia", "slug": "georgia", "abbr": "GA", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Articles of Organization (Form CD 030) with Transmittal Form 231",
+    "formation_notes": "$100 online; $110 by mail. Expedite: +$100 (2 business days), +$250 (same day). The SOS fee schedule (effective Sept 6, 2025) reportedly adds a $5 online service charge ($105 total), but sos.ga.gov was blocked (Cloudflare 403) today and could not be read.",
+    "annual_report": {
+      "name": "Annual Registration",
+      "fee": 50,
+      "frequency": "annual",
+      "due": "between January 1 and April 1 each year, starting the year after formation (2- or 3-year multi-year registration possible)",
+      "late_penalty": "$25 late fee if not filed/postmarked by April 1; extra $10 service charge for mail filing; risk of administrative dissolution"
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://georgia.gov/register-llc", "title": "Georgia.gov - Register an LLC with Georgia Secretary of State", "quote": "Pay the $100 filing fee by approved credit card" },
+      { "id": 2, "url": "https://georgia.gov/renew-llc", "title": "Georgia.gov - Renew an LLC", "quote": "Your envelope must be postmarked by April 1 of the current year to avoid a $25 late fee." },
+      { "id": 3, "url": "https://georgia.gov/blog/2014-06-12/what-llc", "title": "Georgia.gov blog - What Is An LLC? (2014)", "quote": "Each LLC in Georgia is required to pay the $50 registration fee between January 1 and April 1" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Net worth tax (corporations, including S corporations)", "rate": null, "minimum": 0, "notes": "Graduated net worth tax; corporations with net worth of $100,000 or less owe nothing but must file; maximum $5,000 for net worth over $22 million. Not applicable to LLCs taxed as partnerships/disregarded.", "source": 1 },
+      { "name": "Corporate income tax (only if S status not recognized for Georgia, or PTET election)", "rate": 0.0499, "minimum": null, "notes": "If S Corporation status is recognized for Georgia, shareholders pay the tax instead of the corporation", "source": 1 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "S corporations and partnerships may make an annual irrevocable election (HB 149, tax years from 2022) to pay tax at the entity level at the individual rate under O.C.G.A. 48-7-20(a.1): 4.99% for 2026 after HB 463.", "source": 2 },
+    "sources": [
+      { "id": 1, "url": "https://dor.georgia.gov/corporate-income-and-net-worth-tax", "title": "Georgia DOR - Corporate Income and Net Worth Tax", "quote": "corporations with a net worth of $100,000 or less are not subject to tax but must file a return. The maximum is $5,000" },
+      { "id": 2, "url": "https://dor.georgia.gov/hb-149-pass-through-entity-tax-faq", "title": "Georgia DOR - HB 149 Pass-Through Entity Tax FAQ", "quote": "S Corporations and Partnerships may annually make an irrevocable election to pay income tax at the entity level." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.0499,
+    "brackets": null,
+    "standard_deduction": { "single": 15000, "mfj": 30000 },
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No personal exemption for the taxpayer; dependent exemption raised from $4,000 to $5,000 per dependent for 2026 (HB 463). Standard deduction rises $375 (single) / $750 (MFJ) per year from 2027, up to $18,000 / $36,000, subject to delays." },
+    "starting_point": "federal AGI",
+    "surtaxes": "None. HB 463 (signed May 11, 2026) cut the rate from 5.19% to 4.99% retroactive to Jan 1, 2026; further 0.125-point annual cuts from 2027 toward 3.99% subject to revenue triggers.",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.legis.ga.gov/api/legislation/document/20252026/249080", "title": "HB 463 (as passed House and Senate), 2025-2026 session", "quote": "the tax imposed pursuant to subsection (a) of this Code section shall be 5.19 percent 4.99 percent for taxable years beginning on or after January 1, 2025 2026" },
+      { "id": 2, "url": "https://www.legis.ga.gov/api/legislation/document/20252026/249080", "title": "HB 463 - standard deduction", "quote": "In the case of a married couple filing a joint return, $24,000.00 $30,000.00 ... single taxpayer ... $12,000.00 $15,000.00" },
+      { "id": 3, "url": "https://gov.georgia.gov/press-releases/2026-05-11/gov-kemp-signs-legislation-lowering-taxes-and-supporting-economic-growth", "title": "Governor's Office - Gov. Kemp signs legislation lowering taxes (May 11, 2026)", "quote": "HB 463 lowers Georgia's state income tax rate from 5.19% to 4.99%, beginning January 1, 2026." }
+    ]
+  },
+  "estimated_tax": { "required_if": "expected gross income exceeds exemptions plus estimated deductions plus $1,000 of income not subject to withholding (2025 Form 500-ES wording)", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Form 500-ES; later start dates if requirement first met after April 1", "source_url": "https://dor.georgia.gov/document/document/2025-500-es-estimated-tax-individuals-and-fiduciaries/download" },
+  "unemployment_2026": { "taxable_wage_base": 9500, "new_employer_rate": 0.027, "notes": "GDOL FAQ: new employers assigned a total rate of 2.70% (FAQ may be dated; 2026 rate notices are in the Employer Portal). Wage base $9,500 since 2013.", "source_url": "https://dol.georgia.gov/faqs-employers/employers-faqs-unemployment-insurance" },
+  "local_taxes": [],
+  "notable": [
+    "2026 flat rate cut to 4.99% retroactively by HB 463 signed May 11, 2026, with standard deduction raised to $15,000 / $30,000 (https://gov.georgia.gov/press-releases/2026-05-11/gov-kemp-signs-legislation-lowering-taxes-and-supporting-economic-growth)",
+    "No franchise tax on LLCs; S corporations owe net worth tax only above $100,000 of net worth, capped at $5,000 (https://dor.georgia.gov/corporate-income-and-net-worth-tax)",
+    "PTET election available to S corps and partnerships at the individual rate (https://dor.georgia.gov/hb-149-pass-through-entity-tax-faq)"
+  ],
+  "uncertain": [
+    "sos.ga.gov (fee schedule, how-to guides) blocked by Cloudflare today. $100 formation fee read on georgia.gov; the $50 annual registration fee is from a 2014 georgia.gov blog post, not a 2026 SOS page. Possible $5 online / $10 mail service charges on top not verified.",
+    "New employer SUTA rate 2.70% is from a GDOL FAQ of unknown date; some sources cite 2.64%. Not verified for 2026.",
+    "2026 Form 500-ES not opened; threshold wording taken from the 2025 form."
+  ]
+}

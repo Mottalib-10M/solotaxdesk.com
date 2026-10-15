@@ -1,0 +1,179 @@
+{
+  "state": "Rhode Island",
+  "slug": "rhode-island",
+  "abbr": "RI",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 150,
+    "formation_doc": "Articles of Organization (Form 400)",
+    "formation_notes": "SOS schedule lists an additional 'Enhanced Fee' of $6.00 for online filing of Form 400. Professional LLC (Form 412) also $150.",
+    "annual_report": {
+      "name": "LLC Annual Report (Form 632)",
+      "fee": 50,
+      "frequency": "annual",
+      "due": "between February 1 and May 1 of each year after the year of formation",
+      "late_penalty": "$75 when filed with penalty imposed (schedule: 'Annual Report - Penalty Imposed $75')"
+    },
+    "state_tax_on_llc": [
+      {
+        "name": "Annual fee equal to the minimum tax (R.I. Gen. Laws 44-11-2(e))",
+        "amount": 400,
+        "kind": "fixed",
+        "rate": null,
+        "applies": "every LLC filing Form RI-1065 (partnership or single-member LLC) and LLCs taxed as S corps (RI-1120S); a sole proprietor using RI-1065 only for the PTE election is exempt",
+        "notes": "Paid on Form RI-1065 line 7a; single-member LLC return due the 15th day of the 4th month (April 15 for calendar year).",
+        "source": 3
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://docs.sos.ri.gov/documents/BusinessServices/business-forms-fee-schedule.pdf",
+        "title": "RI Department of State - Business forms fee schedule",
+        "quote": "400 ARTICLES OF ORGANIZATION YES $150.00 $6.00 ... 632 ANNUAL REPORT YES $50.00 $2.50"
+      },
+      {
+        "id": 2,
+        "url": "https://webserver.rilegislature.gov/Statutes/TITLE7/7-16/7-16-66.htm",
+        "title": "R.I. Gen. Laws 7-16-66 (read via web.archive.org copy dated 2026-06-16)",
+        "quote": "shall file, between the first day of February and the first day of May in each year"
+      },
+      {
+        "id": 3,
+        "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-01/2025%20RI-1065%20Instructions.pdf",
+        "title": "2025 Form RI-1065 Instructions (read via web.archive.org copy; tax.ri.gov blocks direct fetch)",
+        "quote": "Enter the amount of $400.00 on this line. Pursuant to R.I. Gen. Laws § 44-11-2(e), the minimum tax imposed shall be $400.00."
+      }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      {
+        "name": "Business corporation minimum tax",
+        "rate": null,
+        "minimum": 400,
+        "notes": "S corps not subject to the 7% corporate income tax but pay the $400 minimum tax (since 2015); tax on built-in gains/passive income to the extent taxed federally.",
+        "source": 1
+      }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "5.99% entity-level election (R.I. Gen. Laws 44-11-2.3), open to S corps, partnerships, LLCs and even sole proprietors; for tax years from 2025 owners get a credit of only 90% of the PTE tax paid. From 2027 the PTE may also elect to pay the new high-income surtax at entity level.",
+      "source": 2
+    },
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://webserver.rilegislature.gov/Statutes/TITLE44/44-11/44-11-2.htm",
+        "title": "R.I. Gen. Laws 44-11-2 (read via web.archive.org copy dated 2026-07-15)",
+        "quote": "For tax years beginning on or after January 1, 2017, the tax imposed shall not be less than four hundred dollars ($400)."
+      },
+      {
+        "id": 2,
+        "url": "https://webserver.rilegislature.gov/Statutes/TITLE44/44-11/44-11-2.3.htm",
+        "title": "R.I. Gen. Laws 44-11-2.3 (read via web.archive.org copy dated 2026-09-02)",
+        "quote": "a pass-through entity may elect to pay the state tax at the entity level at the rate of five and ninety-nine hundredths percent (5.99%)."
+      },
+      {
+        "id": 3,
+        "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-07/2026_summary_of_legislative_changes.pdf",
+        "title": "RI Division of Taxation - Summary of Legislative Changes, July 22, 2026 (via web.archive.org)",
+        "quote": "may additionally elect to pay the High-Income Surtax at the entity level"
+      }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [
+        [
+          0,
+          0.0375
+        ],
+        [
+          82050,
+          0.0475
+        ],
+        [
+          186450,
+          0.0599
+        ]
+      ],
+      "mfj": [
+        [
+          0,
+          0.0375
+        ],
+        [
+          82050,
+          0.0475
+        ],
+        [
+          186450,
+          0.0599
+        ]
+      ]
+    },
+    "standard_deduction": {
+      "single": 11200,
+      "mfj": 22400
+    },
+    "personal_exemption": {
+      "single": 5250,
+      "mfj": 10500,
+      "is_credit": false,
+      "notes": "$5,250 per personal/dependency exemption for 2026. Standard deduction and exemptions phase out for modified federal AGI between $261,000 and $290,800 (2026). Single uniform rate schedule for all filing statuses. Head of household standard deduction $16,800."
+    },
+    "starting_point": "federal AGI",
+    "surtaxes": "New high-income surtax (FY2027 budget, H 7127 Sub A): 1% on income over $1 million (indexed) for tax year 2027, 2% for 2028, 3% from 2029. No surtax for tax year 2026.",
+    "year_of_figures": 2026,
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-11/ADV_2025_22_Inflation_Adjustments.pdf",
+        "title": "ADV 2025-22: Inflation-adjusted amounts set for Tax Year 2026 (via web.archive.org copy of 2025-11-05)",
+        "quote": "Single $10,900 $11,200 Married filing jointly* $21,800 $22,400"
+      },
+      {
+        "id": 2,
+        "url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-07/2026_summary_of_legislative_changes.pdf",
+        "title": "Summary of Legislative Changes, July 22, 2026",
+        "quote": "imposes a surtax of 1% on personal income over $1 million for the tax year beginning January 1, 2027."
+      }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "estimated RI income tax of $250 or more in excess of credits",
+    "due_dates_2026": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "notes": "",
+    "source_url": "https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-01/2026%20RI-1040ES_w.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 30800,
+    "new_employer_rate": 0.0121,
+    "notes": "$32,300 wage base for employers at the highest rate. New employer rate 1.21% includes the 0.21% Job Development Assessment. Schedule F (0.9% to 9.4%). Separately, TDI (employee-paid) 1.1% on wages up to $100,000.",
+    "source_url": "https://dlt.ri.gov/press-releases/2026-tax-rates-unemployment-insurance-and-temporary-disability-insurance"
+  },
+  "local_taxes": [],
+  "notable": [
+    "Every LLC (including single-member) owes a $400 annual fee on Form RI-1065 on top of the $50 SOS annual report (https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-01/2025%20RI-1065%20Instructions.pdf)",
+    "PTE election open to sole proprietors as well as LLCs/S corps, at 5.99%, but owners get only a 90% credit since 2025 (https://webserver.rilegislature.gov/Statutes/TITLE44/44-11/44-11-2.3.htm)",
+    "Millionaire surtax enacted in 2026: 1% (2027), 2% (2028), 3% (2029+) on income over $1M (https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-07/2026_summary_of_legislative_changes.pdf)",
+    "Single bracket schedule for all filing statuses: married couples get no wider brackets (https://tax.ri.gov/sites/g/files/xkgbur541/files/2025-11/ADV_2025_22_Inflation_Adjustments.pdf)",
+    "Estimated tax required from only $250 of expected tax (https://tax.ri.gov/sites/g/files/xkgbur541/files/2026-01/2026%20RI-1040ES_w.pdf)",
+    "Tax amnesty Dec 3, 2026 to Feb 15, 2027 for periods ending on or before Dec 31, 2025 (summary of legislative changes)"
+  ],
+  "uncertain": [
+    "tax.ri.gov, dlt.ri.gov and rilegislature.gov block direct fetching (Cloudflare 403 / connection refused); official documents were read through web.archive.org copies of the official URLs. Content is official but not fetched live from the agency.",
+    "2026 bracket table in ADV 2025-22 is partly garbled in the PDF text layer; thresholds $82,050 and $186,450 confirmed by the base-tax amounts ($3,076.88 = 3.75% x 82,050).",
+    "Late annual report: statute cites a penalty; fee schedule shows $75 total when penalty imposed; exact penalty amount ($25 vs $75 total) not read in the current statute.",
+    "Whether a disregarded single-member LLC owned by an individual pays the $400 is stated via the RI-1065 instructions (all LLCs filing RI-1065); the SMLLC section confirms SMLLCs file RI-1065."
+  ]
+}

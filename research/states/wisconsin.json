@@ -1,0 +1,57 @@
+{
+  "state": "Wisconsin", "slug": "wisconsin", "abbr": "WI", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 130,
+    "formation_doc": "Articles of Organization (Form 502)",
+    "formation_notes": "$130 online, $170 on paper; next-day expedite $100. Student entrepreneur waiver (Form 502SE) has no fee.",
+    "annual_report": { "name": "Annual Report (Form 5)", "fee": 25, "frequency": "annual", "due": "by the end of the calendar quarter in which the LLC's anniversary falls (Mar 31, Jun 30, Sep 30 or Dec 31), starting the year after formation", "late_penalty": null },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/Fees.aspx", "title": "Wisconsin DFI, Corporation Fees", "quote": "Incorporation/Organization via Online Filing $100.00 $130.00 ... Annual Report via Online Filing $25.00" },
+      { "id": 2, "url": "https://dfi.wi.gov/Documents/BusinessServices/BusinessEntities/Forms/CORP5i.pdf", "title": "DFI Annual Report Instructions", "quote": "The report must be filed during the calendar year quarter in which the anniversary date of the incorporation/organization occurs." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Economic development surcharge (Form 5S Schedule S)", "rate": 0.002, "minimum": 25, "notes": "Only if gross receipts from all activities are $4 million or more; greater of $25 or 0.2% of net income, max $9,800.", "source": 2 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "Entity-level tax election at 7.9% of Wisconsin net income for tax-option (S) corporations (Schedule 5S-ET, consent of >50% shareholders) and partnerships/LLCs taxed as partnerships (Schedule 3-ET); losses do not pass through.", "source": 1 },
+    "sources": [
+      { "id": 1, "url": "https://www.revenue.wi.gov/Pages/FAQS/ise-scorp-determinc.aspx", "title": "WI DOR, Pass-Through Entity-Level Tax: Tax-Option (S) Corporation", "quote": "The net income reportable to Wisconsin is taxed at 7.9%" },
+      { "id": 2, "url": "https://www.revenue.wi.gov/TaxForms2025/2025-Form5S-Inst.pdf", "title": "2025 Wisconsin Form 5S Instructions", "quote": "The economic development surcharge applies to corporations having gross receipts from all activities of $4 million or more during the taxable year." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.035], [15110, 0.044], [51950, 0.053], [332720, 0.0765]],
+      "mfj": [[0, 0.035], [20150, 0.044], [69260, 0.053], [443630, 0.0765]]
+    },
+    "standard_deduction": { "single": 13960, "mfj": 25840 },
+    "personal_exemption": { "single": 700, "mfj": 1400, "is_credit": false, "notes": "$700 per person (self, spouse, each dependent) deduction; +$250 each if 65+. Standard deduction shown is the maximum: it phases out (single: 12% of income over $20,120, zero at $136,453; MFJ: 19.778% over $29,040, zero at $159,690)." },
+    "starting_point": "federal AGI (Wisconsin income) with own sliding-scale standard deduction",
+    "surtaxes": "none",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.revenue.wi.gov/TaxForms2026/2026-Form1-ES-inst.pdf", "title": "2026 Form 1-ES Instructions (2026 tax rate and standard deduction schedules)", "quote": "17,030.62 + 7.65% ......... 332,720" },
+      { "id": 2, "url": "https://www.revenue.wi.gov/TaxForms2026/2026-Form1-ES-inst.pdf", "title": "2026 Form 1-ES Instructions", "quote": "Your exemptions are $700 for yourself, $700 for your spouse if filing a joint return, and $700 for each dependent." }
+    ]
+  },
+  "estimated_tax": { "required_if": "expect to owe at least $500 after withholding and credits", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Safe harbor: 90% of 2026 tax or 100% of 2025 tax. Underpayment charged as interest (Schedule U).", "source_url": "https://www.revenue.wi.gov/TaxForms2026/2026-Form1-ES-inst.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 14000, "new_employer_rate": 0.0305, "notes": "3.05% for non-construction new employers (2.50% construction) in 2026; DWD 2027 schedule shows 3.25% when payroll is $500,000 or more.", "source_url": "https://dwd.wisconsin.gov/dwd/forms/ui/pdf/uct-43-e-2026.pdf" },
+  "local_taxes": [],
+  "notable": [
+    "No LLC franchise or minimum tax; $25 online annual report (https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/Fees.aspx)",
+    "Standard deduction phases out completely ($136,453 single / $159,690 MFJ in 2026) (https://www.revenue.wi.gov/TaxForms2026/2026-Form1-ES-inst.pdf)",
+    "2026 brackets: 4.4% bracket now runs to $51,950 single / $69,260 MFJ (https://www.revenue.wi.gov/TaxForms2026/2026-Form1-ES-inst.pdf)",
+    "Entity-level (PTET) election at 7.9% for S corps and partnerships (https://www.revenue.wi.gov/Pages/FAQS/ise-scorp-determinc.aspx)",
+    "No local income taxes in Wisconsin"
+  ],
+  "uncertain": [
+    "Annual report late penalty not verified.",
+    "Statute text (docs.legis.wisconsin.gov) could not be reached (DNS failure); figures come from DFI and DOR pages.",
+    "Economic development surcharge figures from 2025 Form 5S instructions; 2026 instructions not checked."
+  ]
+}

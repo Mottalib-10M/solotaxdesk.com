@@ -1,0 +1,71 @@
+{
+  "state": "Hawaii", "slug": "hawaii", "abbr": "HI", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 51,
+    "formation_doc": "Articles of Organization (Form LLC-1)",
+    "formation_notes": "$50 filing fee + $1 State Archives fee; expedited review +$25. Certified copy $10 + $0.25/page.",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": 12.50,
+      "frequency": "annual",
+      "due": "during the calendar quarter of the LLC's registration date (Q1 Jan-Mar, Q2 Apr-Jun, Q3 Jul-Sep, Q4 Oct-Dec)",
+      "late_penalty": "$10 late fee per year delinquent (online); fee schedule shows $15 for paper filing"
+    },
+    "state_tax_on_llc": [
+      { "name": "General excise tax (GET) on gross income", "amount": null, "kind": "rate", "rate": 0.04, "applies": "any business, including a single-member LLC or sole proprietor, on gross receipts from professional services, retailing, etc.", "notes": "Gross receipts tax, not an income tax: 4% (0.5% wholesale); plus 0.5% county surcharge in all four counties; one-time $20 GET license fee", "source": 4 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://cca.hawaii.gov/breg/registration/dllc/", "title": "DCCA BREG - Domestic Limited Liability Company", "quote": "Articles of Organization ... is $50.00, with an additional fee of $25.00 for expedited service. ... There is an additional State Archives fee of $1.00." },
+      { "id": 2, "url": "https://cca.hawaii.gov/breg/registration/dllc/fees/", "title": "DCCA BREG - Fees / Uniform Limited Liability Company Act, Chapter 428", "quote": "Annual Report $15.00 $25.00" },
+      { "id": 3, "url": "https://cca.hawaii.gov/breg/release-second-quarter-hawaii-annual-business-reports-due/", "title": "DCCA release - Second quarter annual business reports due (updated April 23, 2026)", "quote": "Fees for filing Hawaii annual business reports online are as follows: LLCs, profit corporations and LLPs: $12.50" },
+      { "id": 4, "url": "https://files.hawaii.gov/tax/news/pubs/25outline.pdf", "title": "Outline of the Hawaii Tax System as of July 1, 2025", "quote": "retailing business and professional services ... are taxed at 4%" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "General excise tax on gross receipts (applies to S corps like any business)", "rate": 0.04, "minimum": null, "notes": "plus 0.5% county surcharge", "source": 2 }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "Partnerships and S corporations may elect entity-level tax for taxable years beginning after Dec 31, 2022; elective rate 9% for years beginning after Dec 31, 2023, no separate capital gains rate.", "source": 1 },
+    "sources": [
+      { "id": 1, "url": "https://files.hawaii.gov/tax/news/pubs/25outline.pdf", "title": "Outline of the Hawaii Tax System as of July 1, 2025", "quote": "The PTE elective rate for taxable years beginning after December 31, 2023 is 9%" },
+      { "id": 2, "url": "https://tax.hawaii.gov/geninfo/countysurcharge/", "title": "Hawaii DOTAX - County Surcharge on General Excise and Use Tax", "quote": "County of Kauai: The county surcharge at the rate of 0.5% is effective from January 1, 2019 to December 31, 2030." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.014], [9600, 0.032], [14400, 0.055], [19200, 0.064], [24000, 0.068], [36000, 0.072], [48000, 0.076], [125000, 0.079], [175000, 0.0825], [225000, 0.09], [275000, 0.10], [325000, 0.11]],
+      "mfj": [[0, 0.014], [19200, 0.032], [28800, 0.055], [38400, 0.064], [48000, 0.068], [72000, 0.072], [96000, 0.076], [250000, 0.079], [350000, 0.0825], [450000, 0.09], [550000, 0.10], [650000, 0.11]]
+    },
+    "standard_deduction": { "single": 8000, "mfj": 16000 },
+    "personal_exemption": { "single": 1144, "mfj": 2288, "is_credit": false, "notes": "$1,144 per exemption (deduction); MFJ = 2 x $1,144. Head of household standard deduction $12,000 in 2026." },
+    "starting_point": "own definition (federal AGI-based with Hawaii adjustments)",
+    "surtaxes": "None. Act 46 SLH 2024: 2026 keeps the 2025 brackets and raises the standard deduction; brackets widen again in 2027 and 2029. Capital gains taxed at max 7.25% (not verified today).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://files.hawaii.gov/tax/news/announce/ann24-03.pdf", "title": "DOTAX Announcement 2024-03 - Act 46, SLH 2024", "quote": "For tax year 2026 ... Single or Married Filing Separate $8,000 ... The income tax brackets will be the same as in tax year 2025." },
+      { "id": 2, "url": "https://files.hawaii.gov/tax/news/announce/ann24-03.pdf", "title": "DOTAX Announcement 2024-03 - 2025 single schedule", "quote": "Over $325,000 $25,966 plus 11% of excess over $325,000" },
+      { "id": 3, "url": "https://files.hawaii.gov/tax/news/pubs/25outline.pdf", "title": "Outline of the Hawaii Tax System as of July 1, 2025", "quote": "The personal exemption amount is $1,144." },
+      { "id": 4, "url": "https://files.hawaii.gov/tax/news/announce/ann25-07.pdf", "title": "DOTAX Announcement 2025-07 - 2026 withholding tables", "quote": "Act 46 additionally increases the standard deduction amounts for tax year 2026." }
+    ]
+  },
+  "estimated_tax": { "required_if": "individuals with income not subject to withholding (threshold not verified today)", "due_dates_2026": ["2026-04-20", "2026-06-20", "2026-09-20", "2027-01-20"], "notes": "Hawaii uses the 20th, not the 15th; Form N-200V. Returns due April 20.", "source_url": "https://files.hawaii.gov/tax/news/pubs/25outline.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 64500, "new_employer_rate": 0.024, "notes": "Schedule C for 2026; max 5.60%; plus 0.01% Employment & Training assessment", "source_url": "https://labor.hawaii.gov/ui/tax-rate-schedule-and-weekly-benefit-amount/" },
+  "local_taxes": [
+    { "place": "All four counties (Honolulu, Kauai, Hawaii, Maui)", "name": "County surcharge on general excise tax", "rate": 0.005, "applies": "gross receipts taxed at the 4% GET rate, including professional services of freelancers", "threshold_or_exemption": "not applied to 0.5% (wholesale) or 0.15% activities; effective through Dec 31, 2030", "source_url": "https://tax.hawaii.gov/geninfo/countysurcharge/", "quote": "County of Maui: The county surcharge at the rate of 0.5% is effective from January 1, 2024" }
+  ],
+  "notable": [
+    "Freelancers pay 4% general excise tax plus 0.5% county surcharge on gross receipts in addition to income tax (https://files.hawaii.gov/tax/news/pubs/25outline.pdf)",
+    "Top income tax rate 11%, among the highest; brackets start very low (1.4% up to $9,600 single) (https://files.hawaii.gov/tax/news/announce/ann24-03.pdf)",
+    "Standard deduction nearly doubled for 2026 to $8,000 / $16,000 (https://files.hawaii.gov/tax/news/announce/ann24-03.pdf)",
+    "Estimated payments and annual returns fall on the 20th (April 20) rather than the 15th (https://files.hawaii.gov/tax/news/pubs/25outline.pdf)",
+    "LLC annual report only $12.50 online (https://cca.hawaii.gov/breg/release-second-quarter-hawaii-annual-business-reports-due/)"
+  ],
+  "uncertain": [
+    "tax.hawaii.gov rate schedule pages and capitol.hawaii.gov HRS pages were not readable (404 / Cloudflare); 2026 brackets taken from DOTAX Announcement 2024-03 (Act 46). HB 2306 (2026 session) proposed higher top rates after 2026; not checked whether enacted, it would not affect 2026.",
+    "Annual report fee: $12.50 online per a DCCA release originally from 2022 (page updated 2026); BREG fee table lists $15.00. Used $12.50.",
+    "Estimated tax threshold not verified; due dates from the July 2025 tax outline."
+  ]
+}

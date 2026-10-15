@@ -1,0 +1,45 @@
+{
+  "state": "South Dakota", "slug": "south-dakota", "abbr": "SD", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 150,
+    "formation_doc": "Articles of Organization (domestic LLC)",
+    "formation_notes": "$150 filed online, $165 on paper (includes paper filing fee). Series LLC master articles $200.",
+    "annual_report": { "name": "Annual Report", "fee": 55, "frequency": "annual", "due": "Current SDCL 59-11-25: first report before the first day of the second month of the year after formation, then same date each year. From 2027-01-01 (SL 2026 ch 203) an entity chooses either its anniversary month or January 31 each year.", "late_penalty": null },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://sdsos.gov/general-information/filing-fees.aspx", "title": "South Dakota Secretary of State - Filing Fees", "quote": "Domestic Articles of Organization Filed Electronically online $150 Filed via Paper (includes paper filing fee) $165" },
+      { "id": 2, "url": "https://sdsos.gov/general-information/filing-fees.aspx", "title": "South Dakota Secretary of State - Filing Fees (LLC annual report)", "quote": "Annual Report Filed Electronically online $55 Filed via Paper (includes paper filing fee) $70" },
+      { "id": 3, "url": "https://sdlegislature.gov/api/Statutes/59-11-25.html", "title": "SDCL 59-11-25 Time for filing annual report", "quote": "Beginning in the calendar year after the entity's formation, on or before January thirty-first, and each January thirty-first thereafter." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": null,
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "No individual income tax." },
+    "starting_point": null,
+    "surtaxes": "none",
+    "year_of_figures": 2026,
+    "sources": []
+  },
+  "estimated_tax": { "required_if": "Not applicable (no individual income tax)", "due_dates_2026": [], "notes": "", "source_url": null },
+  "unemployment_2026": { "taxable_wage_base": 15000, "new_employer_rate": 0.012, "notes": "Year-1 new non-construction employer: 1.20% RA tax + 0.55% investment fee (1.75% total); construction 6.00% + 0.55%. Years 2-3: 1.00% (construction 3.00%) if positive balance. Quarterly reports due last day of month after quarter.", "source_url": "https://dlr.sd.gov/ra/businesses/tax_rates.aspx" },
+  "local_taxes": [],
+  "notable": [
+    "No individual income tax, no corporate income tax on ordinary businesses, no franchise tax on LLCs: the only state cost of an LLC is the $150 formation and $55 annual report (https://sdsos.gov/general-information/filing-fees.aspx)",
+    "From 2027 LLCs can pick an anniversary-month or a January 31 annual report date (https://sdlegislature.gov/api/Statutes/59-11-25.html)",
+    "SUTA wage base $15,000 for 2026; new employers 1.20% + 0.55% investment fee (https://dlr.sd.gov/ra/businesses/default.aspx)"
+  ],
+  "uncertain": [
+    "LLC annual report late penalty not found on the SOS fee page.",
+    "Absence of income tax and of corporate tax on non-bank entities stated from general knowledge of SD law; no DOR page quoted (SD taxes banks under a bank franchise tax only).",
+    "SB 26 (2026) reportedly changes RA contribution rates from mid-2026 or 2027; not verified on an official page."
+  ]
+}

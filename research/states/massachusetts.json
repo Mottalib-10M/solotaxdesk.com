@@ -1,0 +1,137 @@
+{
+ "state": "Massachusetts",
+ "slug": "massachusetts",
+ "abbr": "MA",
+ "retrieved_at": "2026-10-15",
+ "llc": {
+  "formation_fee": 500,
+  "formation_doc": "Certificate of Organization",
+  "formation_notes": "Fee set by 950 CMR 112.29 ($500). Third-party sites report an extra $20 for online/fax filing; not verified on the Secretary of the Commonwealth site (blocked to automated reading).",
+  "annual_report": {
+   "name": "Annual Report",
+   "fee": 500,
+   "frequency": "annual",
+   "due": "on or before the anniversary date of the filing of the original certificate of organization",
+   "late_penalty": null
+  },
+  "state_tax_on_llc": [],
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.mass.gov/doc/950-cmr-112-limited-liability-companies/download",
+    "title": "950 CMR 112.00: Limited Liability Companies",
+    "quote": "(a) Certificate of Organization $500.00 (b) Annual Report $500.00"
+   },
+   {
+    "id": 2,
+    "url": "https://www.mass.gov/doc/950-cmr-112-limited-liability-companies/download",
+    "title": "950 CMR 112.00 annual report rule",
+    "quote": "Each limited liability company shall file an annual report with the Division on or before the anniversary date of the filing of its original certificate of organization."
+   }
+  ]
+ },
+ "s_corp": {
+  "recognized": "yes",
+  "entity_level_taxes": [
+   {
+    "name": "Corporate excise minimum (S corporations)",
+    "rate": null,
+    "minimum": 456,
+    "notes": "S corporations pay the non-income measure ($2.60 per $1,000 of tangible property or net worth) with a $456 minimum.",
+    "source": 1
+   },
+   {
+    "name": "S corporation entity-level income measure (receipts $6M to <$9M)",
+    "rate": 0.02,
+    "minimum": null,
+    "notes": "Applies only when total receipts are $6 million or more; 3% when receipts are $9 million or more. Not relevant for most small S corps.",
+    "source": 1
+   }
+  ],
+  "pte_elective_tax": {
+   "available": true,
+   "rate_note": "Chapter 63D PTE excise: 5% of qualified members' income (since 2021). New chapter 63E PTE excise: 4% of members' share above the surtax threshold, for tax years beginning on/after 2026-01-01 (St. 2026, c. 101). Both expire if the federal SALT cap expires.",
+   "source": 2
+  },
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.mass.gov/info-details/massachusetts-tax-rates",
+    "title": "Massachusetts Tax Rates (DOR)",
+    "quote": "S Corporations ... Total receipts $6 million or more but less than $9 million (net income) 2% ... Minimum $456"
+   },
+   {
+    "id": 2,
+    "url": "https://www.mass.gov/service-details/elective-pass-through-entity-excise",
+    "title": "Elective Pass-Through Entity Excise (DOR)",
+    "quote": "The chapter 63D excise is an excise equal to 5% of a PTE's income that is attributable to qualified members and subject to tax under chapter 62."
+   }
+  ]
+ },
+ "income_tax_2026": {
+  "type": "flat",
+  "flat_rate": 0.05,
+  "brackets": null,
+  "standard_deduction": null,
+  "personal_exemption": {
+   "single": 4400,
+   "mfj": 8800,
+   "is_credit": false,
+   "notes": "Head of household $6,800. Amounts read on the 2025 Form 1 (latest published); 2026 form not yet published."
+  },
+  "starting_point": "own definition (Massachusetts gross income, Part A/B/C)",
+  "surtaxes": "4% surtax on taxable income over $1,107,750 for tax year 2026 ($1,083,150 for 2025). Short-term capital gains 8.5%, collectibles 12%.",
+  "year_of_figures": 2026,
+  "sources": [
+   {
+    "id": 1,
+    "url": "https://www.mass.gov/info-details/massachusetts-tax-rates",
+    "title": "Massachusetts Tax Rates (DOR)",
+    "quote": "Tax year 2026 : For income exceeding $1,107,750, there is an additional surtax of 4% ."
+   },
+   {
+    "id": 2,
+    "url": "https://www.mass.gov/doc/2026-form-1-es-estimated-tax-payment-vouchers-instructions-and-worksheets/download",
+    "title": "2026 Form 1-ES",
+    "quote": "The surtax threshold for tax year 2026 is $1,107,750."
+   },
+   {
+    "id": 3,
+    "url": "https://www.mass.gov/doc/2025-form-1-massachusetts-resident-income-tax-return/download",
+    "title": "2025 Form 1",
+    "quote": "Personal exemptions. Single/Married filing separately ($4,400), Head of household ($6,800), Married filing jointly ($8,800)"
+   }
+  ]
+ },
+ "estimated_tax": {
+  "required_if": "expect to owe more than $400 in taxes on income not subject to withholding",
+  "due_dates_2026": [
+   "2026-04-15",
+   "2026-06-15",
+   "2026-09-15",
+   "2027-01-15"
+  ],
+  "notes": "Taxpayers subject to the 4% surtax must file and pay electronically.",
+  "source_url": "https://www.mass.gov/doc/2026-form-1-es-estimated-tax-payment-vouchers-instructions-and-worksheets/download"
+ },
+ "unemployment_2026": {
+  "taxable_wage_base": null,
+  "new_employer_rate": 0.0242,
+  "notes": "New employers (registered < 3 years) 2.42%; new construction employers 6.08%. Experienced 2026 range 0.94%-14.37% plus COVID recovery assessment. Wage base believed $15,000 (G.L. c.151A s.14) but malegislature.gov was unreachable and the DUA page does not state it.",
+  "source_url": "https://www.mass.gov/info-details/learn-about-employer-contributions-to-dua"
+ },
+ "local_taxes": [],
+ "notable": [
+  "No LLC franchise tax, but both the Certificate of Organization and the annual report cost $500, among the highest in the US (https://www.mass.gov/doc/950-cmr-112-limited-liability-companies/download)",
+  "4% millionaire surtax threshold rises to $1,107,750 for 2026 (https://www.mass.gov/info-details/massachusetts-tax-rates)",
+  "New for 2026: a second elective PTE excise (ch. 63E, 4%) lets pass-throughs deduct the surtax at entity level (https://www.mass.gov/service-details/elective-pass-through-entity-excise)",
+  "S corporations owe at least the $456 minimum corporate excise every year (https://www.mass.gov/info-details/massachusetts-tax-rates)",
+  "No local income taxes in Massachusetts."
+ ],
+ "uncertain": [
+  "2026 personal exemption amounts taken from the 2025 Form 1 ($4,400/$8,800); 2026 Form 1 not published yet.",
+  "SUTA taxable wage base ($15,000 by statute) not read on an official page today: malegislature.gov refused connection.",
+  "Online filing surcharge (+$20 reported by third parties) and late annual report penalty not verified: sec.state.ma.us blocks automated access.",
+  "Paid Family and Medical Leave contributions not researched."
+ ]
+}

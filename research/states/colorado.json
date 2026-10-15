@@ -1,0 +1,81 @@
+{
+  "state": "Colorado",
+  "slug": "colorado",
+  "abbr": "CO",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 50,
+    "formation_doc": "Articles of Organization (online only)",
+    "formation_notes": "Online filing only; no paper option for Articles of Organization.",
+    "annual_report": {
+      "name": "Periodic Report",
+      "fee": 25,
+      "frequency": "annual",
+      "due": "During the anniversary month of formation, with a window opening two months before and closing two months after without penalty",
+      "late_penalty": "$50 late filing penalty"
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://www.sos.state.co.us/pubs/info_center/fees/business.html", "title": "Business Organizations Fee Schedule - Colorado Secretary of State", "quote": "Articles of Organization $50.00 n/a" },
+      { "id": 2, "url": "https://www.sos.state.co.us/pubs/info_center/fees/business.html", "title": "Business Organizations Fee Schedule - Colorado Secretary of State", "quote": "Periodic Report $25.00 n/a Periodic Report Late Filing Penalty $50.00" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Colorado SALT Parity Act elective entity-level tax for partnerships and S corporations at the individual rate (4.4% for 2026). Not verified on a DOR page today.",
+      "source": null
+    },
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.044,
+    "brackets": null,
+    "standard_deduction": { "single": null, "mfj": null },
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "Colorado starts from federal taxable income, so the federal standard deduction (or itemized deductions) is already subtracted; there is no separate Colorado standard deduction or exemption. Add-backs apply for high earners' deductions (state addback for itemized/standard deductions above certain AGI)." },
+    "starting_point": "federal taxable income",
+    "surtaxes": "None. A temporary TABOR-triggered rate reduction (max 0.15 pt) is not expected for 2026 per the March 2026 Legislative Council forecast (search index).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://tax.colorado.gov/sites/default/files/documents/DR_0104EP_2026.pdf", "title": "DR 0104EP 2026 Colorado Individual Estimated Income Tax Payment Form", "quote": "Estimated 2026 Colorado income tax — 4.4% of line 1" },
+      { "id": 2, "url": "https://tax.colorado.gov/individual-income-tax-guide", "title": "Individual Income Tax Guide - Colorado DOR", "quote": "Colorado income tax is based generally on federal taxable income" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "You expect to owe more than $1,000 in net Colorado tax for 2026 after withholding and credits",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Required annual payment is the smaller of 70% of the current-year net liability or 100% of the prior year's (50% for farmers/fishers).",
+    "source_url": "https://tax.colorado.gov/sites/default/files/documents/DR_0104EP_2026.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 30600,
+    "new_employer_rate": 0.0305,
+    "notes": "2026 non-construction introductory rate 3.05% (1.53% base + 0.17% support + 1.35% solvency surcharge); heavy construction 6.285%. For 2027 the wage base rises to $32,100 and the surcharge turns off (intro rate 1.70%). Colorado FAMLI paid leave premium 0.88% of wages for 2026, split 50/50 (per FAMLI pages, search index), also hits an S corp owner's salary.",
+    "source_url": "https://cdle.colorado.gov/employers/unemployment-insurance-premiums/introductory-rates"
+  },
+  "local_taxes": [
+    {
+      "place": "Denver",
+      "name": "Occupational Privilege Tax (OPT)",
+      "rate": null,
+      "applies": "Business OPT $4.00 per month for each owner, partner, manager (and each taxable employee) engaged in business in Denver, regardless of earnings; single-member disregarded LLC member taxed as an owner. Employee OPT $5.75 per month withheld from employees earning at least $500/month in Denver (S corp officer-employees fall here).",
+      "threshold_or_exemption": "The $500 earnings test does not apply to owners or partners; any entity with activity in Denver owes at least $4.00 per month. Sole proprietors without employees may prepay the year by January 31.",
+      "source_url": "https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf",
+      "quote": "the employer is required to pay the Business OPT at a rate of $4.00 per month for each owner, partner, or manager engaged in business in Denver"
+    }
+  ],
+  "notable": [
+    "No LLC franchise tax and a $25 periodic report (raised from $10 in July 2024) (https://www.sos.state.co.us/pubs/info_center/fees/business.html)",
+    "Flat 4.4% on federal taxable income for 2026 (https://tax.colorado.gov/sites/default/files/documents/DR_0104EP_2026.pdf)",
+    "Denver charges a flat monthly head tax on owners: $48/year per owner even for a one-person LLC (https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf)",
+    "2026 new-employer UI rate includes a 1.35% solvency surcharge that ends in 2027 (https://cdle.colorado.gov/employers/unemployment-insurance-premiums/introductory-rates)"
+  ],
+  "uncertain": [
+    "PTET (SALT parity) availability and rate not read on an official page today.",
+    "Other Colorado occupational privilege taxes (Aurora, Greenwood Village, Sheridan, Glendale) not researched.",
+    "FAMLI 2026 rate (0.88%) from search index of famli.colorado.gov; a headcount notice suggests employers with nine or fewer employees pay only the 0.44% employee share."
+  ]
+}

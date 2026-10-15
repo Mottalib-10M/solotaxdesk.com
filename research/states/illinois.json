@@ -1,0 +1,62 @@
+{
+  "state": "Illinois", "slug": "illinois", "abbr": "IL", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 150,
+    "formation_doc": "Articles of Organization (Form LLC-5.5)",
+    "formation_notes": "Series LLC $400; expedited service +$100 (online filing is expedited). Figures from ilsos.gov forms list as shown in search excerpts; ilsos.gov returned 403 (Akamai) and ilga.gov was unreachable today, so not read directly.",
+    "annual_report": {
+      "name": "Annual Report (Form LLC-50.1)",
+      "fee": 75,
+      "frequency": "annual",
+      "due": "before the first day of the LLC's anniversary month (statute; not re-read today)",
+      "late_penalty": "$100 late penalty; administrative dissolution if still not filed after delinquency (from ilsos.gov guide excerpt)"
+    },
+    "state_tax_on_llc": [
+      { "name": "Personal property replacement income tax (LLC taxed as partnership)", "amount": null, "kind": "rate", "rate": 0.015, "applies": "multi-member LLCs taxed as partnerships (and S corps); not single-member disregarded LLCs owned by individuals", "notes": "Entity-level tax on Illinois net income, on top of the members' 4.95% individual tax. LLCs taxed as C corps pay 2.5% replacement tax + 7% corporate income tax.", "source": 1 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://tax.illinois.gov/research/taxrates/income.html", "title": "Illinois DOR - Income Tax Rates", "quote": "Partnerships, trusts, and S corporations 1.5 percent of net income" },
+      { "id": 2, "url": "https://www.ilsos.gov/publications/business-services/llc.html", "title": "Illinois SOS - LLC Publications and Forms (not opened: 403)", "quote": null }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Personal property replacement income tax", "rate": 0.015, "minimum": null, "notes": "Paid by the S corporation on its Illinois net income (Form IL-1120-ST)", "source": 1 },
+      { "name": "Illinois franchise tax (Secretary of State, on paid-in capital)", "rate": null, "minimum": null, "notes": "Applies to corporations including S corps; not verified today (ilsos.gov blocked)", "source": null }
+    ],
+    "pte_elective_tax": { "available": true, "rate_note": "Partnerships and S corporations may elect the PTE tax at 4.95% of net income; Public Act 104-0453 removed the PTE tax expiration date.", "source": 2 },
+    "sources": [
+      { "id": 1, "url": "https://tax.illinois.gov/research/taxrates/income.html", "title": "Illinois DOR - Income Tax Rates", "quote": "Partnerships, trusts, and S corporations 1.5 percent of net income" },
+      { "id": 2, "url": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-15.html", "title": "IDOR Informational Bulletin FY 2026-15, What's New for Illinois Income Taxes", "quote": "The expiration date for the Pass-through Entity (PTE) tax has been removed in accordance with Public Act 104-0453." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": 0.0495,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": 2925, "mfj": 5850, "is_credit": false, "notes": "$2,925 per exemption for 2026 (up from $2,850); +$1,000 if 65+ or blind; not allowed if federal AGI > $250,000 ($500,000 MFJ)." },
+    "starting_point": "federal AGI",
+    "surtaxes": "None",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://tax.illinois.gov/research/taxrates/income.html", "title": "Illinois DOR - Income Tax Rates", "quote": "Individual Income Tax Effective July 1, 2017: 4.95 percent of net income" },
+      { "id": 2, "url": "https://tax.illinois.gov/research/publications/bulletins/fy-2026-15.html", "title": "IDOR Bulletin FY 2026-15", "quote": "The personal exemption amount for tax year 2026 will increase to $2,925." }
+    ]
+  },
+  "estimated_tax": { "required_if": "you reasonably expect 2026 tax liability to exceed $1,000 after withholding and credits", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Form IL-1040-ES", "source_url": "https://tax.illinois.gov/content/dam/soi/en/web/tax/forms/incometax/documents/currentyear/individual/il-1040-es.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 14250, "new_employer_rate": 0.0335, "notes": "Entry rate 3.350% includes 0.550% fund building rate; some NAICS sectors pay more (e.g. sector 56: 3.450%)", "source_url": "https://ides.illinois.gov/content/dam/soi/en/web/ides/ides_forms_and_publications/EA-50_2026.pdf" },
+  "local_taxes": [],
+  "notable": [
+    "S corps and partnership-taxed LLCs pay a 1.5% replacement tax at entity level, on top of the 4.95% individual tax (https://tax.illinois.gov/research/taxrates/income.html)",
+    "No standard deduction; only a $2,925 per-person exemption in 2026, phased out above $250,000 / $500,000 AGI (https://tax.illinois.gov/research/publications/bulletins/fy-2026-15.html)",
+    "PTE elective tax made permanent by Public Act 104-0453 (https://tax.illinois.gov/research/publications/bulletins/fy-2026-15.html)",
+    "No city income tax in Chicago or elsewhere in Illinois"
+  ],
+  "uncertain": [
+    "LLC formation ($150) and annual report ($75, $100 late penalty) fees could not be read on an official page today: ilsos.gov returns 403 and ilga.gov (805 ILCS 180/50-10) timed out. Values come from search excerpts of ilsos.gov pages; long-standing since Public Act 100-0571.",
+    "Illinois corporate franchise tax for S corporations (Secretary of State) not verified.",
+    "Statement 'no city income tax' is general knowledge, not tied to a source read today."
+  ]
+}

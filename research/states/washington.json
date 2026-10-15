@@ -1,0 +1,67 @@
+{
+  "state": "Washington", "slug": "washington", "abbr": "WA", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 180,
+    "formation_doc": "Certificate of Formation",
+    "formation_notes": "SOS fee schedule lists $180 for LLC original filings; expedite $100 (about 3 working days), same-day $150. An Initial Report ($10 if filed separately) is due after formation. A separate DOR Business License Application (UBI) is required if gross income is $12,000/yr or more, among other triggers; its fee varies.",
+    "annual_report": { "name": "Annual Report", "fee": 70, "frequency": "annual", "due": "by the end of the LLC's anniversary (expiration) month", "late_penalty": "$25 delinquency fee ($95 total)" },
+    "state_tax_on_llc": [
+      { "name": "Business & Occupation (B&O) tax, Service & other activities", "amount": null, "kind": "tiered", "rate": 0.015, "applies": "gross receipts of any business (LLC, sole proprietor, S corp) earning service income in WA; 1.5% if prior-year gross under $1,000,000, 1.75% for $1M-$4,999,999, 2.1% for $5M+", "notes": "Gross receipts tax, no deduction for expenses. Retailing 0.471%, wholesaling/manufacturing 0.484%. Small Business B&O Credit: for mostly-service businesses the credit fully offsets tax up to $160/month of filing period ($1,920/yr for annual filers) and phases out at twice that ($3,840/yr), so an annual service filer owes nothing up to roughly $128,000 of gross receipts at 1.5%. DOR may relieve a business from filing returns if B&O-taxable gross income is under $125,000/yr and it owes no other tax.", "source": 1 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://dor.wa.gov/taxes-rates/business-occupation-tax/business-occupation-tax-classifications", "title": "WA DOR, B&O tax classifications", "quote": "Service & other activities (Less than $1,000,000 in the prior year) .015" },
+      { "id": 2, "url": "https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-schedules-priority-services", "title": "WA Secretary of State, Fee schedules & priority services", "quote": "Original Filings $180 ... Annual Report $70 Annual Report with delinquency fee $95" },
+      { "id": 3, "url": "https://dor.wa.gov/taxes-rates/tax-incentives/credits", "title": "WA DOR, Tax credits (Small Business B&O Tax Credit)", "quote": "Total B&O tax liability for filing period beginning on or after Jan. 1, 2023, is below: Monthly $320 Quarterly $960 Annual $3,840" },
+      { "id": 4, "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=82.04.4451", "title": "RCW 82.04.4451 Small business credit (effective until Jan. 1, 2029)", "quote": "the maximum credit for a reporting period is $160 multiplied by the number of months in the reporting period" },
+      { "id": 5, "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=82.32.045", "title": "RCW 82.32.045 Relief from filing requirements", "quote": "gross income of the business, from all business activities taxable under chapter 82.04 RCW, is less than $125,000 per year" },
+      { "id": 6, "url": "https://dor.wa.gov/open-business/apply-business-license", "title": "WA DOR, Apply for a business license", "quote": "Your gross income is $12,000 per year or more." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "partial",
+    "entity_level_taxes": [
+      { "name": "B&O tax on gross receipts (same as any business)", "rate": 0.015, "minimum": null, "notes": "No state income tax, so the S election has no state income-tax effect; the S corp pays B&O on gross receipts (1.5% / 1.75% / 2.1% service tiers) with the small business credit.", "source": 1 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://dor.wa.gov/taxes-rates/business-occupation-tax/business-occupation-tax-classifications", "title": "WA DOR, B&O tax classifications", "quote": "Service & other activities ($1,000,000 to $4,999,999 in the prior year) .0175" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "none",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": null,
+    "starting_point": null,
+    "surtaxes": "Capital gains excise tax (individuals): 7% on Washington long-term capital gains above the standard deduction ($278,000 in 2025, indexed) plus 2.9% on gains above $1,000,000 (since 2025). Real estate and depreciable business assets exempt; sale of a qualified family-owned small business deductible. New 9.9% income tax on AGI over $1 million starts Jan. 1, 2028 (SB 6346, 2026 session).",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://dor.wa.gov/taxes-rates/income-tax", "title": "WA DOR, Income tax", "quote": "Beginning Jan. 1, 2028, a new 9.9% income tax will apply to individuals and married couples filing jointly with annual adjusted gross income exceeding $1 million." },
+      { "id": 2, "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=82.87.040", "title": "RCW 82.87.040 Capital gains tax", "quote": "an additional excise tax ... equals 2.90 percent multiplied by the portion of an individual's Washington capital gains exceeding $1,000,000" },
+      { "id": 3, "url": "https://dor.wa.gov/taxes-rates/other-taxes/capital-gains-tax", "title": "WA DOR, Capital gains tax", "quote": "The standard deduction for 2025 is $278,000." }
+    ]
+  },
+  "estimated_tax": { "required_if": "no state individual income tax; no estimated tax", "due_dates_2026": [], "notes": "B&O/excise returns: monthly due the 25th of the following month; quarterly due the last day of the month after the quarter; annual filers due April 15 of the following year (RCW 82.32.045).", "source_url": "https://app.leg.wa.gov/RCW/default.aspx?cite=82.32.045" },
+  "unemployment_2026": { "taxable_wage_base": 78200, "new_employer_rate": null, "notes": "Up from $72,800 in 2025. New-employer rate is industry-based (commonly cited 115% of industry average) and not verified on esd.wa.gov.", "source_url": "https://esd.wa.gov/node/995" },
+  "local_taxes": [
+    { "place": "Seattle", "name": "Business license tax (city B&O), Service & other business activities", "rate": 0.00658, "applies": "businesses with Seattle taxable revenue of $2,000,000 or more (2026-2032 rate; retail/wholesale/manufacturing 0.342%); a $2M standard deduction applies above the threshold", "threshold_or_exemption": "From 2026 no tax if Seattle taxable revenue under $2 million, but a return must still be filed. Annual business license tax certificate fee 2026: $73 (revenue $0-$19,999), $147 ($20,000-$499,999), $667 ($500,000-$1,999,999); exempt from the certificate if Seattle gross income is $4,000 or less and no place of business in the city.", "source_url": "https://seattle.gov/city-finance/business-taxes-and-licenses/business-taxes/tax-rates-and-classifications", "quote": "2026-2032 Business & Occupation Tax Rates ... Service & Other Business Activities .00658" },
+    { "place": "Other WA cities (e.g., Tacoma, Bellevue, Everett, Spokane)", "name": "City B&O tax / business license", "rate": null, "applies": "about 50 cities levy their own gross-receipts B&O tax with varying rates and thresholds", "threshold_or_exemption": "varies by city", "source_url": "https://dor.wa.gov/taxes-rates/business-occupation-tax", "quote": "City B&O tax" }
+  ],
+  "notable": [
+    "No personal income tax in 2026, but B&O tax is charged on gross receipts (1.5% for service businesses under $1M; 1.75% from $1M, 2.1% from $5M) (https://dor.wa.gov/taxes-rates/business-occupation-tax/business-occupation-tax-classifications)",
+    "Small Business B&O Credit wipes out the tax for service businesses owing under $1,920/yr, roughly $128,000 gross at 1.5% (https://app.leg.wa.gov/RCW/default.aspx?cite=82.04.4451)",
+    "Washington will tax AGI over $1 million at 9.9% starting 2028 (SB 6346) (https://dor.wa.gov/taxes-rates/income-tax)",
+    "Seattle raised its B&O threshold from $100,000 to $2 million in 2026 while raising rates (service 0.658%) (https://seattle.gov/city-finance/business-taxes-and-licenses/business-taxes/seattle-shield-bando-tax-changes)",
+    "Business license required once gross income reaches $12,000/yr (https://dor.wa.gov/open-business/apply-business-license)",
+    "Capital gains tax 7% + 2.9% over $1M can hit the sale of a business interest (https://app.leg.wa.gov/RCW/default.aspx?cite=82.87.040)"
+  ],
+  "uncertain": [
+    "LLC formation fee: SOS fee schedule says $180; many third parties quote $200 online (possibly including a processing/online fee). The $200 figure was not verified on an official page.",
+    "Annual report due date (end of anniversary month) taken from common practice; not read on an official SOS page today.",
+    "2026 capital gains standard deduction (indexed from $278,000) not published on the DOR page read.",
+    "Small business credit amounts change on Jan. 1, 2029 (2026 c 250); not relevant to 2026.",
+    "ESD new-employer rate not verified.",
+    "Paid Family & Medical Leave and WA Cares premiums not researched."
+  ]
+}

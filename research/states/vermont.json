@@ -1,0 +1,62 @@
+{
+  "state": "Vermont", "slug": "vermont", "abbr": "VT", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 155,
+    "formation_doc": "Articles of Organization",
+    "formation_notes": "Statutory fee, same figure for domestic and foreign registration in 11 V.S.A. § 4012. No publication requirement.",
+    "annual_report": { "name": "Annual Report (domestic LLC)", "fee": 45, "frequency": "annual", "due": "within three months after the end of the LLC's fiscal year (March 31 for a calendar-year LLC)", "late_penalty": null },
+    "state_tax_on_llc": [
+      { "name": "Vermont minimum business entity tax (Form BI-471 / BI-476)", "amount": 250, "kind": "fixed", "rate": null, "applies": "every S corporation, partnership and multi-member LLC (or LLC taxed as partnership/S corp) engaged in activities in Vermont", "notes": "A single-member LLC disregarded for federal purposes (Schedule C) is not required to file BI-471, so it does not owe the $250. Foreign LLC annual report is $170.", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://legislature.vermont.gov/statutes/section/11/025/04012", "title": "11 V.S.A. § 4012. Fees", "quote": "(1) Articles of organization $155.00 ... (15) Annual report of a domestic limited liability company $45.00" },
+      { "id": 2, "url": "https://tax.vermont.gov/business/business-entity-income-tax", "title": "Vermont Department of Taxes, Business Entity Income Tax", "quote": "Most business entities will file form BI-471, Business Income Tax Return. Generally, a minimum tax of $250 is due." },
+      { "id": 3, "url": "https://tax.vermont.gov/sites/tax/files/documents/BI-471-Instr-2025.pdf", "title": "2025 Form BI-471 Instructions", "quote": "Single member LLCs which have elected to be classified for federal purposes as disregarded entities ... are not required to file Form BI-471." },
+      { "id": 4, "url": "https://legislature.vermont.gov/statutes/section/11/025/04033", "title": "11 V.S.A. § 4033. Annual report for Secretary of State", "quote": "The annual report shall be delivered to the Secretary of State within three months after the expiration of the company's fiscal year." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Minimum entity tax (BI-471)", "rate": null, "minimum": 250, "notes": "Pass-through treatment; entity pays the $250 minimum plus required estimated payments for nonresident shareholders at 6.6%. Built-in gains etc. taxed at corporate rate.", "source": 1 }
+    ],
+    "pte_elective_tax": null,
+    "sources": [
+      { "id": 1, "url": "https://tax.vermont.gov/sites/tax/files/documents/BI-471-Instr-2025.pdf", "title": "2025 Form BI-471 Instructions", "quote": "The pass-through entity is liable for the minimum annual (entity) tax of $250 for each taxable year beginning on or after Jan. 1, 1998." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.0335], [49400, 0.066], [119700, 0.076], [249700, 0.0875]],
+      "mfj": [[0, 0.0335], [82500, 0.066], [199450, 0.076], [304000, 0.0875]]
+    },
+    "standard_deduction": { "single": 7650, "mfj": 15300 },
+    "personal_exemption": { "single": 5300, "mfj": 10600, "is_credit": false, "notes": "2025 figure: $5,300 per exemption (deduction). 2026 withholding tables use a $450 monthly allowance ($5,400/yr), which suggests $5,400 for 2026 but the 2026 return figure is not yet published." },
+    "starting_point": "federal AGI (Vermont own standard deduction and exemptions)",
+    "surtaxes": "Minimum tax: if AGI exceeds $150,000, Vermont tax is the greater of 3% of AGI (less US-obligation interest) or the rate-schedule tax (2025 instructions).",
+    "year_of_figures": 2025,
+    "sources": [
+      { "id": 1, "url": "https://tax.vermont.gov/sites/tax/files/documents/IN-111-Instr-2025.pdf", "title": "2025 Form IN-111 Instructions (rate schedules p.13)", "quote": "249,700 - 16,175.00 8.75% 249,700" },
+      { "id": 2, "url": "https://tax.vermont.gov/sites/tax/files/documents/IN-111-Instr-2025.pdf", "title": "2025 Form IN-111 Instructions", "quote": "For Adjusted Gross Incomes (IN-111, Line 1) exceeding $150,000, Line 8 is the greater of 1) 3% of Adjusted Gross Income" },
+      { "id": 3, "url": "https://tax.vermont.gov/sites/tax/files/documents/TaxTables-2026.pdf", "title": "Vermont Percentage Method Withholding Tables (for wages paid in 2026)", "quote": "one withholding allowance equals $450.00" }
+    ]
+  },
+  "estimated_tax": { "required_if": "owe more than $500 after withholding (pay 100% of prior-year or 90% of current-year tax)", "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "Form IN-114. Pass-through entities pay estimates for nonresident owners on WH-435.", "source_url": "https://tax.vermont.gov/sites/tax/files/documents/IN-114-2026.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 15400, "new_employer_rate": null, "notes": "Wage base up from $14,800 in 2025. New-employer rate (commonly cited 1%) not confirmed on an official page.", "source_url": "https://labor.vermont.gov/node/5551" },
+  "local_taxes": [],
+  "notable": [
+    "Multi-member LLCs and S corps owe a $250 minimum entity tax every year, but a single-member disregarded LLC does not (https://tax.vermont.gov/sites/tax/files/documents/BI-471-Instr-2025.pdf)",
+    "LLC annual report is $45 for domestic and $170 for foreign LLCs (https://legislature.vermont.gov/statutes/section/11/025/04012)",
+    "High earners (AGI over $150,000) pay at least 3% of AGI (https://tax.vermont.gov/sites/tax/files/documents/IN-111-Instr-2025.pdf)",
+    "No local income tax in Vermont; no elective pass-through entity tax found in BI-471 instructions"
+  ],
+  "uncertain": [
+    "2026 income tax brackets, standard deduction and personal exemption are not yet published (the 2026 return instructions come out in early 2027); figures are tax year 2025 from the IN-111 instructions. Vermont indexes them annually.",
+    "Online LLC formation fee: statute says $155; a reduced online fee claimed by some third parties was not verified on sos.vermont.gov (fee page returned 404).",
+    "Annual report late penalty not verified.",
+    "UI new-employer rate not found on labor.vermont.gov.",
+    "No Vermont PTET found; absence not confirmed by a statute search."
+  ]
+}

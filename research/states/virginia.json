@@ -1,0 +1,57 @@
+{
+  "state": "Virginia", "slug": "virginia", "abbr": "VA", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Articles of Organization (filed with the State Corporation Commission)",
+    "formation_notes": "Statutory fee $100 (Va. Code § 13.1-1005); same for foreign registration. No publication requirement.",
+    "annual_report": { "name": "Annual registration fee (no separate annual report form)", "fee": 50, "frequency": "annual", "due": "last day of the anniversary month of formation (each year after the month organized)", "late_penalty": null },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://law.lis.virginia.gov/vacode/title13.1/chapter12/section13.1-1005/", "title": "Va. Code § 13.1-1005. Fees", "quote": "For filing any one of the following, the fee shall be $100: a. Articles of organization." },
+      { "id": 2, "url": "https://law.lis.virginia.gov/vacode/title13.1/chapter12/section13.1-1062/", "title": "Va. Code § 13.1-1062. Annual registration fees", "quote": "on or before the last day of the twelfth month next succeeding the month in which it was organized ... an annual registration fee of $50" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": { "available": true, "rate_note": "Annual election on a timely filed Form 502; 5.75% on Virginia taxable income of the entity (Va. Code § 58.1-390.3). Text in force on 2026-10-15 has no end date (applies to taxable years beginning on and after 2022-01-01).", "source": 1 },
+    "sources": [
+      { "id": 1, "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-390.3/", "title": "Va. Code § 58.1-390.3. Elective pass-through entity tax", "quote": "A tax at the rate of 5.75 percent is hereby annually imposed on the Virginia taxable income" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.02], [3000, 0.03], [5000, 0.05], [17000, 0.0575]],
+      "mfj": [[0, 0.02], [3000, 0.03], [5000, 0.05], [17000, 0.0575]]
+    },
+    "standard_deduction": { "single": 8750, "mfj": 17500 },
+    "personal_exemption": { "single": 930, "mfj": 1860, "is_credit": false, "notes": "$930 deduction per personal exemption allowable for federal purposes (dependents included); same brackets for every filing status (not indexed)." },
+    "starting_point": "federal AGI",
+    "surtaxes": "none; 2026 bills for a 7.75% bracket over $1M (HB 1074) were not enacted",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-320/", "title": "Va. Code § 58.1-320. Imposition of tax", "quote": "Five and three-quarters percent on income in excess of $17,000 for taxable years beginning on and after January 1, 1990." },
+      { "id": 2, "url": "https://tax.virginia.gov/news/new-virginia-tax-laws", "title": "Virginia Tax, New Virginia tax laws (2026 session)", "quote": "The standard deduction remains at $8,750 for single filers and $17,500 for married couples filing jointly for Tax Year 2026." },
+      { "id": 3, "url": "https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-322.03/", "title": "Va. Code § 58.1-322.03. Deductions", "quote": "A deduction in the amount of $ 930 for each personal exemption allowable to the taxpayer for federal income tax purposes." }
+    ]
+  },
+  "estimated_tax": { "required_if": "expected Virginia tax after withholding and credits is more than $1,000 (new for 2026; was $150)", "due_dates_2026": ["2026-05-01", "2026-06-15", "2026-09-15", "2027-01-15"], "notes": "First installment is May 1, not April 15. Not required if VAGI under $11,950 single / $23,900 MFJ.", "source_url": "https://www.tax.virginia.gov/sites/default/files/taxforms/individual-income-tax/2026/760es-2026.pdf" },
+  "unemployment_2026": { "taxable_wage_base": 8000, "new_employer_rate": 0.025, "notes": "Both are statutory (Va. Code §§ 60.2-229 and 60.2-526); VEC may add pool-cost / fund-building charges and an admin fee on top. VEC site blocked automated reading.", "source_url": "https://law.lis.virginia.gov/vacode/title60.2/chapter5/section60.2-526/" },
+  "local_taxes": [
+    { "place": "Virginia counties, cities and towns (varies)", "name": "BPOL business license tax on gross receipts", "rate": 0.0058, "applies": "maximum rate for financial, real estate and professional services ($0.58 per $100 of gross receipts); $0.36 per $100 max for personal/business services, $0.20 retail, $0.16 contracting; each locality sets its own rate (some localities grandfathered higher)", "threshold_or_exemption": "no license tax on gross receipts under $100,000 in localities over 50,000 people, or under $50,000 in localities of 25,000-50,000 (a flat license fee may still apply)", "source_url": "https://law.lis.virginia.gov/vacode/title58.1/chapter37/section58.1-3706/", "quote": "For financial, real estate and professional services, fifty-eight cents per $100 of gross receipts" }
+  ],
+  "notable": [
+    "Estimated tax threshold rose to $1,000 for 2026, and the first payment is due May 1 (https://www.tax.virginia.gov/sites/default/files/taxforms/individual-income-tax/2026/760es-2026.pdf)",
+    "Standard deduction stays $8,750/$17,500 in 2026, rises to $9,200/$18,400 in 2027 (https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-322.03/)",
+    "LLCs owe no state franchise tax, only a $50 annual registration fee (https://law.lis.virginia.gov/vacode/title13.1/chapter12/section13.1-1062/)",
+    "Local BPOL gross-receipts license tax applies to freelancers above $100,000 receipts in larger localities (https://law.lis.virginia.gov/vacode/title58.1/chapter37/section58.1-3706/)",
+    "Elective PTET at 5.75% remains available for 2026 (https://law.lis.virginia.gov/vacode/title58.1/chapter3/section58.1-390.3/)"
+  ],
+  "uncertain": [
+    "Late penalty for the LLC annual registration fee not verified.",
+    "VEC 2026 add-on charges (pool cost, fund building, admin fee) not verified; vec.virginia.gov returned 403.",
+    "Online filing fee assumed equal to the statutory $100 (SCC fee page not read)."
+  ]
+}

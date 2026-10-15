@@ -1,0 +1,82 @@
+{
+  "state": "Arkansas",
+  "slug": "arkansas",
+  "abbr": "AR",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 45,
+    "formation_doc": "Certificate of Organization (Form LL-01)",
+    "formation_notes": "$45 online, $50 on paper. Franchise Tax Registration is filed with the LL-01 at no fee.",
+    "annual_report": {
+      "name": "Annual LLC Franchise Tax Report",
+      "fee": 150,
+      "frequency": "annual",
+      "due": "On or before May 1 (report for the prior calendar year)",
+      "late_penalty": "$25 late filing penalty plus interest of 0.0274% per day"
+    },
+    "state_tax_on_llc": [
+      { "name": "LLC franchise tax", "amount": 150, "kind": "fixed", "rate": null, "applies": "Every LLC registered in Arkansas, domestic or foreign", "notes": "Flat $150 paid with the annual franchise tax report; no extensions.", "source": 2 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc", "title": "LLC Forms/Fees - Arkansas Secretary of State", "quote": "Certificate of Organization for a Dom. Limited Liability Co. LL-01 $45.00 $50.00" },
+      { "id": 2, "url": "https://www.sos.arkansas.gov/uploads/bcs/LLC1_FT_2026.pdf", "title": "Annual LLC Franchise Tax Report 2026", "quote": "ALL LIMITED LIABILITY COMPANIES PAY $150.00 TOTAL DUE" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "Corporation franchise tax", "rate": 0.003, "minimum": 150, "notes": "0.3% of Arkansas-apportioned outstanding capital stock, minimum $150 (stock corporations), due May 1 with the annual report to the Secretary of State.", "source": 1 }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "Elective pass-through entity tax (Act 362 of 2021, Form AR362 election, AR1100PET return) at the top individual marginal rate (3.7% for 2026 after Act 2 of 2026 1st Extraordinary Session; 2026 PET instructions not yet read), capital gains at half the rate.",
+      "source": 2
+    },
+    "sources": [
+      { "id": 1, "url": "https://www.sos.arkansas.gov/uploads/bcs/Corp1_FT_2026.pdf", "title": "Annual Corporation Franchise Tax Report 2026 (via search index)", "quote": "Arkansas Capital Stock X .003" },
+      { "id": 2, "url": "https://www.dfa.arkansas.gov/wp-content/uploads/PET_TAX_FAQ_2023_Draft_2.pdf", "title": "Pass-Through Entity-Level Tax: Frequently Asked Questions (DFA)", "quote": "The net taxable income of the affected business entity is taxed at the top marginal income-tax rate under § 26-51-201(a)(2)." }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.0], [5600, 0.02], [11200, 0.03], [16000, 0.034], [26400, 0.037]],
+      "mfj": [[0, 0.0], [5600, 0.02], [11200, 0.03], [16000, 0.034], [26400, 0.037]]
+    },
+    "standard_deduction": { "single": 2470, "mfj": 4940 },
+    "personal_exemption": { "single": 29, "mfj": 58, "is_credit": true, "notes": "Personal tax credit $29 per taxpayer ($58 joint) plus $29 per dependent. Brackets shown apply when net income is $94,700 or less. Above $94,700: 2% on the first $4,700 and 3.7% on the rest, minus a bracket adjustment ($290 down to $10) for net income $94,701-$97,600. The same table applies to every filing status (spouses may file separately on the same return). Standard deduction is $2,470 per taxpayer ($4,940 joint inferred from 'per taxpayer')." },
+    "starting_point": "own definition",
+    "surtaxes": "None",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2026S1%2FPublic%2FACT2.pdf", "title": "Act 2 of the First Extraordinary Session of 2026 (SB 1)", "quote": "For tax years beginning on or after January 1, 2026 ... $26,400 $94,700 3.7%" },
+      { "id": 2, "url": "https://www.dfa.arkansas.gov/wp-content/uploads/Withholding-Tax-Formula.pdf", "title": "Withholding Tax Formula Method, Tax Year 2026 (updated)", "quote": "Subtract the Standard Deduction of $ 2,470 to arrive at Net Taxable Income." },
+      { "id": 3, "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2026_Final_AR1000ES_2.pdf", "title": "2026 AR1000ES Estimated Tax Declaration Vouchers", "quote": "enter the standard deduction of $2,470 per taxpayer" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "You can reasonably expect your estimated tax to be more than $1,000",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2026-09-15", "2027-01-15"],
+    "notes": "Must pay at least 90% of the tax actually due; penalty 10% per year on the underestimate.",
+    "source_url": "https://www.dfa.arkansas.gov/wp-content/uploads/2026_Final_AR1000ES_2.pdf"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 7000,
+    "new_employer_rate": 0.02,
+    "notes": "2026: new employer rate 2.0% (in 2025 this was 1.9% plus 0.1% administrative assessment); experienced range 0.2%-5.1%.",
+    "source_url": "https://dws.arkansas.gov/workforce-services/unemployment/employer-ui-information/"
+  },
+  "local_taxes": [],
+  "notable": [
+    "Top income tax rate cut from 3.9% to 3.7% for 2026, enacted in May 2026 (Act 2, 1st Extraordinary Session) and applied retroactively to January 1, 2026; DFA updated its 2026 withholding formula (https://www.arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2026S1%2FPublic%2FACT2.pdf)",
+    "Every LLC pays a flat $150 franchise tax each May 1, with no extensions (https://www.sos.arkansas.gov/uploads/bcs/LLC1_FT_2026.pdf)",
+    "Arkansas does not start from federal AGI and uses a tiny standard deduction ($2,470) plus $29 personal credits (https://www.dfa.arkansas.gov/wp-content/uploads/2026_Final_AR1000ES_2.pdf)"
+  ],
+  "uncertain": [
+    "Arkansas income above $94,700 uses a different table (2% on first $4,700, 3.7% above, less bracket adjustment); a calculator using only the bracket list will slightly overstate tax for high incomes. The withholding formula's 'minus adjustment' column handles this.",
+    "MFJ standard deduction $4,940 inferred from '$2,470 per taxpayer'.",
+    "PTE tax rate for 2026 assumed to follow the 3.7% top rate; 2026 PET instructions not published/read.",
+    "Corporation franchise tax 0.3% / $150 minimum read via search index of the 2026 SOS form, not the PDF directly."
+  ]
+}

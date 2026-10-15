@@ -1,0 +1,93 @@
+{
+  "state": "California",
+  "slug": "california",
+  "abbr": "CA",
+  "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 70,
+    "formation_doc": "Articles of Organization (Form LLC-1)",
+    "formation_notes": "$15 handling fee only for in-person counter filings. Initial Statement of Information due within 90 days of formation. The first-year $800 tax exemption applied only to tax years 2021-2023 and has expired.",
+    "annual_report": {
+      "name": "Statement of Information (Form LLC-12)",
+      "fee": 20,
+      "frequency": "biennial",
+      "due": "Within 90 days of formation, then every two years by the end of the filing period (month of formation)",
+      "late_penalty": "$250 penalty for failure to file (collected by FTB for the Secretary of State)"
+    },
+    "state_tax_on_llc": [
+      { "name": "Annual LLC tax", "amount": 800, "kind": "fixed", "rate": null, "applies": "Every LLC doing business in or organized/registered in California, including single-member disregarded LLCs", "notes": "Due by the 15th day of the 4th month of the tax year (Form FTB 3522), owed every year until the LLC is cancelled. No first-year exemption after 2023 (except short-form cancellation within one year).", "source": 1 },
+      { "name": "LLC fee (gross receipts)", "amount": null, "kind": "tiered", "rate": null, "applies": "LLCs with total California income of $250,000 or more", "notes": "$900 for $250,000-$499,999; $2,500 for $500,000-$999,999; $6,000 for $1,000,000-$4,999,999; $11,790 for $5,000,000 or more. Estimated by the 15th day of the 6th month (Form FTB 3536).", "source": 1 }
+    ],
+    "sources": [
+      { "id": 1, "url": "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html", "title": "Limited liability company | FTB.ca.gov", "quote": "Every LLC that is doing business or organized in California must pay an annual tax of $800." },
+      { "id": 2, "url": "https://bpd.cdn.sos.ca.gov/pdf/be-fee-schedule-062018.pdf", "title": "California Secretary of State Business Entities Fee Schedule", "quote": "Articles of Organization (Form LLC-1) ... $ 70.00" },
+      { "id": 3, "url": "https://www.sos.ca.gov/business-programs/customer-alerts/misleading-statement-information-solicitations", "title": "Misleading Statement of Information Solicitations - CA SOS", "quote": "$20 for California nonprofit corporations and all limited liability companies." }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [
+      { "name": "S corporation franchise tax", "rate": 0.015, "minimum": 800, "notes": "1.5% of California net income, $800 minimum franchise tax. The minimum tax is waived for a newly formed or qualified S corp's first taxable year (the 1.5% still applies to first-year income).", "source": 1 }
+    ],
+    "pte_elective_tax": {
+      "available": true,
+      "rate_note": "PTE elective tax 9.3% of qualified net income; extended to taxable years beginning on or after January 1, 2026 and before January 1, 2031. For 2026-2030, missing the June 15 payment no longer voids the election, but owners' credit is reduced by 12.5% of the unpaid amount.",
+      "source": 2
+    },
+    "sources": [
+      { "id": 1, "url": "https://www.ftb.ca.gov/file/business/types/corporations/s-corporations.html", "title": "S corporations | FTB.ca.gov", "quote": "We tax every S corporation that has California source income 1.5%." },
+      { "id": 2, "url": "https://www.ftb.ca.gov/file/business/credits/pass-through-entity-elective-tax/index.html", "title": "Pass-through entity elective tax | FTB.ca.gov", "quote": "The PTE elective tax is 9.3% of the qualified entity's qualified net income" }
+    ]
+  },
+  "income_tax_2026": {
+    "type": "graduated",
+    "flat_rate": null,
+    "brackets": {
+      "single": [[0, 0.01], [11456, 0.02], [27157, 0.04], [42861, 0.06], [59498, 0.08], [75197, 0.093], [384109, 0.103], [460927, 0.113], [768213, 0.123]],
+      "mfj": [[0, 0.01], [22912, 0.02], [54314, 0.04], [85722, 0.06], [118996, 0.08], [150394, 0.093], [768218, 0.103], [921854, 0.113], [1536426, 0.123]]
+    },
+    "standard_deduction": { "single": 5900, "mfj": 11800 },
+    "personal_exemption": { "single": 158, "mfj": 316, "is_credit": true, "notes": "Personal exemption credit $158 single / $316 joint; dependent exemption credit $491 (2026, CCPI 3.4%). Credits phase out at higher incomes." },
+    "starting_point": "federal AGI",
+    "surtaxes": "1% Mental Health Services Tax on taxable income over $1,000,000 (all filing statuses, not indexed), making the top rate 13.3%. Employees also pay SDI 1.3% on all wages (2026); self-employed are not covered unless they opt in.",
+    "year_of_figures": 2026,
+    "sources": [
+      { "id": 1, "url": "https://www.ftb.ca.gov/about-ftb/newsroom/tax-news/index.html", "title": "FTB Tax News October 2026 - 2026 Indexing", "quote": "Standard deduction for single or married filing separate taxpayers $5,706 $5,900" },
+      { "id": 2, "url": "https://www.ftb.ca.gov/about-ftb/newsroom/tax-news/index.html", "title": "FTB Tax News October 2026 - 2026 California tax rate schedules", "quote": "768,213 & OVER 74,675.27 + 12.30% of the amount over 768,213" }
+    ]
+  },
+  "estimated_tax": {
+    "required_if": "You expect to owe at least $500 ($250 if married/RDP filing separately) after withholding and credits",
+    "due_dates_2026": ["2026-04-15", "2026-06-15", "2027-01-15"],
+    "notes": "California schedule is 30% / 40% / 0% / 30%: no payment due on September 15. High earners (AGI $1,000,000+, $500,000 MFS) must base payments on current-year tax.",
+    "source_url": "https://www.ftb.ca.gov/pay/estimated-tax-payments.html"
+  },
+  "unemployment_2026": {
+    "taxable_wage_base": 7000,
+    "new_employer_rate": 0.034,
+    "notes": "New employers 3.4% UI for two to three years; 2026 schedule F+ (1.5%-6.2%). Plus ETT 0.1% on first $7,000. Employee SDI 1.3% on all wages (2026).",
+    "source_url": "https://edd.ca.gov/en/payroll_taxes/rates_and_withholding/"
+  },
+  "local_taxes": [
+    {
+      "place": "San Francisco",
+      "name": "Gross Receipts Tax (and Overpaid Executive Tax)",
+      "rate": null,
+      "applies": "Businesses with San Francisco gross receipts above the small business exemption; rates depend on business activity category (7 categories since Proposition M, 2024). All businesses must still pay the annual Business Registration Fee.",
+      "threshold_or_exemption": "Small business exemption: $5 million of San Francisco gross receipts, starting with tax year 2025 filing (due 2026); businesses at or below it do not file the GRT return. June 2, 2026 Measure C (raise to $7.5 million) failed 34.02% yes / 65.98% no.",
+      "source_url": "https://sftreasurer.org/proposition-m-2024-business-tax-reform",
+      "quote": "Increases the Gross Receipts Tax and Overpaid Executive Tax Small Business Exemption ceiling from $2,250,000 to $5 million."
+    }
+  ],
+  "notable": [
+    "Every LLC pays $800 a year even with no income, plus a gross-receipts LLC fee from $250,000 of California income (https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html)",
+    "Estimated payments are front-loaded: 30% April, 40% June, nothing in September, 30% January (https://www.ftb.ca.gov/pay/estimated-tax-payments.html)",
+    "PTE elective tax renewed for 2026-2030 at 9.3% (https://www.ftb.ca.gov/file/business/credits/pass-through-entity-elective-tax/index.html)",
+    "San Francisco voters rejected raising the gross receipts small business exemption to $7.5M on June 2, 2026; it stays at $5M (https://www.sfelections.org/results/20260602/index.html)"
+  ],
+  "uncertain": [
+    "SF Gross Receipts Tax rates per category not recorded (rate null); whether the $5M exemption is CPI-adjusted for tax year 2026 not verified.",
+    "Other California city business taxes (Los Angeles business tax with small business exemption, Oakland, San Jose) not researched.",
+    "LLC-1 $70 fee read from the SOS fee schedule PDF dated 06/2018 and the bizfile brochure; no newer change found."
+  ]
+}
