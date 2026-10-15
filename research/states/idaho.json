@@ -1,0 +1,49 @@
+{
+  "state": "Idaho", "slug": "idaho", "abbr": "ID", "retrieved_at": "2026-10-15",
+  "llc": {
+    "formation_fee": 100,
+    "formation_doc": "Certificate of Organization - Limited Liability Company",
+    "formation_notes": "$100 base filing fee online via SOSBiz; paper filings add a $20 manual processing fee ($120 total).",
+    "annual_report": {
+      "name": "Annual Report",
+      "fee": null,
+      "frequency": "annual",
+      "due": null,
+      "late_penalty": null
+    },
+    "state_tax_on_llc": [],
+    "sources": [
+      { "id": 1, "url": "https://sos.idaho.gov/business-forms/", "title": "Idaho SOS - Business Forms", "quote": "Certificate of Organization – Limited Liability Company $100 (base filing fee) $20 (manual processing fee) $120 Total" }
+    ]
+  },
+  "s_corp": {
+    "recognized": "yes",
+    "entity_level_taxes": [],
+    "pte_elective_tax": null,
+    "sources": []
+  },
+  "income_tax_2026": {
+    "type": "flat",
+    "flat_rate": null,
+    "brackets": null,
+    "standard_deduction": null,
+    "personal_exemption": { "single": null, "mfj": null, "is_credit": false, "notes": "" },
+    "starting_point": "federal AGI",
+    "surtaxes": "Permanent building fund tax of $10 per return (not verified today)",
+    "year_of_figures": null,
+    "sources": []
+  },
+  "estimated_tax": { "required_if": null, "due_dates_2026": [], "notes": "not verified", "source_url": null },
+  "unemployment_2026": { "taxable_wage_base": null, "new_employer_rate": null, "notes": "labor.idaho.gov unreachable today", "source_url": null },
+  "local_taxes": [],
+  "notable": [
+    "LLC formation is $100 online; paper filing costs $20 more (https://sos.idaho.gov/business-forms/)"
+  ],
+  "uncertain": [
+    "All Idaho State Tax Commission, Legislature and Department of Labor servers (tax.idaho.gov, legislature.idaho.gov, labor.idaho.gov, gov.idaho.gov) refused or timed out connections from this environment all day; only sos.idaho.gov was reachable. Income tax, S corp/PTET, estimated tax and SUTA were left null.",
+    "Search excerpts (not read on the official page) indicate: flat 5.3% individual rate effective Jan 1, 2025 (Idaho Code 63-3024, HB 40 of 2025) applied above a zero-rate amount, the federal standard deduction used as Idaho's, and a 2026 bill H0589 amending 63-3024 for tax years from 2027 whose effect was not confirmed. Verify before use.",
+    "Annual report: Idaho LLC annual reports are believed to have no fee and be due by the end of the anniversary month - not stated on any sos.idaho.gov page read today.",
+    "Idaho PTET (elective, at the corporate/individual rate) exists per general knowledge but was not verified; recorded as null.",
+    "S corp 'recognized: yes' is general knowledge, not read on an official page today."
+  ]
+}

@@ -64,7 +64,8 @@ export const defineState = (s: StateDef): StateDef => s;
 
 export interface LocalDef {
   /** "new-york". */ state: string;
-  /** "new-york-city": key of the local tax in states.json (local[].slug). */ place: string;
+  /** URL segment: "new-york-city". */ place: string;
+  /** Key of the tax in states.json (local[].slug), e.g. "new-york-city-unincorporated-business-tax-ubt". */ tax: string;
   /** Menu label: "New York City". */ name: string;
   title: string; description: string; h1: string; intro: string; resume: string;
   body: (h: Helpers) => string;

@@ -24,6 +24,7 @@ UNVERIFIED_INCOME = {
     'ohio',         # HB 96 single 2.75% rate read only through a search extract; DOR worksheet still shows 2025
     'utah',         # taxpayer credit phase-out amounts for 2026 not read (site blocked)
     'new-mexico',   # 2026 brackets not readable
+    'kansas',       # automatic rate-cut trigger for 2026 not checked (ksrevenue.gov unreachable)
 }
 UNVERIFIED_FEES = {
     'illinois', 'nevada', 'new-hampshire', 'tennessee', 'utah', 'ohio',   # fee pages blocked, figures only in search extracts
@@ -46,7 +47,7 @@ OVERRIDES = {
     'vermont': {'scorp': {'fixed': 250, 'name': 'Minimum business entity tax (BI-471)'}},
     'new-jersey': {'scorp': {'fixed': 375, 'name': 'Corporation Business Tax minimum, receipts under $100,000'}},
     'massachusetts': {'scorp': {'fixed': 456, 'name': 'Corporate excise minimum for S corporations'}},
-    'oregon': {'scorp': {'fixed': 150, 'name': 'S corporation minimum excise tax'}},
+    'oregon': {'scorp': {'fixed': 150, 'name': 'S corporation minimum excise tax'}, 'localKeys': {'trimet': 0.008237, 'lane transit': 0.008}},
     'north-carolina': {'scorp': {'fixed': 200, 'name': 'Franchise tax minimum for S corporations'}},
     'illinois': {'scorp': {'rate': 0.015, 'name': 'Personal property replacement income tax (1.5%)'}},
     'mississippi': {'scorp': {'fixed': 25, 'name': 'Franchise tax minimum for S corporations'}},
@@ -62,7 +63,10 @@ OVERRIDES = {
     'ohio': {'localKeys': {'columbus': 0.025, 'cleveland': 0.025, 'toledo': 0.025, 'dayton': 0.025, 'cincinnati': 0.018, 'akron': 0.025}},
     'missouri': {'localKeys': {'kansas city': 0.01, 'st. louis (city) earnings': 0.01}},
     'michigan': {'localKeys': {'detroit': 0.024, 'grand rapids': 0.015, 'highland park': 0.02}},
-    'oregon_local': {},
+    'kentucky': {'minTax': 175, 'minTaxName': 'Limited Liability Entity Tax minimum (LLET)',
+                 'scorp': {'fixed': 175, 'name': 'Limited Liability Entity Tax minimum (LLET)', 'replacesLlcMin': True},
+                 'income': {'std': {'single': 3360, 'mfj': 3360}},   # joint amount not verified: one deduction only, never more
+                 'localKeys': {'lexington': 0.0225}},
 }
 
 def slugify(s):

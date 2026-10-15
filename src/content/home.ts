@@ -8,6 +8,8 @@ const big = K.se(250000);
 const cmp = K.compare({ profit: 120000, salary: 50000, filing: 'single', adminCost: 2000 });
 const small = K.compare({ profit: 40000, salary: 20000, filing: 'single', adminCost: 2000 });
 const wb = P.se.wageBase;
+const noTax = K.states.filter((s) => s.income.type === 'none').length;
+const top = (slug: string) => { const b = K.st(slug).income.brackets!.single; return K.rate(b[b.length - 1][1]); };
 
 export const HOME = {
   title: 'Self-Employment Tax 2026: 1099 Taxes, State and S Corp',
@@ -28,7 +30,7 @@ ${h.table(['What', '2026', 'Source'], [
     ['Business mileage', `${K.dec(P.mileage.h1 * 100, 1)}¢ to June 30, ${K.dec(P.mileage.h2 * 100, 1)}¢ from July 1`, h.src('mileage', 'IRS')],
   ], undefined, ['l', 'r', 'l'])}`,
   why: (h: Helpers) => `<h2>Why the state decides the last third of the bill</h2>
-<p>Federal tax is the same in Miami and in Manhattan. What changes from one state to the next is everything stacked on top: a state income tax that runs from nothing in nine states to a top rate above 10% in California, New York and New Jersey; a yearly fee for keeping an LLC alive that ranges from a few dollars to ${K.usd(K.st('california').yearly)} in California; and, in some cities, a tax on business profit that a salaried neighbor never sees. A designer in Philadelphia, a consultant in Portland and a developer in Columbus all pay a city tax on net profit; New York City adds its unincorporated business tax on top of the city income tax.</p>
+<p>Federal tax is the same in Miami and in Manhattan, and the same in each of the 50 states and DC. What changes from one state to the next is everything stacked on top: a state income tax that runs from nothing in ${noTax} of them to top rates of ${top('california')} in California, ${top('new-york')} in New York and ${top('new-jersey')} in New Jersey; a yearly fee for keeping an LLC alive that ranges from a few dollars to ${K.usd(K.st('california').yearly)} in California; and, in some cities, a tax on business profit that a salaried neighbor never sees. A designer in Philadelphia, a consultant in Portland and a developer in Columbus all pay a city tax on net profit; New York City adds its unincorporated business tax on top of the city income tax.</p>
 <p>Most calculators that rank for these searches stop at the federal line, or ask for an email before showing anything. This site carries every state: the filing fee and annual report of an LLC read on each Secretary of State site, the 2026 brackets where the revenue department has published them, the special taxes on S corporations, and the local taxes on self-employment income. Each figure is linked to the page it was read on, with the date. Where a state had not published a figure we could read, the table says n/a rather than guess. Start with the ${h.a('state-income-tax', 'state income tax comparison')} or open your state below.</p>`,
   tableTitle: 'LLC costs and income tax, state by state',
   tableIntro: (h: Helpers) => `<p>One line per state and DC. The yearly LLC cost adds the annual or biennial report (spread over its cycle) and any minimum or franchise tax; the last column is the state income tax of a single filer with ${K.usd(75000)} of net profit and no other income. Each name opens the state page, with its brackets, S corp rules and local taxes. The ${h.a('llc-cost', 'LLC cost page')} sorts the states from cheapest to dearest.</p>`,
