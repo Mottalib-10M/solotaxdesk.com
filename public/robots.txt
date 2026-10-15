@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://us-self-employed.example/sitemap-index.xml
+Sitemap: https://solotaxdesk.com/sitemap-index.xml

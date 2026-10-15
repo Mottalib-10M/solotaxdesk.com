@@ -8,7 +8,7 @@ fédéral, QBI, acomptes trimestriels, safe harbor, pénalité) et choix de la s
 S corp, C corp), avec une page par État (frais de LLC, franchise tax, impôt d'État, traitement des S corp,
 impôts locaux) et quelques pages de villes. **Anglais américain seul**, sous `/en/`. Dollars, `$` devant,
 virgule des milliers. Éditeur : la société **Radif Partners** (jamais un nom de personne, ni photo, ni diplôme).
-Nom provisoire : Solo Tax Desk, URL provisoire `https://us-self-employed.example`.
+Nom provisoire : Solo Tax Desk, URL provisoire `https://solotaxdesk.com`.
 
 **L'angle** (rapport SERP : `~/Documents/GitHub/reports/us-self-employed-serp-2026-10-15.md`) : la tête
 « llc vs s corp » n'a que des articles sans calcul ; les calculateurs S corp sont des pages de cabinets qui vendent
