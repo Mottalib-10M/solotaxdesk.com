@@ -1,0 +1,48 @@
+import { defineGuide } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const P = K.P;
+const a = K.compare({ profit: 120000, salary: 50000, filing: 'single', adminCost: 2000 });
+const b = K.compare({ profit: 60000, salary: 35000, filing: 'single', adminCost: 2000 });
+const c = K.compare({ profit: 250000, salary: 110000, filing: 'single', adminCost: 2000 });
+const be = K.breakEven(0.45, { filing: 'single', adminCost: 2000 });
+const ca = K.st('california');
+
+export default defineGuide({
+  id: 'llc-vs-s-corp',
+  group: 'structure',
+  order: 1,
+  slug: 'llc-vs-s-corp',
+  nav: 'LLC vs S corp',
+  card: 'The tax difference for your profit, salary and state',
+  title: 'LLC vs S Corp 2026: Tax Savings Calculator by State',
+  description: `LLC vs S corp in 2026: what the S election saves after payroll taxes, QBI and state fees for your profit and salary, by state. Free, no email, IRS 2026 rules.`,
+  h1: 'LLC vs S corp: what the election saves you in 2026',
+  intro: 'An LLC is a legal entity; an S corp is a tax election that the LLC can make. Enter your profit and the salary you would pay yourself to see the difference.',
+  resume: `An LLC and an S corp are not two rival choices: an LLC with one owner is taxed like a sole proprietorship unless it files Form 2553 to be taxed as an S corporation. Without the election, all of the profit carries the 15.3% self-employment tax, up to ${K.usd(P.se.wageBase['2026'])} for the Social Security part in 2026. With it, only the salary you pay yourself carries payroll tax, and the rest reaches your return as K-1 income free of it. That gap is the whole saving, and it has to pay for running a payroll, a second tax return and the extra state taxes some states put on S corporations. For a single filer with no state tax and ${K.usd(2000)} of yearly payroll and filing costs, ${K.usd(120000)} of profit and a ${K.usd(50000)} salary save ${K.usd(a.savings)}; ${K.usd(60000)} of profit and a ${K.usd(35000)} salary ${b.savings >= 0 ? `save ${K.usd(b.savings)}` : `cost ${K.usd(-b.savings)}`}. With a salary at 45% of profit, the election starts to pay at about ${be ? K.usd(be) : 'a very high profit'} of profit.`,
+  tool: 'scorp',
+  body: (h) => `<p>The calculator compares the same business twice. On the left, the LLC taxed by default: Schedule C, self-employment tax on ${K.dec(P.se.factor * 100, 2)}% of profit, half of it deducted, the QBI deduction on what remains. On the right, the same LLC after the S election: a salary run through payroll, both halves of Social Security and Medicare on that salary, federal and state unemployment tax, then the remaining profit taxed as ordinary income with the QBI deduction. State income tax, state fees and any state tax on S corporations are added on both sides where they apply.</p>
+${h.mini('scorpQuick')}
+<h2>Where the saving comes from, line by line</h2>
+<p>Take ${K.usd(120000)} of profit and a ${K.usd(50000)} salary, single filer. As a default LLC, self-employment tax is ${K.usd(a.solo.se.total)}. As an S corp, payroll taxes on the salary come to ${K.usd(a.scorp.payrollTaxes)}, both halves together, including ${K.usd(a.scorp.futa)} of federal unemployment tax. The difference in federal income tax goes the other way, because the employer half of payroll tax is a business expense while half of SE tax is an adjustment, and because the QBI deduction now applies only to the K-1 profit, not to the salary: ${K.usd(a.solo.qbi.deduction)} of QBI deduction as an LLC against ${K.usd(a.scorp.qbi.deduction)} as an S corp. Income tax is ${K.usd(a.solo.incomeTax)} on one side and ${K.usd(a.scorp.incomeTax)} on the other.</p>
+<p>The smaller QBI deduction is the part most quick calculators leave out, and it eats a visible share of the payroll saving at mid-range profits. So does the cost of payroll. A payroll service, quarterly Forms 941, a yearly Form 940, W-2 filing and the ${h.src('i1120s', 'Form 1120-S')} return cost money or time; the calculator uses ${K.usd(2000)} a year as a placeholder you should replace with your own quotes.</p>
+<h2>The salary is the lever, and the IRS watches it</h2>
+<p>The lower the salary, the bigger the saving, which is exactly why the IRS requires "reasonable compensation" for the work an owner does before any distribution (${h.src('reasonable_comp', 'IRS, S corporation compensation')}). There is no published percentage. Courts look at what the business would pay someone else for the same work, the owner's training and hours, and what similar firms pay. A designer billing ${K.usd(120000)} who does all the work alone will have trouble defending a ${K.usd(20000)} salary. The ${h.a('reasonable-salary', 'reasonable salary calculator')} shows how the saving shrinks as the salary rises toward a defensible level.</p>
+<h3>Above the Social Security wage base</h3>
+<p>At high profits the saving narrows for another reason: the 12.4% Social Security part of SE tax stops at ${K.usd(P.se.wageBase['2026'])} of net earnings in 2026. On ${K.usd(250000)} of profit with a ${K.usd(110000)} salary, the election saves ${K.usd(c.savings)}, less than the arithmetic of 15.3% on the distribution would suggest, because only 2.9% Medicare and the 0.9% Additional Medicare Tax were due on the top slice anyway.</p>
+<h2>States that change the answer</h2>
+<p>Federal law is the same everywhere, but a handful of states and cities put their own tax on S corporations. California charges S corporations a franchise tax of 1.5% of net income with an ${K.usd(800)} minimum, where the LLC pays ${K.usd(ca.llc.minTax)} plus a fee based on gross receipts. New York City does not recognize the S election at all and taxes the company under its General Corporation Tax. Tennessee and Texas tax the entity whatever its federal status. In these places the comparison can flip, and the state pages carry the detail, each with the agency page it was read on. Choose your state in the calculator: the line "tax on the S corp itself" appears when one applies.</p>
+<h2>What does not change</h2>
+<p>Liability protection comes from the LLC, not from the election: an LLC taxed as an S corp protects your personal assets exactly as before. The state fees of the LLC stay too. And the election is not reversible at will: after revoking it, a business generally has to wait five years to elect again. It is filed on ${h.src('f2553', 'Form 2553')}, no later than two months and fifteen days after the start of the tax year it should apply to, which is March 15 for a calendar year. The ${h.a('llc-taxed-as-s-corp', 'S election guide')} has the deadline calculator.</p>
+<h2>A reading of the result</h2>
+<p>When the calculator shows a saving of a few hundred dollars, the honest reading is "no": one year of higher bookkeeping costs, a missed payroll deposit penalty or a salary challenged by the IRS wipes it out. When it shows several thousand dollars at a salary you could defend, the election is worth a conversation with a CPA, who will look at what the calculator cannot see: retirement contributions, which follow the salary in an S corp; health insurance, which a more-than-2% shareholder must run through payroll to deduct; and your state's own rules.</p>`,
+  faqs: [
+    { q: 'At what profit does an S corp make sense instead of an LLC?', a: `With a salary at 45% of profit and ${K.usd(2000)} of yearly payroll and filing costs, a single filer without state tax starts to save at about ${be ? K.usd(be) : 'a very high profit'}. A lower salary moves that point down, state taxes on S corporations move it up. Run your own numbers in the calculator above.` },
+    { q: 'Can a single-member LLC be taxed as an S corp?', a: 'Yes. A single-member LLC is disregarded by default, but it can elect to be taxed as an S corporation by filing Form 2553 (it is then treated as having elected to be a corporation). The LLC keeps its legal form and state filings; only its federal tax treatment changes, and it must run payroll for the owner.' },
+    { q: 'Do I still pay self-employment tax with an S corp?', a: `Not on the S corp profit. You pay Social Security and Medicare through payroll on your salary, half withheld from it and half paid by the company, ${K.rate(P.payroll.ssEmployer + P.payroll.medicareEmployer)} each. Distributions above the salary carry no payroll or SE tax. SE tax remains on any other business you run as a sole proprietor.` },
+    { q: 'Does the S corp election lower the QBI deduction?', a: `Usually yes. Your salary is not qualified business income, so the 20% deduction applies only to the K-1 profit left after salary and payroll taxes. At ${K.usd(120000)} of profit and a ${K.usd(50000)} salary, the deduction falls from ${K.usd(a.solo.qbi.deduction)} to ${K.usd(a.scorp.qbi.deduction)} for a single filer, which cancels part of the payroll saving.` },
+    { q: 'Is there a state tax on S corporations?', a: 'In most states no: the S corporation passes its income to the owners like an LLC. A few charge the entity anyway, such as California (1.5% of net income, $800 minimum), and New York City does not recognize the election. Each state page lists what applies there, with the official source.' },
+  ],
+  related: ['reasonable-salary', 's-corp-tax-savings-calculator', 'llc-taxed-as-s-corp', 's-corp', 'llc-vs-corporation', 'state:california'],
+  sources: ['reasonable_comp', 'f2553', 'i1120s', 'p15', 'rp_2025_32', 'ssa_2027'],
+});

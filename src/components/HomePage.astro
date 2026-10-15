@@ -1,0 +1,67 @@
+---
+/**
+ * Home, in its own order: the full 2026 calculator first (profit, filing status, state, city), the four
+ * payment dates as a strip, the folded answer, the 2026 numbers as a ledger, why the state changes the bill,
+ * the 51-row state table, the two families of calculators, long text in accordions, FAQ.
+ * Text: src/content/home.ts.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import { HOME } from '../content/home';
+import { route } from '../i18n/routes';
+import { GROUPS } from '../i18n/nav';
+import { helpers, SOURCES, table } from '../lib/helpers';
+import { GUIDES, STATE_PAGES, stateId } from '../lib/pages';
+import { STATES } from '../lib/data';
+import { KIT as K } from '../lib/kit';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { LAST_UPDATED } from '../data/site-config';
+const lang = 'en';
+const x = HOME;
+const path = route('home', lang);
+const h = helpers();
+const sources = x.sources.map((k) => ({ name: SOURCES[k].label, url: SOURCES[k].url }));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(x.faqs, lang)];
+const rows = STATES.map((s) => {
+  const v = K.st(s.slug); const has = STATE_PAGES.some((p) => p.slug === s.slug);
+  const inc = s.income;
+  const it = inc.type === 'none' ? 'none' : inc.type === 'interest_dividends_only' ? 'interest only' : !inc.verified ? 'n/a' : inc.type === 'flat' ? K.rate(inc.flat ?? 0) : `${K.rate(inc.brackets!.single[0][1])} to ${K.rate(inc.brackets!.single[inc.brackets!.single.length - 1][1])}`;
+  return [has ? `<a href="${route(stateId(s.slug), lang)}">${s.name}</a>` : s.name, s.llc.formation === null ? 'n/a' : K.usd(s.llc.formation), K.usd(v.yearly), it, inc.verified || inc.type === 'none' ? K.usd(v.ex75.stateTax) : 'n/a'];
+});
+const P = K.P;
+const due = P.estimated.dueDates;
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={x.faqs} sources={sources}>
+  <header class="mb-4">
+    <h1 class="font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{x.h1}</h1>
+    <p class="mt-2 text-base text-navy-700 sm:text-lg">{x.intro}</p>
+    <p class="mt-1 text-sm text-navy-600">IRS Rev. Proc. 2025-32, Form 1040-ES 2026 and 51 state agencies, checked <time datetime={LAST_UPDATED}>{K.day(LAST_UPDATED)}</time> · <a href={route('method', lang)} class="underline">How we calculate</a> · <a href={route('about', lang)} class="underline">Who publishes this</a></p>
+  </header>
+  <div data-outil data-chrome><Tool kind="total" /></div>
+  <ol class="my-5 grid grid-cols-2 gap-2 text-sm sm:grid-cols-4" data-chrome aria-label="2026 estimated tax due dates">
+    {due.map((d, i) => <li class="rounded-lg border border-navy-200 bg-navy-50 px-3 py-2"><span class="block text-xs font-semibold uppercase tracking-wide text-navy-600">Payment {i + 1}</span><span class="font-semibold text-navy-900">{K.day(d)}</span></li>)}
+  </ol>
+  <Clamp text={x.resume} lang={lang} id="clamp-home" class="my-8" />
+  <section class="prose prose-slate max-w-none prose-headings:font-serif"><Fragment set:html={x.ledger(h)} /></section>
+  <section class="mt-10 prose prose-slate max-w-none prose-headings:font-serif"><Fragment set:html={x.why(h)} /></section>
+  <section class="mt-10 prose prose-slate max-w-none prose-headings:font-serif">
+    <h2>{x.tableTitle}</h2>
+    <Fragment set:html={x.tableIntro(h)} />
+    <Fragment set:html={table(['State', 'LLC filing fee', 'LLC cost per year after', 'Income tax rates', 'State tax on $75,000 profit'], rows, 'Single filer, 2026; state fees and taxes read on each state agency site on October 15, 2026. n/a: not verified, so not shown.', ['l', 'r', 'r', 'r', 'r'])} />
+  </section>
+  <section class="mt-10" data-chrome>
+    {GROUPS.map((g) => (
+      <div class="mb-6">
+        <h2 class="font-serif text-xl font-bold text-navy-900">{g.label}</h2>
+        <ul class="mt-3 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+          {GUIDES.filter((p) => p.group === g.id).map((p) => <li><a href={route(p.id, lang)} class="font-medium text-accent-700 underline-offset-2 hover:underline">{p.nav}</a><span class="block text-navy-600">{p.card}</span></li>)}
+        </ul>
+      </div>
+    ))}
+  </section>
+  <section class="mt-10">
+    <h2 class="font-serif text-2xl font-bold text-navy-900">Before you file or form anything</h2>
+    {x.sections(h).map((s) => <details class="fold"><summary><h3 class="fold-h">{s.title}</h3></summary><div class="prose prose-slate max-w-none pb-4"><Fragment set:html={s.html} /></div></details>)}
+  </section>
+</PageLayout>

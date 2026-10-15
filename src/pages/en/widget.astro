@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const code = `<iframe src="${SITE_URL}/embed/self-employment-tax/" title="Self-employment tax calculator 2026" width="100%" height="900" style="border:0;max-width:1100px" loading="lazy"></iframe>`;
+---
+<PageLayout title="Embed the 2026 self-employment tax calculator on your site, free" description="Coworking spaces, freelancer unions, bookkeeping courses and newsrooms can embed the 2026 self-employment tax calculator with one iframe line. No cookie, no tracking, no lead form." lang={lang} noindex={true} jsonLd={[breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'Embed the calculator', path: route('widget', lang) }])]} breadcrumbs={[{ label: 'Embed the calculator' }]} showAuthor={false}>
+  <header class="mb-6">
+    <h1 class="font-serif text-3xl font-bold text-navy-900 md:text-4xl">Embed the calculator</h1>
+    <p class="mt-3 text-lg text-navy-700">One line of code. When the IRS publishes the 2027 figures, the embedded calculator updates by itself.</p>
+  </header>
+  <div class="prose prose-slate max-w-none">
+    <p>Terms: keep the credit line under the calculator visible, do not alter the frame, and do not place it next to a sign-up form for a paid tax or formation service. The frame sets no cookie and sends us nothing about your visitors. Questions: <a href={route('contact', lang)}>contact page</a>.</p>
+    <h2>Self-employment tax, income tax and state tax for 2026</h2>
+    <p>For: coworking spaces, freelancer associations, bookkeeping and business courses, local newsrooms in tax season.</p>
+    <pre class="overflow-x-auto rounded-lg bg-navy-900 p-4 text-sm text-white"><code>{code}</code></pre>
+  </div>
+  <div class="mt-8 overflow-hidden rounded-xl border border-navy-200">
+    <iframe src="/embed/self-employment-tax/" title="Self-employment tax calculator 2026" width="100%" height="900" style="border:0" loading="lazy"></iframe>
+  </div>
+</PageLayout>

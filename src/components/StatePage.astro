@@ -1,0 +1,71 @@
+---
+/** A state: the full 1099 calculator locked on the state first, the folded answer, the text written for the
+ *  state, then tables generated from states.json (LLC fees, income tax brackets, S corp treatment, local taxes),
+ *  each line with its official source. */
+import PageLayout from '../layouts/PageLayout.astro';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import Body from './Body.astro';
+import { route, ROUTES } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { t } from '../i18n/ui';
+import { stateId, localsOf, localId, guideById, statePageById } from '../lib/pages';
+import { helpers, table } from '../lib/helpers';
+import { bySlug } from '../lib/data';
+import { KIT as K } from '../lib/kit';
+import { articleSchema, faqSchema, breadcrumbSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { AUTHOR_NAME } from '../data/site-config';
+import type { StateDef } from '../lib/page-types';
+interface Props { def: StateDef }
+const { def } = Astro.props;
+const lang = 'en';
+const ui = t(lang);
+const s = bySlug(def.slug);
+const x = K.st(def.slug);
+const path = route(stateId(def.slug), lang);
+const h1 = `Self-employed taxes and LLC costs in ${s.name}, 2026`;
+const jsonLd = [webApplicationSchema({ name: h1, description: def.description, path, lang }), articleSchema({ title: def.title, description: def.description, path, lang }), webPageSchema({ name: def.title, description: def.description, path, lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: s.name, path }])];
+if (def.faqs.length) jsonLd.push(faqSchema(def.faqs, lang));
+const card = (id: string) => guideById(id)?.card ?? (statePageById(id) ? 'LLC fees, income tax and S corp rules of the state' : 'City or county tax on business income');
+const locals = localsOf(def.slug);
+const related = [...locals.map((l) => localId(l.state, l.place)), ...def.related].filter((id, i, a) => a.indexOf(id) === i && ROUTES.some((r) => r.id === id)).map((id) => ({ href: route(id, lang), name: label(id), description: card(id) }));
+const seen = new Set<string>();
+const sources = [...s.llcDetail.sources, ...s.incomeDetail.sources, ...s.scorpDetail.sources].filter((v) => { if (seen.has(v.url)) return false; seen.add(v.url); return true; }).map((v) => ({ name: `${v.title} (read 2026-10-15)`, url: v.url }));
+const inc = s.income;
+const pct = (r: number) => K.rate(r);
+const bracketRows = (b: Array<[number, number]>) => b.map(([lo, r], i) => [i + 1 < b.length ? `${K.usd(lo)} to ${K.usd(b[i + 1][0])}` : `over ${K.usd(lo)}`, pct(r)]);
+const incomeTable = inc.type === 'graduated' && inc.brackets && inc.verified
+  ? table(['Taxable income, single', 'Rate', 'Taxable income, joint', 'Rate'], bracketRows(inc.brackets.single).map((r, i) => [...r, ...(bracketRows(inc.brackets!.mfj)[i] ?? ['', ''])]), `${s.name} income tax rates for tax year ${inc.year}${inc.std ? `, after a standard deduction of ${K.usd(inc.std.single)} single / ${K.usd(inc.std.mfj)} joint` : ''}${inc.exemption ? `${inc.exemption.credit ? ' and a personal credit' : ' and a personal exemption'} of ${K.usd(inc.exemption.single)} / ${K.usd(inc.exemption.mfj)}` : ''}.`, ['l', 'r', 'l', 'r'])
+  : '';
+const keyRows: Array<[string, string]> = [
+  ['LLC filing fee', s.llc.formation === null ? 'not verified' : K.usd(s.llc.formation)],
+  [s.llcDetail.annualName ?? 'Annual report', s.llc.frequency === 'none' ? 'none' : s.llc.annual === null ? 'not verified' : `${K.usd(s.llc.annual)}${s.llc.frequency === 'biennial' ? ' every two years' : ' a year'}`],
+  ...(s.llc.minTax ? [[s.llc.minTaxName ?? 'Minimum tax', `${K.usd(s.llc.minTax)} a year`] as [string, string]] : []),
+  ['Income tax', inc.type === 'none' ? 'none on wages or business income' : inc.type === 'interest_dividends_only' ? 'interest and dividends only' : !inc.verified ? 'see the state revenue department' : inc.type === 'flat' ? `flat ${pct(inc.flat ?? 0)}` : `${pct(inc.brackets!.single[0][1])} to ${pct(inc.brackets!.single[inc.brackets!.single.length - 1][1])}`],
+  ['S corporation election', s.scorp.recognized === 'yes' ? 'followed by the state' : s.scorp.recognized === 'no' ? 'not recognized' : 'followed, with exceptions'],
+  ['Tax on $75,000 of profit (single)', `${K.usd(x.ex75.total)} in all, ${K.usd(x.ex75.stateTax)} to ${s.name}`],
+];
+const localRows = s.local.map((l) => [l.url ? `<a href="${l.url}" target="_blank" rel="nofollow noopener noreferrer">${l.place}</a>` : l.place, l.name, l.rateText, l.threshold || l.applies]);
+---
+<PageLayout title={def.title} description={def.description} lang={lang} jsonLd={jsonLd} faqs={def.faqs} related={related} sources={sources} breadcrumbs={[{ label: 'States' }, { label: s.name }]}>
+  <article>
+    <header class="mb-4">
+      <h1 class="font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{h1}</h1>
+      <p class="mt-2 text-base text-navy-700 sm:text-lg">{def.intro}</p>
+    </header>
+    <div data-outil data-chrome class="mb-4"><Tool kind="total" st={def.slug} lock={true} /></div>
+    <p class="mb-6 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> from IRS and {s.name} agency documents read on October 15, 2026 · <a href={route('method', lang)} class="underline hover:text-navy-900">{label('method')}</a></p>
+    <Clamp text={def.resume} lang={lang} id={`clamp-${def.slug}`} class="mb-8" />
+    <section class="mb-8" data-chrome>
+      <h2 class="font-serif text-xl font-bold text-navy-900">{s.name} at a glance, 2026</h2>
+      <Fragment set:html={table(['', ''], keyRows, undefined, ['l', 'r'])} />
+    </section>
+    <Body html={def.body(helpers())} path={path} />
+    {incomeTable && <section class="mt-10" data-chrome><h2 class="font-serif text-2xl font-bold text-navy-900">{s.name} income tax brackets</h2><Fragment set:html={incomeTable} /></section>}
+    {localRows.length > 0 && <section class="mt-10" data-chrome>
+      <h2 class="font-serif text-2xl font-bold text-navy-900">City and county taxes on business income in {s.name}</h2>
+      <Fragment set:html={table(['Place', 'Tax', 'Rate', 'Who pays'], localRows, 'Local taxes that reach a self-employed person or a small business; rates from each city or county finance department.')} />
+      {locals.length > 0 && <p class="mt-2 text-sm">{locals.map((l, i) => <>{i > 0 && ' · '}<a class="text-accent-700 underline" href={route(localId(l.state, l.place), lang)}>{l.name}: the full calculation</a></>)}</p>}
+    </section>}
+  </article>
+</PageLayout>

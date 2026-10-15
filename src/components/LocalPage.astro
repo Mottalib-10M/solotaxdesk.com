@@ -1,0 +1,40 @@
+---
+/** A city or county tax on business income: the calculator locked on the place, the folded answer, the text. */
+import PageLayout from '../layouts/PageLayout.astro';
+import Clamp from './Clamp.astro';
+import Tool from './Tool.astro';
+import Body from './Body.astro';
+import { route, ROUTES } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { t } from '../i18n/ui';
+import { stateId, localId, guideById, statePageById } from '../lib/pages';
+import { helpers } from '../lib/helpers';
+import { bySlug } from '../lib/data';
+import { articleSchema, faqSchema, breadcrumbSchema, webPageSchema } from '../lib/seo';
+import { AUTHOR_NAME } from '../data/site-config';
+import type { LocalDef } from '../lib/page-types';
+interface Props { def: LocalDef }
+const { def } = Astro.props;
+const lang = 'en';
+const ui = t(lang);
+const s = bySlug(def.state);
+const tax = s.local.find((l) => l.slug === def.place);
+const path = route(localId(def.state, def.place), lang);
+const jsonLd = [articleSchema({ title: def.title, description: def.description, path, lang }), webPageSchema({ name: def.title, description: def.description, path, lang }), breadcrumbSchema([{ name: ui.breadcrumbHome, path: route('home', lang) }, { name: s.name, path: route(stateId(def.state), lang) }, { name: def.name, path }])];
+if (def.faqs.length) jsonLd.push(faqSchema(def.faqs, lang));
+const card = (id: string) => guideById(id)?.card ?? (statePageById(id) ? 'LLC fees, income tax and S corp rules of the state' : 'City or county tax on business income');
+const related = [stateId(def.state), ...def.related].filter((id, i, a) => a.indexOf(id) === i && ROUTES.some((r) => r.id === id)).map((id) => ({ href: route(id, lang), name: label(id), description: card(id) }));
+const sources = s.local.filter((l) => l.url && (l.slug === def.place || l.place === tax?.place)).map((l) => ({ name: `${l.place}: ${l.name} (read 2026-10-15)`, url: l.url }));
+---
+<PageLayout title={def.title} description={def.description} lang={lang} jsonLd={jsonLd} faqs={def.faqs} related={related} sources={sources} breadcrumbs={[{ label: s.name, href: route(stateId(def.state), lang) }, { label: def.name }]}>
+  <article>
+    <header class="mb-4">
+      <h1 class="font-serif text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{def.h1}</h1>
+      <p class="mt-2 text-base text-navy-700 sm:text-lg">{def.intro}</p>
+    </header>
+    <div data-outil data-chrome class="mb-4"><Tool kind="local" st={def.state} place={def.place} /></div>
+    <p class="mb-6 text-sm text-navy-600">{ui.reviewedBy} <a href={route('about', lang)} class="underline hover:text-navy-900">{AUTHOR_NAME}</a> from the {def.name} finance department, read on October 15, 2026 · <a href={route('method', lang)} class="underline hover:text-navy-900">{label('method')}</a></p>
+    <Clamp text={def.resume} lang={lang} id={`clamp-${def.state}-${def.place}`} class="mb-8" />
+    <Body html={def.body(helpers())} path={path} />
+  </article>
+</PageLayout>

@@ -1,0 +1,21 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, REVIEW_CYCLE_MONTHS } from '../../data/site-config';
+const lang = 'en';
+---
+<PageLayout title="Editorial policy of Solo Tax Desk: sources, dates, corrections" description="How Solo Tax Desk writes its 2026 tax pages: IRS, SSA and state agency documents only, figures read from one parameter file, no money from tax, payroll or formation firms." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Editorial policy</h1>
+    <h2>Sources</h2>
+    <p>Federal amounts come from IRS revenue procedures, forms, instructions and publications, and from the Social Security Administration. State amounts come from the Secretary of State fee schedule, the revenue department's tax tables and the state workforce agency; local taxes from the city or county finance department. Blogs, formation services and other calculators are never a source here. Each state figure carries its link and the date it was read.</p>
+    <h2>How a figure reaches a page</h2>
+    <p>No amount is typed into an article. Federal parameters sit in one file, state data in another, and every page and calculator reads them through the same tested engine. When the IRS publishes the 2027 revenue procedure or a state changes a fee, one update changes every page that uses the figure, and the date at the bottom moves.</p>
+    <h2>What is left out</h2>
+    <p>A figure we could not read on an official page today is marked "n/a" and is not used in a calculation. Approximations are named where they occur, on the <a href={route('method', lang)}>method page</a> and under the calculator.</p>
+    <h2>Independence</h2>
+    <p>{AUTHOR_NAME} takes no money from accounting firms, tax software, payroll providers or company-formation services, and the pages carry no affiliate links. There is no advertising today; if some is added, it will be labeled, limited to three places per page and never come from a firm selling what a page compares.</p>
+    <h2>Review and corrections</h2>
+    <p>Pages are reviewed at least every {REVIEW_CYCLE_MONTHS} months and whenever the IRS publishes its yearly inflation adjustments (October or November), when SSA announces the next wage base (October), and when a state legislature changes a rate. Write through the <a href={route('contact', lang)}>contact page</a>; a confirmed error is corrected and dated.</p>
+  </div>
+</PageLayout>

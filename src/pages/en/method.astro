@@ -1,0 +1,52 @@
+---
+/** Method: every document used, each step of each calculator, the assumptions and the limits. Figures from the kit. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { KIT as K } from '../../lib/kit';
+import { src, table } from '../../lib/helpers';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('method', lang);
+const P = K.P;
+const title = 'Tax Calculation Method 2026: IRS Tables, SE Tax, S Corp';
+const description = 'How Solo Tax Desk computes 2026 self-employment tax, income tax, QBI, quarterly payments, S corp savings and state LLC costs, step by step, with its limits.';
+const ex = K.solo({ profit: 100000, filing: 'single' });
+const sc = K.compare({ profit: 100000, salary: 45000, filing: 'single', adminCost: 2000 });
+const bRows = P.brackets.single.map(([lo, r], i) => [i + 1 < P.brackets.single.length ? `${K.usd(lo)} to ${K.usd(P.brackets.single[i + 1][0])}` : `over ${K.usd(lo)}`, K.rate(r), i + 1 < P.brackets.mfj.length ? `${K.usd(P.brackets.mfj[i][0])} to ${K.usd(P.brackets.mfj[i + 1][0])}` : `over ${K.usd(P.brackets.mfj[i][0])}`]);
+const verified = K.states.filter((s) => s.income.verified || s.income.type === 'none').length;
+const fees = K.states.filter((s) => s.llc.formation !== null).length;
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'How we calculate', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'How we calculate', path }])]} breadcrumbs={[{ label: 'How we calculate' }]}>
+  <article class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>How the 2026 calculations are made</h1>
+    <p>Every calculator on this site runs the same engine in your browser. It reads two data files: the federal parameters of tax year 2026, each read on an IRS or SSA document on October 15, 2026, and the state file, where each fee and rate carries the link of the agency page it came from. This page follows the engine step by step so that any result can be checked by hand.</p>
+    <h2>1. Self-employment tax</h2>
+    <p>As on Schedule SE and the worksheet of <Fragment set:html={src('f1040es', 'Form 1040-ES 2026')} />: net profit × {K.dec(P.se.factor * 100, 2)}% gives net earnings from self-employment. Nothing is due below {K.usd(P.se.minimumNet)} of net earnings. Social Security takes {K.rate(P.se.ssRate)} of net earnings up to {K.usd(P.se.wageBase['2026'])}, minus W-2 wages already taxed for Social Security; Medicare takes {K.rate(P.se.medicareRate)} of all net earnings. Half of the total is deducted from income. The Additional Medicare Tax of {K.rate(P.additionalMedicare.rate)} (<Fragment set:html={src('i8959', 'Form 8959')} />) applies to wages plus net earnings above {K.usd(P.additionalMedicare.threshold.single)} single, {K.usd(P.additionalMedicare.threshold.mfj)} joint or {K.usd(P.additionalMedicare.threshold.mfs)} separate, the threshold being reduced by wages first. For 2027 the calculator offers the {K.usd(P.se.wageBase['2027'])} base announced by <Fragment set:html={src('ssa_2027', 'SSA')} />.</p>
+    <h2>2. Federal income tax</h2>
+    <p>Adjusted gross income = profit + wages + other income − half of SE tax − self-employed health insurance (capped at profit minus half SE tax and retirement contributions) − SEP or solo 401(k) contributions. Then the standard deduction ({K.usd(P.standardDeduction.single)} single, {K.usd(P.standardDeduction.mfj)} joint, {K.usd(P.standardDeduction.hoh)} head of household), the QBI deduction, and the 2026 rate schedules of <Fragment set:html={src('rp_2025_32', 'Rev. Proc. 2025-32')} />. The child tax credit of {K.usd(P.childTaxCredit)} per child is subtracted when you enter children, without its phase-out. Itemized deductions are not modeled.</p>
+    <Fragment set:html={table(['Single, taxable income', 'Rate', 'Married filing jointly'], bRows, 'Tax year 2026, Rev. Proc. 2025-32 section 4.01, as reprinted in the 2026 Form 1040-ES.', ['l', 'r', 'l'])} />
+    <h2>3. The QBI deduction</h2>
+    <p>20% of qualified business income (profit minus half SE tax, SE health insurance and retirement contributions), capped at 20% of taxable income before the deduction. Above {K.usd(P.qbi.threshold.single)} of taxable income ({K.usd(P.qbi.threshold.mfj)} joint) the limit based on W-2 wages paid and property phases in over {K.usd(P.qbi.phaseInEnd.single - P.qbi.threshold.single)} ({K.usd(P.qbi.phaseInEnd.mfj - P.qbi.threshold.mfj)} joint), and a specified service business loses the deduction over the same range. From 2026 a minimum deduction of {K.usd(P.qbi.minimumDeduction)} applies with at least {K.usd(P.qbi.minimumQbi)} of QBI from an active business (<Fragment set:html={src('f1040es', 'Form 1040-ES 2026, What’s New')} />). Property (UBIA) is entered as zero: most freelancers have little of it.</p>
+    <p>Worked example: {K.usd(100000)} of profit, single, no other income. SE tax {K.usd(ex.se.total)}, AGI {K.usd(ex.agi)}, QBI deduction {K.usd(ex.qbi.deduction)}, taxable income {K.usd(ex.taxable)}, income tax {K.usd(ex.incomeTax)}: {K.usd(ex.federalTotal)} of federal tax.</p>
+    <h2>4. State and local taxes</h2>
+    <p>State income tax is computed for a resident, on federal AGI minus the state's own standard deduction and exemption, or on federal taxable income where the state starts there, with the state's single or joint brackets (head of household and separate filers use the single table, an approximation). State credits, deductions for retirement income and special subtractions are not modeled. {verified} of 51 jurisdictions have a verified 2026 rule; a state whose figures we could not read on an official page shows "n/a" and is left out of totals rather than guessed. Local taxes are applied as a flat rate on net profit where the city or county taxes self-employment income at one rate; exemptions and credits are described on each city page.</p>
+    <h2>5. LLC costs</h2>
+    <p>The filing fee is the online fee for domestic Articles of Organization (or Certificate of Formation) on the Secretary of State fee schedule. The yearly cost adds the annual report fee (half of it when the report is due every two years) and any minimum, franchise or privilege tax that a small LLC owes regardless of profit. Registered agent services, publication costs beyond the state fee, business licenses and lawyers are not included. {fees} jurisdictions have their LLC fees verified.</p>
+    <h2>6. The S corp comparison</h2>
+    <p>The S corp side pays you a salary. On it: {K.rate(P.payroll.ssEmployer)} + {K.rate(P.payroll.medicareEmployer)} for the company and the same for you, up to the {K.usd(P.se.wageBase['2026'])} base for Social Security (<Fragment set:html={src('p15', 'Publication 15')} />); FUTA at {K.rate(P.payroll.futaNet)} of the first {K.usd(P.payroll.futaWageBase)} after the full state credit; state unemployment tax at the new-employer rate on the state wage base where we could read both. What is left after salary, employer taxes and the payroll and filing costs you enter is the K-1 income; the QBI deduction applies to it, not to the salary. Any state tax on S corporations is added. The LLC side is the sole-proprietor calculation with the same state fees. Example: {K.usd(100000)} of profit, {K.usd(45000)} salary, {K.usd(2000)} of costs, single, no state tax: {K.usd(sc.solo.total)} as an LLC, {K.usd(sc.scorp.total)} as an S corp, a difference of {K.usd(sc.savings)}.</p>
+    <p>The $2,000 default for payroll and filing costs is a placeholder for you to replace with your own quotes, not a published figure. Whether a salary is reasonable is a question of fact that the <Fragment set:html={src('reasonable_comp', 'IRS')} /> leaves to the work done: the calculator shows the effect of the salary you choose and nothing more.</p>
+    <h2>7. C corporation</h2>
+    <p>Profit after salary and employer payroll taxes is taxed at the flat {K.rate(P.corporate.rate)} of <Fragment set:html={src('usc_11', '26 U.S.C. §11')} /> (state corporate tax only if you enter a rate). The share paid out is a qualified dividend, taxed at 0%, 15% or 20% on top of your other income with the 2026 breakpoints, plus the {K.rate(P.niit.rate)} net investment income tax above {K.usd(P.niit.threshold.single)} single (<Fragment set:html={src('usc_1411', '§1411')} />).</p>
+    <h2>8. Estimated taxes and the penalty</h2>
+    <p>The required annual payment is the smaller of {K.rate(P.estimated.currentYearShare)} of the 2026 tax and 100% of the 2025 tax, or 110% when 2025 AGI was above {K.usd(P.estimated.highAgi.single)} ({K.usd(P.estimated.highAgi.mfs)} married filing separately), as in <Fragment set:html={src('f1040es', 'Form 1040-ES 2026')} />; no payment is required under {K.usd(P.estimated.minimumOwed)} owed after withholding. The penalty follows the regular method of Form 2210: each missed installment accrues the IRS underpayment rate (7%, 6%, 7% and 7% for the four quarters of 2026, <Fragment set:html={src('interest', 'IRS')} />) from its due date until it is covered, a later payment first covering the oldest gap. The rate for 2027 is not published yet: the last known rate, 7%, is used until it is.</p>
+    <h2>9. Tests</h2>
+    <p>Before each release, automated tests replay the 2026 rate schedules at each bracket edge for all four filing statuses, Schedule SE at and above the wage base, the QBI phase-in and the $400 minimum, the 1040-ES safe harbor rules, the Form 2210 penalty on a known case, the Form 2553 deadline and the S corp payroll taxes, with expected values worked out by hand from the IRS documents.</p>
+    <h2>10. What the calculators do not know</h2>
+    <ul>
+      <li>Credits other than the child tax credit, the alternative minimum tax, capital gains and losses, and itemized deductions.</li>
+      <li>Part-year residents, people who work in one state and live in another, and city taxes with several brackets.</li>
+      <li>The annualized income method of Form 2210 for income that arrives unevenly.</li>
+      <li>Fees charged by formation services, registered agents, payroll companies and accountants.</li>
+    </ul>
+  </article>
+</PageLayout>

@@ -1,0 +1,38 @@
+---
+/** Renders the calculator of a page (first render = build defaults, RECETTE §17.5). */
+import * as T from './calc/Tools';
+import { route, ROUTES } from '../i18n/routes';
+import type { ToolKind } from '../lib/page-types';
+interface Props { kind: ToolKind; st?: string; lock?: boolean; place?: string }
+const { kind, st, lock = false, place } = Astro.props;
+const methodHref = route('method', 'en');
+const has = (id: string) => ROUTES.some((r) => r.id === id);
+const hrefs = { scorp: has('llc-vs-s-corp') ? route('llc-vs-s-corp', 'en') : '' };
+const p = { methodHref, ...(st ? { defState: st } : {}), lockState: lock, hrefs };
+---
+{kind === 'total' && <T.TotalTool client:load {...p} />}
+{kind === 'se' && <T.SeTool client:load {...p} />}
+{kind === 'quarterly' && <T.QuarterlyTool client:load {...p} />}
+{kind === 'safe-harbor' && <T.SafeHarborTool client:load {...p} />}
+{kind === 'penalty' && <T.PenaltyTool client:load {...p} />}
+{kind === 'schedule-c' && <T.ScheduleCTool client:load {...p} />}
+{kind === 'qbi' && <T.QbiTool client:load {...p} />}
+{kind === 'home-office' && <T.HomeOfficeTool client:load {...p} />}
+{kind === 'deductions' && <T.DeductionsTool client:load {...p} />}
+{kind === 'w2-vs-1099' && <T.W2vs1099Tool client:load {...p} />}
+{kind === 'set-aside' && <T.SetAsideTool client:load {...p} />}
+{kind === 'health' && <T.HealthTool client:load {...p} />}
+{kind === 'retirement' && <T.RetirementTool client:load {...p} />}
+{kind === 'mileage' && <T.MileageTool client:load {...p} />}
+{kind === 'nec' && <T.NecTool client:load {...p} />}
+{kind === 'scorp' && <T.ScorpTool client:load {...p} />}
+{kind === 'scorp-tax' && <T.ScorpTaxTool client:load {...p} />}
+{kind === 'breakeven' && <T.BreakevenTool client:load {...p} />}
+{kind === 'compare' && <T.CompareTool client:load {...p} />}
+{kind === 'ccorp' && <T.CcorpTool client:load {...p} />}
+{kind === 'llc-cost' && <T.LlcCostTool client:load {...p} />}
+{kind === 'salary' && <T.SalaryTool client:load {...p} />}
+{kind === 'election' && <T.ElectionTool client:load {...p} />}
+{kind === 'llc-tax' && <T.LlcTaxTool client:load {...p} />}
+{kind === 'state-compare' && <T.StateCompareTool client:load {...p} />}
+{kind === 'local' && <T.LocalTool client:load {...p} place={place} />}

@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { CONTACT_EMAIL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('contact', lang);
+const description = 'Write to the publisher of Solo Tax Desk about a 2026 figure, a state fee, a source link or the embed code. No sales follow-up, and no review of personal returns.';
+---
+<PageLayout title="Contact Solo Tax Desk: figures, state fees and embed code" description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path, lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Contact</h1>
+    <p>By e-mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. There is no form and no newsletter: nobody will contact you afterwards.</p>
+    <h2>Messages that help</h2>
+    <ul>
+      <li>A state fee or rate that differs from the agency page: tell us the state and the link, we check it against the source and correct the date on the page.</li>
+      <li>A 2026 IRS or state notice we have not used yet.</li>
+      <li>Embedding a calculator on a coworking, union or accounting-course site: the code is on the <a href={route('widget', lang)}>embed page</a>.</li>
+    </ul>
+    <h2>What we do not do</h2>
+    <p>We do not prepare returns, review a client's numbers, form companies or run payroll, and we do not recommend anyone who does. For your own situation, a CPA or an enrolled agent; for free help with a federal return, the IRS Volunteer Income Tax Assistance program if you qualify.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+  </div>
+</PageLayout>

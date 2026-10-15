@@ -1,0 +1,21 @@
+{
+ "name": "Solo Tax Desk",
+ "short_name": "Solo Tax Desk",
+ "description": "Self-employment tax 2026, 1099 income and quarterly payments worked out in your browser, and the LLC, S corp and sole proprietorship numbers for your state.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#0F5257",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, LEGAL, SITE_NAMES, SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`${SITE_NAMES[lang]} legal notice: publisher, host and terms of use 2026`} description="Publisher and host of Solo Tax Desk, why its 2026 tax calculators are general information and not tax advice, independence from the IRS, reuse, embedding and governing law." lang={lang} noindex={true} breadcrumbs={[{ label: 'Legal notice' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none prose-headings:font-serif">
+    <h1>Legal notice and terms of use</h1>
+    <p>Information given under Article 6 III-1 of French law no. 2004-575 of 21 June 2004, the publisher being established in France.</p>
+    <h2>Publisher</h2>
+    <LegalIdentity lang={lang} />
+    <p>Publication director: {AUTHOR_NAME}, responsible for the content of {SITE_URL}.</p>
+    <h2>Host</h2>
+    <LegalIdentity mode="hosting" lang={lang} />
+    <h2>Independent site</h2>
+    <p>{SITE_NAMES[lang]} is a private publication. It is not run, endorsed or paid by the Internal Revenue Service, the Social Security Administration, the Treasury or any state or city agency, and uses none of their seals or logos.</p>
+    <h2>General information, not tax advice</h2>
+    <p>The pages describe published 2026 rules and the calculators estimate taxes from the figures you enter. They are not tax, legal or accounting advice, do not create any client relationship, and cannot replace a review of your own return by a CPA, an enrolled agent or an attorney. Rules change, and a state can amend a fee or a rate during the year.</p>
+    <h2>Liability</h2><p>Figures are read from official documents and the engine is tested before each release, but errors cannot be ruled out. The publisher is not liable for a filing or business decision made on the basis of the site alone. Report an error through the <a href={route('contact', lang)}>contact page</a>.</p>
+    <h2>Intellectual property</h2><p>Texts, design and code belong to the publisher; short quotations with a link are welcome. IRS and SSA documents are public domain works of the U.S. government.</p>
+    <h2>Embedding</h2><p>The calculators may be embedded free of charge with their credit line visible: see the <a href={route('widget', lang)}>embed page</a>.</p>
+    <h2>Personal data</h2><p>No cookie, nothing kept of what you type: <a href={route('privacy', lang)}>privacy policy</a>, <a href={route('cookies', lang)}>cookies</a>.</p>
+    <h2>Reporting unlawful content</h2><p>Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the page address.</p>
+    <h2>Governing law</h2><p>French law applies; failing an amicable settlement, the courts of {LEGAL.jurisdiction} have jurisdiction. Updated: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>
