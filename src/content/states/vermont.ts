@@ -1,0 +1,30 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('vermont');
+const fed = K.solo({ profit: 75000, filing: 'single' });
+const fedCmp = K.compare({ profit: 120000, salary: 50000, filing: 'single', adminCost: 2000 });
+
+export default defineState({
+  slug: 'vermont',
+  title: `Vermont LLC and 1099 Taxes 2026: The ${K.usd(s.scorp.fixed)} Entity Minimum`,
+  description: `Vermont 2026: an LLC costs ${K.usd(s.llc.formation)} to form and ${K.usd(s.llc.annual)} a year, a ${K.usd(s.scorp.fixed)} minimum entity tax hits S corps and multi-member LLCs, but not LLCs with a single owner.`,
+  intro: `In Vermont the line that matters is between a one-owner LLC, which owes no entity tax, and every other business form, which owes at least ${K.usd(s.scorp.fixed)} a year.`,
+  resume: `A Vermont LLC costs ${K.usd(s.llc.formation)} to organize and ${K.usd(s.llc.annual)} for each annual report, so a single-member LLC spends ${K.usd(s.cost5)} on state fees over five years. That figure stays low only while the LLC has one owner and no election: multi-member LLCs and S corporations owe Vermont's minimum business entity tax of ${K.usd(s.scorp.fixed)} every year on Form BI-471, while a disregarded single-member LLC does not file that form. Vermont taxes individual income in graduated brackets that it indexes each year, and the 2026 schedule had not been published when this page was checked; the calculator therefore leaves Vermont income tax out until it is. Federal tax is complete: a single filer with ${K.usd(75000)} of profit owes about ${K.usd(fed.federalTotal)} in federal income tax and self-employment tax. Vermont follows the S election, and on federal numbers alone it saves about ${K.usd(fedCmp.savings)} at ${K.usd(120000)} of profit, before the ${K.usd(s.scorp.fixed)} minimum tax that the S corporation then owes.`,
+  body: (h) => `<p>Adding a partner, or electing S status, costs a Vermont business a fixed ${K.usd(s.scorp.fixed)} a year. The ${h.ext('https://tax.vermont.gov/sites/tax/files/documents/BI-471-Instr-2025.pdf', 'BI-471 instructions')} apply the minimum business entity tax to partnerships, multi-member LLCs and S corporations, and state that a single-member LLC reported on the owner's Schedule C is not required to file. For a freelancer that makes the one-owner LLC the cheapest structure with liability protection, at ${K.usd(s.yearly)} a year in Secretary of State fees.</p>
+${h.mini('stateLlc', { s: 'vermont' })}
+<h2>Filing the annual report</h2>
+<p>The report is due ${s.llcDetail.due}. The fee is set by statute, ${h.ext('https://legislature.vermont.gov/statutes/section/11/025/04012', '11 V.S.A. § 4012')}, at ${K.usd(s.llc.annual)} for a domestic LLC and ${K.usd(170)} for a foreign one. A business formed in another state and registered in Vermont therefore pays almost four times as much each year, one reason Vermont residents rarely gain anything by organizing elsewhere. There is no newspaper publication and no franchise tax.</p>
+<h2>Where the 2026 income tax stands</h2>
+<p>Vermont's brackets and its standard deduction and personal exemption are adjusted for inflation every year, and the amounts for 2026 appear in the return instructions released early in 2027. Until then only the 2025 schedule is official, in the ${h.ext('https://tax.vermont.gov/sites/tax/files/documents/IN-111-Instr-2025.pdf', 'IN-111 instructions')}. Those instructions also contain a rule that few states have: above a certain adjusted gross income, Vermont tax is the greater of the schedule result and a percentage of AGI, a floor for high earners. We do not apply 2025 numbers to 2026, so the calculator shows Vermont at zero for now and the ${h.a('state-income-tax', 'state comparison')} flags it.</p>
+<h3>Estimated payments</h3>
+<p>The ${h.ext('https://tax.vermont.gov/sites/tax/files/documents/IN-114-2026.pdf', '2026 Form IN-114')} requires estimates when you expect to owe more than ${K.usd(500)} after withholding, and accepts 100% of last year's tax or 90% of this year's as the target. The four due dates follow the federal ones, from April 15, 2026 to January 15, 2027. The ${h.a('safe-harbor', 'safe harbor guide')} explains the federal version of the same rule.</p>
+<h2>Pass-through entities and nonresident owners</h2>
+<p>An S corporation or a partnership with an owner who lives outside Vermont has an extra duty: it pays estimated tax on that owner's share, on Form WH-435, as the IN-114 notes. A Vermont couple running a consulting firm together as an LLC will meet the ${K.usd(s.scorp.fixed)} tax but not that one. The instructions read for this page did not show an elective pass-through entity tax of the kind ${h.a('state:new-york', 'New York')} or ${h.a('state:massachusetts', 'Massachusetts')} offer.</p>`,
+  faqs: [
+    { q: `Does a single-member LLC in Vermont owe the ${K.usd(s.scorp.fixed)} minimum tax?`, a: `No. A single-member LLC that is disregarded for federal tax and reported on Schedule C is not required to file Form BI-471, so it owes no minimum business entity tax. It pays only the ${K.usd(s.llc.annual)} annual report fee. Multi-member LLCs and S corporations owe at least ${K.usd(s.scorp.fixed)} a year.` },
+    { q: 'When is the Vermont LLC annual report due?', a: `Within three months after the end of the LLC's fiscal year, which is March 31 for a calendar-year company. The fee is ${K.usd(s.llc.annual)} for a domestic LLC and ${K.usd(170)} for a foreign LLC registered in Vermont, both set in 11 V.S.A. § 4012. Vermont has no publication requirement for new LLCs.` },
+    { q: 'Why is Vermont income tax missing from the 2026 calculation?', a: 'Vermont indexes its brackets, standard deduction and exemption every year, and the 2026 amounts were not yet published when this page was checked. Applying the 2025 schedule to 2026 income would give a wrong figure, so the calculator leaves Vermont tax out and shows federal income tax and self-employment tax only.' },
+  ],
+  related: ['llc-cost', 'single-member-llc', 'safe-harbor', 'state:new-hampshire', 'state:new-york'],
+});

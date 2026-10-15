@@ -1,0 +1,31 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('arizona');
+const l010 = 'https://www.azcc.gov/docs/default-source/corps-files/instructions/l010i-instructions-articles-of-organization.pdf';
+const fees = 'https://azcc.gov/docs/default-source/corps-files/fee-schedules/fee-schedule-llcs.pdf';
+const est = 'https://www.azleg.gov/ars/43/00581.htm';
+
+export default defineState({
+  slug: 'arizona',
+  title: `LLC Arizona 2026: ${K.usd(s.llc.formation!)} Filing, Publication Rule, State Tax`,
+  description: `Arizona LLCs in 2026: ${K.usd(s.llc.formation!)} to file, no annual report, a newspaper notice outside Maricopa and Pima counties, and the state tax rules for a 1099 earner.`,
+  intro: 'Arizona makes an LLC cheap to open and free to keep, but where your statutory agent sits decides whether you must publish a notice.',
+  resume: `An Arizona LLC costs ${K.usd(s.llc.formation!)} to form with the Corporation Commission and files no annual report afterward, which makes it one of the least expensive companies to keep alive in the country: ${K.usd(s.cost5)} over five years. The catch is publication. Unless the statutory agent's street address is in Maricopa or Pima County, the articles must be announced in a newspaper, a cost the state does not set. Profit flows to the owner's Arizona return, and the S election is followed by the state with no tax on the corporation itself. The 2026 standard deduction could not be read on the Department of Revenue site, so this page quotes no Arizona rate or tax amount and treats the state line of the calculator as an estimate. Federal tax and self-employment tax are unaffected: on ${K.usd(120000)} of profit with a ${K.usd(50000)} salary, the S election saves about ${K.usd(s.cmp.savings)} a year in the calculator.`,
+  body: (h) => `<p>Arizona still asks some new companies to buy space in a newspaper. Under A.R.S. § 29-3201, a notice of the Articles of Organization must be published, except when the statutory agent's street address is in Maricopa or Pima County: there the Corporation Commission posts the notice on its own website and the owner does nothing (${h.ext(l010, 'ACC, Form L010 instructions')}). A founder in Flagstaff, Yuma or Prescott who names a local agent pays a newspaper for the notice. One who uses an agent address in Phoenix or Tucson does not.</p>
+${h.mini('llcFees', { s: 'arizona' })}
+<h2>What the Corporation Commission charges</h2>
+<p>Filing the articles costs ${K.usd(s.llc.formation!)}. Faster handling is sold in steps: $35 more for expedited review, then next-day, same-day and two-hour service at higher prices, and $10 to reserve a name (${h.ext(fees, 'ACC fee schedule for LLCs')}). After that, nothing. Arizona LLCs file no annual report with the Commission, so there is no yearly renewal to miss and no late penalty to fear. Compare that with the states in the ${h.a('llc-cost', 'LLC cost table')}, where the yearly report or minimum tax alone can exceed what an Arizona LLC pays in a decade.</p>
+<h2>Arizona income tax on your profit</h2>
+<p>Arizona taxes individuals at a single rate, but its 2026 standard deduction is indexed each year and the Department of Revenue's pages refused automated reading on the day these sheets were compiled. For that reason this page does not print an Arizona rate or tax figure. The calculator leaves the Arizona line at zero; for the state amount, use ADOR's 2026 Form 140 instructions or the ${h.ext('https://www.azleg.gov/ars/43/01011.01.htm', 'rate statute, A.R.S. 43-1011.01')}. Arizona cities levy a transaction privilege tax on sales, not a local income tax, so nothing is added at the city level for a service business's profit.</p>
+<h3>Estimated payments have a high trigger</h3>
+<p>Arizona's quarterly payments are mandatory only for people whose Arizona gross income exceeded $75,000, or $150,000 on a joint return, in both the current and the preceding year (${h.ext(est, 'A.R.S. 43-581')}). There is no underpayment penalty when the Arizona tax still due on the return is under $1,000. A freelancer in a first strong year can therefore pay the state in April and settle the federal side through the ${h.a('quarterly-estimated-taxes', 'four federal installments')}.</p>
+<h2>S corporation owners</h2>
+<p>The state follows the federal S election and adds no corporate tax. Since 2022, an S corporation or partnership may consent to pay Arizona tax at the entity level, at a rate equal to the highest individual rate, under ${h.ext('https://www.azleg.gov/ars/43/01014.htm', 'A.R.S. 43-1014')}; an electing entity with more than $150,000 of taxable income in the prior year must make estimated payments itself. Arizona's unemployment rates for 2026 were read only from an index of the DES rate chart, so the payroll side of the ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} leaves state unemployment tax out here.</p>`,
+  faqs: [
+    { q: 'Do I have to publish my Arizona LLC in a newspaper?', a: 'Only if the statutory agent\'s street address is outside Maricopa and Pima counties. In those two counties the Arizona Corporation Commission publishes the notice on its website automatically. Elsewhere, A.R.S. § 29-3201 requires a notice of the Articles of Organization in a newspaper, paid for by the company. The Form L010 instructions describe the rule.' },
+    { q: 'Does an Arizona LLC pay an annual fee?', a: `No. Arizona LLCs file no annual report with the Corporation Commission and owe no franchise tax, so after the ${K.usd(s.llc.formation!)} filing fee there is no yearly state charge on the company itself. Five years of ownership cost ${K.usd(s.cost5)} in state filing fees, before any newspaper publication or optional expedite fees.` },
+    { q: 'When must an Arizona freelancer make estimated tax payments?', a: 'Arizona requires estimated payments only when Arizona gross income exceeded $75,000 for a single filer, or $150,000 for a joint return, in both the current and the prior tax year. No penalty applies if the Arizona tax due with the return is under $1,000. Federal estimated payments follow their own, lower trigger.' },
+  ],
+  related: ['llc-cost', 'quarterly-estimated-taxes', 'llc-vs-s-corp', 'state:california', 'state:colorado'],
+});

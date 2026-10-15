@@ -47,7 +47,7 @@ OVERRIDES = {
     'vermont': {'scorp': {'fixed': 250, 'name': 'Minimum business entity tax (BI-471)'}},
     'new-jersey': {'scorp': {'fixed': 375, 'name': 'Corporation Business Tax minimum, receipts under $100,000'}},
     'massachusetts': {'scorp': {'fixed': 456, 'name': 'Corporate excise minimum for S corporations'}},
-    'oregon': {'scorp': {'fixed': 150, 'name': 'S corporation minimum excise tax'}, 'localKeys': {'trimet': 0.008237, 'lane transit': 0.008}},
+    'oregon': {'scorp': {'fixed': 150, 'name': 'S corporation minimum excise tax'}},
     'north-carolina': {'scorp': {'fixed': 200, 'name': 'Franchise tax minimum for S corporations'}},
     'illinois': {'scorp': {'rate': 0.015, 'name': 'Personal property replacement income tax (1.5%)'}},
     'mississippi': {'scorp': {'fixed': 25, 'name': 'Franchise tax minimum for S corporations'}},
@@ -60,7 +60,7 @@ OVERRIDES = {
     'nebraska': {'annualNull': True},    # biennial fee read only through a search extract
     # Flat local rates on net profit that the calculator applies (resident, no exemption modeled beyond what is noted).
     'pennsylvania': {'localKeys': {'philadelphia net profits': 0.03735, 'pittsburgh earned': 0.03}},
-    'ohio': {'localKeys': {'columbus': 0.025, 'cleveland': 0.025, 'toledo': 0.025, 'dayton': 0.025, 'cincinnati': 0.018, 'akron': 0.025}},
+    'ohio': {'localKeys': {'columbus': 0.025, 'cleveland': 0.025, 'toledo': 0.025, 'dayton': 0.025, }},
     'missouri': {'localKeys': {'kansas city': 0.01, 'st. louis (city) earnings': 0.01}},
     'michigan': {'localKeys': {'detroit': 0.024, 'grand rapids': 0.015, 'highland park': 0.02}},
     'kentucky': {'minTax': 175, 'minTaxName': 'Limited Liability Entity Tax minimum (LLET)',

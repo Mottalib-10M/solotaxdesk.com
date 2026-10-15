@@ -1,0 +1,34 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('oregon');
+const b = s.income.brackets!.single;
+const top = b[b.length - 1];
+const est = 'https://www.oregon.gov/dor/forms/FormsPubs/publication-or-estimate_101-026_2026.pdf';
+const pte = 'https://www.oregon.gov/dor/programs/businesses/Pages/pass-through-entity-elective-tax.aspx';
+const L = (prefix: string) => s.local.find((l) => l.slug.startsWith(prefix))!;
+const blt = L('city-of-portland-business-license'), mcbit = L('multnomah-county-business-income'), trimet = L('trimet');
+const p200 = K.solo({ profit: 200000, filing: 'single', state: s });
+
+export default defineState({
+  slug: 'oregon',
+  title: `Oregon Self-Employed Taxes 2026: ${K.rate(top[1])} Rate and Local Taxes`,
+  description: `Oregon 2026: no sales tax but an income tax up to ${K.rate(top[1])}, about ${K.usd(s.ex75.stateTax)} of state tax on $75,000 of profit, ${K.usd(s.llc.annual!)} a year for an LLC and a ${K.usd(s.scorp.fixed)} S corp minimum.`,
+  intro: 'Oregon has no sales tax and makes up for it with one of the steepest income taxes on self-employment profit in the country.',
+  resume: `Oregon taxes business profit on the owner's return at ${K.rate(b[0][1])} to ${K.rate(top[1])}, and the ${K.rate(b[2][1])} bracket starts at only ${K.usd(b[2][0])} of taxable income for a single filer, so the state share is high from the start. A single filer with ${K.usd(75000)} of profit owes about ${K.usd(s.ex75.stateTax)} to Oregon and ${K.usd(s.ex75.total)} in total with federal income tax and self-employment tax, about ${K.rate(s.ex75.setAside)} of profit; at ${K.usd(120000)} the state share is ${K.usd(s.ex120.stateTax)}. An LLC costs ${K.usd(s.llc.formation!)} to form and ${K.usd(s.llc.annual!)} for each annual renewal. An S corporation pays a ${K.usd(s.scorp.fixed)} minimum excise tax, and its owner's salary carries unemployment tax at ${K.rate(s.suta.rate!)} up to ${K.usd(s.suta.wageBase!)} in the calculator; with a ${K.usd(50000)} salary on ${K.usd(120000)} of profit, the election saves about ${K.usd(s.cmp.savings)} a year. In the Portland area, city, county, regional and transit taxes come on top of all this.`,
+  body: (h) => `<p>The top rate of ${K.rate(top[1])} begins at ${K.usd(top[0])} of taxable income for a single filer, a level many established consultants pass (${h.ext(est, 'Oregon DOR, 2026 OR-ESTIMATE')}). Below it, the ${K.rate(b[2][1])} bracket covers most of a freelance income. The standard deduction is small, ${K.usd(s.income.std!.single)} single, and the personal exemption of ${K.usd(s.income.exemption!.single)} is a credit that disappears above ${K.usd(100000)} of federal AGI for a single filer. These are the department's indexed figures for 2026, published in October 2025, and the final return amounts may differ slightly. On ${K.usd(200000)} of profit, Oregon takes about ${K.usd(p200.stateTax)}.</p>
+${h.mini('stateGap', { a: 'oregon', b: 'washington' })}
+<h2>The Columbia River question</h2>
+<p>Washington, across the river, has no personal income tax, and the comparison above shows the difference on the same profit. It is not a free pass for Portland-area workers living in Vancouver: Oregon taxes nonresidents on income from work performed in Oregon, so a Washington resident who works on site for Oregon clients still files there. The ${h.a('state:washington', 'Washington page')} covers that side, including its business and occupation tax on gross receipts.</p>
+<h2>Portland, Multnomah County and the transit districts</h2>
+<p>Inside the Portland area, a self-employed person can owe the City of Portland Business License Tax (${blt.rateText} of net income), the Multnomah County Business Income Tax (${mcbit.rateText}), personal income taxes for Metro supportive housing and Multnomah's Preschool for All above high income thresholds, and the TriMet transit tax of ${trimet.rateText} on net self-employment earnings. Each has its own exemptions; the Portland tax, for instance, skips businesses below a gross receipts threshold that rose for 2026 (${h.ext(blt.url, 'Portland Revenue Division, business taxes')}). The ${h.a('local:oregon/portland', 'Portland page')} runs the full stack, and Eugene and Springfield have their own transit tax.</p>
+<h3>Estimates, the excise tax and the PTE-E</h3>
+<p>Quarterly estimates are due when you expect to owe ${K.usd(1000)} or more after withholding and credits, and the required payment is the lesser of 90% of this year's tax or 100% of last year's, with no higher bar for high earners (${h.ext(est, 'OR-ESTIMATE')}). An S corporation files an excise tax return and pays the ${K.usd(s.scorp.fixed)} minimum, which does not pass to the owners. Every entity type, sole proprietors included, also owes the Corporate Activity Tax once Oregon commercial activity passes ${K.usd(1000000)}: $250 plus 0.57% of the excess after a subtraction (${h.ext('https://www.oregon.gov/dor/programs/businesses/Pages/corporate-activity-tax.aspx', 'Oregon DOR, Corporate Activity Tax')}).</p>
+<p>The pass-through entity elective tax lets an S corporation or partnership pay 9% on the first ${K.usd(250000)} of distributive proceeds and 9.9% above, so owners can deduct state tax federally through the entity; a 2026 law extended it through tax years beginning before 2028, and for 2026 the first two estimated payments are both due June 15 (${h.ext(pte, 'Oregon DOR, PTE-E')}). The ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} handles the payroll part.</p>`,
+  faqs: [
+    { q: 'How much Oregon income tax does a freelancer pay on $75,000?', a: `About ${K.usd(s.ex75.stateTax)} for a single filer in 2026, after the ${K.usd(s.income.std!.single)} standard deduction and the ${K.usd(s.income.exemption!.single)} exemption credit, with most of the income taxed at ${K.rate(b[2][1])}. Federal income tax and self-employment tax bring the total to ${K.usd(s.ex75.total)}. Portland-area city, county and transit taxes are extra.` },
+    { q: 'Does an Oregon S corporation pay a minimum tax?', a: `Yes. An S corporation doing business in Oregon pays a ${K.usd(s.scorp.fixed)} minimum excise tax each year, which stays with the company rather than passing to the shareholders. The profit itself is taxed on the owners' returns. Above ${K.usd(1000000)} of Oregon commercial activity, the Corporate Activity Tax applies as well, to any business form.` },
+    { q: 'What is the Oregon PTE-E tax for S corporations?', a: `An elective tax that an S corporation or partnership can choose each year: 9% on the first ${K.usd(250000)} of distributive proceeds and 9.9% above, paid by the entity so the state tax becomes deductible federally. A 2026 law extended it to tax years beginning before 2028. For 2026, the first two estimated payments are both due June 15.` },
+  ],
+  related: ['local:oregon/portland', 'state:washington', 'state:idaho', 'state:california', 'llc-vs-s-corp'],
+});

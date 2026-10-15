@@ -6180,13 +6180,13 @@
     "slug": "cincinnati-municipal-income-tax",
     "place": "Cincinnati",
     "name": "Municipal income tax",
-    "rate": 0.018,
+    "rate": null,
     "rateText": "1.8%",
     "applies": "residents on all income incl. Schedule C/E/F net profit; nonresidents on Cincinnati-apportioned income",
     "threshold": "Resident credit for tax paid to other cities up to 1.8%",
     "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
     "quote": "The current Cincinnati income tax rate effective 10/02/20 is 1.8%.",
-    "selfEmployed": true
+    "selfEmployed": false
    },
    {
     "slug": "toledo-municipal-income-tax",
@@ -6204,13 +6204,13 @@
     "slug": "akron-municipal-income-tax",
     "place": "Akron",
     "name": "Municipal income tax",
-    "rate": 0.025,
+    "rate": null,
     "rateText": "2.5%",
     "applies": "residents, nonresidents working in Akron, business net profits (also its JEDDs)",
     "threshold": "Credit for tax paid to other municipalities up to 2.5%",
     "url": "https://www.akronohio.gov/departments/finance/individual_joint_filers.php",
     "quote": "2.5% effective January 1, 2018 (per search extract)",
-    "selfEmployed": true
+    "selfEmployed": false
    },
    {
     "slug": "dayton-municipal-income-tax",
@@ -6657,25 +6657,25 @@
     "slug": "trimet-district-portland-area-trimet-transit-self-employment",
     "place": "TriMet District (Portland area)",
     "name": "TriMet transit self-employment tax",
-    "rate": 0.008237,
+    "rate": null,
     "rateText": "0.8237%",
     "applies": "Net self-employment earnings from business carried on in the TriMet District (filed with Oregon DOR, Form OR-TM)",
     "threshold": "$400 exclusion of net self-employment earnings (per DOR form instructions for the parallel LTD tax; not re-read for OR-TM)",
     "url": "https://trimet.org/taxinfo/",
     "quote": "The transit tax rate is 0.8237% of the wages paid by an employer",
-    "selfEmployed": true
+    "selfEmployed": false
    },
    {
     "slug": "lane-transit-district-eugene-springfield-ltd-transit-self-em",
     "place": "Lane Transit District (Eugene/Springfield)",
     "name": "LTD transit self-employment tax",
-    "rate": 0.008,
+    "rate": null,
     "rateText": "0.8%",
     "applies": "Net self-employment earnings from business carried on in the Lane Transit District (Form OR-LTD)",
     "threshold": "Net self-employment earnings over $400; one $400 exclusion",
     "url": "https://www.oregon.gov/dor/forms/FormsPubs/form-or-ltd-instructions_560-001-1_2025.pdf",
     "quote": "The tax rate is 0.0080 (.8000 of 1 percent).",
-    "selfEmployed": true
+    "selfEmployed": false
    }
   ],
   "notable": [

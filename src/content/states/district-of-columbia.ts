@@ -1,0 +1,32 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('district-of-columbia');
+const b = s.income.brackets!.single;
+const rates = 'https://otr.cfo.dc.gov/page/dc-business-franchise-tax-rates';
+const faq = 'https://otr.cfo.dc.gov/page/franchise-tax-faqs';
+const dlcp = 'https://dlcp.dc.gov/page/dlcp-license-corporate-filing-fees';
+
+export default defineState({
+  slug: 'district-of-columbia',
+  title: 'DC Unincorporated Business Tax 2026: LLC and S Corp Rules',
+  description: `DC in 2026: an LLC owes the unincorporated business tax above ${K.usd(12000)} of receipts, S corps are taxed like C corps, and income tax runs ${K.rate(b[0][1])} to ${K.rate(b[b.length - 1][1])}.`,
+  intro: 'The District taxes many unincorporated businesses as businesses, on top of the owner\'s income tax, and it ignores the federal S election.',
+  resume: `In the District of Columbia an LLC costs ${K.usd(s.llc.formation!)} to register and ${K.usd(s.llc.annual!)} for each biennial report, plus a basic business license. The owner's profit is taxed on the DC individual return at rates from ${K.rate(b[0][1])} to ${K.rate(b[b.length - 1][1])}; on ${K.usd(75000)} of profit a single filer owes about ${K.usd(s.ex75.stateTax)} to the District and ${K.usd(s.ex75.total)} in all. Two District rules change the picture. Sole proprietorships, partnerships and LLCs with more than ${K.usd(12000)} of DC gross receipts owe the unincorporated business franchise tax as well, after a salary allowance for owners and a ${K.usd(5000)} exemption, unless more than 80% of their income comes from the owners' personal services. And DC does not recognize S corporations: an S corp files Form D-20 and pays the corporate franchise tax like a C corporation. The S election that saves federal payroll tax therefore buys no District relief, and the calculator's comparison here leaves that franchise tax out.`,
+  body: (h) => `<p>Washington is one of very few places in the country that taxes an unincorporated business as a taxpayer in its own right. The unincorporated business franchise tax, filed on Form D-30, reaches sole proprietorships, partnerships and LLCs carrying on business in the District once their DC gross receipts pass ${K.usd(12000)} (${h.ext(rates, 'OTR, business franchise tax rates')}). Before the tax applies, the business deducts a salary allowance of 30% of net income for its owners and a ${K.usd(5000)} exemption. The minimum is ${K.usd(250)} when DC gross receipts are ${K.usd(1000000)} or less and ${K.usd(1000)} above. The rate is published by the Office of Tax and Revenue on the same page; its table runs through 2025, so this page does not print a 2026 figure and the calculator above does not add the tax.</p>
+${h.mini('setAside', { s: 'district-of-columbia' })}
+<h2>The personal services exemption</h2>
+<p>Many freelancers never pay it. A business is exempt when more than 80% of its gross income comes from the personal services of its owners and capital is not a material income-producing factor, and also when the trade or profession cannot by law be carried on as a corporation. A writer, developer or consultant working alone with a laptop is the typical case. A business that resells goods or relies on equipment is not, and owes the tax on top of the owner's income tax.</p>
+<h2>No S corporation in the District</h2>
+<p>The District does not follow the federal S election. An S corporation files Form D-20 and pays the corporation franchise tax exactly as a C corporation would, with the same ${K.usd(250)} and ${K.usd(1000)} minimums (${h.ext(faq, 'OTR, franchise tax FAQs')}). The federal saving on self-employment tax still exists, but part of it is handed back to the District. The ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} does not model the DC franchise tax, so its result for the District overstates the saving; the ${h.a('c-corporation', 'C corporation guide')} explains how a tax at the company level works.</p>
+<h3>Estimated tax from $100</h3>
+<p>The threshold for individual estimated payments is unusually low: you are expected to pay during the year once your DC tax liability is greater than $100 (${h.ext('https://otr.cfo.dc.gov/page/underpayment-estimated-tax-interest', 'OTR, underpayment interest')}). A business filing D-20 or D-30 makes its own estimated franchise tax payments when it expects to owe more than ${K.usd(1000)}. The four individual dates are the federal ones, listed in the ${h.a('quarterly-estimated-taxes', 'quarterly estimated tax guide')}.</p>
+<h3>Licenses and reports</h3>
+<p>Registration with the Department of Licensing and Consumer Protection costs ${K.usd(s.llc.formation!)}, and the LLC's biennial report, due April 1 of each reporting year, costs ${K.usd(s.llc.annual!)}. Most businesses also need a basic business license: ${K.usd(99)} for a two-year general license, ${K.usd(49)} for six months or ${K.usd(198)} for four years (${h.ext(dlcp, 'DLCP fees')}).</p>`,
+  faqs: [
+    { q: 'Who pays the District of Columbia unincorporated business tax?', a: `Sole proprietorships, partnerships and LLCs doing business in DC with gross receipts over ${K.usd(12000)}. The tax applies after a salary allowance of 30% of net income for owners and a ${K.usd(5000)} exemption, with a minimum of ${K.usd(250)}, or ${K.usd(1000)} above ${K.usd(1000000)} of receipts. A business whose income comes more than 80% from its owners' personal services, with no material capital, is exempt.` },
+    { q: 'Does the District of Columbia recognize the S corporation election?', a: 'No. An S corporation doing business in DC files Form D-20 and pays the corporation franchise tax like any C corporation, with a minimum of $250 or $1,000 depending on gross receipts. The federal S election still removes self-employment tax on distributions, but the company owes District tax on its own income.' },
+    { q: 'When must a District of Columbia freelancer pay estimated tax?', a: 'As soon as the expected DC tax liability for the year is greater than $100, a far lower threshold than the federal one. Payments follow the federal calendar of April, June, September and January. A business filing a D-20 or D-30 franchise tax return pays its own estimates once its liability is expected to exceed $1,000.' },
+  ],
+  related: ['llc-vs-s-corp', 'c-corporation', 'local-business-taxes', 'state:delaware', 'state:connecticut'],
+});

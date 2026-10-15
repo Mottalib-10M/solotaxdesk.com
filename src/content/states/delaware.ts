@@ -1,0 +1,32 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('delaware');
+const b = s.income.brackets!.single;
+const alt = 'https://corp.delaware.gov/alt-entitytaxinstructions/';
+const grt = 'https://revenue.delaware.gov/business-tax-forms/gross-receipts-tax-faqs/';
+const est = 'https://revenuefiles.delaware.gov/2025/PITForms_Instructions/Instructions/PIT-EST_Instructions_2026-01.pdf';
+
+export default defineState({
+  slug: 'delaware',
+  title: `Delaware LLC ${K.usd(s.llc.minTax!)} Tax 2026: New Rate, Income Tax, Receipts`,
+  description: `Delaware raised its LLC annual tax to ${K.usd(s.llc.minTax!)} for 2026, payable June 1, 2027. Add income tax up to ${K.rate(b[b.length - 1][1])} and a gross receipts tax above a monthly threshold.`,
+  intro: 'Delaware is famous for incorporations, but a freelancer who actually lives and works there meets a higher LLC tax in 2026 and a tax on gross receipts.',
+  resume: `A Delaware LLC costs ${K.usd(s.llc.formation!)} to form and then owes an annual LLC tax that House Bill 400 raised to ${K.usd(s.llc.minTax!)} starting with tax year 2026; the first payment at the new amount is due June 1, 2027, and it is not prorated for a partial year. There is no annual report for an LLC, so the tax is the whole yearly cost, ${K.usd(s.cost5)} over five years. A resident owner also pays Delaware income tax on the profit, at rates rising to ${K.rate(b[b.length - 1][1])} above ${K.usd(b[b.length - 1][0])}: about ${K.usd(s.ex75.stateTax)} on ${K.usd(75000)} of profit for a single filer, ${K.usd(s.ex75.total)} with federal tax. Delaware has no sales tax but taxes gross receipts of every business form, sole proprietors included, above an exclusion that generally starts at $100,000 a month. The state follows the S election, and with ${K.usd(120000)} of profit and a ${K.usd(50000)} salary it saves about ${K.usd(s.cmp.savings)} a year.`,
+  body: (h) => `<p>For years the Delaware LLC tax was $300. House Bill 400, signed on May 21, 2026, lifted it to ${K.usd(s.llc.minTax!)} with effect from January 1, 2026, so the payment due on June 1, 2027 for tax year 2026 is the first one at the new amount (${h.ext(alt, 'Delaware Division of Corporations, LLC tax instructions')}). The same law raised expedite fees from August 1, 2026 (${h.ext('https://corpfiles.delaware.gov/2026_Legislation/House_Bill_400.pdf', 'HB 400 text')}). The tax is flat: it does not depend on income or members, it is not prorated, and it is owed even by a company formed in December. Delaware LLCs file no annual report, so missing the June 1 date is the only way to fall out of good standing.</p>
+${h.mini('stateLlc', { s: 'delaware' })}
+<h2>A Delaware LLC is not a Delaware tax resident</h2>
+<p>The ${K.usd(s.llc.minTax!)} is what an owner in another state pays to keep a Delaware company. Someone living in Wilmington or Dover owes much more than that, because Delaware taxes its residents' income at rates from ${K.rate(b[1][1])} to ${K.rate(b[b.length - 1][1])}, after a ${K.usd(s.income.std!.single)} standard deduction and a ${K.usd(s.income.exemption!.single)} personal credit for a single filer. An LLC formed in Delaware by an owner living elsewhere usually also registers as a foreign LLC in the home state and pays that state's fees. The ${h.a('llc-cost', 'LLC cost by state')} page compares both sides.</p>
+<h2>Gross receipts tax: Delaware's substitute for a sales tax</h2>
+<p>Delaware charges no sales tax and taxes sellers instead. The gross receipts tax applies to sole proprietors and LLCs as well as corporations, at rates from 0.0945% to 1.9914% depending on the activity, after an exclusion that generally starts at $100,000 of receipts a month (${h.ext(grt, 'Division of Revenue, gross receipts tax FAQ')}). A consultant billing well under that amount owes little or nothing. A business near the threshold watches its monthly receipts, since the tax is on revenue rather than profit.</p>
+<h3>April 30 for the first installment</h3>
+<p>Estimated payments are required when tax beyond withholding can reasonably be expected to exceed $800. The first one is due April 30, two weeks after the federal date, because Delaware's return is due then; the others follow the federal calendar. Underpayment costs 1.5% a month, and paying 100% of last year's tax, or 110% above $150,000 of federal AGI, avoids it (${h.ext(est, 'Division of Revenue, 2026 estimated tax instructions')}). See the ${h.a('quarterly-estimated-taxes', 'quarterly estimated tax guide')} for the federal rules.</p>
+<h3>Wilmington's own tax</h3>
+<p>Wilmington levies a wage tax on people working in the city and a net profits tax on sole proprietors and partnerships doing business within city limits, filed on Form WCWT-6. Its current rate could not be read on the city's site, so the calculator does not include it; the ${h.ext('https://www.wilmingtonde.gov/residents/earned-income-tax-and-net-profits-tax', 'City of Wilmington tax page')} has the details. The ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} handles the payroll side with Delaware selected.</p>`,
+  faqs: [
+    { q: 'How much is the Delaware LLC annual tax for 2026?', a: `${K.usd(s.llc.minTax!)}. House Bill 400, signed May 21, 2026, raised it from $300 with effect from January 1, 2026. The tax for 2026 is due on or before June 1, 2027. It is a flat amount, not prorated for a company formed during the year, and Delaware LLCs file no annual report alongside it.` },
+    { q: 'Do Delaware sole proprietors pay the gross receipts tax?', a: 'Yes. Delaware applies its gross receipts tax to every business form, including sole proprietorships and LLCs. Rates range from 0.0945% to 1.9914% of gross revenue by type of activity, and an exclusion that generally begins at $100,000 per month means many small service businesses owe little. The tax replaces the sales tax Delaware does not have.' },
+    { q: 'When is the first Delaware estimated tax payment due in 2026?', a: 'On April 30, 2026, not April 15, because Delaware individual returns are due April 30. The later installments fall on June 15, September 15 and January 15. Payments are required when tax beyond withholding is expected to exceed $800, and the penalty for underpaying is 1.5% per month.' },
+  ],
+  related: ['llc-cost', 'quarterly-estimated-taxes', 'llc-vs-s-corp', 'state:connecticut', 'state:district-of-columbia'],
+});

@@ -1,0 +1,32 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('nebraska');
+const b = s.income.brackets!.single;
+const top = b[b.length - 1][1];
+const chrono = 'https://revenue.nebraska.gov/sites/default/files/doc/research/chronology/4-607table1.pdf';
+const p45 = K.solo({ profit: 45000, filing: 'single', state: s });
+const j120 = K.solo({ profit: 120000, filing: 'mfj', state: s });
+
+export default defineState({
+  slug: 'nebraska',
+  title: `Nebraska LLC and Freelancer Taxes 2026: Top Rate ${K.rate(top)}`,
+  description: `Nebraska 2026: a ${K.usd(s.llc.formation!)} LLC certificate, a report every two years, a top income tax rate cut to ${K.rate(top)}, and what the S corp election saves a one-owner firm.`,
+  intro: 'Nebraska cut its top income tax rate again for 2026 and asks LLCs for a report only in odd-numbered years.',
+  resume: `Nebraska charges ${K.usd(s.llc.formation!)} to file a Certificate of Organization online, then asks for a biennial report in odd-numbered years rather than an annual one, and puts no franchise or minimum tax on LLCs. Business profit is taxed on the owner's return, where the 2026 brackets run from ${K.rate(b[0][1])} to ${K.rate(top)}, after a standard deduction of ${K.usd(s.income.std!.single)} for a single filer and a personal exemption credit of ${K.usd(s.income.exemption!.single)}. On ${K.usd(75000)} of profit, a single filer owes about ${K.usd(s.ex75.stateTax)} to Nebraska and ${K.usd(s.ex75.total)} in total once self-employment tax and federal income tax are counted, so roughly ${K.rate(s.ex75.setAside)} of profit should go into a tax account. Nebraska follows the federal S election; at ${K.usd(120000)} of profit and a ${K.usd(50000)} salary, the election saves about ${K.usd(s.cmp.savings)} a year after ${K.usd(2000)} of payroll costs. The biennial report fee itself could not be confirmed on the Secretary of State fee page.`,
+  body: (h) => `<p>For 2026 the top Nebraska rate is ${K.rate(top)}, down from 5.20% in 2025, and current law schedules a further cut to 3.99% from 2027 (${h.ext(chrono, 'Nebraska DOR, tax rate chronology')}). That rate starts early: a single filer reaches it at ${K.usd(b[2][0])} of taxable income, so for most full-time freelancers nearly all of the profit above the standard deduction is taxed at ${K.rate(top)}. The cuts matter more than the bracket edges here.</p>
+${h.mini('stateQuick', { s: 'nebraska', p: 70000 })}
+<h2>From profit to Nebraska tax</h2>
+<p>Nebraska starts from federal adjusted gross income, which already excludes half of your self-employment tax, health premiums paid as a self-employed person and retirement contributions. It then subtracts its own standard deduction, ${K.usd(s.income.std!.single)} single or ${K.usd(s.income.std!.mfj)} for a married couple, applies the brackets, and takes ${K.usd(s.income.exemption!.single)} per person off the result as a credit. The federal QBI deduction does not carry over, since it comes after AGI. A part-time consultant clearing ${K.usd(45000)} pays about ${K.usd(p45.stateTax)} to Nebraska; a married couple with ${K.usd(120000)} of profit and no other income pays about ${K.usd(j120.stateTax)}. The state uses the federal quarterly calendar for estimates, so the ${h.a('quarterly-estimated-taxes', 'quarterly estimated tax guide')} applies to both payments.</p>
+<h2>A newspaper notice and a report every other year</h2>
+<p>Two features set a Nebraska LLC apart from its neighbors. First, a new company is expected to publish a notice of organization in a legal newspaper near its designated office and then file proof of publication with the Secretary of State, whose fee page lists that filing alongside the ${K.usd(s.llc.formation!)} online certificate (${h.ext('https://sos.nebraska.gov/business-services/forms-and-fee-information', 'Nebraska SOS, forms and fees')}). The newspaper charges are separate and vary by paper. The publication statute could only be read through an extract today, so check the current wording before you budget for it.</p>
+<p>Second, the recurring filing is a biennial report, due by April 1 of each odd-numbered year and delinquent after June 16, after which the state can dissolve the company administratively (${h.ext('https://sos.nebraska.gov/business-services/annualbiennial-reporting', 'Nebraska SOS, annual and biennial reporting')}). Missing one report can therefore cost the LLC its standing, not just a late fee. The ${h.a('llc-cost', 'LLC cost comparison')} shows how the recurring bill compares across states.</p>
+<h3>Payroll for an S corporation owner</h3>
+<p>Nebraska follows the federal S election, so the corporation's profit flows to the owner's return like an LLC's. Whether Nebraska adds any entity-level tax for S corporations, or offers an elective pass-through entity tax, could not be verified on an official page today; the calculator adds none. Paying yourself a salary also makes the company a Nebraska employer for unemployment insurance, a cost that grows with the salary. The ${h.a('reasonable-salary', 'reasonable salary calculator')} shows how the saving moves as the salary rises.</p>`,
+  faqs: [
+    { q: 'How often does a Nebraska LLC file a report with the state?', a: `Every two years. Nebraska LLCs file a biennial report in odd-numbered years, due by April 1 and delinquent after June 16, when administrative dissolution can follow. The state charges no franchise or minimum tax on LLCs, so after the ${K.usd(s.llc.formation!)} online certificate the recurring cost is that report fee, which the Secretary of State publishes.` },
+    { q: 'What is the top Nebraska income tax rate for 2026?', a: `${K.rate(top)} for tax year 2026, down from 5.20% in 2025, with a cut to 3.99% scheduled for 2027 under current law. A single filer reaches the top rate at ${K.usd(b[2][0])} of taxable income. On ${K.usd(75000)} of freelance profit, the Nebraska share is about ${K.usd(s.ex75.stateTax)} for a single filer.` },
+    { q: 'Does a new Nebraska LLC have to publish a newspaper notice?', a: 'Nebraska expects a new LLC to publish a notice of organization in a legal newspaper near its designated office and then file proof of publication with the Secretary of State, which lists that filing on its fee page. The newspaper bills separately. A 2026 bill proposed an electronic option; its status was not verified, so ask the Secretary of State.' },
+  ],
+  related: ['state:iowa', 'state:kansas', 'state:south-dakota', 'quarterly-estimated-taxes', 'llc-cost'],
+});

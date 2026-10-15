@@ -9,7 +9,9 @@ export const PLANNED_GUIDES = [
   'llc-vs-corporation', 'business-structure', 'sole-proprietorship-vs-llc', 'llc-taxes', 'single-member-llc', 'llc-vs-partnership',
   'llc-cost', 'state-income-tax', 'local-business-taxes',
 ];
-export const PLANNED_LOCAL: Record<string, string[]> = {};
+export const PLANNED_LOCAL: Record<string, string[]> = {
+  'new-york': ['new-york-city'], pennsylvania: ['philadelphia'], oregon: ['portland'], ohio: ['columbus'], missouri: ['kansas-city'], michigan: ['detroit'], kentucky: ['lexington'],
+};
 export const PLANNED_IDS = new Set<string>([
   ...PLANNED_GUIDES, ...STATES.map((s) => `state:${s.slug}`),
   ...Object.entries(PLANNED_LOCAL).flatMap(([s, cs]) => cs.map((c) => `local:${s}/${c}`)),

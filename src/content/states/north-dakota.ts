@@ -1,0 +1,31 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('north-dakota');
+const sos = 'https://www.sos.nd.gov/business/business-services/business-structures/limited-liability-company-llc';
+const tax = 'https://www.tax.nd.gov/individual-income-tax';
+const fed75 = K.solo({ profit: 75000, filing: 'single' });
+const fed120 = K.solo({ profit: 120000, filing: 'single' });
+const cmp = K.compare({ profit: 120000, salary: 50000, filing: 'single', adminCost: 2000, llcFees: s.yearly });
+
+export default defineState({
+  slug: 'north-dakota',
+  title: 'North Dakota Self-Employed Taxes 2026: LLC Fees and Rates',
+  description: `North Dakota 2026: a ${K.usd(s.llc.formation!)} LLC filing, a ${K.usd(s.llc.annual!)} annual report due November 15, no franchise tax, and one of the lightest state income taxes on 1099 profit.`,
+  intro: 'North Dakota pairs a low LLC upkeep with an income tax so light that many freelancers owe little or nothing to the state.',
+  resume: `North Dakota charges ${K.usd(s.llc.formation!)} to register an LLC and ${K.usd(s.llc.annual!)} for each annual report, due by November 15, which brings the state cost to ${K.usd(s.cost5)} over five years with no franchise tax and no publication. The income tax starts from federal taxable income and has a zero-rate first bracket, so a large part of a typical freelance profit is taxed at nothing. The 2026 brackets had not been published on the Office of State Tax Commissioner's page today, which still shows 2025, so this page states no North Dakota tax amount and the calculator leaves the state tax out. The federal part on ${K.usd(75000)} of profit is ${K.usd(fed75.total)} for a single filer, ${K.usd(fed75.quarterly)} a quarter, and ${K.usd(fed120.total)} at ${K.usd(120000)}. North Dakota follows the federal S election; at ${K.usd(120000)} of profit and a ${K.usd(50000)} salary, the election saves about ${K.usd(cmp.savings)} a year federally after the state fees and ${K.usd(2000)} of payroll costs.`,
+  body: (h) => `<p>The annual report deadline is the first thing a new North Dakota LLC owner tends to miss, because it does not follow the usual spring calendar. A regular LLC or PLLC files its report by November 15 each year, while a farm or ranch LLC files by April 15 (${h.ext(sos, 'ND Secretary of State, LLC')}). The fee is ${K.usd(s.llc.annual!)}, after ${K.usd(s.llc.formation!)} to register the company. North Dakota requires no newspaper notice and charges no franchise or minimum tax on LLCs.</p>
+${h.mini('llcFees', { s: 'north-dakota' })}
+<h2>A state tax that starts at zero</h2>
+<p>North Dakota computes its income tax on federal taxable income, so the federal standard deduction and the QBI deduction already reduce the base, and then applies a first bracket taxed at 0%. Above it come two low rates. The structure means many single freelancers with moderate profit owe little to the state, and couples even less because their zero bracket is wider. The brackets are indexed every year, though, and the Tax Commissioner's page read today still showed the 2025 figures (${h.ext(tax, 'ND Tax Commissioner, individual income tax')}). Until the 2026 schedule appears there, this page quotes none of the rates and the calculator shows federal tax only. The ${h.a('state-income-tax', 'state income tax comparison')} will place North Dakota among the others once it is confirmed.</p>
+<h2>Estimated payments and the federal link</h2>
+<p>North Dakota ties its estimate rule to the federal one: you make state estimated payments if you are required to pay federal estimated tax and expect your North Dakota net tax to exceed $1,000 (${h.ext(tax, 'ND Tax Commissioner')}). With a zero bracket at the bottom, a single owner can be well into federal estimates while owing the state far less than that, in which case no state installment is due. The page read today did not state the due dates; the federal ones are in the ${h.a('estimated-tax-due-dates', 'estimated tax due dates')} guide.</p>
+<h3>S corporation owners in North Dakota</h3>
+<p>The state follows the federal S election and taxes the income on the owner's return. Whether North Dakota adds an entity-level tax on S corporations, or offers an elective pass-through entity tax, could not be verified today, and the calculator adds none. Running payroll for yourself also means registering with Job Service North Dakota for unemployment insurance; its 2026 wage base and new-employer rate were not found on the pages read. With a federal saving of about ${K.usd(cmp.savings)} at ${K.usd(120000)} of profit and the light state tax, the payroll and filing costs carry more weight in the decision than any North Dakota rule. The ${h.a('s-corp-tax-savings-calculator', 'S corp savings calculator')} lets you replace the ${K.usd(2000)} placeholder with your own quotes. Neighboring ${h.a('state:minnesota', 'Minnesota')} works very differently.</p>`,
+  faqs: [
+    { q: 'When is the North Dakota LLC annual report due?', a: `By November 15 each year for a regular LLC or PLLC, and by April 15 for a farm or ranch LLC. The fee is ${K.usd(s.llc.annual!)}. North Dakota charges ${K.usd(s.llc.formation!)} to register the LLC and has no franchise tax, so five years of state fees come to ${K.usd(s.cost5)}. The late fee was not captured today.` },
+    { q: 'Does North Dakota have a zero percent income tax bracket?', a: 'Yes. North Dakota taxes the first slice of federal taxable income at 0%, with a wider slice for married couples, and applies two low rates above it. The brackets are indexed each year and the 2026 figures were not yet on the Tax Commissioner page read today, so the calculator leaves North Dakota tax out rather than use 2025 numbers.' },
+    { q: 'Who must make North Dakota estimated tax payments?', a: 'Anyone required to pay federal estimated tax who also expects a North Dakota net tax liability above $1,000 for the year. Because the first bracket is taxed at 0%, many self-employed people below a moderate profit owe the state too little to need quarterly payments, even while they pay federal estimates.' },
+  ],
+  related: ['state:minnesota', 'state:south-dakota', 'state:montana', 'llc-cost', 'estimated-tax-due-dates'],
+});

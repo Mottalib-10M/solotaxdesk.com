@@ -1,0 +1,32 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('alaska');
+const ui = 'https://labor.alaska.gov/estax/2026-industry-rates.html';
+const lic = 'https://www.commerce.alaska.gov/web/portals/5/pub/BusinessLicenseStatutes.pdf';
+const corp = 'https://www.commerce.alaska.gov/web/cbpl/Corporations/CorporationFormsFees';
+
+export default defineState({
+  slug: 'alaska',
+  title: 'Alaska Self-Employed Tax 2026: No Income Tax, LLC Costs',
+  description: `Alaska in 2026: no state income tax, so ${K.usd(75000)} of freelance profit costs ${K.usd(s.ex75.total)} in federal and SE tax alone, plus a business license and LLC report.`,
+  intro: 'Alaska taxes neither personal income nor pass-through companies, which leaves federal tax as nearly the whole bill for a freelancer.',
+  resume: `Alaska has no individual income tax and puts no franchise or income tax on an LLC or an S corporation, so a self-employed person there pays federal tax and nothing comparable to the state. On ${K.usd(75000)} of net profit, a single filer owes about ${K.usd(s.ex75.total)} in all, of which ${K.usd(s.ex75.se.total)} is self-employment tax; at ${K.usd(120000)} the figure is ${K.usd(s.ex120.total)}. The state costs are administrative: a business license that every business needs, the LLC's formation filing, and a biennial report due every other January with the Division of Corporations, whose current fees this page sends you to read at the source because they could not be confirmed. The S corp angle has one Alaska twist. Unemployment insurance is withheld from employees too, so the owner's own salary carries both an employer and an employee contribution. With ${K.usd(120000)} of profit and a ${K.usd(50000)} salary, the election still saves about ${K.usd(s.cmp.savings)} a year.`,
+  body: (h) => `<p>Most states that skip a personal income tax find the money somewhere else in the business world: a gross receipts tax, a franchise tax, a fee that climbs with revenue. Alaska does not. Its revenue rests largely on oil, so a sole proprietor, a single-member LLC and an S corporation all reach the end of the year owing the state no tax on profit at all. What changes from one structure to another is federal tax and payroll, which is why the set-aside rate below is close to the federal one.</p>
+${h.mini('setAside', { s: 'alaska' })}
+<h2>The business license is the one recurring charge</h2>
+<p>Every business operating in Alaska needs a state business license, whatever its legal form. It costs $50 a year or $100 for two years, and expires on December 31 (${h.ext(lic, 'Alaska business license statutes and fees')}). A sole proprietor aged 65 or older, or a disabled veteran, pays half, but that reduction is not open to an LLC. If you invoice clients from Anchorage or Fairbanks under your own name, the license is the whole state paperwork for the year.</p>
+<h3>LLC filings with the Division of Corporations</h3>
+<p>An LLC files Articles of Organization (Form 08-0484) and then a biennial report, due January 2 of each reporting year, with a late fee from February 2. The Division's fee page lists one amount for the articles while the regulation sets a lower one, apparently because the first biennial fee is collected at formation, and the Division's site could not be read directly. So the at-a-glance table above shows the fee as not verified, and the ${h.ext(corp, 'Division of Corporations forms and fees page')} is the place to confirm both amounts before you file. The ${h.a('llc-cost', 'LLC cost comparison')} sets Alaska next to the states whose fees were read.</p>
+<h2>Payroll for an S corp owner</h2>
+<p>Alaska is one of the few states where workers pay into unemployment insurance alongside their employer. In 2026 the new employer rate is ${K.rate(s.suta.rate!)} for every industry, and employees contribute 0.50% of wages, both on the first ${K.usd(s.suta.wageBase!)} (${h.ext(ui, 'Alaska Department of Labor, 2026 rates')}). An owner who elects S status and pays a salary meets both sides on that salary. The wage base is far higher than in most states, so the unemployment cost on a ${K.usd(50000)} salary is a few hundred dollars rather than tens.</p>
+<p>The rest of the S corp arithmetic is federal. Self-employment tax falls away on the profit above the salary, the company runs payroll and files Form 1120-S, and the QBI deduction shrinks because the salary no longer counts as business income. With no state tax on either side, the ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} gives a cleaner comparison in Alaska than almost anywhere.</p>
+<h3>No state quarterly payments</h3>
+<p>Without a personal income tax there are no Alaska estimated payments to schedule. Federal Form 1040-ES still applies: once you expect to owe ${K.usd(K.P.estimated.minimumOwed)} or more for the year, the four federal installments are due, and the ${h.a('how-much-to-set-aside', 'set-aside guide')} turns that into a share of each invoice. Borough and city sales taxes exist in parts of the state, but they are charged on sales, not on your profit, and sit outside this page.</p>`,
+  faqs: [
+    { q: 'Does Alaska tax the income of a single-member LLC?', a: 'No. Alaska has no individual income tax and no franchise or income tax on LLCs taxed as partnerships or disregarded entities, or on S corporations. The owner reports the profit only on the federal return. The state charges a business license and the LLC files a biennial report with the Division of Corporations, but neither is measured on profit.' },
+    { q: 'How much does an Alaska business license cost in 2026?', a: 'A state business license costs $50 for one year or $100 for a two-year license, and every license expires on December 31. Sole proprietors aged 65 or older and disabled veterans pay $25 or $50, a reduction an LLC cannot claim. The license is required for any business activity in Alaska, separately from the LLC filing.' },
+    { q: 'Why does an Alaska S corp owner pay unemployment tax on both sides?', a: `Alaska collects unemployment insurance from employees as well as employers. In 2026 a new employer pays ${K.rate(s.suta.rate!)} and the employee 0.50%, each on wages up to ${K.usd(s.suta.wageBase!)}. An owner on the S corp payroll is an employee of the company, so both contributions apply to the salary they pay themselves.` },
+  ],
+  related: ['llc-vs-s-corp', 'how-much-to-set-aside', 'llc-cost', 'state:washington', 'state:hawaii'],
+});

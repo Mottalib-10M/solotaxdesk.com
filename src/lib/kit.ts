@@ -14,9 +14,11 @@ import * as E from './engine/tax';
 /** A state with a few computed examples, for prose. */
 function st(slug: string) {
   const s = bySlug(slug);
-  const ex75 = E.solo({ profit: 75000, filing: 'single', state: s });
-  const ex120 = E.solo({ profit: 120000, filing: 'single', state: s });
-  const cmp = E.compareScorp({ profit: 120000, salary: 50000, filing: 'single', state: s, adminCost: 2000, llcFees: E.llcYearly(s) });
+  // An unverified state income tax is left out of every example, as in the calculators.
+  const u: StateFull = s.income.verified || s.income.type === 'none' ? s : { ...s, income: { ...s.income, type: 'none' } };
+  const ex75 = E.solo({ profit: 75000, filing: 'single', state: u });
+  const ex120 = E.solo({ profit: 120000, filing: 'single', state: u });
+  const cmp = E.compareScorp({ profit: 120000, salary: 50000, filing: 'single', state: u, adminCost: 2000, llcFees: E.llcYearly(s) });
   return { ...s, yearly: E.llcYearly(s), cost5: E.llcCost(s, 5), first: E.llcCost(s, 1), ex75, ex120, cmp,
     stateOn75: ex75.stateTax, stateOn120: ex120.stateTax };
 }

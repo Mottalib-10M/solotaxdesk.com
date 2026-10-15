@@ -1,0 +1,30 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('south-dakota');
+const ten = K.llcCost(s, 10);
+const big = K.solo({ profit: 180000, filing: 'mfj', state: s });
+
+export default defineState({
+  slug: 'south-dakota',
+  title: `LLC Cost South Dakota 2026: ${K.usd(s.llc.annual)} a Year, No Income Tax`,
+  description: `South Dakota in 2026: an LLC costs ${K.usd(s.llc.formation)} online and ${K.usd(s.llc.annual)} a year, with no state income tax, so a freelancer pays federal tax alone. See the full numbers.`,
+  intro: `South Dakota charges a self-employed resident nothing on income, so the only recurring state bill for a small LLC is the ${K.usd(s.llc.annual)} annual report.`,
+  resume: `A South Dakota freelancer owes no state income tax in 2026, and an LLC adds only two filings: ${K.usd(s.llc.formation)} for the articles of organization when filed online, then ${K.usd(s.llc.annual)} for each annual report. The first year costs ${K.usd(s.first)}, five years ${K.usd(s.cost5)} and ten years ${K.usd(ten)}, with no franchise tax and no minimum tax on top. What remains is federal: on ${K.usd(75000)} of profit, a single filer pays about ${K.usd(s.ex75.total)} of federal income tax and self-employment tax, roughly ${K.rate(s.ex75.setAside)} of profit to set aside, or ${K.usd(s.ex75.quarterly)} per quarterly payment. Because there is no state return, the S corporation election changes only federal and payroll taxes; at ${K.usd(120000)} of profit and a ${K.usd(50000)} salary it saves about ${K.usd(s.cmp.savings)} after ${K.usd(2000)} of payroll costs and ${K.usd(s.cmp.scorp.suta)} of state unemployment tax. Forming the LLC here does not change where a nonresident owes income tax.`,
+  body: (h) => `<p>What South Dakota leaves out is the story here. There is no tax on wages or business income, no corporate income tax for ordinary companies and no franchise tax on LLCs. The Secretary of State's ${h.ext('https://sdsos.gov/general-information/filing-fees.aspx', 'fee schedule')} lists ${K.usd(s.llc.formation)} for articles filed online and ${K.usd(165)} on paper, then ${K.usd(s.llc.annual)} a year. Nothing else from the state reaches a one-owner LLC that has no employees.</p>
+${h.mini('llcFees', { s: 'south-dakota' })}
+<h2>Your tax bill is the federal one</h2>
+<p>With no state return, the ${h.a('quarterly-estimated-taxes', 'quarterly estimates')} you send are federal only. For a married couple filing jointly with ${K.usd(180000)} of business profit, the total comes to about ${K.usd(big.total)}, of which ${K.usd(big.se.total)} is self-employment tax, the 15.3% Social Security and Medicare charge on ${K.dec(K.P.se.factor * 100, 2)}% of profit. That charge is the largest single line for most freelancers below the Social Security wage base of ${K.usd(K.P.se.wageBase['2026'])}, and it is the reason the S corporation question comes up at all.</p>
+<h3>When the S corp adds a South Dakota payroll account</h3>
+<p>Electing S status means paying yourself a salary, and a salary means registering with the state's Reemployment Assistance program. A new employer outside construction pays ${K.rate(s.suta.rate)} on the first ${K.usd(s.suta.wageBase)} of each employee's wages, plus an investment fee of 0.55% listed by the ${h.ext('https://dlr.sd.gov/ra/businesses/default.aspx', 'Department of Labor and Regulation')}. On one owner salary that is a small sum, and the ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} includes it when you pick South Dakota.</p>
+<h2>A new choice for the annual report date</h2>
+<p>Under the current statute, the first report is due before the first day of the second month of the year after formation, then on that same date each year. From January 1, 2027, ${h.ext('https://sdlegislature.gov/api/Statutes/59-11-25.html', 'SDCL 59-11-25')} as amended lets each company choose between its anniversary month and January 31 every year. Owners who run several entities can line them all up on one date, which makes missed filings less likely.</p>
+<h2>Comparing with the neighbors</h2>
+<p>South Dakota shares the no-income-tax status with ${h.a('state:wyoming', 'Wyoming')}, and both keep LLC upkeep in the double digits each year. ${h.a('state:north-dakota', 'North Dakota')} next door does tax income, at low rates. For a remote worker deciding where to base a business, the gap is mostly the state income tax, since federal tax and self-employment tax are identical everywhere. Residency is a question of where you live and work, not where the LLC is registered: forming an LLC here while living in another state does not move your income out of that state's reach.</p>`,
+  faqs: [
+    { q: 'How much does it cost to keep an LLC in South Dakota?', a: `The articles of organization cost ${K.usd(s.llc.formation)} filed online and the annual report ${K.usd(s.llc.annual)} each year after. South Dakota has no franchise tax or minimum tax on LLCs, so ten years of state fees come to ${K.usd(ten)}. A registered agent service, if you use one, is a private cost not counted here.` },
+    { q: 'Do South Dakota self-employed residents file a state income tax return?', a: `No. South Dakota has no individual income tax, so there is no state return and no state estimated payment. Your 2026 obligations are federal: income tax, self-employment tax and the four quarterly estimates. On ${K.usd(75000)} of profit a single filer sets aside about ${K.rate(s.ex75.setAside)} of profit for those.` },
+    { q: 'What unemployment tax does a South Dakota S corporation pay on the owner salary?', a: `A new non-construction employer pays ${K.rate(s.suta.rate)} on the first ${K.usd(s.suta.wageBase)} of wages per employee in 2026, plus a 0.55% investment fee, according to the Department of Labor and Regulation. On a salary of ${K.usd(50000)} the state charge is about ${K.usd(s.cmp.scorp.suta)} before that fee.` },
+  ],
+  related: ['llc-cost', 'llc-vs-s-corp', 'how-much-to-set-aside', 'state:wyoming', 'state:north-dakota'],
+});

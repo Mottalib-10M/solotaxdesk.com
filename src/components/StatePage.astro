@@ -43,7 +43,7 @@ const keyRows: Array<[string, string]> = [
   ...(s.llc.minTax ? [[s.llc.minTaxName ?? 'Minimum tax', `${K.usd(s.llc.minTax)} a year`] as [string, string]] : []),
   ['Income tax', inc.type === 'none' ? 'none on wages or business income' : inc.type === 'interest_dividends_only' ? 'interest and dividends only' : !inc.verified ? 'see the state revenue department' : inc.type === 'flat' ? `flat ${pct(inc.flat ?? 0)}` : `${pct(inc.brackets!.single[0][1])} to ${pct(inc.brackets!.single[inc.brackets!.single.length - 1][1])}`],
   ['S corporation election', s.scorp.recognized === 'yes' ? 'followed by the state' : s.scorp.recognized === 'no' ? 'not recognized' : 'followed, with exceptions'],
-  ['Tax on $75,000 of profit (single)', `${K.usd(x.ex75.total)} in all, ${K.usd(x.ex75.stateTax)} to ${s.name}`],
+  ['Tax on $75,000 of profit (single)', inc.verified || inc.type === 'none' ? `${K.usd(x.ex75.total)} in all, ${K.usd(x.ex75.stateTax)} to ${s.name}` : `${K.usd(x.ex75.federalTotal)} federal; ${s.name} tax not verified`],
 ];
 const localRows = s.local.map((l) => [l.url ? `<a href="${l.url}" target="_blank" rel="nofollow noopener noreferrer">${l.place}</a>` : l.place, l.name, l.rateText, l.threshold || l.applies]);
 ---

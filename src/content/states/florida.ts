@@ -1,0 +1,31 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('florida');
+const st605 = 'http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0605/Sections/0605.0213.html';
+const st607 = 'http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0607/Sections/0607.193.html';
+const corp = 'https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx';
+
+export default defineState({
+  slug: 'florida',
+  title: `Florida LLC Annual Report 2026: ${K.cents(s.llc.annual!)}, No Income Tax`,
+  description: `Florida in 2026: no personal income tax, a ${K.cents(s.llc.annual!)} LLC annual report due by May 1 with a $400 late fee, and ${K.usd(s.ex75.total)} of federal tax on ${K.usd(75000)} of profit.`,
+  intro: 'Florida leaves pass-through profit untaxed, so the decisions that matter are federal ones and the date of the annual report.',
+  resume: `Florida has no personal income tax, so profit from a sole proprietorship, a single-member LLC or an S corporation is taxed only by the IRS. On ${K.usd(75000)} of net profit a single filer owes about ${K.usd(s.ex75.total)}, all of it federal income and self-employment tax; at ${K.usd(120000)} the total is ${K.usd(s.ex120.total)}. An LLC costs ${K.usd(s.llc.formation!)} to form, the $100 filing fee plus $25 for designating a registered agent, and ${K.cents(s.llc.annual!)} for each annual report filed between January 1 and May 1, which puts five years at ${K.cents(s.cost5)}. A report filed after May 1 carries a $400 late charge, often the largest Florida cost a small LLC ever pays. Florida follows the S election and does not tax the corporation's ordinary income. Payroll adds the reemployment tax, paid by the employer alone, on the owner's salary. With ${K.usd(120000)} of profit and a ${K.usd(50000)} salary, the election saves about ${K.usd(s.cmp.savings)} a year.`,
+  body: (h) => `<p>The number to remember in Florida is not a tax rate but a date. The LLC annual report is accepted from January 1 to May 1, and the statute adds a $400 late charge to a report filed after that (${h.ext(st607, 'Fla. Stat. 607.193')}). For an LLC whose yearly cost is otherwise ${K.cents(s.llc.annual!)}, a missed deadline nearly quadruples the bill. The fee itself is two pieces: a $50 annual report fee under the LLC statute and an $88.75 supplemental corporate fee collected with it (${h.ext(st605, 'Fla. Stat. 605.0213')}).</p>
+<h2>What no income tax means for a freelancer</h2>
+<p>Without a state return, your quarterly planning is purely federal. The set-aside you need on each invoice is the federal one: about ${Math.round(s.ex75.setAside * 100)}% of profit at ${K.usd(75000)} and ${Math.round(s.ex120.setAside * 100)}% at ${K.usd(120000)} for a single filer. Moving from a taxed state changes the arithmetic in a visible way, as the comparison below shows with Georgia, Florida's northern neighbor.</p>
+${h.mini('stateGap', { a: 'georgia', b: 'florida' })}
+<p>Federal estimated payments are still due when you expect to owe ${K.usd(K.P.estimated.minimumOwed)} or more for the year, on the dates in the ${h.a('quarterly-estimated-taxes', 'quarterly estimated tax guide')}. Florida itself asks individuals for nothing.</p>
+<p>Formation paperwork is short. The articles of organization and the registered agent designation go in together, and the two optional extras the state sells at that point are a certified copy for $30 and a certificate of status for $5; neither is needed to start doing business, and neither changes the yearly cost.</p>
+<h2>Where Florida does tax a business</h2>
+<p>The state corporate income tax exists, and it reaches some small owners. An LLC that elects to be taxed as a C corporation pays 5.5% on its income after a $50,000 exemption (${h.ext(corp, 'Florida DOR, corporate income tax')}). An S corporation normally files no Florida corporate return at all. The exception is income the corporation itself pays federal tax on, such as built-in gains or excess passive income reported on Form 1120-S; that portion is taxed by Florida with the same exemption. For a service business that has always been an S corporation, the exception rarely applies. The ${h.a('c-corp-vs-s-corp', 'C corp vs S corp comparison')} shows why most one-owner companies avoid the C route.</p>
+<h3>Reemployment tax on the owner's salary</h3>
+<p>Florida's reemployment tax is paid by employers only; nothing is withheld from wages (${h.ext('https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx', 'Florida DOR, reemployment tax')}). An S corp owner who pays a salary is an employee, so the company owes ${K.rate(s.suta.rate!)} on the first ${K.usd(s.suta.wageBase!)} of that salary as a new employer, ${K.usd(s.cmp.scorp.suta)} a year. The ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} counts it with the federal payroll taxes.</p>`,
+  faqs: [
+    { q: 'What happens if a Florida LLC files its annual report after May 1?', a: `Florida adds a $400 late charge to an annual report filed after May 1, on top of the regular ${K.cents(s.llc.annual!)}. The report opens on January 1 each year, beginning the year after formation. Filed on time, the report costs only the regular fee; the late charge alone is close to three times that amount, which makes the May 1 date the main Florida deadline for a small LLC.` },
+    { q: 'Does Florida tax S corporation income?', a: 'Generally no. An S corporation does not file a Florida corporate income tax return unless it owes federal tax at the corporate level, such as tax on built-in gains or excess passive income. That portion is then taxed by Florida after a $50,000 exemption. Shareholders owe no state tax on their share of the profit, since Florida has no personal income tax.' },
+    { q: 'How much does it cost to form an LLC in Florida in 2026?', a: `${K.usd(s.llc.formation!)}: a $100 fee for the articles of organization and $25 for the certificate designating the registered agent, both set by section 605.0213 of the Florida Statutes. A certified copy and a certificate of status are optional extras. From the next year the LLC pays ${K.cents(s.llc.annual!)} for each annual report.` },
+  ],
+  related: ['how-much-to-set-aside', 'llc-vs-s-corp', 'c-corp-vs-s-corp', 'state:georgia', 'state:alabama'],
+});

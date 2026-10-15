@@ -1,0 +1,34 @@
+import { defineState } from '../../lib/page-types';
+import { KIT as K } from '../../lib/kit';
+
+const s = K.st('ohio');
+const loc = (p: string) => s.local.find((l) => l.place === p)!;
+const col = loc('Columbus'), cin = loc('Cincinnati'), cle = loc('Cleveland');
+const cat = 'https://tax.ohio.gov/static/commercial_activities/information_releases/CAT_2023-01_info_release.pdf';
+const es = 'https://dam.assets.ohio.gov/image/upload/tax.ohio.gov/forms/ohio_individual/individual/2026/ites-instructions-fi.pdf';
+const fed75 = K.solo({ profit: 75000, filing: 'single' });
+const city75 = 75000 * col.rate!;
+const cmp = K.compare({ profit: 120000, salary: 50000, filing: 'single', adminCost: 2000 });
+
+export default defineState({
+  slug: 'ohio',
+  title: 'Ohio Self-Employment Tax 2026: City Income Tax and LLC Cost',
+  description: `Ohio 2026: no LLC annual report, city income taxes up to ${col.rateText} on net profit (${K.usd(city75)} on $75,000 in Columbus) and a state rate schedule rewritten for 2026.`,
+  intro: 'In Ohio the city where you work taxes your profit on its own terms, and the LLC itself costs almost nothing to keep.',
+  resume: `Ohio is a state where the local layer matters as much as the state one. Most cities levy a municipal income tax on residents' and workers' wages and on the net profit of self-employed people and businesses: ${col.rateText} in Columbus, ${cle.rateText} in Cleveland, ${cin.rateText} in Cincinnati. In Columbus, ${K.usd(75000)} of profit means about ${K.usd(city75)} of city tax. The state income tax was rewritten for 2026 by a budget law, and the new schedule could only be read through an extract of the statute today, so this page gives no Ohio income tax figure and the calculator leaves it out; the federal part on ${K.usd(75000)} is ${K.usd(fed75.total)} for a single filer. On the business side, an Ohio LLC files no annual report and pays no franchise tax, and the Commercial Activity Tax only reaches companies with receipts above ${K.usd(6000000)}. The S election saves about ${K.usd(cmp.savings)} federally at ${K.usd(120000)} of profit with a ${K.usd(50000)} salary, but Ohio cities can tax the S corporation's own net profit too.`,
+  body: (h) => `<p>A self-employed person in Ohio usually files with three governments: the IRS, the state, and the municipality, and sometimes a fourth, the school district, which in some areas levies its own income tax. City rates on net profits reach ${col.rateText} in several large cities, and residents get a credit, often capped at the home city's rate, for tax paid to the city where they work (${h.ext(col.url, 'Columbus Income Tax Division')}). A freelancer living in one city and working on site in another needs to look at both. The ${h.a('local:ohio/columbus', 'Columbus page')} computes the city tax with its credits.</p>
+${h.mini('localQuick', { l: col.slug })}
+<h2>A state rate schedule in transition</h2>
+<p>For 2026, the state budget law rewrote Ohio's brackets for nonbusiness income. The 2026 estimated tax worksheet published by the Department of Taxation was prepared before that change and still shows the older brackets, and the amended statute could only be read through an extract today, so the two sources disagree and neither is used here (${h.ext('https://tax.ohio.gov/individual/resources/annual-tax-rates', 'Ohio DOT, annual tax rates')}). The calculator therefore shows federal tax and city tax but no Ohio income tax until the department's 2026 tables confirm the schedule. Ohio also treats business income separately from other income, with a deduction for part of it; its 2026 amount was not confirmed on a page opened today.</p>
+<p>Estimated state payments are due when your expected Ohio tax after credits, minus withholding, exceeds $500, on the federal dates; municipal and school district estimates are paid separately to their own collectors (${h.ext(es, '2026 Ohio estimated tax worksheet')}). The ${h.a('quarterly-estimated-taxes', 'quarterly estimated tax guide')} covers the federal schedule.</p>
+<h2>Cheap to keep: the Ohio LLC</h2>
+<p>An Ohio LLC is formed with Articles of Organization on Form 610 and then files no annual report at all (${h.ext('https://www.ohiosos.gov/globalassets/business/forms/610_web.pdf', 'Ohio SOS, Form 610')}). The filing fee could only be read through an extract today, so it is left blank in the calculator. Ohio has no franchise tax on LLCs, and the Commercial Activity Tax, a tax on gross receipts, has had no annual minimum since 2024 and applies only to receipts above ${K.usd(6000000)}, at 0.26% (${h.ext(cat, 'Ohio DOT, CAT information release')}). A one-person business will not reach it.</p>
+<h3>The S corporation and city net profit tax</h3>
+<p>Ohio follows the federal S election for the state income tax, but municipal net profit tax works differently: most cities tax the net profit of an S corporation or an LLC at the entity level, at the city rate, for example ${cle.rateText} in Cleveland (${h.ext(cle.url, 'Cleveland Central Collection Agency, tax rates')}). The owner's salary is then taxed as wages where the work is done. Ohio also offers an elective pass-through entity tax, whose 2026 rate was not confirmed today. The ${h.a('llc-vs-s-corp', 'LLC vs S corp calculator')} runs the federal side; for a state with a flat city-level tax on earnings next door, see ${h.a('state:pennsylvania', 'Pennsylvania')}.</p>`,
+  faqs: [
+    { q: 'Do Ohio cities tax self-employment income?', a: `Yes. Most Ohio municipalities tax the net profit of self-employed residents and of businesses working in the city, at rates such as ${col.rateText} in Columbus, ${cle.rateText} in Cleveland and ${cin.rateText} in Cincinnati. Residents usually receive a credit, often capped at the home rate, for tax paid to another city. In Columbus, ${K.usd(75000)} of profit means about ${K.usd(city75)} of city tax.` },
+    { q: 'Does an Ohio LLC have to file an annual report?', a: `No. Ohio LLCs file Articles of Organization once and no annual report afterward. There is no franchise tax on LLCs, and the Commercial Activity Tax applies only to gross receipts above ${K.usd(6000000)}, with no annual minimum since 2024. The recurring costs are the city income tax and, if the LLC has payroll, unemployment insurance.` },
+    { q: 'Why is Ohio state income tax left out of the 2026 calculator?', a: 'The 2026 schedule changed under the state budget law, the department\'s 2026 worksheet predates that change, and the amended statute could only be read through an extract today. Rather than pick one, the calculator shows federal tax and city tax without Ohio income tax. The Department of Taxation will publish the final 2026 rates with its forms.' },
+  ],
+  related: ['local:ohio/columbus', 'state:pennsylvania', 'state:michigan', 'state:kentucky', 'local-business-taxes'],
+});
