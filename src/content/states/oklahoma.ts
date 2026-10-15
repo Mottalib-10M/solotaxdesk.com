@@ -4,7 +4,7 @@ import { KIT as K } from '../../lib/kit';
 const s = K.st('oklahoma');
 const b = s.income.brackets!.single;
 const top = b[b.length - 1];
-const hb = 'http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF';
+const hb = 'https://www.oklegislature.gov/BillInfo.aspx?Bill=HB2764&Session=2500';
 const ow8 = 'https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/OW-8-ES.pdf';
 const p50 = K.solo({ profit: 50000, filing: 'single', state: s });
 

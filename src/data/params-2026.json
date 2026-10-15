@@ -99,7 +99,7 @@
     "contractor": { "url": "https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-self-employed-or-employee", "label": { "en": "IRS, Independent contractor (self-employed) or employee?" } },
     "solo401k": { "url": "https://www.irs.gov/retirement-plans/one-participant-401k-plans", "label": { "en": "IRS, One-participant 401(k) plans" } },
     "qbi_news": { "url": "https://www.irs.gov/newsroom/qualified-business-income-deduction", "label": { "en": "IRS, Qualified business income deduction" } },
-    "usc_11": { "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section11", "label": { "en": "26 U.S.C. §11, corporate income tax rate (21%)" } },
-    "usc_1411": { "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title26-section1411", "label": { "en": "26 U.S.C. §1411, net investment income tax (3.8%)" } }
+    "usc_11": { "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap1-subchapA-partII-sec11.htm", "label": { "en": "26 U.S.C. §11, corporate income tax rate (21%)" } },
+    "usc_1411": { "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title26/html/USCODE-2023-title26-subtitleA-chap2A-sec1411.htm", "label": { "en": "26 U.S.C. §1411, net investment income tax (3.8%)" } }
   }
 }

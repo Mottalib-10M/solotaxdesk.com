@@ -6351,7 +6351,7 @@
    "sources": [
     {
      "id": 1,
-     "url": "http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF",
+     "url": "https://www.oklegislature.gov/BillInfo.aspx?Bill=HB2764&Session=2500",
      "title": "Enrolled HB 2764 (2025), amending 68 O.S. 2355",
      "quote": "(a) 0% tax on first $3,750.00 or part thereof, (b) 2.5% tax on the next $1,150.00 ... (d) 4.5% tax on the remainder."
     },
@@ -6375,7 +6375,7 @@
    "sources": [
     {
      "id": 1,
-     "url": "http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF",
+     "url": "https://www.oklegislature.gov/BillInfo.aspx?Bill=HB2764&Session=2500",
      "title": "Enrolled HB 2764 (68 O.S. 2355)",
      "quote": "a tax is hereby imposed upon the Oklahoma taxable income of every corporation ... in an amount equal to four percent (4%) thereof."
     },
@@ -6404,7 +6404,7 @@
   },
   "local": [],
   "notable": [
-   "2026 top rate cut to 4.5% (from 4.75%) and brackets collapsed to 0% / 2.5% / 3.5% / 4.5% by HB 2764 (http://webserver1.lsb.state.ok.us/cf_pdf/2025-26%20ENR/hB/HB2764%20ENR.PDF)",
+   "2026 top rate cut to 4.5% (from 4.75%) and brackets collapsed to 0% / 2.5% / 3.5% / 4.5% by HB 2764 (https://www.oklegislature.gov/BillInfo.aspx?Bill=HB2764&Session=2500)",
    "4.5% applies above only $7,200 of taxable income (single), so nearly all freelancers pay the top rate on most income (same source)",
    "No franchise tax since tax year 2024 and no LLC entity tax; LLC costs are $100 formation + $25 annual certificate (https://www.sos.ok.gov/business/fees.aspx)",
    "Estimated-tax safe harbor is 70% of current-year tax (https://oklahoma.gov/content/dam/ok/en/tax/documents/forms/individuals/current/OW-8-ES.pdf)",
