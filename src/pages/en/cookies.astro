@@ -9,7 +9,7 @@ const lang = 'en';
     <h1>Cookies</h1>
     <p>This site sets no cookie and uses no local storage. Your profit, state or salary exist only in the open page, and in its address if you copy a share link.</p>
     <h2>No banner, and why</h2>
-    <p>A consent banner is needed when a site stores or reads non-essential information on your device. Nothing of the kind happens here. {CLARITY_ID ? 'The cookie-free stability measurement described in the privacy policy stores nothing on your device either.' : 'No analytics or advertising script is loaded.'}</p>
+    <p>A consent banner is needed when a site stores or reads non-essential information on your device. Nothing of the kind happens here. {CLARITY_ID ? 'The cookie-free stability measurement described in the privacy policy, Microsoft Clarity in a mode that sets no cookie, stores nothing on your device either; you can block it by blocking clarity.ms.' : 'No analytics or advertising script is loaded.'}</p>
     <h2>Check it yourself</h2>
     <p>Open your browser's developer tools (F12), tab Application or Storage: Cookies and Local Storage stay empty for this site while you use any calculator. In the Network tab, typing a number sends no request at all.</p>
     <p>See also the <a href={route('privacy', lang)}>privacy policy</a>. Updated: {LAST_UPDATED}.</p>
